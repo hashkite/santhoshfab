@@ -1,0 +1,20 @@
+uuid: 3133b4c4-47c0-4702-9d20-10a592b04d00
+langcode: en
+status: true
+dependencies:
+  module:
+    - mck_rest_apis
+    - serialization
+    - user
+_core:
+  default_config_hash: yohRMgr_kvCNnC8C4r5qCsWEpazBtrv--9lCFr6vZBA
+id: fetch_menu
+plugin_id: fetch_menu
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - json
+  authentication:
+    - cookie

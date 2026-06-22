@@ -1,0 +1,181 @@
+uuid: 6abdbc14-e8da-4efe-8b8b-37e41a92e7cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraphs
+    - paragraphs.paragraphs_type.grid
+    - paragraphs.paragraphs_type.tiles_item
+  module:
+    - entity_reference_revisions
+id: paragraph.grid.field_paragraphs
+field_name: field_paragraphs
+entity_type: paragraph
+bundle: grid
+label: 'Info items'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      tiles_item: tiles_item
+    negate: 0
+    target_bundles_drag_drop:
+      business_needs:
+        weight: 44
+        enabled: false
+      business_teaser:
+        weight: 45
+        enabled: false
+      country:
+        weight: 18
+        enabled: false
+      creativity:
+        weight: 50
+        enabled: false
+      famaash_productions:
+        weight: 51
+        enabled: false
+      famaash_streamlines:
+        weight: 57
+        enabled: false
+      faq_s:
+        weight: 19
+        enabled: false
+      feedback:
+        weight: 27
+        enabled: false
+      grid:
+        weight: 60
+        enabled: false
+      hero:
+        weight: 4
+        enabled: false
+      hero_slide:
+        weight: 5
+        enabled: false
+      hero_slider:
+        weight: 6
+        enabled: false
+      horizontal_tab:
+        weight: 57
+        enabled: false
+      horizontal_tabs:
+        weight: 58
+        enabled: false
+      how_we_work:
+        weight: 66
+        enabled: false
+      image:
+        weight: 59
+        enabled: false
+      image_with_background:
+        weight: 61
+        enabled: false
+      image_with_titles:
+        weight: 62
+        enabled: false
+      images:
+        weight: 60
+        enabled: false
+      link_with_icon:
+        weight: 71
+        enabled: false
+      looking_for_a_team:
+        weight: 72
+        enabled: false
+      model_item:
+        weight: 73
+        enabled: false
+      number:
+        weight: 63
+        enabled: false
+      numbers:
+        weight: 64
+        enabled: false
+      our_capabilities:
+        weight: 76
+        enabled: false
+      our_clients:
+        weight: 23
+        enabled: false
+      our_expertise:
+        weight: 78
+        enabled: false
+      our_footprints:
+        weight: 24
+        enabled: false
+      our_model:
+        weight: 80
+        enabled: false
+      our_team:
+        weight: 70
+        enabled: false
+      people:
+        weight: 71
+        enabled: false
+      people_images:
+        weight: 72
+        enabled: false
+      person:
+        weight: 73
+        enabled: false
+      scrollable_item:
+        weight: 75
+        enabled: false
+      scrollable_items:
+        weight: 76
+        enabled: false
+      service_item:
+        weight: 88
+        enabled: false
+      services:
+        weight: 87
+        enabled: false
+      slider:
+        weight: 89
+        enabled: false
+      tab:
+        weight: 27
+        enabled: false
+      tabs:
+        weight: 28
+        enabled: false
+      teaser:
+        weight: 92
+        enabled: false
+      tile:
+        weight: 93
+        enabled: false
+      tiles:
+        weight: 94
+        enabled: false
+      tiles_item:
+        weight: 95
+        enabled: true
+      title_with_description:
+        weight: 29
+        enabled: false
+      titles:
+        weight: 81
+        enabled: false
+      vertical_tab:
+        weight: 98
+        enabled: false
+      vertical_tabs:
+        weight: 99
+        enabled: false
+      video:
+        weight: 83
+        enabled: false
+      videos:
+        weight: 84
+        enabled: false
+      view:
+        weight: 30
+        enabled: false
+field_type: entity_reference_revisions

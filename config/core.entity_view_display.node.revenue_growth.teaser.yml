@@ -1,0 +1,26 @@
+uuid: 1fb3a423-de62-41c5-ab06-688c081f7f13
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.revenue_growth.field_hero
+    - field.field.node.revenue_growth.field_marketing_paragrapghs
+    - node.type.revenue_growth
+  module:
+    - user
+id: node.revenue_growth.teaser
+targetEntityType: node
+bundle: revenue_growth
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  extra_field_favorite: true
+  extra_field_popup: true
+  field_hero: true
+  field_marketing_paragrapghs: true

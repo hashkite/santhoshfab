@@ -1,0 +1,22 @@
+uuid: c1e0bec3-fe46-4a1f-8087-dc33978bf0fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_engineering_color
+    - paragraphs.paragraphs_type.engineering_card_wrapper
+  module:
+    - color_field
+id: paragraph.engineering_card_wrapper.field_engineering_color
+field_name: field_engineering_color
+entity_type: paragraph
+bundle: engineering_card_wrapper
+label: 'Engineering Color'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  opacity: 1
+field_type: color_field_type

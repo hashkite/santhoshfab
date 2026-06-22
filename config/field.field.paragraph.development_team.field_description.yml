@@ -1,0 +1,24 @@
+uuid: 8ee35a8a-c1ce-406b-8527-459c1f599e3f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - filter.format.basic_html
+    - paragraphs.paragraphs_type.development_team
+  module:
+    - text
+id: paragraph.development_team.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: development_team
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text_long

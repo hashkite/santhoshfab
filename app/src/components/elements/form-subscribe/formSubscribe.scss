@@ -1,0 +1,53 @@
+@import '../../../app/styles/functions';
+@import '../../../app/styles/mixins';
+@import '../../../app/styles/variables';
+@import '../../../app/styles/colors';
+
+.form-subscribe__webform {
+  max-width: 660px;
+
+  .webform__form {
+    display: flex;
+    gap: 10px;
+    position: relative;
+    transition: 0.3s;
+    width: 100%;
+
+    fieldset {
+      &:first-child {
+        width: calc(100% - 65px);
+      }
+
+      &:last-child {
+        width: 65px;
+      }
+
+      .field {
+        height: 100%;
+      }
+
+      .btn-secondary {
+        height: 100%;
+        width: 100%;
+        gap: 0;
+
+        .text {
+          @include visually-hidden;
+        }
+      }
+    }
+  }
+
+  > .container {
+    padding: 0;
+
+    h2 {
+      font-size: 20px;
+      margin-bottom: 0;
+
+      &.text-error {
+        color: #ff1146;
+      }
+    }
+  }
+}

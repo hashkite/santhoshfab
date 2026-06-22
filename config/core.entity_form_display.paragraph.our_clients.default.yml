@@ -1,0 +1,42 @@
+uuid: 9652e546-ef83-48d2-9fcd-7fed368d2082
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.our_clients.field_grid
+    - field.field.paragraph.our_clients.field_images
+    - paragraphs.paragraphs_type.our_clients
+  module:
+    - autocomplete_deluxe
+id: paragraph.our_clients.default
+targetEntityType: paragraph
+bundle: our_clients
+mode: default
+content:
+  field_grid:
+    type: boolean_checkbox
+    weight: 4
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_images:
+    type: autocomplete_deluxe
+    weight: 3
+    region: content
+    settings:
+      match_operator: CONTAINS
+      autocomplete_route_name: autocomplete_deluxe.autocomplete
+      size: 60
+      selection_handler: default
+      limit: 10
+      min_length: 0
+      delimiter: ''
+      not_found_message_allow: false
+      not_found_message: "The term '@term' will be added"
+      no_empty_message: 'No terms could be found. Please type in order to add a new term.'
+      new_terms: false
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

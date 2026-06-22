@@ -1,0 +1,29 @@
+uuid: 7207049d-2374-4429-9dc8-1ec974564a25
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_people_images
+    - media.type.image
+    - paragraphs.paragraphs_type.images
+id: paragraph.images.field_people_images
+field_name: field_people_images
+entity_type: paragraph
+bundle: images
+label: 'People images'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,9 @@
+uuid: e9090d01-c19d-4fa8-a224-cd00d24ff346
+langcode: en
+status: true
+dependencies: {  }
+name: Partnerships
+vid: partnerships
+description: 'Footer block'
+weight: 0
+new_revision: false

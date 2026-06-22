@@ -1,0 +1,26 @@
+uuid: 70ba335b-4b4f-485e-9b94-df43796c397b
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.all_services
+    - field.field.config_pages.all_services.field_paragraphs
+  module:
+    - mck_rest_apis
+id: config_pages.all_services.default
+targetEntityType: config_pages
+bundle: all_services
+mode: default
+content:
+  field_paragraphs:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

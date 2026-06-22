@@ -1,0 +1,17 @@
+uuid: 2dd92a64-f166-49d9-801d-0ccf54459e04
+langcode: en
+status: true
+dependencies: {  }
+id: case_studies
+label: 'Case studies'
+token: false
+context:
+  show_warning: true
+  group:
+    language: false
+  fallback:
+    language: ''
+menu:
+  path: ''
+  weight: 0
+  description: ''

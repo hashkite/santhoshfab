@@ -1,0 +1,59 @@
+uuid: 20846689-b884-4431-a837-0b42d6c38591
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.restricted_html
+    - rest.resource.fetch_config_pages_info
+    - rest.resource.fetch_menu
+    - rest.resource.fetch_node_info
+    - rest.resource.fetch_node_list
+    - rest.resource.fetch_node_popup
+    - rest.resource.fetch_terms_info
+    - rest.resource.fetch_user_info
+    - rest.resource.fetch_users_list
+    - rest.resource.search_by_partners
+    - rest.resource.search_by_tag
+    - rest.resource.search_by_view
+    - rest.resource.simple_news_subscribe
+    - rest.resource.webform_rest_submit
+  module:
+    - comment
+    - contact
+    - filter
+    - media
+    - rest
+    - search
+    - simplenews
+    - statistics
+    - system
+_core:
+  default_config_hash: 6WavjUYXIegP9AAg2zXGx54MWIVoomC3SZhNiqe-Dyk
+id: anonymous
+label: 'Anonymous user'
+weight: 0
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access site-wide contact form'
+  - 'access user profiles'
+  - 'administer statistics'
+  - 'restful get fetch_config_pages_info'
+  - 'restful get fetch_menu'
+  - 'restful get fetch_node_info'
+  - 'restful get fetch_node_list'
+  - 'restful get fetch_node_popup'
+  - 'restful get fetch_terms_info'
+  - 'restful get fetch_user_info'
+  - 'restful get fetch_users_list'
+  - 'restful get search_by_partners'
+  - 'restful get search_by_tag'
+  - 'restful get search_by_view'
+  - 'restful post simple_news_subscribe'
+  - 'restful post webform_rest_submit'
+  - 'search content'
+  - 'subscribe to newsletters'
+  - 'use text format restricted_html'
+  - 'view media'
+  - 'view post access counter'

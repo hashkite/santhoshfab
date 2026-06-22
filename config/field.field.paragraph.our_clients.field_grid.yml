@@ -1,0 +1,21 @@
+uuid: ce785cd3-cd55-47aa-9dd9-7b0496e063ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_grid
+    - paragraphs.paragraphs_type.our_clients
+id: paragraph.our_clients.field_grid
+field_name: field_grid
+entity_type: paragraph
+bundle: our_clients
+label: Grid
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

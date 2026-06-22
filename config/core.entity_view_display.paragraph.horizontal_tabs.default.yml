@@ -1,0 +1,26 @@
+uuid: c7c873c6-9a30-407c-b7ec-b4aa20e4dde6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.horizontal_tabs.field_paragraphs
+    - paragraphs.paragraphs_type.horizontal_tabs
+  module:
+    - mck_rest_apis
+id: paragraph.horizontal_tabs.default
+targetEntityType: paragraph
+bundle: horizontal_tabs
+mode: default
+content:
+  field_paragraphs:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: paragraph
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  extra_field_popup: true

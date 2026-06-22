@@ -1,0 +1,4 @@
+mck_rest_apis:
+  css:
+    theme:
+      css/admin.css: {}

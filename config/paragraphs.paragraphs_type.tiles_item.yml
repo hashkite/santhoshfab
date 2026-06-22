@@ -1,0 +1,15 @@
+uuid: 3f348625-792c-419d-89fc-59840d0ce63e
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_ee
+third_party_settings:
+  paragraphs_ee:
+    paragraphs_categories: {  }
+id: tiles_item
+label: 'Tiles item'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

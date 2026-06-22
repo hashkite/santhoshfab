@@ -1,0 +1,24 @@
+uuid: db33cb74-9394-4c25-af46-3bb68373759e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_multicolor_title
+    - filter.format.full_html
+    - paragraphs.paragraphs_type.looking_for_a_team
+  module:
+    - text
+id: paragraph.looking_for_a_team.field_multicolor_title
+field_name: field_multicolor_title
+entity_type: paragraph
+bundle: looking_for_a_team
+label: 'Multicolor title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

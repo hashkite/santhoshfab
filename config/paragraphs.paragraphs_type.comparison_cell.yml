@@ -1,0 +1,15 @@
+uuid: 18f23f8a-558d-4279-aeaa-885e612e836a
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_ee
+third_party_settings:
+  paragraphs_ee:
+    paragraphs_categories: {  }
+id: comparison_cell
+label: 'Comparison Cell'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

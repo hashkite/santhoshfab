@@ -1,0 +1,21 @@
+uuid: 0d31af90-6154-4c75-bf56-ca153b6361e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title_alignment
+    - paragraphs.paragraphs_type.marketing_main
+  module:
+    - options
+id: paragraph.marketing_main.field_title_alignment
+field_name: field_title_alignment
+entity_type: paragraph
+bundle: marketing_main
+label: 'Title Alignment'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

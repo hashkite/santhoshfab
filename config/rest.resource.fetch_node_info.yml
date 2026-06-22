@@ -1,0 +1,20 @@
+uuid: 557e9154-1eb7-4290-9a49-bb2c47e83d0d
+langcode: en
+status: true
+dependencies:
+  module:
+    - mck_rest_apis
+    - serialization
+    - user
+_core:
+  default_config_hash: HuFSBh_5ndj2-LBpCAajUfuZP0YqKMoQIx-TPx-5F00
+id: fetch_node_info
+plugin_id: fetch_node_info
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - json
+  authentication:
+    - cookie

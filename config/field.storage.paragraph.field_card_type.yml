@@ -1,0 +1,39 @@
+uuid: 1e76a289-86b9-45bc-9b9f-e4a04ad48f10
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_card_type
+field_name: field_card_type
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: large
+      label: Large
+    -
+      value: small_colored
+      label: 'Small Colored'
+    -
+      value: colored
+      label: Colored
+    -
+      value: lwb
+      label: 'Large With Background'
+    -
+      value: tc
+      label: 'Title Colored'
+    -
+      value: tcwb
+      label: 'Title Colored With Background'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

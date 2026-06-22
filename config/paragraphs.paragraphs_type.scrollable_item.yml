@@ -1,0 +1,10 @@
+uuid: 5a3878d2-cf30-4026-b477-93343152614a
+langcode: en
+status: true
+dependencies: {  }
+id: scrollable_item
+label: 'Scrollable item'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

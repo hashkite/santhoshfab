@@ -1,0 +1,48 @@
+uuid: b97a6028-a46e-4585-8dad-8aa800d24caa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.revenue_chart.field_paragraphs
+    - field.field.paragraph.revenue_chart.field_subtitle
+    - field.field.paragraph.revenue_chart.field_title
+    - paragraphs.paragraphs_type.revenue_chart
+  module:
+    - mck_rest_apis
+id: paragraph.revenue_chart.default
+targetEntityType: paragraph
+bundle: revenue_chart
+mode: default
+content:
+  field_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_subtitle:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_paragraphs:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: paragraph
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  extra_field_popup: true

@@ -1,0 +1,17 @@
+uuid: 597b9277-56c8-44c6-a675-bacf61544506
+langcode: en
+status: true
+dependencies: {  }
+id: how_does_it_work
+label: 'How does it work?'
+token: false
+context:
+  show_warning: true
+  group:
+    language: false
+  fallback:
+    language: ''
+menu:
+  path: ''
+  weight: 0
+  description: ''

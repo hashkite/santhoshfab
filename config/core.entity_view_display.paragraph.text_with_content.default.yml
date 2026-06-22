@@ -1,0 +1,111 @@
+uuid: 26279f50-9ee2-4030-a469-9c13f5110e0e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.text_with_content.field_align_text_left
+    - field.field.paragraph.text_with_content.field_background_color
+    - field.field.paragraph.text_with_content.field_content_type
+    - field.field.paragraph.text_with_content.field_cta
+    - field.field.paragraph.text_with_content.field_media
+    - field.field.paragraph.text_with_content.field_section_id
+    - field.field.paragraph.text_with_content.field_sub_description
+    - field.field.paragraph.text_with_content.field_text
+    - paragraphs.paragraphs_type.text_with_content
+  module:
+    - mck_rest_apis
+id: paragraph.text_with_content.default
+targetEntityType: paragraph
+bundle: text_with_content
+mode: default
+content:
+  field_align_text_left:
+    type: mck_react
+    label: hidden
+    settings:
+      format: bool
+      view_mode: default
+      storage: ''
+      convert: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_background_color:
+    type: mck_react
+    label: hidden
+    settings:
+      format: color
+      view_mode: default
+      storage: ''
+      convert: 0
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_content_type:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_cta:
+    type: mck_react
+    label: hidden
+    settings:
+      format: link
+      view_mode: default
+      storage: ''
+      convert: 0
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_media:
+    type: mck_react
+    label: hidden
+    settings:
+      format: media
+      view_mode: default
+      storage: media
+      convert: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_section_id:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_sub_description:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_text:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+hidden:
+  extra_field_popup: true

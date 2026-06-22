@@ -1,0 +1,19 @@
+uuid: ca22912e-2fd3-4017-b815-85908368f1e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_section_id
+    - paragraphs.paragraphs_type.ppc_setup_process
+id: paragraph.ppc_setup_process.field_section_id
+field_name: field_section_id
+entity_type: paragraph
+bundle: ppc_setup_process
+label: 'Section Id'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

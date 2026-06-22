@@ -1,0 +1,51 @@
+uuid: 294b6703-9c49-44d0-9571-5d3b10e937c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.logo_item.field_image
+    - field.field.paragraph.logo_item.field_review_numbers
+    - field.field.paragraph.logo_item.field_review_score
+    - paragraphs.paragraphs_type.logo_item
+  module:
+    - mck_rest_apis
+id: paragraph.logo_item.default
+targetEntityType: paragraph
+bundle: logo_item
+mode: default
+content:
+  field_image:
+    type: mck_react
+    label: hidden
+    settings:
+      format: media
+      view_mode: default
+      convert: '1'
+      storage: media
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_review_numbers:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_review_score:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  extra_field_popup: true

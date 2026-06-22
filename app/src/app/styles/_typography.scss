@@ -1,0 +1,154 @@
+@use 'sass:map';
+
+body,
+html {
+  color: $black;
+  font-size: $font-size-default;
+  font-family: $body-font-family;
+  font-weight: 300;
+  line-height: $line-height-default;
+
+  @include breakpoint-down($md) {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $headings-font-family;
+  color: $black;
+  line-height: 1.3;
+  position: relative;
+  transition: color 0.3s, font-size 0.3s, line-height 0.3s, margin 0.3s,
+    padding 0.3s;
+
+  b,
+  strong {
+    font-weight: inherit;
+  }
+}
+
+h1,
+h2.h1 {
+  font-size: 70px;
+  font-weight: 500;
+  letter-spacing: -3.5px;
+
+  @include breakpoint-down($xxl) {
+    font-size: 55px;
+  }
+
+  @include breakpoint-down($xl) {
+    font-size: 45px;
+    letter-spacing: -1.5px;
+  }
+
+  @include breakpoint-down($lg) {
+    font-size: 40px;
+    letter-spacing: -1px;
+  }
+
+  @include breakpoint-down($sm) {
+    font-size: 35px;
+    letter-spacing: -0.75px;
+  }
+
+  @include breakpoint-down($xs) {
+    font-size: 30px;
+    letter-spacing: -0.5px;
+  }
+}
+
+h2 {
+  font-size: 45px;
+  font-weight: 600;
+  letter-spacing: -.9px;
+  line-height: 1.22;
+
+  @include breakpoint-down($xl) {
+    font-size: 40px;
+    letter-spacing: -1.5px;
+  }
+
+  @include breakpoint-down($lg) {
+    font-size: 35px;
+    letter-spacing: -1px;
+  }
+
+  @include breakpoint-down($md) {
+    font-size: 30px;
+    letter-spacing: -0.7px;
+  }
+
+  @include breakpoint-down($sm) {
+    font-size: 25px;
+    letter-spacing: -0.5px;
+  }
+}
+
+h3 {
+  font-size: 25px;
+  font-weight: 500;
+  letter-spacing: -1.25px;
+  margin-bottom: 20px;
+
+  @include breakpoint-down($xl) {
+    font-size: 22px;
+  }
+
+  @include breakpoint-down($sm) {
+    font-size: 20px;
+    letter-spacing: -0.75px;
+  }
+}
+
+li,
+p {
+  margin-bottom: rem(20);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+a {
+  color: $color-primary;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+em,
+time {
+  font-style: italic;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+ul,
+ol {
+  padding-left: rem(40);
+  margin-bottom: rem(20);
+
+  li {
+    margin-bottom: rem(12);
+  }
+}

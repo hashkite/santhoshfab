@@ -1,0 +1,27 @@
+uuid: 46964807-08b7-4a0b-9780-d2d94c1e2606
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.service_steps_wrapper.field_service_step
+    - paragraphs.paragraphs_type.service_steps_wrapper
+  module:
+    - mck_rest_apis
+id: paragraph.service_steps_wrapper.default
+targetEntityType: paragraph
+bundle: service_steps_wrapper
+mode: default
+content:
+  field_service_step:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: paragraph
+      convert: 0
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  extra_field_popup: true

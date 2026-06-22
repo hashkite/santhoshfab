@@ -1,0 +1,24 @@
+main_styles:
+  css:
+    base:
+      css/main.css: {}
+
+main_app:
+  css:
+    base:
+      css/main.css: {}
+#  js:
+#    js/main.js: { preprocess: false  }
+
+user_styles:
+  css:
+    base:
+      css/user.css: {}
+
+webform:
+  css:
+    base:
+      css/hire.css: {}
+  js:
+    https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js: { minified: true }
+    js/hire.js: {}

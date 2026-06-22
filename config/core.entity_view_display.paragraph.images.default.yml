@@ -1,0 +1,51 @@
+uuid: dc533605-8843-4618-b122-ccca6fb3d942
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.images.field_people_images
+    - field.field.paragraph.images.field_title
+    - field.field.paragraph.images.field_top_title
+    - paragraphs.paragraphs_type.images
+  module:
+    - mck_rest_apis
+id: paragraph.images.default
+targetEntityType: paragraph
+bundle: images
+mode: default
+content:
+  field_people_images:
+    type: mck_react
+    label: hidden
+    settings:
+      format: media
+      view_mode: default
+      convert: '1'
+      storage: media
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_top_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  extra_field_popup: true

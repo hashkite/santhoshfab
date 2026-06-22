@@ -1,0 +1,65 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@300;400;500;600;700&display=swap');
+
+$headings-font-family: 'Bai Jamjuree', Arial, sans-serif;
+$body-font-family: $headings-font-family;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-size-default: 18px;
+$line-height-default: 30px;
+
+// Media
+$media_path: '/media/images';
+$icons_path: '/media/icons';
+
+// Layout
+$xs: 550px;
+$sm: 768px;
+$md: 1024px;
+$lg: 1220px;
+$xl: 1440px;
+$xxl: 1630px;
+$fluid: 2000px;
+
+$grid-gutter-width: 30px;
+$grid-columns: 12;
+
+$grid-breakpoints: (
+  xs: $xs,
+  sm: $sm,
+  md: $md,
+  lg: $lg,
+  xl: $xl,
+  xxl: $xxl,
+  fluid: $fluid,
+) !default;
+
+$container-max-widths: (
+  xs: 0,
+  sm: 0,
+  md: 0,
+  lg: 1024px,
+  xl: 1220px,
+  xxl: 1560px,
+  fluid: 1880px,
+) !default;
+
+$spacing: 4px;
+$offset: 20px;
+
+$spacings: (
+  0: $spacing * 0,
+  1: $spacing,
+  2: $spacing * 2,
+  3: $spacing * 3,
+  4: $spacing * 4,
+  5: $spacing * 5,
+  sm: $offset * 1,
+  md: $offset * 1.5,
+  lg: $offset * 2,
+  xl: $offset * 3,
+  xxl: $offset * 3.4,
+);
+
+$positions: (('t', 'top'), ('r', 'right'), ('b', 'bottom'), ('l', 'left'));

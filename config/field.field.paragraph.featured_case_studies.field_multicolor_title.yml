@@ -1,0 +1,24 @@
+uuid: 402fd54e-c685-4e86-b2dc-f44e5928470f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_multicolor_title
+    - filter.format.full_html
+    - paragraphs.paragraphs_type.featured_case_studies
+  module:
+    - text
+id: paragraph.featured_case_studies.field_multicolor_title
+field_name: field_multicolor_title
+entity_type: paragraph
+bundle: featured_case_studies
+label: 'Multicolor title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

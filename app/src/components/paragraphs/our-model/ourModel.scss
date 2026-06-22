@@ -1,0 +1,114 @@
+@import '../../../app/styles/functions';
+@import '../../../app/styles/mixins';
+@import '../../../app/styles/variables';
+@import '../../../app/styles/colors';
+
+.our-model {
+  &__section {
+    background: $gray-300;
+    padding: 90px 0;
+    transition: padding 0.3s;
+
+    @include breakpoint-down($md) {
+      padding: 70px 0;
+    }
+
+    &.new_ui {
+      position: relative;
+      background: $white;
+      padding: 150px 0;
+
+      @include breakpoint-down($md) {
+        padding: 50px 0;
+      }
+      &::before {
+        background: linear-gradient(
+          0deg,
+          #e8eef8 0%,
+          rgba(232, 238, 248, 0) 100%
+        );
+        content: '';
+        width: 100%;
+        height: 50%;
+        top: 0;
+        display: block;
+        position: absolute;
+      }
+      .container {
+        position: relative;
+        z-index: 1;
+        background: $white-100;
+        border-radius: 35px;
+        box-shadow: 0px 18px 39px 0px #b5b5b51a, 0px 71px 71px 0px #b5b5b517,
+          0px 160px 96px 0px #b5b5b50d, 0px 284px 114px 0px #b5b5b503,
+          0px 444px 124px 0px #b5b5b500;
+        padding: 70px 50px;
+
+        @include breakpoint-down($md) {
+          padding: 50px 30px;
+        }
+
+        @include breakpoint-down($sm) {
+          padding: 30px 10px;
+        }
+      }
+
+      h1 {
+        font-size: 40px;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+        margin: 0 auto 30px;
+        text-align: center;
+
+        @include breakpoint-down($xl) {
+          font-size: 30px;
+        }
+
+        span {
+          font-weight: 600 !important;
+        }
+      }
+
+      .our-model__header {
+        margin: auto;
+        text-align: center;
+      }
+
+      .our-model__description {
+        margin: auto;
+        text-align: center;
+        max-width: 700px;
+        margin-bottom: 50px;
+      }
+    }
+  }
+
+  &__header {
+    margin-bottom: 80px;
+    max-width: 750px;
+    transition: 0.3s;
+
+    @include breakpoint-down($xxl) {
+      margin-bottom: 50px;
+    }
+
+    @include breakpoint-down($md) {
+      margin-bottom: 35px;
+    }
+
+    h2 {
+      color: $blue-dark-400;
+      letter-spacing: -0.9px;
+      margin-bottom: 35px;
+
+      @include breakpoint-down($xl) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__description {
+    color: $blue-dark-600;
+    max-width: 650px;
+  }
+}

@@ -1,0 +1,81 @@
+uuid: 45168de1-d2a7-4e04-95b9-2e86203053ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.article.body
+    - field.field.node.article.field_author
+    - field.field.node.article.field_date
+    - field.field.node.article.field_hero
+    - field.field.node.article.field_image
+    - field.field.node.article.field_service
+    - field.field.node.article.field_sub_service
+    - field.field.node.article.field_sub_tags
+    - field.field.node.article.field_tags
+    - field.field.node.article.field_teaser_text
+    - field.field.node.article.field_technologies
+    - node.type.article
+  module:
+    - mck_rest_apis
+    - text
+    - user
+_core:
+  default_config_hash: 83jX5ChAGdMzOxiDA_B1NjgebVMuD8lNVDgClg_QVP8
+id: node.article.teaser
+targetEntityType: node
+bundle: article
+mode: teaser
+content:
+  body:
+    type: text_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_image:
+    type: mck_react
+    label: hidden
+    settings:
+      format: media
+      view_mode: default
+      convert: '1'
+      storage: media
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_tags:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: taxonomy_term
+      convert: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_teaser_text:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  extra_field_favorite: true
+  extra_field_popup: true
+  field_author: true
+  field_date: true
+  field_hero: true
+  field_service: true
+  field_sub_service: true
+  field_sub_tags: true
+  field_technologies: true
+  links: true

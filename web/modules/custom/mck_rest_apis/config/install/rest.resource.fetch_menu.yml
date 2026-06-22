@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - mck_rest_apis
+    - serialization
+    - user
+id: fetch_menu
+plugin_id: fetch_menu
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - json
+  authentication:
+    - cookie

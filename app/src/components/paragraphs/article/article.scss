@@ -1,0 +1,513 @@
+@import '../../../app/styles/functions';
+@import '../../../app/styles/mixins';
+@import '../../../app/styles/variables';
+@import '../../../app/styles/colors';
+
+.article {
+  &__section {
+    scroll-margin-top: 200px;
+    background: $gray-50;
+    margin-top: 270px;
+    padding: 0 0 110px;
+    position: relative;
+    transition: padding 0.3s;
+
+    @include breakpoint-down($xxl) {
+      margin-top: 150px;
+    }
+
+    @include breakpoint-down($xl) {
+      margin-top: 100px;
+    }
+
+    @include breakpoint-down($lg) {
+      margin-top: 80px;
+    }
+
+    @include breakpoint-down($md) {
+      margin-top: 50px;
+      padding-bottom: 70px;
+    }
+
+    @include breakpoint-down($sm) {
+      padding-bottom: 50px;
+    }
+
+    @include breakpoint-down($xs) {
+      margin-top: 35px;
+    }
+  }
+
+  &__content {
+    align-items: flex-start;
+    display: flex;
+    flex-flow: wrap;
+    margin: 0;
+    padding: 0 0 0 380px;
+    position: relative;
+    transition: max-width 0.3s, margin 0.3s, padding 0.3s;
+
+    @include breakpoint-down($xxl) {
+      max-width: 1180px;
+    }
+
+    @include breakpoint-down($xl) {
+      padding-left: 300px;
+    }
+
+    @include breakpoint-down($md) {
+      padding-left: 230px;
+    }
+
+    @include breakpoint-down($sm) {
+      padding-left: 0;
+    }
+  }
+
+  &__body {
+    // counter-reset: headings;
+    width: 100%;
+
+    > * {
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    > h2 {
+      counter-reset: headings;
+    }
+
+    h2 {
+      color: $blue-dark-400;
+      font-size: 35px;
+      letter-spacing: -0.2px;
+      margin: 80px 0 60px;
+      transition: 0.3s;
+
+      @include breakpoint-down($lg) {
+        margin: 35px 0;
+      }
+
+      @include breakpoint-down($md) {
+        font-size: 30px;
+        margin: 25px 0;
+      }
+
+      @include breakpoint-down($xs) {
+        font-size: 25px;
+      }
+    }
+
+    > h3 {
+      scroll-margin-top: 80px;
+      border-top: 1px solid $gray-400;
+      font-size: 25px;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+      line-height: 32px;
+      margin: 60px 0 50px;
+      padding-top: 60px;
+      position: relative;
+      transition: 0.3s;
+      counter-increment: headings;
+
+      @include breakpoint-down($lg) {
+        margin: 35px 0;
+        padding-top: 35px;
+      }
+
+      @include breakpoint-down($md) {
+        font-size: 22px;
+        margin: 25px 0;
+        padding-top: 25px;
+      }
+
+      &::before {
+        content: counter(headings) '.';
+        margin-right: 10px;
+        // margin-left: 10px;
+        transition: 0.3s;
+
+        @include breakpoint-down($md) {
+          margin-left: 0;
+        }
+      }
+
+      &:first-child {
+        border-top: 0;
+        margin-top: 0;
+        padding-top: 0;
+      }
+    }
+
+    p {
+      color: $blue-dark-400;
+      margin: 30px 0;
+      transition: margin 0.3s;
+
+      @include breakpoint-down($lg) {
+        margin: 25px 0;
+      }
+    }
+
+    blockquote {
+      background: $gray-300;
+      border-radius: 15px;
+      color: $blue-dark-400;
+      font-size: 19px;
+      font-style: italic;
+      font-weight: 400;
+      line-height: 33px;
+      margin: 60px 0;
+      padding: 70px 55px;
+      transition: 0.3s;
+
+      @include breakpoint-down($lg) {
+        margin: 35px 0;
+        padding: 35px;
+      }
+
+      @include breakpoint-down($md) {
+        font-size: 16px;
+        line-height: 24px;
+        margin: 25px 0;
+        padding: 25px;
+      }
+
+      p {
+        &:first-child {
+          margin-top: 0;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    ul {
+      list-style: none;
+      margin: 30px 0;
+      padding: 0;
+      transition: 0.3s;
+
+      @include breakpoint-down($md) {
+        margin: 25px 0;
+      }
+
+      ul {
+        margin-bottom: 0;
+        margin-top: 0;
+      }
+
+      li {
+        margin: 0;
+        padding-left: 30px;
+        position: relative;
+        transition: padding 0.3s;
+
+        &::before {
+          background: $blue-dark-400;
+          border-radius: 100%;
+          content: '';
+          height: 3px;
+          position: absolute;
+          top: 14px;
+          left: 13px;
+          transition: 0.3s;
+          width: 3px;
+        }
+      }
+    }
+
+    img {
+      height: auto;
+      margin: 70px 0;
+      max-height: 410px;
+      object-fit: cover;
+      object-position: center;
+      transition: 0.3s;
+      width: 100%;
+
+      @include breakpoint-down($lg) {
+        max-height: 350px;
+        margin: 35px 0;
+      }
+
+      @include breakpoint-down($md) {
+        margin: 25px 0;
+      }
+
+      @include breakpoint-down($xs) {
+        max-height: 250px;
+      }
+    }
+  }
+
+  &__info {
+    border: 1px solid $gray-400;
+    border-radius: 15px;
+    margin-top: 120px;
+    padding: 44px 56px;
+    transition: margin 0.3s;
+    width: 100%;
+
+    @include breakpoint-down($xl) {
+      margin-top: 70px;
+      padding: 35px;
+    }
+
+    @include breakpoint-down($lg) {
+      margin-top: 50px;
+      padding: 25px;
+    }
+
+    @include breakpoint-down($md) {
+      margin-top: 35px;
+    }
+  }
+
+  &__share-block {
+    margin-top: 65px;
+    transition: 0.3s;
+
+    @include breakpoint-down($xl) {
+      margin-top: 40px;
+    }
+
+    @include breakpoint-down($lg) {
+      margin-top: 30px;
+    }
+
+    @include breakpoint-down($md) {
+      margin-top: 25px;
+    }
+
+    .share {
+      &__buttons {
+        align-items: center;
+        display: flex;
+        gap: 8px;
+        justify-content: flex-start;
+        transition: gap 0.3s;
+      }
+
+      &__button {
+        align-items: center;
+        background: $gray-300 !important;
+        border: none !important;
+        border-radius: 100%;
+        display: flex;
+        height: 56px;
+        justify-content: center;
+        overflow: hidden;
+        position: relative;
+        transition: 0.3s;
+        width: 56px;
+
+        @include breakpoint-down($lg) {
+          height: 45px;
+          width: 45px;
+        }
+
+        &::before,
+        &::after {
+          background: $purple-200;
+          border-radius: 100%;
+          content: '';
+          height: 5px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          transition: 0.3s 0.1s cubic-bezier(0.65, 0, 0.35, 1);
+          transform-origin: center;
+          transform: scale(0);
+          width: 5px;
+        }
+
+        &::after {
+          top: auto;
+          right: 0;
+          bottom: 0;
+          left: auto;
+        }
+
+        svg {
+          display: block;
+          position: relative;
+          z-index: 1;
+
+          path {
+            transition: 0.3s;
+          }
+        }
+
+        &:hover {
+          text-decoration: none;
+
+          svg {
+            path {
+              fill: $white;
+            }
+          }
+
+          &::before,
+          &::after {
+            transform: scale(30);
+          }
+        }
+
+        &:active {
+          border-color: $purple-300;
+
+          &::before,
+          &::after {
+            background: $purple-300;
+          }
+        }
+
+        &-copy {
+          background: $gray-50 !important;
+          border: 1px solid $gray-400 !important;
+          border-radius: 100%;
+          cursor: pointer;
+          margin-left: auto;
+          transition: 0.3s;
+
+          &:hover {
+            border-color: $purple-200 !important;
+          }
+
+          &:active {
+            border-color: $purple-300 !important;
+          }
+
+          svg {
+            @include breakpoint-down($lg) {
+              height: 20px;
+              width: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__sidebar {
+    position: sticky;
+    top: 140px;
+    transition: 0.3s;
+    width: 300px;
+
+    @include breakpoint-down($xl) {
+      top: 110px;
+      width: 250px;
+    }
+
+    @include breakpoint-down($md) {
+      top: 120px;
+      width: 200px;
+    }
+
+    @include breakpoint-down($sm) {
+      position: static;
+      width: 100%;
+    }
+
+    &-wrap {
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: height 0.3s, top 0.3s, right 0.3s;
+
+      @include breakpoint-down($sm) {
+        height: auto;
+        position: static;
+      }
+    }
+
+    &-title {
+      color: $blue-dark-400;
+      font-size: 17px;
+      font-weight: 600;
+      line-height: 20px;
+      margin-bottom: 30px;
+      transition: 0.3s;
+
+      @include breakpoint-down($md) {
+        font-size: 15px;
+        margin-bottom: 20px;
+      }
+
+      @include breakpoint-down($sm) {
+        display: none;
+      }
+    }
+
+    &-toc {
+      border: 1px solid $gray-400;
+      border-radius: 15px;
+      padding: 35px 20px;
+      transition: 0.3s;
+
+      @include breakpoint-down($md) {
+        padding: 20px;
+      }
+
+      @include breakpoint-down($sm) {
+        display: none;
+      }
+
+      ol {
+        counter-reset: list;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        transition: 0.3s;
+
+        @include breakpoint-down($md) {
+          gap: 10px;
+        }
+
+        li {
+          counter-increment: list;
+          font-size: 14px;
+          line-height: 20px;
+          margin: 0;
+          padding-left: 16px;
+          position: relative;
+
+          &::before {
+            color: rgba($blue-dark-400, 0.6);
+            content: counter(list) '.';
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+
+          a {
+            color: rgba($blue-dark-400, 0.6);
+            padding-bottom: 0.08em;
+            border-bottom: 1px solid rgba($blue-dark-400, 0.6);
+            transition: trs(border-color), trs(color);
+
+            &:hover {
+              color: $blue-dark-400;
+              border-color: $blue-dark-400;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+uuid: 32493fe1-11a3-4813-a928-78b6d71f7974
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.start_cooperation
+    - field.storage.config_pages.field_subscribe_subtitle
+id: config_pages.start_cooperation.field_subscribe_subtitle
+field_name: field_subscribe_subtitle
+entity_type: config_pages
+bundle: start_cooperation
+label: 'Subscribe subtitle'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

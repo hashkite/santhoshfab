@@ -1,0 +1,142 @@
+uuid: 3f41cb74-316c-47c0-9244-8f7653ac9a7e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.article.body
+    - field.field.node.article.field_author
+    - field.field.node.article.field_date
+    - field.field.node.article.field_hero
+    - field.field.node.article.field_image
+    - field.field.node.article.field_service
+    - field.field.node.article.field_sub_service
+    - field.field.node.article.field_sub_tags
+    - field.field.node.article.field_tags
+    - field.field.node.article.field_teaser_text
+    - field.field.node.article.field_technologies
+    - node.type.article
+  module:
+    - mck_rest_apis
+    - user
+_core:
+  default_config_hash: 7fb0j9HnIXfP9ndewzgPPzzeX_SV532wuYpkscrCMCk
+id: node.article.default
+targetEntityType: node
+bundle: article
+mode: default
+content:
+  body:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_author:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: compact
+      storage: user
+      convert: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_date:
+    type: mck_react
+    label: hidden
+    settings:
+      format: timestamp
+      view_mode: default
+      storage: ''
+      convert: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_hero:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_service:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_sub_service:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: teaser
+      storage: node
+      convert: 0
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_sub_tags:
+    type: mck_react
+    label: hidden
+    settings:
+      format: taxonomy
+      view_mode: default
+      storage: taxonomy_term
+      convert: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_tags:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: default
+      storage: taxonomy_term
+      convert: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_teaser_text:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_technologies:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: taxonomy_term
+      convert: 0
+    third_party_settings: {  }
+    weight: 9
+    region: content
+hidden:
+  extra_field_favorite: true
+  extra_field_popup: true
+  field_image: true
+  links: true

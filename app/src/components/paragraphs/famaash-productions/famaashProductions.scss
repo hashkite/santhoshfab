@@ -1,0 +1,455 @@
+@import '../../../app/styles/functions';
+@import '../../../app/styles/mixins';
+@import '../../../app/styles/variables';
+@import '../../../app/styles/colors';
+
+.famaash-productions {
+  &__section {
+    position: relative;
+    margin-bottom: -100px;
+  }
+
+  &__top {
+    background: {
+      position: center;
+      repeat: no-repeat;
+      size: cover;
+    }
+    height: 100vh;
+    padding: 140px 0 50px;
+    position: relative;
+    text-align: center;
+    transition: padding 0.3s;
+    width: 100%;
+    z-index: 0;
+
+    @include breakpoint-down($fluid) {
+      padding-bottom: 160px;
+    }
+
+    @include breakpoint-down($xl) {
+      padding-top: 120px;
+    }
+
+    @include breakpoint-down($lg) {
+      padding-top: 100px;
+      padding-bottom: 120px;
+    }
+
+    @include breakpoint-down($md) {
+      height: 70vh;
+      padding-bottom: 100px;
+    }
+
+    @include breakpoint-down($sm) {
+      height: 60vh;
+      padding-bottom: 100px;
+    }
+
+    video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      background-color: $blue-dark-400;
+    }
+
+    > .container {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      position: relative;
+      z-index: 2;
+
+      @include breakpoint-down($fluid) {
+        align-items: flex-start;
+        justify-content: flex-end;
+      }
+    }
+
+    &::before {
+      background: linear-gradient(
+        180deg,
+        rgba($black, 0.5) 0%,
+        rgba($black, 0) 100%
+      );
+      content: '';
+      height: 50%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1;
+    }
+
+    &::after {
+      background: linear-gradient(
+        90deg,
+        rgba($black, 0.7) 0%,
+        rgba($black, 0) 100%
+      );
+      content: '';
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 40%;
+      z-index: 1;
+    }
+
+    &-decor {
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      z-index: 2;
+
+      svg {
+        display: block;
+        height: auto;
+        width: 100%;
+      }
+    }
+
+    h1 {
+      color: $white;
+      font-size: 55px;
+      font-weight: 600;
+      letter-spacing: -1.4px;
+      margin: auto;
+      position: absolute;
+      bottom: 160px;
+      left: 85px;
+      text-transform: uppercase;
+      hyphenate-character: '';
+
+      b {
+        color: $yellow-400;
+        font-weight: inherit;
+      }
+
+      @include breakpoint-down($fluid) {
+        margin: auto 0 0;
+        position: relative;
+        bottom: 0;
+        left: 0;
+      }
+
+      @include breakpoint-down($md) {
+        font-size: 45px;
+      }
+
+      @include breakpoint-down($sm) {
+        font-size: 40px;
+        margin: auto auto 0;
+      }
+    }
+
+    .breadcrumbs__block {
+      position: static;
+
+      .container {
+        padding: 0;
+      }
+    }
+  }
+
+  &__bottom {
+    transition: 0.3s;
+    padding: 0 0 100px;
+    background-color: $white;
+    position: relative;
+    z-index: 1;
+
+    @include breakpoint-down($xs) {
+      padding-bottom: 50px;
+    }
+
+    svg.decor {
+      width: 100%;
+    }
+
+    &,
+    .lines {
+      &::before,
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        width: 1.5px;
+        background-color: $gray-300;
+        top: -4.65vw;
+        left: 50%;
+
+        @include breakpoint-down($xl) {
+          display: none;
+        }
+      }
+
+      &::before {
+        top: -4.6vw;
+      }
+    }
+
+    &::before {
+      margin-left: -60px;
+
+      @include breakpoint-down($md) {
+        margin-left: -30px;
+      }
+    }
+
+    &::after {
+      margin-left: 60px;
+
+      @include breakpoint-down($md) {
+        margin-left: 30px;
+      }
+    }
+
+    .lines {
+      &::before {
+        left: calc(((100vw - #{$xxl}) / 2) + ((#{$xxl} * 25) / 100) - 60px);
+        margin-left: 30px;
+        top: -3.6vw;
+
+        @include breakpoint-up(1920px) {
+          top: -3.8vw;
+        }
+
+        @include breakpoint-up(2000px) {
+          top: -4vw;
+        }
+
+        @include breakpoint-down($xxl) {
+          display: none;
+        }
+      }
+
+      &::after {
+        left: auto;
+        right: calc(((100vw - #{$xxl}) / 2) + ((#{$xxl} * 25) / 100) - 60px);
+        margin-right: 30px;
+        top: -3.8vw;
+
+        @include breakpoint-up(1920px) {
+          top: -4vw;
+        }
+
+        @include breakpoint-up(2000px) {
+          top: -4.2vw;
+        }
+
+        @include breakpoint-down($xl) {
+          display: none;
+        }
+      }
+    }
+
+    > .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    &-inner {
+      padding-top: 100px;
+      padding-bottom: 60px;
+      position: relative;
+
+      @include breakpoint-down($lg) {
+        padding-bottom: 50px;
+      }
+
+      &::after,
+      &::before {
+        @include breakpoint-up($xxl) {
+          content: '';
+          display: block;
+          position: absolute;
+          bottom: -60px;
+          width: 1.5px;
+          background-color: $gray-400;
+          left: -1.5px;
+          top: -1.7vw;
+        }
+
+        @include breakpoint-up(1920px) {
+          top: -2.3vw;
+        }
+
+        @include breakpoint-up(2000px) {
+          top: -2vw;
+        }
+
+        @include breakpoint-down($xxl) {
+          display: none;
+        }
+      }
+
+      &::after {
+        left: auto;
+        right: -1.5px;
+
+        @include breakpoint-up(1920px) {
+          top: -2.5vw;
+        }
+
+        @include breakpoint-up(2000px) {
+          top: -2vw;
+        }
+      }
+    }
+  }
+
+  &__items {
+    margin-top: 120px;
+    counter-reset: section;
+    position: relative;
+
+    @include breakpoint-down($xxl) {
+      margin-top: 80px;
+    }
+
+    @include breakpoint-down($md) {
+      margin-top: 50px;
+    }
+
+    &::after {
+      @include breakpoint-up($sm) {
+        content: '';
+        display: block;
+        position: absolute;
+        width: calc(50% - 90px);
+        right: 0;
+        background: url('#{$icons_path}/camera.svg') no-repeat center;
+        height: 100%;
+        top: 0;
+      }
+
+      @include breakpoint-down($xl) {
+        background-position: right center;
+        width: calc(40% - 50px);
+      }
+
+      @include breakpoint-down($md) {
+        width: calc(50% - 60px);
+      }
+    }
+  }
+
+  &__item {
+    counter-increment: section;
+    width: 53%;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 45px;
+    transition: 0.3s;
+
+    @include breakpoint-down($xl) {
+      gap: 45px;
+      width: 65%;
+    }
+
+    @include breakpoint-down($sm) {
+      gap: 30px;
+      width: 100%;
+    }
+
+    @include breakpoint-down($xs) {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    h3 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      color: $blue-dark-400;
+      letter-spacing: -0.5px;
+
+      @include breakpoint-down($xl) {
+        font-size: 22px;
+      }
+    }
+
+    .text {
+      color: $blue-dark-400;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      color: $blue-dark-600;
+      display: block;
+      content: '0' counter(section);
+      font-size: 15px;
+      letter-spacing: -0.3px;
+      font-weight: 400;
+    }
+
+    .svg {
+      flex: 0 0 55px;
+      width: 55px;
+
+      svg {
+        display: block;
+        height: auto;
+        width: 100%;
+      }
+    }
+  }
+
+  &__decor {
+    position: absolute;
+    bottom: -1px;
+    z-index: 1;
+    width: 100%;
+
+    svg {
+      width: 100%;
+    }
+  }
+
+  &__content {
+    margin: auto;
+    max-width: 1350px;
+
+    h2 {
+      letter-spacing: -1.1px;
+
+      @include breakpoint-up($xl) {
+        font-size: 55px;
+      }
+    }
+  }
+
+  &__subtitle {
+    color: $blue-dark-200;
+    font-size: 25px;
+    letter-spacing: -0.5px;
+    line-height: 32px;
+    margin-bottom: 35px;
+    transition: 0.3s;
+
+    @include breakpoint-down($xl) {
+      font-size: 20px;
+      line-height: 30px;
+      margin-bottom: 25px;
+    }
+
+    @include breakpoint-down($lg) {
+      margin-bottom: 20px;
+    }
+
+    @include breakpoint-down($sm) {
+      font-size: 18px;
+      line-height: 25px;
+    }
+  }
+}

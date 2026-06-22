@@ -1,0 +1,30 @@
+uuid: 2791765a-580f-493c-92dd-068e7d1c0962
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.number.field_number
+    - field.field.paragraph.number.field_number_color
+    - paragraphs.paragraphs_type.number
+id: paragraph.number.default
+targetEntityType: paragraph
+bundle: number
+mode: default
+content:
+  field_number:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_number_color:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

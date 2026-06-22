@@ -1,0 +1,24 @@
+uuid: 75127972-5bfb-4521-8834-535a0f2dc2d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - filter.format.basic_html
+    - paragraphs.paragraphs_type.vertical_tabs_new
+  module:
+    - text
+id: paragraph.vertical_tabs_new.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: vertical_tabs_new
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text_long

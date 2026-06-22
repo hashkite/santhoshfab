@@ -1,0 +1,24 @@
+uuid: a9643832-5ae1-4076-9331-1ad8ca1b4834
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - filter.format.basic_html
+    - paragraphs.paragraphs_type.some_cases_studies
+  module:
+    - text
+id: paragraph.some_cases_studies.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: some_cases_studies
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text_long

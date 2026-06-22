@@ -1,0 +1,24 @@
+uuid: eefae907-c618-4ee8-b935-39c260206bf9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - filter.format.basic_html
+    - paragraphs.paragraphs_type.looking_for_a_team
+  module:
+    - text
+id: paragraph.looking_for_a_team.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: looking_for_a_team
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text_long

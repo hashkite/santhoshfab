@@ -1,0 +1,151 @@
+@import '../../../app/styles/functions';
+@import '../../../app/styles/mixins';
+@import '../../../app/styles/variables';
+@import '../../../app/styles/colors';
+
+.view {
+  &__section {
+    background: $gray-300;
+    overflow: hidden;
+    padding: 115px 0;
+    position: relative;
+    transition: 0.3s;
+
+    @include breakpoint-down($lg) {
+      padding: 100px 0;
+    }
+
+    @include breakpoint-down($md) {
+      padding: 70px 0;
+    }
+
+    @include breakpoint-down($sm) {
+      padding: 50px 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    &.--view {
+      &-case_studies-case_studies {
+        background: $gray-50;
+      }
+
+      &-intriguing_perspectives-articles,
+      &-similar_articles-articles {
+        .view__header {
+          display: flex;
+          flex-direction: column;
+          text-align: left;
+
+          &-description {
+            margin: 30px 0 0;
+            text-align: left;
+
+            @include breakpoint-down($xl) {
+              margin-top: 20px;
+            }
+          }
+        }
+      }
+
+      &-all-articles {
+        background: $gray-100;
+        padding: 70px 0 100px;
+
+        @include breakpoint-down($md) {
+          padding: 70px 0;
+        }
+
+        @include breakpoint-down($sm) {
+          padding: 50px 0;
+        }
+      }
+
+      &-block_1-exceptional_talent {
+        background: $gray-50;
+        margin: 50px 0;
+        padding: 0;
+        transition: 0.3s;
+
+        @include breakpoint-down($xxl) {
+          margin: 0;
+        }
+
+        .view__header {
+          margin-bottom: 55px;
+          text-align: left;
+          transition: 0.3s;
+
+          @include breakpoint-down($xxl) {
+            margin-bottom: 35px;
+          }
+        }
+      }
+    }
+
+    &.--style {
+      &-round_top_corner {
+        background: $gray-300;
+        margin-top: -145px;
+        padding: 200px 0 115px;
+        transition: 0.3s;
+
+        @include breakpoint-down($xxl) {
+          padding: 150px 0 100px;
+        }
+
+        .view {
+          &__decor {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+
+            svg {
+              display: block;
+              height: auto;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__header {
+    margin-bottom: 60px;
+    text-align: center;
+    transition: margin 0.3s;
+
+    @include breakpoint-down($lg) {
+      margin-bottom: 50px;
+    }
+
+    @include breakpoint-down($md) {
+      margin-bottom: 30px;
+    }
+
+    &-description {
+      margin: 30px auto 0;
+      max-width: 800px;
+      transition: 0.3s;
+
+      @include breakpoint-down($xxl) {
+        margin-top: 20px;
+      }
+
+      @include breakpoint-down($md) {
+        margin-top: 15px;
+      }
+    }
+  }
+
+  &__case-studies {
+    .view__section {
+      background: $gray-300;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+uuid: 31ef241e-0493-40d7-8ff8-fdc92c2b96aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.table_row.field_cell
+    - paragraphs.paragraphs_type.table_row
+  module:
+    - mck_rest_apis
+id: paragraph.table_row.default
+targetEntityType: paragraph
+bundle: table_row
+mode: default
+content:
+  field_cell:
+    type: mck_react
+    label: hidden
+    settings:
+      format: multiple
+      view_mode: default
+      storage: ''
+      convert: 0
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  extra_field_popup: true

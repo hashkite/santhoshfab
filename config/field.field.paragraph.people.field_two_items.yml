@@ -1,0 +1,118 @@
+uuid: 3abbe20e-c6cb-4592-be70-ccefb1c3b5a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_two_items
+    - paragraphs.paragraphs_type.people
+    - paragraphs.paragraphs_type.person
+  module:
+    - entity_reference_revisions
+id: paragraph.people.field_two_items
+field_name: field_two_items
+entity_type: paragraph
+bundle: people
+label: 'Two items'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      person: person
+    negate: 0
+    target_bundles_drag_drop:
+      business_needs:
+        weight: 31
+        enabled: false
+      business_teaser:
+        weight: 32
+        enabled: false
+      case_studies:
+        weight: 33
+        enabled: false
+      client_impact:
+        weight: 34
+        enabled: false
+      client_impacts:
+        weight: 35
+        enabled: false
+      country:
+        weight: 36
+        enabled: false
+      faq_s:
+        weight: 37
+        enabled: false
+      feedback:
+        weight: 38
+        enabled: false
+      hero:
+        weight: 39
+        enabled: false
+      hero_slide:
+        weight: 40
+        enabled: false
+      hero_slider:
+        weight: 41
+        enabled: false
+      images:
+        weight: 42
+        enabled: false
+      number:
+        weight: 43
+        enabled: false
+      numbers:
+        weight: 44
+        enabled: false
+      office:
+        weight: 45
+        enabled: false
+      offices:
+        weight: 46
+        enabled: false
+      our_clients:
+        weight: 47
+        enabled: false
+      our_footprints:
+        weight: 48
+        enabled: false
+      our_partners:
+        weight: 49
+        enabled: false
+      people:
+        weight: 50
+        enabled: false
+      person:
+        weight: 51
+        enabled: true
+      process:
+        weight: 52
+        enabled: false
+      scrollable_item:
+        weight: 53
+        enabled: false
+      scrollable_items:
+        weight: 54
+        enabled: false
+      tab:
+        weight: 55
+        enabled: false
+      tabs:
+        weight: 56
+        enabled: false
+      talent_insights:
+        weight: 57
+        enabled: false
+      title_with_description:
+        weight: 58
+        enabled: false
+      view:
+        weight: 59
+        enabled: false
+      webform:
+        weight: 60
+        enabled: false
+field_type: entity_reference_revisions

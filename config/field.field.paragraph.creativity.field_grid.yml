@@ -1,0 +1,21 @@
+uuid: 02ea1d96-d458-4e16-b089-0e893b4a500d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_grid
+    - paragraphs.paragraphs_type.creativity
+id: paragraph.creativity.field_grid
+field_name: field_grid
+entity_type: paragraph
+bundle: creativity
+label: 'Box Shadow'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,20 @@
+uuid: 24d30ce5-8729-4a33-9537-b4054e3e0a71
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_linked_in
+  module:
+    - user
+id: user.user.field_linked_in
+field_name: field_linked_in
+entity_type: user
+bundle: user
+label: 'Linked in'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

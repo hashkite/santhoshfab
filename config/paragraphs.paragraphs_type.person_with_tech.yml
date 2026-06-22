@@ -1,0 +1,16 @@
+uuid: 451ed784-512c-43e0-b481-8e17e952ed1c
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_ee
+third_party_settings:
+  paragraphs_ee:
+    paragraphs_categories:
+      service: service
+id: person_with_tech
+label: 'Person with Tech'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

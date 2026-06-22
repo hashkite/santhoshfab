@@ -1,0 +1,17 @@
+uuid: e68498d2-6953-43e8-a441-484ceeb91989
+langcode: en
+status: true
+dependencies: {  }
+id: faq_s
+label: "FAQ's talent"
+token: false
+context:
+  show_warning: true
+  group:
+    language: false
+  fallback:
+    language: ''
+menu:
+  path: ''
+  weight: 0
+  description: ''

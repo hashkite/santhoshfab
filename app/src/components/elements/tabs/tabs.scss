@@ -1,0 +1,250 @@
+@import '../../../app/styles/functions';
+@import '../../../app/styles/mixins';
+@import '../../../app/styles/variables';
+@import '../../../app/styles/colors';
+
+.tabs {
+  &__block {
+    align-items: flex-start;
+    display: flex;
+
+    @include breakpoint-down($sm) {
+      flex-direction: column;
+    }
+  }
+
+  &-block {
+    &__nav {
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+      position: relative;
+      width: 30%;
+
+      @include breakpoint-down($sm) {
+        border-bottom: 1px solid rgba($gray-100, 0.2);
+        flex-direction: row;
+        overflow: auto;
+        width: 100%;
+      }
+
+      &::after {
+        background: rgba($gray-100, 0.2);
+        content: '';
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 1px;
+
+        @include breakpoint-down($sm) {
+          display: none;
+        }
+      }
+    }
+
+    &__content {
+      padding: 10px 0 0 190px;
+      position: relative;
+      transition: 0.3s;
+      width: 70%;
+
+      @include breakpoint-down($xxl) {
+        padding-left: 150px;
+      }
+
+      @include breakpoint-down($md) {
+        padding: 0 0 0 70px;
+      }
+
+      @include breakpoint-down($sm) {
+        padding: 30px 0 0;
+        width: 100%;
+      }
+    }
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+  }
+
+  &-nav__item {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    gap: 90px;
+    position: relative;
+    transition: 0.3s;
+
+    &::before {
+      background: $brand-blue;
+      border-radius: 1px;
+      content: '';
+      height: 0;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transition: 0.3s 0.2s;
+      width: 1px;
+      z-index: 1;
+
+      @include breakpoint-down($sm) {
+        height: 0;
+        top: auto;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+      }
+    }
+
+    &::after {
+      background: $brand-blue;
+      border-radius: 1px;
+      content: '';
+      height: 1px;
+      opacity: 0;
+      margin: auto;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      transition: 0.3s;
+      width: 0;
+      z-index: 1;
+    }
+
+    &-image {
+      border-radius: 100%;
+      height: 57px;
+      position: relative;
+      width: 57px;
+
+      img {
+        display: block;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
+      }
+
+      &::before {
+        background: $white;
+        content: '';
+        height: 28px;
+        margin: auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: -44px;
+        width: 1px;
+      }
+    }
+
+    &-title {
+      h3 {
+        color: rgba($white, 0.6);
+        font-size: 25px;
+        font-weight: 400;
+        letter-spacing: 0;
+        margin: 0;
+        transition: 0.3s;
+
+        @include breakpoint-down($md) {
+          font-size: 20px;
+        }
+
+        @include breakpoint-down($sm) {
+          font-size: 17px;
+          letter-spacing: normal;
+          white-space: nowrap;
+        }
+      }
+    }
+
+    &:hover {
+      .tabs-nav__item {
+        &-title h3 {
+          color: $white;
+        }
+      }
+    }
+
+    &.selected {
+      &::before {
+        height: 100%;
+        opacity: 1;
+        transition: 0.3s;
+
+        @include breakpoint-down($sm) {
+          height: 1px;
+          width: 100%;
+        }
+      }
+
+      &::after {
+        opacity: 1;
+        transition: 0.3s 0.2s;
+        width: 40px;
+      }
+
+      .tabs-nav__item {
+        &-image {
+          &::before {
+            background: $brand-blue;
+          }
+        }
+
+        &-title h3 {
+          color: $white;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  &-item {
+    &__header {
+      align-items: center;
+      display: flex;
+      gap: 54px;
+    }
+
+    &-header {
+      &__image {
+        border-radius: 100%;
+        height: 133px;
+        width: 133px;
+
+        img {
+          display: block;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          width: 100%;
+        }
+      }
+
+      &__cnt {
+        .subtitle {
+          margin-bottom: 5px;
+        }
+
+        h3 {
+          color: $white;
+          font-size: 30px;
+          letter-spacing: -1.5px;
+          margin: 0;
+        }
+      }
+    }
+
+    &__cnt {
+      font-size: 22px;
+      line-height: 37px;
+      max-width: 760px;
+    }
+  }
+}

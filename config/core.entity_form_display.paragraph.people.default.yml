@@ -1,0 +1,45 @@
+uuid: 3b2d22a4-396e-4065-96b2-594572ef7627
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.people.field_image
+    - field.field.paragraph.people.field_two_items
+    - paragraphs.paragraphs_type.people
+  module:
+    - media_library
+    - paragraphs
+id: paragraph.people.default
+targetEntityType: paragraph
+bundle: people
+mode: default
+content:
+  field_image:
+    type: media_library_widget
+    weight: 0
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_two_items:
+    type: paragraphs
+    weight: 1
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

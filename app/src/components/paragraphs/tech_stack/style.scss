@@ -1,0 +1,194 @@
+@import '../../../app/styles/functions';
+@import '../../../app/styles/mixins';
+@import '../../../app/styles/variables';
+@import '../../../app/styles/colors';
+
+.tech-stack-section {
+  background: #f7f8fa;
+  padding: 64px 0;
+  .container {
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0;
+  }
+  .tech-stack__left {
+    flex: 1.1;
+    padding-right: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    @include breakpoint-down($md) {
+      padding-right: 0;
+      align-items: center;
+      text-align: center;
+    }
+    .tech-stack__title {
+      text-transform: uppercase;
+      font-size: 15px;
+      color: #888;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      margin-bottom: 12px;
+    }
+    .tech-stack__subtitle {
+      font-size: 2.3rem;
+      font-weight: 700;
+      color: #181818;
+      margin-bottom: 8px;
+    }
+    .tech-stack__desc {
+      font-size: 1.1rem;
+      color: #888;
+      margin-bottom: 18px;
+    }
+    .tech-stack__cta {
+      color: #ff6b3d;
+      font-size: 1.08rem;
+      font-weight: 500;
+      text-decoration: none;
+      border-bottom: 2px solid #ff6b3d;
+      padding-bottom: 2px;
+      margin-top: 18px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.18s;
+      &:hover {
+        color: #ff4a1a;
+        border-bottom-color: #ff4a1a;
+      }
+      .tech-stack__cta-arrow {
+        font-size: 1.2em;
+        margin-left: 2px;
+      }
+    }
+  }
+  .tech-stack__right {
+    flex: 1.2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    .tech-stack__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 0;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: visible;
+  min-width: 480px;
+  min-height: 240px;
+      @include breakpoint-down($md) {
+        min-width: 0;
+        min-height: 0;
+      }
+      .tech-stack__grid-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 32px 18px 18px 18px;
+        min-width: 120px;
+        min-height: 100px;
+        background: none;
+        position: relative;
+        border-right: none;
+        border-bottom: none;
+      }
+      .tech-stack__icon-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: 48px;
+        margin-bottom: 10px;
+      }
+      .tech-stack__icon-label {
+        display: none;
+      }
+      .tech-stack__grid-item--more {
+        .tech-stack__icon-label--more {
+          color: #181818;
+          font-size: 1.08rem;
+          font-weight: 600;
+          text-decoration: underline;
+          cursor: pointer;
+          margin-top: 24px;
+          letter-spacing: 0.01em;
+        }
+        .tech-stack__icon {
+          display: none;
+        }
+      }
+      // Only fade grid lines at the outer edges
+      // Horizontal lines: only for rows except last, fade in at left of first, fade out at right of last
+      .tech-stack__grid-item:not(:nth-last-child(-n+3))::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 1px;
+        pointer-events: none;
+        background: #e0e0e0;
+      }
+      .tech-stack__grid-item:nth-child(1)::after,
+      .tech-stack__grid-item:nth-child(4)::after {
+        background: linear-gradient(to right, rgba(224,224,224,0) 0%, #e0e0e0 18%, #e0e0e0 100%);
+      }
+      .tech-stack__grid-item:nth-child(3)::after,
+      .tech-stack__grid-item:nth-child(6)::after {
+        background: linear-gradient(to right, #e0e0e0 0%, #e0e0e0 82%, rgba(224,224,224,0) 100%);
+      }
+      // Vertical lines: only for columns except last, fade in at top of first row, fade out at bottom of last row
+      .tech-stack__grid-item:not(:nth-child(3n))::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 1px;
+        pointer-events: none;
+        background: #e0e0e0;
+      }
+      .tech-stack__grid-item:nth-child(-n+3):not(:nth-child(3n))::before {
+        background: linear-gradient(to bottom, rgba(224,224,224,0) 0%, #e0e0e0 18%, #e0e0e0 100%);
+      }
+      .tech-stack__grid-item:nth-child(n+4):not(:nth-child(3n))::before {
+        background: linear-gradient(to bottom, #e0e0e0 0%, #e0e0e0 82%, rgba(224,224,224,0) 100%);
+      }
+
+      .tech-stack__see-more-btn {
+        background: none;
+        border: none;
+        color: #181818;
+        font-size: 1.08rem;
+        font-weight: 600;
+        text-decoration: underline;
+        cursor: pointer;
+        margin-top: 12px;
+        padding: 0;
+        letter-spacing: 0.01em;
+        transition: color 0.18s;
+      }
+      .tech-stack__see-more-btn:hover {
+        color: #ff6b3d;
+      }
+      .tech-stack__icon {
+        width: 64px;
+        height: 64px;
+        object-fit: contain;
+        display: block;
+        filter: grayscale(1) brightness(0.8) contrast(1.1);
+        transition: filter 0.3s;
+      }
+      .tech-stack__grid-item:hover .tech-stack__icon {
+        filter: none;
+      }
+    }
+  }
+}

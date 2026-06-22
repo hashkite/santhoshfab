@@ -1,0 +1,39 @@
+uuid: 0d454906-011f-4f64-8268-ce93c1cff2db
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tab_with_paragraphs.field_paragraphs
+    - field.field.paragraph.tab_with_paragraphs.field_title
+    - paragraphs.paragraphs_type.tab_with_paragraphs
+  module:
+    - mck_rest_apis
+id: paragraph.tab_with_paragraphs.default
+targetEntityType: paragraph
+bundle: tab_with_paragraphs
+mode: default
+content:
+  field_paragraphs:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  extra_field_popup: true

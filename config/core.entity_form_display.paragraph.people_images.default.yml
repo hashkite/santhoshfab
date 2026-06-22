@@ -1,0 +1,32 @@
+uuid: 49b080b8-6e03-4849-a6a7-46f9ef67b089
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.people_images.field_background_image
+    - field.field.paragraph.people_images.field_logos
+    - paragraphs.paragraphs_type.people_images
+  module:
+    - media_library
+id: paragraph.people_images.default
+targetEntityType: paragraph
+bundle: people_images
+mode: default
+content:
+  field_background_image:
+    type: media_library_widget
+    weight: 1
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_logos:
+    type: media_library_widget
+    weight: 2
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

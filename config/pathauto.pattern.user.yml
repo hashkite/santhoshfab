@@ -1,0 +1,14 @@
+uuid: 1e09061a-0254-4496-96af-d06ba62f8d36
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user
+label: User
+type: 'canonical_entities:user'
+pattern: '/talent-profile/[user:account-name]'
+selection_criteria: {  }
+selection_logic: and
+weight: 0
+relationships: {  }

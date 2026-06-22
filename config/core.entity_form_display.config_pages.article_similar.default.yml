@@ -1,0 +1,33 @@
+uuid: 154567eb-276f-4d2f-a56c-d64607c101a6
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.article_similar
+    - field.field.config_pages.article_similar.field_description
+    - field.field.config_pages.article_similar.field_multicolor_title
+  module:
+    - text
+id: config_pages.article_similar.default
+targetEntityType: config_pages
+bundle: article_similar
+mode: default
+content:
+  field_description:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_multicolor_title:
+    type: text_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  label: true

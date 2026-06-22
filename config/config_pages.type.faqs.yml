@@ -1,0 +1,17 @@
+uuid: 7ad89f6f-83c3-4eef-8874-d9a736b4ff8d
+langcode: en
+status: true
+dependencies: {  }
+id: faqs
+label: "FAQ's sub service"
+token: false
+context:
+  show_warning: true
+  group:
+    language: false
+  fallback:
+    language: ''
+menu:
+  path: ''
+  weight: 0
+  description: ''

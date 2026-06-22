@@ -1,0 +1,156 @@
+@import '../../../app/styles/functions';
+@import '../../../app/styles/mixins';
+@import '../../../app/styles/variables';
+@import '../../../app/styles/colors';
+
+.our-capabilities {
+  &__section {
+    padding: 115px 0 150px;
+    transition: padding 0.3s;
+
+    @include breakpoint-down($xxl) {
+      padding: 110px 0;
+    }
+
+    @include breakpoint-down($lg) {
+      padding: 90px 0;
+    }
+
+    @include breakpoint-down($md) {
+      padding: 70px 0;
+    }
+  }
+
+  &__header {
+    margin-bottom: 70px;
+    transition: 0.3s;
+
+    @include breakpoint-down($xxl) {
+      margin-bottom: 50px;
+    }
+
+    @include breakpoint-down($md) {
+      margin-bottom: 35px;
+    }
+
+    h2 {
+      color: $blue-dark-400;
+      letter-spacing: -0.9px;
+      margin-bottom: 35px;
+
+      @include breakpoint-down($xl) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__description {
+    color: $blue-dark-600;
+  }
+
+  &__list {
+    display: grid;
+    gap: 30px 75px;
+    grid-template-columns: repeat(2, 1fr);
+    padding-right: 35px;
+
+    @include breakpoint-down($xxl) {
+      gap: 20px 50px;
+    }
+
+    @include breakpoint-down($xl) {
+      gap: 15px 25px;
+    }
+
+    @include breakpoint-down($sm) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    &-col {
+      border-right: 1px solid $gray-400;
+
+      @include breakpoint-down($md) {
+        border-right: none;
+      }
+    }
+  }
+
+  &__techs {
+    display: grid;
+    gap: 9px 20px;
+    grid-template-columns: repeat(5, 1fr);
+    transition: .3s;
+
+    @include breakpoint-down($xxl) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include breakpoint-down($xl) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include breakpoint-down($md) {
+      grid-template-columns: repeat(5, 1fr);
+    }
+
+    @include breakpoint-down($sm) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include breakpoint-down($xs) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &-col {
+      &[class*='col'] {
+        padding-left: 50px;
+        transition: .3s;
+
+        @include breakpoint-down($md) {
+          margin-top: 30px;
+          padding-left: 0;
+        }
+      }
+
+      h3 {
+        margin-bottom: 0;
+        padding-bottom: 28px;
+        border-bottom: 1px solid $gray-400;
+        margin-bottom: 9px;
+      }
+    }
+  }
+
+  &__tech {
+    &-item {
+      text-align: center;
+      height: 100px;
+      box-shadow: rgba(0, 0, 0, 0.05) 0 0 0 1px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 5px 5px 5px 0;
+
+      picture {
+        width: 50px;
+        height: 35px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          max-height: 100%;
+          object-fit: contain;
+          width: auto;
+          min-height: 25px;
+        }
+      }
+    }
+  }
+}

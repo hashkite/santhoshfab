@@ -1,0 +1,84 @@
+@import '../../../app/styles/functions';
+@import '../../../app/styles/mixins';
+@import '../../../app/styles/variables';
+@import '../../../app/styles/colors';
+
+.our-capabilities {
+  &__item {
+    align-items: flex-start;
+    border-bottom: 1px solid $gray-400;
+    color: $blue-dark-400;
+    display: flex;
+    gap: 30px;
+    padding: 0 0 25px 20px;
+    position: relative;
+    text-decoration: none;
+    transition: 0.3s;
+
+    @include breakpoint-down($xxl) {
+      gap: 20px;
+      padding: 15px 0 15px 15px;
+    }
+
+    @include breakpoint-down($xl) {
+      padding-top: 0;
+    }
+
+    @include breakpoint-down($sm) {
+      gap: 15px;
+      padding: 0 0 10px 15px;
+    }
+
+    &[href]:hover {
+      border-color: $purple-200;
+      color: $purple-200;
+      text-decoration: none;
+    }
+
+    .text {
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: -0.4px;
+      line-height: 25px;
+      transition: 0.3s;
+      flex: 1 0 0%;
+
+      &:before{
+        content: "";
+        width: 7px;
+        height: 7px;
+        background: black;
+        border-radius: 50%;
+        position: absolute;
+        top: 9px;
+        left: 0;
+      }
+
+      @include breakpoint-down($xxl) {
+        font-size: 18px;
+      }
+
+      @include breakpoint-down($sm) {
+        font-size: 16px;
+        line-height: 22px;
+      }
+    }
+
+    .img {
+      width: 35px;
+      flex: 0 0 35px;
+      display: flex;
+      align-items: center;
+    }
+
+    .icon {
+      margin-left: auto;
+      width: 16px;
+      flex: 0 0 16px;
+
+      svg {
+        min-width: 16px;
+      }
+    }
+  }
+}

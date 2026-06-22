@@ -1,0 +1,24 @@
+uuid: 67d098b5-85c6-4b1b-8122-47f305e7bc44
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_multicolor_title
+    - filter.format.full_html
+    - paragraphs.paragraphs_type.top_companies
+  module:
+    - text
+id: paragraph.top_companies.field_multicolor_title
+field_name: field_multicolor_title
+entity_type: paragraph
+bundle: top_companies
+label: 'Multicolor title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

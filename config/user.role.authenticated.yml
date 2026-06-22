@@ -1,0 +1,72 @@
+uuid: a390a31c-a5f2-430c-99a1-ce60ba5bb0e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+    - filter.format.webform_default
+    - media.type.image
+    - rest.resource.fetch_config_pages_info
+    - rest.resource.fetch_menu
+    - rest.resource.fetch_node_info
+    - rest.resource.fetch_node_list
+    - rest.resource.fetch_node_popup
+    - rest.resource.fetch_terms_info
+    - rest.resource.fetch_user_info
+    - rest.resource.fetch_users_list
+    - rest.resource.search_by_partners
+    - rest.resource.search_by_tag
+    - rest.resource.search_by_view
+    - rest.resource.simple_news_subscribe
+    - rest.resource.webform_rest_submit
+  module:
+    - comment
+    - contact
+    - file
+    - filter
+    - media
+    - rest
+    - search
+    - shortcut
+    - simplenews
+    - statistics
+    - system
+_core:
+  default_config_hash: cFrlqjtkTfvY3RGccjJkPf1SGIfJ942IrxTLWAO4mgA
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access shortcuts'
+  - 'access site-wide contact form'
+  - 'access user profiles'
+  - 'create image media'
+  - 'delete own files'
+  - 'delete own image media'
+  - 'edit own image media'
+  - 'post comments'
+  - 'restful get fetch_config_pages_info'
+  - 'restful get fetch_menu'
+  - 'restful get fetch_node_info'
+  - 'restful get fetch_node_list'
+  - 'restful get fetch_node_popup'
+  - 'restful get fetch_terms_info'
+  - 'restful get fetch_user_info'
+  - 'restful get fetch_users_list'
+  - 'restful get search_by_partners'
+  - 'restful get search_by_tag'
+  - 'restful get search_by_view'
+  - 'restful post simple_news_subscribe'
+  - 'restful post webform_rest_submit'
+  - 'search content'
+  - 'skip comment approval'
+  - 'subscribe to newsletters'
+  - 'update media'
+  - 'use text format basic_html'
+  - 'use text format webform_default'
+  - 'view media'
+  - 'view post access counter'
+  - 'view the administration theme'

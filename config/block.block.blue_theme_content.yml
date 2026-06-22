@@ -1,0 +1,22 @@
+uuid: dd5ca8a1-22cb-4bdb-912b-dbc267c0101b
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - blue_theme
+_core:
+  default_config_hash: a0Yyx1GeyKarZ4T_yXQBR_ZFKnXiFLtxAb6gWLd8nr0
+id: blue_theme_content
+theme: blue_theme
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,17 @@
+uuid: 7456c9c1-69a4-405a-86fb-ac7b6be9fa98
+langcode: en
+status: true
+dependencies: {  }
+id: article_similar
+label: 'Article Similar'
+token: false
+context:
+  show_warning: true
+  group:
+    language: false
+  fallback:
+    language: ''
+menu:
+  path: ''
+  weight: 0
+  description: ''

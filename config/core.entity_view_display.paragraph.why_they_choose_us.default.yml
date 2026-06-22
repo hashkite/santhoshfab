@@ -1,0 +1,63 @@
+uuid: 5007f58d-ce07-4868-a6e4-d0a706c7c5bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.why_they_choose_us.field_description
+    - field.field.paragraph.why_they_choose_us.field_image
+    - field.field.paragraph.why_they_choose_us.field_multicolor_title
+    - field.field.paragraph.why_they_choose_us.field_paragraphs
+    - paragraphs.paragraphs_type.why_they_choose_us
+  module:
+    - mck_rest_apis
+id: paragraph.why_they_choose_us.default
+targetEntityType: paragraph
+bundle: why_they_choose_us
+mode: default
+content:
+  field_description:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_image:
+    type: mck_react
+    label: hidden
+    settings:
+      format: media
+      view_mode: default
+      convert: '1'
+      storage: media
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_multicolor_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_paragraphs:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  extra_field_popup: true

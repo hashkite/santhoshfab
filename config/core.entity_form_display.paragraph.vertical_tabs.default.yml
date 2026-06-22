@@ -1,0 +1,27 @@
+uuid: 4b7bbf22-7f49-4323-87be-0067b4ee7db3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.vertical_tabs.field_multicolor_title
+    - field.field.paragraph.vertical_tabs.field_view
+    - paragraphs.paragraphs_type.vertical_tabs
+  module:
+    - text
+id: paragraph.vertical_tabs.default
+targetEntityType: paragraph
+bundle: vertical_tabs
+mode: default
+content:
+  field_multicolor_title:
+    type: text_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_view: true
+  status: true

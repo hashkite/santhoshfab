@@ -1,0 +1,131 @@
+uuid: b4716660-bfd9-40cf-bbd3-1d27c32471b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.comparison_table.field_cells
+    - field.field.paragraph.comparison_table.field_columns
+    - field.field.paragraph.comparison_table.field_cta
+    - field.field.paragraph.comparison_table.field_description
+    - field.field.paragraph.comparison_table.field_rows
+    - field.field.paragraph.comparison_table.field_subtitle
+    - field.field.paragraph.comparison_table.field_title
+    - paragraphs.paragraphs_type.comparison_table
+  module:
+    - field_group
+    - link
+    - paragraphs
+    - text
+third_party_settings:
+  field_group:
+    group_table:
+      children:
+        - field_rows
+        - field_columns
+        - field_cells
+      label: Table
+      region: content
+      parent_name: ''
+      weight: 3
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+id: paragraph.comparison_table.default
+targetEntityType: paragraph
+bundle: comparison_table
+mode: default
+content:
+  field_cells:
+    type: paragraphs
+    weight: 9
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      features:
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+  field_columns:
+    type: paragraphs
+    weight: 8
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      features:
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+  field_cta:
+    type: link_default
+    weight: 4
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_description:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_rows:
+    type: paragraphs
+    weight: 7
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      features:
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+  field_subtitle:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

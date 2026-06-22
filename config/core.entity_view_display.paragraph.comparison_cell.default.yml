@@ -1,0 +1,51 @@
+uuid: e3b12130-85ef-448e-9081-ecfe22aa215c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.comparison_cell.field_comparison_columns
+    - field.field.paragraph.comparison_cell.field_comparison_rows
+    - field.field.paragraph.comparison_cell.field_value
+    - paragraphs.paragraphs_type.comparison_cell
+  module:
+    - mck_rest_apis
+id: paragraph.comparison_cell.default
+targetEntityType: paragraph
+bundle: comparison_cell
+mode: default
+content:
+  field_comparison_columns:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: paragraph
+      convert: 0
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_comparison_rows:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: paragraph
+      convert: 0
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_value:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  extra_field_popup: true

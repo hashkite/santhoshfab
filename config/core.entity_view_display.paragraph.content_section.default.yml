@@ -1,0 +1,75 @@
+uuid: 4a94c6c5-ad25-48a0-9025-af2c1e89251d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.content_section.field_description
+    - field.field.paragraph.content_section.field_image
+    - field.field.paragraph.content_section.field_multicolor_title
+    - field.field.paragraph.content_section.field_testimonial
+    - field.field.paragraph.content_section.field_title
+    - paragraphs.paragraphs_type.content_section
+  module:
+    - mck_rest_apis
+id: paragraph.content_section.default
+targetEntityType: paragraph
+bundle: content_section
+mode: default
+content:
+  field_description:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_image:
+    type: mck_react
+    label: hidden
+    settings:
+      format: media
+      view_mode: default
+      convert: '1'
+      storage: media
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_multicolor_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_testimonial:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: paragraph
+      convert: 0
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  extra_field_popup: true

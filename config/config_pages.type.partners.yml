@@ -1,0 +1,17 @@
+uuid: a1e47342-dd24-41cb-9a2b-c473c66e9e8c
+langcode: en
+status: true
+dependencies: {  }
+id: partners
+label: Partners
+token: false
+context:
+  show_warning: true
+  group:
+    language: false
+  fallback:
+    language: ''
+menu:
+  path: ''
+  weight: 0
+  description: ''

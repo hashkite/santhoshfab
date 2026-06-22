@@ -1,0 +1,24 @@
+uuid: 32b507ae-c584-4cd3-9e9f-ffdb1bddcdba
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - filter.format.basic_html
+    - paragraphs.paragraphs_type.work_experience
+  module:
+    - text
+id: paragraph.work_experience.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: work_experience
+label: 'Work description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text_long

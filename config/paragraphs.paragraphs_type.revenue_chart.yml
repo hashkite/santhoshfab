@@ -1,0 +1,10 @@
+uuid: 4a25cdd8-bd4c-40b8-a75c-239aba08aa99
+langcode: en
+status: true
+dependencies: {  }
+id: revenue_chart
+label: 'Revenue Growth Chart'
+icon_uuid: null
+icon_default: null
+description: 'Displays an interactive revenue growth chart.'
+behavior_plugins: {  }

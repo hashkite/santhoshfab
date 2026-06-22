@@ -1,0 +1,33 @@
+uuid: 22cd1d1e-622f-4674-9253-c4f52b4a3333
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.brands_images.field_brand_logos
+    - field.field.paragraph.brands_images.field_heading
+    - paragraphs.paragraphs_type.brands_images
+  module:
+    - media_library
+id: paragraph.brands_images.default
+targetEntityType: paragraph
+bundle: brands_images
+mode: default
+content:
+  field_brand_logos:
+    type: media_library_widget
+    weight: 1
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_heading:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

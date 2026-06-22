@@ -1,0 +1,23 @@
+uuid: 93cb31dc-03f8-44dc-88dc-825d11941bf2
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.services
+  module:
+    - taxonomy
+id: service
+label: Service
+type: 'canonical_entities:taxonomy_term'
+pattern: '/services/[term:name]'
+selection_criteria:
+  0a7332dd-d6ec-45ec-9d54-eb3946632d97:
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      services: services
+selection_logic: and
+weight: -5
+relationships: {  }

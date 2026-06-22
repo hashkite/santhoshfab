@@ -1,0 +1,24 @@
+uuid: f55c9ce9-8e56-4d7b-9bb7-f75547f7a1aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_multicolor_title
+    - filter.format.full_html
+    - paragraphs.paragraphs_type.some_cases_studies
+  module:
+    - text
+id: paragraph.some_cases_studies.field_multicolor_title
+field_name: field_multicolor_title
+entity_type: paragraph
+bundle: some_cases_studies
+label: 'Multicolor title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

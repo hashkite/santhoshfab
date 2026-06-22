@@ -1,0 +1,58 @@
+{
+  "name": "app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "prebuild": "rm -rf ../web/themes/custom/blue_theme/css/main.css ../web/themes/custom/blue_theme/js/main.js ../web/media",
+    "postbuild": "npm run copy-files && npm run sass:build",
+    "sass:watch": "sass --watch src/app/styles/hire.scss:../web/themes/custom/blue_theme/css/hire.css",
+    "sass:build": "sass src/app/styles/hire.scss:../web/themes/custom/blue_theme/css/hire.css --style compressed",
+    "copy-files": "cp dist/assets/css/index.css ../web/themes/custom/blue_theme/css/main.css && cp dist/assets/js/index.js ../web/themes/custom/blue_theme/js/main.js && cp -R dist/media ../web/media",
+    "preview": "vite preview",
+    "lint": "eslint . --fix --max-warnings=0",
+    "format": "npx prettier --write ."
+  },
+  "dependencies": {
+    "@brightcove/react-player-loader": "^1.4.1",
+    "@gsap/react": "^2.1.0",
+    "axios": "^1.3.5",
+    "classnames": "^2.5.1",
+    "compose-function": "^3.0.3",
+    "gsap": "^3.12.5",
+    "html-react-parser": "^3.0.16",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-ga4": "^2.1.0",
+    "react-google-recaptcha-v3": "^1.10.1",
+    "react-helmet": "^6.1.0",
+    "react-lazy-load-image-component": "^1.6.0",
+    "react-query": "^3.39.3",
+    "react-router": "^6.10.0",
+    "react-router-dom": "^6.10.0",
+    "react-share": "^5.0.3",
+    "react-transition-group": "^4.4.5",
+    "sass": "^1.61.0",
+    "swiper": "^10.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@vitejs/plugin-react": "^3.1.0",
+    "eslint": "^8.41.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "lint-staged": "^13.2.2",
+    "prettier": "^2.8.7",
+    "vite": "^4.2.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx,scss,css,md}": "npx prettier --write",
+    "*.{js,jsx}": "eslint --cache --fix"
+  }
+}

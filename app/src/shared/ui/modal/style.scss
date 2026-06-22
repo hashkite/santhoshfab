@@ -1,0 +1,98 @@
+@import 'src/app/styles/functions';
+@import 'src/app/styles/mixins';
+@import 'src/app/styles/variables';
+
+//add modal animation
+@keyframes modal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modal-content-in {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes modal-content-out {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+}
+
+.custom-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #00000059;
+  backdrop-filter: blur(15px);
+  overflow: auto;
+  animation: modal 0.3s ease-in-out;
+  padding: 1.5rem;
+
+  @include breakpoint-down($md) {
+    align-items: start;
+    padding: 1.5rem 0.6rem;
+  }
+
+  @media (max-height: $xl) {
+    align-items: start;
+    padding: 1.5rem 0.6rem;
+  }
+
+  .modal__content {
+    background-color: #fff;
+    padding: 2rem 3rem 0 3rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 25px 0 var(--color-gray-ultra-light);
+    position: relative;
+    animation: modal-content-in 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+
+    @include breakpoint-down($md) {
+      align-items: start;
+      padding: 2rem 1.5rem 2rem;
+    }
+
+    .modal__close {
+      position: absolute;
+      top: 36px;
+      right: 16px;
+      cursor: pointer;
+      z-index: 1;
+
+      @include breakpoint-down($md) {
+        top: 5px;
+        right: 5px;
+      }
+    }
+  }
+
+  p a {
+    color: var(--color-primary);
+  }
+}
+
+.fade-in-out.exiting .modal__content {
+  animation: modal-content-out 0.3s ease-in-out;
+}

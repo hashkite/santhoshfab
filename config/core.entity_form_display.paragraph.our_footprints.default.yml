@@ -1,0 +1,90 @@
+uuid: 0b30804d-7b0a-4fb6-a55b-80a64154fe3a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.our_footprints.field_description
+    - field.field.paragraph.our_footprints.field_link
+    - field.field.paragraph.our_footprints.field_media
+    - field.field.paragraph.our_footprints.field_multicolor_title
+    - field.field.paragraph.our_footprints.field_tags
+    - field.field.paragraph.our_footprints.field_top_title
+    - field.field.paragraph.our_footprints.field_two_paragraphs
+    - paragraphs.paragraphs_type.our_footprints
+  module:
+    - autocomplete_deluxe
+    - link_attributes
+    - media_library
+    - text
+id: paragraph.our_footprints.default
+targetEntityType: paragraph
+bundle: our_footprints
+mode: default
+content:
+  field_description:
+    type: text_textarea
+    weight: 4
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_link:
+    type: link_attributes
+    weight: 5
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      enabled_attributes:
+        id: false
+        name: false
+        target: true
+        rel: true
+        class: true
+        accesskey: false
+      widget_default_open: expandIfValuesSet
+    third_party_settings: {  }
+  field_media:
+    type: media_library_widget
+    weight: 2
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_multicolor_title:
+    type: text_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_tags:
+    type: autocomplete_deluxe
+    weight: 3
+    region: content
+    settings:
+      match_operator: CONTAINS
+      autocomplete_route_name: autocomplete_deluxe.autocomplete
+      size: 60
+      selection_handler: default
+      limit: 10
+      min_length: 0
+      delimiter: ''
+      not_found_message_allow: false
+      not_found_message: "The term '@term' will be added"
+      no_empty_message: 'No terms could be found. Please type in order to add a new term.'
+    third_party_settings: {  }
+  field_top_title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_two_paragraphs: true
+  status: true

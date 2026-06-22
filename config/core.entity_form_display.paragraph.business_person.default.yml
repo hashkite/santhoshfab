@@ -1,0 +1,80 @@
+uuid: ccfa83fb-1f0c-414c-bef9-f47969adbc69
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.business_person.field_description
+    - field.field.paragraph.business_person.field_image
+    - field.field.paragraph.business_person.field_link
+    - field.field.paragraph.business_person.field_linked_in
+    - field.field.paragraph.business_person.field_subtitle
+    - field.field.paragraph.business_person.field_title
+    - paragraphs.paragraphs_type.business_person
+  module:
+    - link
+    - link_attributes
+    - media_library
+    - text
+id: paragraph.business_person.default
+targetEntityType: paragraph
+bundle: business_person
+mode: default
+content:
+  field_description:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_image:
+    type: media_library_widget
+    weight: 1
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_link:
+    type: link_attributes
+    weight: 4
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      enabled_attributes:
+        id: false
+        name: false
+        target: true
+        rel: true
+        class: true
+        accesskey: false
+      widget_default_open: expandIfValuesSet
+    third_party_settings: {  }
+  field_linked_in:
+    type: link_default
+    weight: 5
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_subtitle:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

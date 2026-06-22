@@ -1,0 +1,24 @@
+uuid: 385d6f42-de87-4073-be19-3702e0affa7d
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.case_studies
+    - field.storage.config_pages.field_multicolor_title
+    - filter.format.full_html
+  module:
+    - text
+id: config_pages.case_studies.field_multicolor_title
+field_name: field_multicolor_title
+entity_type: config_pages
+bundle: case_studies
+label: 'Multicolor title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

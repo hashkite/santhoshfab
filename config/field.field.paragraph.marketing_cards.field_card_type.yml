@@ -1,0 +1,21 @@
+uuid: af3d2f47-0c83-4bba-987c-fdb2ced545b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_card_type
+    - paragraphs.paragraphs_type.marketing_cards
+  module:
+    - options
+id: paragraph.marketing_cards.field_card_type
+field_name: field_card_type
+entity_type: paragraph
+bundle: marketing_cards
+label: 'Card Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

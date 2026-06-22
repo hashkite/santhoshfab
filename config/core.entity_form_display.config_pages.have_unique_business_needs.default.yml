@@ -1,0 +1,51 @@
+uuid: 1bd1aa9f-e7ab-4c59-bced-583de87f36d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.have_unique_business_needs
+    - field.field.config_pages.have_unique_business_needs.field_description
+    - field.field.config_pages.have_unique_business_needs.field_link
+    - field.field.config_pages.have_unique_business_needs.field_multicolor_title
+  module:
+    - link_attributes
+    - text
+id: config_pages.have_unique_business_needs.default
+targetEntityType: config_pages
+bundle: have_unique_business_needs
+mode: default
+content:
+  field_description:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_link:
+    type: link_attributes
+    weight: 4
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      enabled_attributes:
+        id: false
+        name: false
+        target: true
+        rel: true
+        class: true
+        accesskey: false
+      widget_default_open: expandIfValuesSet
+    third_party_settings: {  }
+  field_multicolor_title:
+    type: text_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  label: true

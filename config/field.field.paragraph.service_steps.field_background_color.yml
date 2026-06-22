@@ -1,0 +1,25 @@
+uuid: ea78ee51-bbc2-4880-b731-7bcb0d48683c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_background_color
+    - paragraphs.paragraphs_type.service_steps
+  module:
+    - color_field
+id: paragraph.service_steps.field_background_color
+field_name: field_background_color
+entity_type: paragraph
+bundle: service_steps
+label: 'Background Color'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    color: '#f6f6f6'
+    opacity: 0.78
+default_value_callback: ''
+settings:
+  opacity: 1
+field_type: color_field_type

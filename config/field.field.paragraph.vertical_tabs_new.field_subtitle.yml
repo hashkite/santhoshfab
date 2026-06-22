@@ -1,0 +1,19 @@
+uuid: 02b1fa52-a896-4fc6-81c7-4da94f2df02e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_subtitle
+    - paragraphs.paragraphs_type.vertical_tabs_new
+id: paragraph.vertical_tabs_new.field_subtitle
+field_name: field_subtitle
+entity_type: paragraph
+bundle: vertical_tabs_new
+label: 'Sidebar title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

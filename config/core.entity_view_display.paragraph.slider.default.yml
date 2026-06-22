@@ -1,0 +1,87 @@
+uuid: 69e089a1-a0c1-402e-832c-ef9bbc64ec47
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.slider.field_description
+    - field.field.paragraph.slider.field_links
+    - field.field.paragraph.slider.field_multicolor_title
+    - field.field.paragraph.slider.field_paragraphs
+    - field.field.paragraph.slider.field_slider_type
+    - field.field.paragraph.slider.field_subtitle
+    - paragraphs.paragraphs_type.slider
+  module:
+    - mck_rest_apis
+id: paragraph.slider.default
+targetEntityType: paragraph
+bundle: slider
+mode: default
+content:
+  field_description:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_links:
+    type: mck_react
+    label: hidden
+    settings:
+      format: link
+      view_mode: default
+      storage: ''
+      convert: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_multicolor_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_paragraphs:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_slider_type:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_subtitle:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  extra_field_popup: true

@@ -1,0 +1,228 @@
+@import '../../../app/styles/functions';
+@import '../../../app/styles/mixins';
+@import '../../../app/styles/variables';
+@import '../../../app/styles/colors';
+
+// style for grid md:grid-cols-3 gap-10
+
+.grid {
+  display: grid;
+}
+
+.md\:grid-cols-3 {
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.gap-10 {
+  gap: 1rem;
+}
+
+// Modal hire-popup-modal
+
+.hire-popup {
+  max-width: 1300px;
+}
+
+.hire-popup-modal {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(7px);
+
+  @media (max-height: $xl) {
+    align-items: center;
+  }
+
+  @media (max-height: $md) {
+    align-items: start;
+    padding: 1.5rem 0.6rem;
+  }
+
+  .modal__content {
+    background: transparent;
+    color: white;
+    padding: 5rem 0.5rem;
+
+    .modal__close {
+      opacity: 1;
+      top: 30px;
+      border: none;
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+    }
+  }
+
+  .title {
+    color: white;
+    text-align: center;
+  }
+
+  .hire-list {
+    margin-top: 50px;
+  }
+
+  .tile {
+    &__block {
+      background: $gray-50;
+      border-radius: 25px;
+      gap: 35px;
+      box-shadow: 0 25px 35px 0 rgba($black, 0.05);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+      overflow: hidden;
+      padding: 35px;
+      position: relative;
+      text-decoration: none;
+      width: 100%;
+
+      @include breakpoint-down($xl) {
+        padding: 35px 35px 45px;
+      }
+
+      @include breakpoint-down($sm) {
+        padding: 25px;
+        flex-direction: column;
+      }
+
+      &::before,
+      &::after {
+        background: $purple-200;
+        border-radius: 100%;
+        content: '';
+        height: 25px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: scale(0);
+        transform-origin: center;
+        transition: 0.3s;
+        width: 25px;
+      }
+
+      &::after {
+        top: auto;
+        right: 0;
+        bottom: 0;
+        left: auto;
+      }
+
+      > * {
+        position: relative;
+        z-index: 1;
+      }
+
+      &:hover {
+        .btn {
+          &::before,
+          &::after {
+            transform: scale(50);
+          }
+        }
+      }
+    }
+
+    &__image {
+      align-items: center;
+      background: $gray-300;
+      border-radius: 10px;
+      display: flex;
+      height: 125px;
+      justify-content: center;
+      margin-bottom: 0;
+      padding: 20px;
+      transition: 0.3s;
+      width: 125px;
+      flex: 0 0 125px;
+
+      @include breakpoint-down($sm) {
+        flex: 0 0 70px;
+        height: 70px;
+        margin-bottom: 25px;
+        padding: 15px;
+        width: 70px;
+      }
+
+      picture {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      img,
+      svg {
+        height: auto;
+        object-fit: contain;
+        max-height: 100%;
+      }
+    }
+
+    &__title {
+      margin-bottom: 20px;
+
+      @include breakpoint-down($xxl) {
+        margin-bottom: 15px;
+      }
+
+      @include breakpoint-down($sm) {
+        margin-bottom: 10px;
+      }
+
+      > * {
+        font-size: 26px;
+        font-weight: 600;
+        letter-spacing: -0.4px;
+        line-height: 25px;
+        margin: 0;
+        transition: 0.3s;
+      }
+    }
+
+    &__description {
+      font-size: 16px;
+
+      transition: 0.3s;
+      color: black;
+
+      @include breakpoint-down($sm) {
+        margin-bottom: 25px;
+      }
+    }
+
+    &__button {
+      margin-left: auto;
+
+      a {
+        white-space: nowrap;
+        width: 100%;
+        min-width: 200px;
+
+        svg {
+          min-width: 18px;
+        }
+
+        span {
+          z-index: 1;
+        }
+      }
+    }
+
+    &__content {
+      font-size: 16px;
+      letter-spacing: -0.32px;
+      line-height: 22px;
+      transition: 0.3s;
+      padding-right: 100px;
+      @include breakpoint-down($md) {
+        padding-right: 20px;
+      }
+    }
+  }
+}
+
+.header__right .btn-secondary {
+  span {
+    z-index: 1;
+  }
+}

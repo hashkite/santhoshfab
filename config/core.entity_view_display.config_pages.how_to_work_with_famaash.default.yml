@@ -1,0 +1,69 @@
+uuid: eb9aa473-748d-4017-8bf9-3979f6dccd49
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.how_to_work_with_famaash
+    - field.field.config_pages.how_to_work_with_famaash.field_description
+    - field.field.config_pages.how_to_work_with_famaash.field_link
+    - field.field.config_pages.how_to_work_with_famaash.field_multicolor_title
+    - field.field.config_pages.how_to_work_with_famaash.field_paragraphs
+    - field.field.config_pages.how_to_work_with_famaash.field_title
+  module:
+    - mck_rest_apis
+id: config_pages.how_to_work_with_famaash.default
+targetEntityType: config_pages
+bundle: how_to_work_with_famaash
+mode: default
+content:
+  field_description:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_link:
+    type: mck_react
+    label: hidden
+    settings:
+      format: link
+      view_mode: default
+      storage: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_multicolor_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_paragraphs:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: paragraph
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

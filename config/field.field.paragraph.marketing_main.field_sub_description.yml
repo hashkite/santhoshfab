@@ -1,0 +1,24 @@
+uuid: 8028f06b-45b5-4610-90b5-d8ac2d625600
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_sub_description
+    - filter.format.basic_html
+    - paragraphs.paragraphs_type.marketing_main
+  module:
+    - text
+id: paragraph.marketing_main.field_sub_description
+field_name: field_sub_description
+entity_type: paragraph
+bundle: marketing_main
+label: 'Sub Description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text_long

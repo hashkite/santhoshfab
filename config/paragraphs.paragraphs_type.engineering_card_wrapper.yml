@@ -1,0 +1,15 @@
+uuid: 15056605-7b92-40da-bea6-5d3af26e32df
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_ee
+third_party_settings:
+  paragraphs_ee:
+    paragraphs_categories: {  }
+id: engineering_card_wrapper
+label: 'Engineering Card Wrapper'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

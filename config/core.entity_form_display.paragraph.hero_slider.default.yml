@@ -1,0 +1,71 @@
+uuid: f79b6ffe-280b-4130-9037-16bf97143bc9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.hero_slider.field_delay
+    - field.field.paragraph.hero_slider.field_paragraph
+    - field.field.paragraph.hero_slider.field_paragraphs
+    - field.field.paragraph.hero_slider.field_slider_speed
+    - paragraphs.paragraphs_type.hero_slider
+  module:
+    - paragraphs
+id: paragraph.hero_slider.default
+targetEntityType: paragraph
+bundle: hero_slider
+mode: default
+content:
+  field_delay:
+    type: number
+    weight: 1
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_paragraph:
+    type: paragraphs
+    weight: 3
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: all
+      closed_mode_threshold: 0
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: our_clients
+      features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+  field_paragraphs:
+    type: paragraphs
+    weight: 2
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+  field_slider_speed:
+    type: number
+    weight: 0
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

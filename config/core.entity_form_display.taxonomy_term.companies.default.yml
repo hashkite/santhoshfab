@@ -1,0 +1,45 @@
+uuid: 577c67e6-2764-45af-8e79-e0b9afe9b982
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.companies.field_image
+    - taxonomy.vocabulary.companies
+  module:
+    - media_library
+    - path
+id: taxonomy_term.companies.default
+targetEntityType: taxonomy_term
+bundle: companies
+mode: default
+content:
+  field_image:
+    type: media_library_widget
+    weight: 1
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 3
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  description: true

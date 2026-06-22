@@ -1,0 +1,21 @@
+uuid: 26358bfa-56b9-428d-a28d-7a1e6667e57f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_new_ui
+    - paragraphs.paragraphs_type.our_values
+id: paragraph.our_values.field_new_ui
+field_name: field_new_ui
+entity_type: paragraph
+bundle: our_values
+label: 'New UI'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

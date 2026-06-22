@@ -1,0 +1,17 @@
+.layout-region--node-main .layout-region__content, .layout-region--node-main {
+  max-width: 100%!important;
+  width: 100%!important;
+}
+
+@media screen and (max-width: 1200px) {
+  #block-claro-content .layout-region--node-secondary {
+    margin-top: 0;
+    float: none;
+    width: 100%;
+  }
+  #block-claro-content .layout-region--node-main {
+    padding-right: 0;
+    float: none;
+    width: 100%;
+  }
+}

@@ -1,0 +1,39 @@
+uuid: 784f8ab0-ebe9-4944-8cd4-e7f24dd8d31b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.team_member_testimonial.field_media
+    - field.field.paragraph.team_member_testimonial.field_title
+    - paragraphs.paragraphs_type.team_member_testimonial
+  module:
+    - mck_rest_apis
+id: paragraph.team_member_testimonial.default
+targetEntityType: paragraph
+bundle: team_member_testimonial
+mode: default
+content:
+  field_media:
+    type: mck_react
+    label: hidden
+    settings:
+      format: media
+      view_mode: default
+      storage: media
+      convert: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  extra_field_popup: true

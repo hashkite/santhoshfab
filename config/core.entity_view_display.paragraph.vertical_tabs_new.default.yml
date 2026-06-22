@@ -1,0 +1,63 @@
+uuid: b192484a-ca6c-4a97-ad35-b5d2462568a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.vertical_tabs_new.field_description
+    - field.field.paragraph.vertical_tabs_new.field_multicolor_title
+    - field.field.paragraph.vertical_tabs_new.field_subtitle
+    - field.field.paragraph.vertical_tabs_new.field_tags
+    - paragraphs.paragraphs_type.vertical_tabs_new
+  module:
+    - mck_rest_apis
+id: paragraph.vertical_tabs_new.default
+targetEntityType: paragraph
+bundle: vertical_tabs_new
+mode: default
+content:
+  field_description:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_multicolor_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_subtitle:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_tags:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: taxonomy_term
+      convert: 0
+    third_party_settings: {  }
+    weight: 6
+    region: content
+hidden:
+  extra_field_popup: true

@@ -1,0 +1,30 @@
+uuid: 961aec40-d994-4aaf-90f5-7f64fb4d699b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_familiar_with
+    - taxonomy.vocabulary.technologies
+  module:
+    - user
+id: user.user.field_familiar_with
+field_name: field_familiar_with
+entity_type: user
+bundle: user
+label: 'Familiar with'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      technologies: technologies
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

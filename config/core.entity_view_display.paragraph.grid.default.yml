@@ -1,0 +1,63 @@
+uuid: 0ba6cbd4-1df5-4319-8484-c9216a06a6e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.grid.field_columns_desktop
+    - field.field.paragraph.grid.field_eyebrow
+    - field.field.paragraph.grid.field_multicolor_title
+    - field.field.paragraph.grid.field_paragraphs
+    - paragraphs.paragraphs_type.grid
+  module:
+    - mck_rest_apis
+id: paragraph.grid.default
+targetEntityType: paragraph
+bundle: grid
+mode: default
+content:
+  field_columns_desktop:
+    type: mck_react
+    label: above
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_eyebrow:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_multicolor_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_paragraphs:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  extra_field_popup: true

@@ -1,0 +1,32 @@
+uuid: 001f8c44-1462-43d9-bf95-fcbdeaadfe93
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.token
+    - field.field.taxonomy_term.technologies.field_image
+    - field.field.taxonomy_term.technologies.field_most_popular
+    - field.field.taxonomy_term.technologies.field_sub_service
+    - taxonomy.vocabulary.technologies
+  module:
+    - mck_rest_apis
+id: taxonomy_term.technologies.token
+targetEntityType: taxonomy_term
+bundle: technologies
+mode: token
+content:
+  field_image:
+    type: mck_react
+    label: hidden
+    settings:
+      format: media
+      view_mode: default
+      storage: media
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  description: true
+  extra_field_related_nodes: true
+  field_most_popular: true
+  field_sub_service: true

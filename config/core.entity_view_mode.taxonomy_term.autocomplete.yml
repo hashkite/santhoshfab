@@ -1,0 +1,11 @@
+uuid: 0112c75d-ad56-4278-86e4-13572a3fcf13
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.autocomplete
+label: Autocomplete
+description: ''
+targetEntityType: taxonomy_term
+cache: true

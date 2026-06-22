@@ -1,0 +1,18 @@
+.ck .purple {
+  background: linear-gradient(90deg, #5C00DB 0%, #AE74FF 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.ck brand-blue {
+  background: linear-gradient(90deg, #dd9a34 -1.09%, #ffd392 98.69%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.h1 {
+  font-size: 70px;
+  line-height: 1.2;
+}

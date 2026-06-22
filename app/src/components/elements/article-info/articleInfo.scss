@@ -1,0 +1,250 @@
+@import '../../../app/styles/functions';
+@import '../../../app/styles/mixins';
+@import '../../../app/styles/variables';
+@import '../../../app/styles/colors';
+
+.article-info {
+  &__block {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 50px;
+    transition: gap 0.3s;
+
+    @include breakpoint-down($md) {
+      gap: 30px;
+      padding-right: 0;
+    }
+
+    @include breakpoint-down($xs) {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    &.--type {
+      &-large {
+        .article-info {
+          &__author {
+            gap: 50px;
+
+            @include breakpoint-down($xl) {
+              gap: 35px;
+            }
+
+            @include breakpoint-down($lg) {
+              gap: 25px;
+            }
+
+            @include breakpoint-down($xs) {
+              gap: 15px;
+            }
+
+            .author {
+              &__pic {
+                height: 100px;
+                width: 100px;
+
+                @include breakpoint-down($lg) {
+                  height: 70px;
+                  width: 70px;
+                }
+
+                @include breakpoint-down($xs) {
+                  height: 50px;
+                  width: 50px;
+                }
+              }
+
+              &__name {
+                .name {
+                  color: $blue-dark-200;
+                  font-size: 25px;
+                  font-weight: 400;
+                  line-height: 30px;
+                  text-decoration: underline;
+
+                  @include breakpoint-down($lg) {
+                    font-size: 20px;
+                    line-height: 25px;
+                  }
+
+                  @include breakpoint-down($md) {
+                    font-size: 18px;
+                  }
+
+                  @include breakpoint-down($xs) {
+                    font-size: 16px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__date {
+    color: $gray-50;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: -0.32px;
+    line-height: 22px;
+  }
+
+  &__author {
+    align-items: center;
+    color: $gray-50;
+    display: flex;
+    font-size: 20px;
+    font-weight: 400;
+    gap: 25px;
+    letter-spacing: -0.4px;
+    transition: 0.3s;
+
+    @include breakpoint-down($md) {
+      gap: 15px;
+      font-size: 18px;
+    }
+
+    .author {
+      &__pic {
+        border-radius: 100%;
+        height: 65px;
+        overflow: hidden;
+        transition: 0.3s;
+        width: 65px;
+
+        @include breakpoint-down($md) {
+          height: 50px;
+          width: 50px;
+        }
+
+        img {
+          display: block;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          width: 100%;
+        }
+      }
+
+      &__name {
+        .title {
+          color: rgba($gray-50, 0.6);
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 22px;
+          letter-spacing: -0.32px;
+
+          @include breakpoint-down($md) {
+            font-size: 14px;
+          }
+        }
+
+        .more-posts {
+          font-size: 19px;
+          font-weight: 300;
+          color: $blue-dark-400;
+          line-height: 33px;
+
+          @include breakpoint-down($lg) {
+            font-size: 16px;
+            line-height: 25px;
+          }
+        }
+      }
+    }
+  }
+
+  &__sub-services,
+  &__technologies {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    margin-bottom: 42px;
+
+    span {
+      color: white;
+    }
+
+    h2 {
+      width: 100%;
+      flex: 0 0 100%;
+      color: #9181d0;
+      margin-bottom: 12px;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      display: block;
+    }
+
+    @include breakpoint-down($md) {
+      margin-top: 35px;
+      margin-bottom: 18px;
+    }
+
+    + .article-info__block {
+      margin-top: 100px;
+
+      @include breakpoint-down($md) {
+        margin-top: 60px;
+      }
+    }
+  }
+
+  &__sub-services {
+    a {
+      border-radius: 20px;
+      line-height: 1;
+      padding: 5px 12px 5px 12px;
+      color: rgba($gray-50, 0.6);
+      font-size: 14px;
+      border: 1px solid $gray-400;
+      transition: trs(color);
+      margin-right: 8px;
+      margin-bottom: 8px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:hover {
+        color: rgba($gray-50, 1);
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__technologies {
+    span {
+      display: flex;
+      align-items: center;
+      margin-right: 20px;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      img,
+      svg {
+        height: 23px;
+        max-width: 30px;
+        object-fit: contain;
+        object-position: center;
+        width: auto;
+        margin-right: 7px;
+
+        path {
+          fill: $gray-50;
+        }
+      }
+    }
+  }
+}

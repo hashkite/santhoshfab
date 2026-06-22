@@ -1,0 +1,24 @@
+uuid: 82a2e816-7a75-4a92-82fa-c9801811a95e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - filter.format.basic_html
+    - paragraphs.paragraphs_type.service_item
+  module:
+    - text
+id: paragraph.service_item.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: service_item
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text_long

@@ -1,0 +1,192 @@
+@import '../../../app/styles/functions';
+@import '../../../app/styles/mixins';
+@import '../../../app/styles/variables';
+@import '../../../app/styles/colors';
+
+.our-team {
+  &__item {
+    background: $gray-50;
+    border: 1px solid $gray-500;
+    border-radius: 25px;
+    overflow: hidden;
+    transition: 0.3s;
+
+    &:hover {
+      background: darken($gray-300, 2);
+    }
+
+    &.--discover {
+      background: url(/media/bg-team-all.svg) no-repeat center / cover,
+        #ab74f6 linear-gradient(90deg, $purple-200 0%, rgba(#ab74f6, 0) 100%);
+      border: none;
+      text-align: center;
+      text-decoration: none;
+
+      &:hover {
+        background-color: $purple-100;
+        text-decoration: none;
+      }
+
+      .our-team-item {
+        &__content {
+          h3 {
+            color: $white;
+          }
+        }
+
+        &__subtitle {
+          color: $white;
+        }
+
+        &__button {
+          margin-top: 70px;
+          transition: margin 0.3s;
+
+          @include breakpoint-down($xl) {
+            margin-top: 50px;
+          }
+
+          .btn-m {
+            padding: 20px;
+            width: 100%;
+
+            @include breakpoint-down($sm) {
+              padding: 15px;
+            }
+          }
+
+          .btn-white-2 {
+
+            &::before,
+            &::after {
+              background: $brand-blue;
+            }
+
+            &:active {
+
+              &::before,
+              &::after {
+                background: darken($brand-blue, 10);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-item {
+    &__discover {
+      padding: 70px 30px 25px;
+      transition: padding 0.3s;
+
+      @include breakpoint-down($xl) {
+        padding: 50px 25px 20px;
+      }
+    }
+
+    &__icon {
+      height: 80px;
+      margin: 0 auto 50px;
+      transition: 0.3s;
+      width: 80px;
+
+      @include breakpoint-down($xl) {
+        height: 60px;
+        margin-bottom: 30px;
+        width: 60px;
+      }
+
+      @include breakpoint-down($sm) {
+        height: 50px;
+        width: 50px;
+      }
+
+      picture {
+        height: 100%;
+      }
+
+      img {
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+        width: 100%;
+      }
+    }
+
+    &__content {
+      &::before {
+        height: 1px;
+        width: 125px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+        background-color: $gray-500;
+        content: '';
+        display: block;
+      }
+
+      h3 {
+        color: $purple-250;
+        font-weight: 600;
+        letter-spacing: -1px;
+        margin-bottom: 5px;
+      }
+    }
+
+    &__subtitle {
+      color: $blue-dark-400;
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    &__top {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      gap: 35px;
+      justify-content: center;
+      padding: 40px 40px 25px;
+      text-align: center;
+      text-decoration: none;
+      transition: 0.3s;
+
+      @include breakpoint-down($xl) {
+        gap: 20px;
+        padding: 20px;
+      }
+
+      &:hover {
+        text-decoration: none;
+
+        .our-team-item__content h3 {
+          color: $blue-dark-400;
+        }
+      }
+    }
+
+    &__image {
+      border-radius: 100%;
+      height: 150px;
+      overflow: hidden;
+      transition: 0.3s;
+      width: 150px;
+
+      @include breakpoint-down($xl) {
+        height: 100px;
+        width: 100px;
+      }
+
+      picture {
+        height: 100%;
+      }
+
+      img {
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
+      }
+    }
+  }
+}

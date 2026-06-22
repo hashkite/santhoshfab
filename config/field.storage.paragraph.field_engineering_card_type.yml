@@ -1,0 +1,54 @@
+uuid: 39fd3b3c-d7ce-41da-bbec-c7b94ab84558
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_engineering_card_type
+field_name: field_engineering_card_type
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: expertise
+      label: Expertise
+    -
+      value: case_study_featured
+      label: 'Case Study Featured'
+    -
+      value: success_practice
+      label: 'Success Practice'
+    -
+      value: methodology
+      label: Methodology
+    -
+      value: audience
+      label: Audience
+    -
+      value: web_solution
+      label: 'Web Solution'
+    -
+      value: case_study_classic
+      label: 'Case Study Classic'
+    -
+      value: industry_grid
+      label: 'Industry Grid'
+    -
+      value: costing
+      label: Costing
+    -
+      value: featured
+      label: Featured
+    -
+      value: engagment
+      label: Engagement
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

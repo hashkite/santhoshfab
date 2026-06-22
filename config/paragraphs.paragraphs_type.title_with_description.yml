@@ -1,0 +1,16 @@
+uuid: 94b3d9b6-0e0f-4f77-8c30-1921c83f2014
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_ee
+third_party_settings:
+  paragraphs_ee:
+    paragraphs_categories:
+      global: global
+id: title_with_description
+label: 'Title with description'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

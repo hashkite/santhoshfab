@@ -1,0 +1,21 @@
+uuid: 6cd17d5d-07e8-48f6-8883-888e5499b18a
+langcode: en
+status: true
+dependencies:
+  module:
+    - config_pages
+    - viewfield
+    - views
+id: config_pages.field_technologies_view
+field_name: field_technologies_view
+entity_type: config_pages
+type: viewfield
+settings:
+  target_type: view
+module: viewfield
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

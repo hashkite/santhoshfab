@@ -1,0 +1,25 @@
+uuid: deb7e781-ab92-4c08-86e2-98e48abf03a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.tags
+  module:
+    - mck_rest_apis
+id: taxonomy_term.tags.default
+targetEntityType: taxonomy_term
+bundle: tags
+mode: default
+content:
+  description:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  extra_field_related_nodes: true

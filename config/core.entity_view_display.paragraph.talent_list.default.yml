@@ -1,0 +1,75 @@
+uuid: 98c55968-e6c1-4d5d-9c59-6341b0153b02
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.talent_list.field_description
+    - field.field.paragraph.talent_list.field_link
+    - field.field.paragraph.talent_list.field_multicolor_title
+    - field.field.paragraph.talent_list.field_paragraph
+    - field.field.paragraph.talent_list.field_two_paragraphs
+    - paragraphs.paragraphs_type.talent_list
+  module:
+    - mck_rest_apis
+id: paragraph.talent_list.default
+targetEntityType: paragraph
+bundle: talent_list
+mode: default
+content:
+  field_description:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_link:
+    type: mck_react
+    label: hidden
+    settings:
+      format: link
+      view_mode: default
+      storage: ''
+      convert: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_multicolor_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_paragraph:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_two_paragraphs:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  extra_field_popup: true

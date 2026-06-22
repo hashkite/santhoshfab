@@ -1,0 +1,24 @@
+uuid: 72dadc6e-ba07-493f-a2e8-4e818a4ea24c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_sub_description
+    - filter.format.basic_html
+    - paragraphs.paragraphs_type.text_with_content
+  module:
+    - text
+id: paragraph.text_with_content.field_sub_description
+field_name: field_sub_description
+entity_type: paragraph
+bundle: text_with_content
+label: 'Sub Description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text_long

@@ -1,0 +1,69 @@
+uuid: 35a2b3e9-44bd-4d7a-b9cd-0b97e7f25017
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.feedback.field_description
+    - field.field.paragraph.feedback.field_image
+    - field.field.paragraph.feedback.field_name
+    - field.field.paragraph.feedback.field_rate
+    - field.field.paragraph.feedback.field_role
+    - field.field.paragraph.feedback.field_title
+    - paragraphs.paragraphs_type.feedback
+  module:
+    - media_library
+    - text
+id: paragraph.feedback.default
+targetEntityType: paragraph
+bundle: feedback
+mode: default
+content:
+  field_description:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_image:
+    type: media_library_widget
+    weight: 3
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_name:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_rate:
+    type: number
+    weight: 1
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_role:
+    type: string_textfield
+    weight: 5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

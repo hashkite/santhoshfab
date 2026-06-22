@@ -1,0 +1,16 @@
+uuid: d4c13ec5-1517-43da-b05e-c95bf41183ae
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_ee
+third_party_settings:
+  paragraphs_ee:
+    paragraphs_categories:
+      global: global
+id: table_row
+label: 'Table Row'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

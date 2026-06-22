@@ -1,0 +1,63 @@
+uuid: 6af15a6e-236a-41d7-a0c7-d8754f5d963c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.we_are_famaash.field_description
+    - field.field.paragraph.we_are_famaash.field_image
+    - field.field.paragraph.we_are_famaash.field_multicolor_title
+    - field.field.paragraph.we_are_famaash.field_title
+    - paragraphs.paragraphs_type.we_are_famaash
+  module:
+    - mck_rest_apis
+id: paragraph.we_are_famaash.default
+targetEntityType: paragraph
+bundle: we_are_famaash
+mode: default
+content:
+  field_description:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_image:
+    type: mck_react
+    label: hidden
+    settings:
+      format: media
+      view_mode: default
+      convert: '1'
+      storage: media
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_multicolor_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  extra_field_popup: true

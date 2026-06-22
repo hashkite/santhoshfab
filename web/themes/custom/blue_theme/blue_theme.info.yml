@@ -1,0 +1,24 @@
+name: McKinsey
+type: theme
+description: 'Custom theme for McKinsey website'
+core_version_requirement: ^10 || ^11
+base theme: stark
+screenshot: screenshot.jpg
+
+#Libraries
+libraries:
+  - blue_theme/main_styles
+
+ckeditor5-stylesheets:
+  - wysiwyg/cke_custom.css
+
+libraries-override:
+  # Exclude all CSS and JS assets from the Olivero base theme
+  olivero/global-styling: false
+  olivero/global-scripts: false
+
+#Regions
+regions:
+  header: Header
+  content: Content
+  footer: Footer

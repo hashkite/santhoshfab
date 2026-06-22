@@ -1,0 +1,86 @@
+@import '../../../app/styles/functions';
+@import '../../../app/styles/mixins';
+@import '../../../app/styles/variables';
+@import '../../../app/styles/colors';
+
+.how-we-work {
+  &__section {
+    background: $blue-dark-400;
+    padding: 170px 0 120px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s;
+
+    @include breakpoint-down($xxl) {
+      padding: 150px 0 110px;
+    }
+
+    @include breakpoint-down($md) {
+      padding: 110px 0 70px;
+    }
+
+    > .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    &::before {
+      background: url(/media/bg-line.svg) no-repeat center / auto 100%;
+      content: '';
+      height: 440px;
+      position: absolute;
+      top: 35%;
+      left: 0;
+      transition: 0.3s;
+      width: 100%;
+
+      @include breakpoint-down($lg) {
+        height: 350px;
+      }
+
+      @include breakpoint-down($md) {
+        height: 300px;
+      }
+    }
+  }
+
+  &__decor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    svg {
+      display: block;
+      height: auto;
+      width: 100%;
+    }
+  }
+
+  &__header {
+    color: $gray-50;
+    margin: 0 auto 90px;
+    max-width: 750px;
+    text-align: center;
+    transition: 0.3s;
+
+    @include breakpoint-down($xxl) {
+      margin-bottom: 60px;
+    }
+
+    @include breakpoint-down($md) {
+      margin-bottom: 50px;
+    }
+
+    h2 {
+      color: $gray-50;
+      letter-spacing: -0.9px;
+      margin-bottom: 35px;
+      transition: 0.3s;
+
+      @include breakpoint-down($xl) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

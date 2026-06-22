@@ -1,0 +1,150 @@
+@import '../../../app/styles/functions';
+@import '../../../app/styles/mixins';
+@import '../../../app/styles/variables';
+@import '../../../app/styles/colors';
+
+.related-services {
+  background: $gray-50;
+  box-shadow: 0px 25px 35px 0px rgba($black, 0.05);
+  border: 1px solid $gray-500;
+  border-radius: 12px;
+  padding: 50px;
+  position: relative;
+  transition: .3s;
+
+  @include breakpoint-down($xxl) {
+    padding: 25px;
+  }
+
+  @include breakpoint-down($xs) {
+    padding: 20px;
+  }
+
+  &__block {
+    padding-top: 70px;
+    position: relative;
+
+    &::before {
+      background: linear-gradient(to bottom, rgba($gray-50, 0) 0%, rgba($gray-50, 0.1) 15%, rgba($gray-50, 0.2) 25%, rgba($gray-50, 0.4) 45%, $gray-50 100%),
+        linear-gradient(to right, #301042 0%, #240B31 8%, #1A0723 11%, #12051A 22%, #0E0314 34%, #0A0210 52%, #0D0313 66%, #120419 74%, #16061E 84%, #15061E 92%, #180721 100%);
+      content: '';
+      height: 500px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+  }
+
+  &__nav {
+    display: grid;
+    gap: 50px;
+    grid-template-columns: repeat(5, 1fr);
+    transition: .3s;
+
+    @include breakpoint-down($xxl) {
+      gap: 25px;
+    }
+
+    @include breakpoint-down($md) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include breakpoint-down($sm) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoint-down($xs) {
+      gap: 15px;
+    }
+
+    &-col {
+      &.selected {
+        .related-services__nav-item {
+          background: linear-gradient(90deg, $purple-200 0%, #ab74f6 100%);
+          color: $white;
+        }
+      }
+    }
+
+    &-item {
+      cursor: pointer;
+      border-radius: 15px;
+      min-height: 210px;
+      border: 1px solid $gray-200;
+      box-shadow: 0px 25px 35px 0px rgba($black, 0.05);
+      padding: 30px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      transition: .3s;
+
+      @include breakpoint-down($xxl) {
+        min-height: 0;
+        height: 100%;
+        padding: 20px;
+      }
+
+      @include breakpoint-down($xs) {
+        padding: 15px;
+      }
+
+      .icon {
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 80px;
+        width: 80px;
+        flex: 0 0 80px;
+        border-radius: 15px;
+        border: 1px solid $gray-200;
+        margin-bottom: 10px;
+        background: $gray-50;
+        transition: .3s;
+
+        @include breakpoint-down($xxl) {
+          height: 70px;
+          width: 70px;
+          flex: 0 0 70px;
+        }
+
+        @include breakpoint-down($xs) {
+          height: 50px;
+          width: 50px;
+          flex: 0 0 50px;
+        }
+      }
+
+      .title {
+        line-height: 1.2;
+        font-size: 18px;
+        margin: auto;
+
+        @include breakpoint-down($xs) {
+          font-size: 16px;
+        }
+      }
+
+      picture,
+      img {
+        margin-left: auto;
+        margin-right: auto;
+        width: 45px;
+        height: 45px;
+        object-fit: contain;
+
+        @include breakpoint-down($xxl) {
+          height: 30px;
+          width: 30px;
+        }
+
+        @include breakpoint-down($xs) {
+          height: 25px;
+          width: 25px;
+        }
+      }
+    }
+  }
+}

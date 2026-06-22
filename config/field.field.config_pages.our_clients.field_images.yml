@@ -1,0 +1,29 @@
+uuid: 9742dcc0-d5e4-4ad6-ba0f-cd3f9664ea61
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.our_clients
+    - field.storage.config_pages.field_images
+    - media.type.image
+id: config_pages.our_clients.field_images
+field_name: field_images
+entity_type: config_pages
+bundle: our_clients
+label: Images
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

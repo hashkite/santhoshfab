@@ -1,0 +1,23 @@
+uuid: 88502358-5080-41cd-a7bd-0baaa271c5af
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_style
+    - paragraphs.paragraphs_type.tiles
+  module:
+    - options
+id: paragraph.tiles.field_text_style
+field_name: field_text_style
+entity_type: paragraph
+bundle: tiles
+label: 'Text style'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: text_center
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,58 @@
+uuid: 52ba3534-861f-4deb-b673-1f48ec3fbc00
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.footer_webform
+    - field.field.config_pages.footer_webform.field_description
+    - field.field.config_pages.footer_webform.field_multicolor_title
+    - field.field.config_pages.footer_webform.field_title
+    - field.field.config_pages.footer_webform.field_webform
+  module:
+    - mck_rest_apis
+id: config_pages.footer_webform.default
+targetEntityType: config_pages
+bundle: footer_webform
+mode: default
+content:
+  field_description:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_multicolor_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_webform:
+    type: mck_react
+    label: hidden
+    settings:
+      format: webform
+      view_mode: default
+      storage: webform
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden: {  }

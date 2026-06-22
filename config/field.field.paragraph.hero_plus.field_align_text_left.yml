@@ -1,0 +1,23 @@
+uuid: 16952d1f-3324-44a3-923b-1b34837875da
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_align_text_left
+    - paragraphs.paragraphs_type.hero_plus
+id: paragraph.hero_plus.field_align_text_left
+field_name: field_align_text_left
+entity_type: paragraph
+bundle: hero_plus
+label: 'Align text left'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

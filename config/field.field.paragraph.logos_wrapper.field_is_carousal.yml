@@ -1,0 +1,21 @@
+uuid: 986226e5-f98c-4831-aefe-0438418ba1a6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_is_carousal
+    - paragraphs.paragraphs_type.logos_wrapper
+id: paragraph.logos_wrapper.field_is_carousal
+field_name: field_is_carousal
+entity_type: paragraph
+bundle: logos_wrapper
+label: 'Is Carousal'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

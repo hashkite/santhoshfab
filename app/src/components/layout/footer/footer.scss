@@ -1,0 +1,516 @@
+@import '../../../app/styles/functions';
+@import '../../../app/styles/variables';
+@import '../../../app/styles/mixins';
+@import '../../../app/styles/colors';
+
+.footer {
+  background: $blue-dark-400;
+  color: $white;
+  overflow: hidden;
+  position: relative;
+  padding-top: 0.1px;
+
+  .btn-scroll {
+    display: none;
+
+    @include breakpoint-down($xs) {
+      display: flex;
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 1;
+    }
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+
+    @include breakpoint-down($xxl) {
+      max-width: 1350px;
+    }
+
+    @include breakpoint-down($xl) {
+      max-width: 1024px;
+    }
+
+    @include breakpoint-down($md) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__top {
+    margin-bottom: 75px;
+    margin-top: 75px;
+    transition: margin 0.3s;
+
+    @include breakpoint-down($xl) {
+      margin-bottom: 60px;
+      margin-top: 60px;
+    }
+
+    @include breakpoint-down($md) {
+      margin-bottom: 45px;
+      margin-top: 45px;
+    }
+
+    @include breakpoint-down($sm) {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__middle {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+    padding-bottom: 70px;
+    gap: 100px;
+    transition: gap 0.3s, margin 0.3s, padding 0.3s;
+
+    @include breakpoint-down($xxl) {
+      gap: 50px;
+    }
+
+    @include breakpoint-down($xl) {
+      margin-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    @include breakpoint-down($md) {
+      margin-top: 0;
+      padding-bottom: 50px;
+    }
+
+    @include breakpoint-down($sm) {
+      flex-direction: column;
+    }
+
+    @include breakpoint-down($xs) {
+      margin-bottom: 30px;
+      padding-bottom: 25px;
+    }
+
+    &-left {
+      transition: 0.3s;
+      width: 58%;
+
+      @include breakpoint-down($md) {
+        width: 60%;
+      }
+
+      @include breakpoint-down($sm) {
+        width: 100%;
+      }
+    }
+
+    &-right {
+      @include breakpoint-down($md) {
+        transition: 0.3s;
+        width: 40%;
+      }
+
+      @include breakpoint-down($sm) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__subscribe {
+    &-block {
+      color: $gray-500;
+      font-size: 16px;
+      font-weight: 400;
+      letter-spacing: -0.32px;
+      line-height: 20px;
+      transition: 0.3s;
+
+      @include breakpoint-down($md) {
+        margin: auto;
+        max-width: 500px;
+      }
+
+      h2 {
+        color: $white;
+        font-size: 20px;
+        letter-spacing: normal;
+        line-height: 25px;
+        margin-bottom: 10px;
+        transition: 0.3s;
+
+        @include breakpoint-down($xxl) {
+          font-size: 22px;
+        }
+
+        @include breakpoint-down($md) {
+          font-size: 18px;
+        }
+      }
+    }
+
+    &-form {
+      margin-top: 35px;
+      transition: 0.3s;
+
+      @include breakpoint-down($xl) {
+        margin-top: 25px;
+      }
+
+      @include breakpoint-down($md) {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__logo {
+    @include breakpoint-down($xxl) {
+      display: block;
+    }
+
+    @include breakpoint-down($md) {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    @include breakpoint-down($sm) {
+      justify-content: center;
+    }
+
+    img,
+    svg {
+      @include breakpoint-down($xxl) {
+        max-width: 300px;
+        transition: 0.3s;
+      }
+
+      @include breakpoint-down($xl) {
+        max-width: 250px;
+      }
+
+      @include breakpoint-down($md) {
+        max-width: 200px;
+      }
+
+      @include breakpoint-down($xs) {
+        max-width: 150px;
+      }
+    }
+  }
+
+  &__logos {
+    transition: gap 0.3s, margin 0.3s, padding 0.3s;
+    border-top: 1px solid $blue-dark-100;
+    padding: 50px 0 50px;
+    display: flex;
+    justify-content: space-between;
+
+    @include breakpoint-down($xs) {
+      display: block;
+    }
+
+    img {
+      height: 50px;
+      object-fit: contain;
+      max-width: 140px;
+      width: auto;
+
+      @include breakpoint-down($xl) {
+        height: 40px;
+        max-width: 120px;
+      }
+
+      @include breakpoint-down($md) {
+        height: 30px;
+        max-width: 100px;
+      }
+    }
+
+    &-col.certificates .footer__logos-item img {
+      height: 80px;
+      max-width: 200px;
+
+      @include breakpoint-down($xl) {
+        height: 70px;
+        max-width: 180px;
+      }
+
+      @include breakpoint-down($md) {
+        height: 60px;
+        max-width: 160px;
+      }
+    }
+
+    .AWS.Partner img {
+      height: 70px;
+      max-width: 160px;
+
+      @include breakpoint-down($xl) {
+        height: 60px;
+        max-width: 140px;
+      }
+
+      @include breakpoint-down($md) {
+        height: 50px;
+        max-width: 120px;
+      }
+    }
+
+    h2 {
+      color: $gray-50;
+      margin-bottom: 40px;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    &-items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 35px;
+      transition: 0.3s;
+
+      @include breakpoint-down($xxl) {
+        gap: 20px;
+      }
+
+      @include breakpoint-down($xs) {
+        gap: 15px;
+        justify-content: center;
+      }
+    }
+
+    &-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &-col {
+      @include breakpoint-down($xs) {
+        text-align: center;
+      }
+
+      + .footer__logos-col {
+        margin-top: 30px;
+      }
+
+      @include breakpoint-up($xs) {
+        padding-right: 20px;
+
+        + .footer__logos-col {
+          padding-right: 0;
+          padding-left: 20px;
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    align-items: center;
+    border-top: 1px solid $blue-dark-100;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0 20px;
+    transition: border 0.3s, gap 0.3s, padding 0.3s;
+
+    @include breakpoint-down($xl) {
+      padding-top: 30px;
+    }
+
+    @include breakpoint-down($md) {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    &-left {
+      align-items: center;
+      display: flex;
+      gap: 60px;
+      transition: 0.3s;
+
+      @include breakpoint-down($xl) {
+        gap: 40px;
+      }
+
+      @include breakpoint-down($sm) {
+        gap: 30px;
+        order: 1;
+      }
+
+      @include breakpoint-down($xs) {
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 20px;
+      }
+    }
+
+    &-right {
+      .btn-scroll {
+        display: flex;
+
+        @include breakpoint-down($xs) {
+          display: none !important;
+        }
+      }
+    }
+
+    &-nav {
+      align-items: center;
+      display: flex;
+      gap: 60px;
+      transition: 0.3s;
+
+      @include breakpoint-down($xxl) {
+        gap: 25px;
+      }
+
+      @include breakpoint-down($md) {
+        gap: 20px;
+      }
+
+      @include breakpoint-down($xs) {
+        gap: 15px;
+      }
+
+      nav {
+        align-items: center;
+        display: flex;
+        gap: 32px;
+        transition: 0.3s;
+
+        @include breakpoint-down($xxl) {
+          gap: 25px;
+        }
+
+        @include breakpoint-down($md) {
+          gap: 20px;
+        }
+
+        @include breakpoint-down($xs) {
+          flex-direction: column;
+          gap: 15px;
+        }
+      }
+
+      .btn-circle {
+        @include breakpoint-down($xs) {
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+        }
+      }
+
+      &__link {
+        color: $white;
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: -0.32px;
+        line-height: 20px;
+        position: relative;
+        text-decoration: none;
+
+        &::before {
+          background: $white;
+          content: '';
+          height: 1px;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          transition: 0.3s;
+          width: 0;
+        }
+
+        &:hover {
+          text-decoration: none;
+
+          &::before {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  &__copy {
+    color: $gray-400;
+    font: {
+      size: 16px;
+      weight: 600;
+    }
+    line-height: 20px;
+
+    @include breakpoint-down($xs) {
+      order: 1;
+    }
+
+    + .footer__logos {
+      position: relative;
+    }
+  }
+
+  &__bottom-cooperation {
+    padding: 140px 0 0;
+    position: relative;
+    transition: padding 0.3s;
+
+    @include breakpoint-down($xl) {
+      padding-top: 100px;
+    }
+
+    @include breakpoint-down($md) {
+      padding-top: 70px;
+    }
+
+    @include breakpoint-down($xs) {
+      padding-top: 50px;
+    }
+
+    .footer-cooperation {
+      &__block {
+        text-align: center;
+
+        h2 {
+          color: $white;
+          letter-spacing: -0.9px;
+          margin-bottom: 35px;
+          position: relative;
+          z-index: 1;
+
+          @include breakpoint-down($xs) {
+            letter-spacing: -0.5px;
+          }
+        }
+
+        .btn {
+          position: relative;
+          z-index: 2;
+        }
+      }
+
+      &__image {
+        margin-top: -112px;
+        transition: 0.3s;
+
+        @include breakpoint-down($xl) {
+          margin-top: -50px;
+        }
+
+        @include breakpoint-down($md) {
+          margin-top: -25px;
+        }
+
+        @include breakpoint-down($xs) {
+          margin-top: 0;
+        }
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

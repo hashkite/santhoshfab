@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "checkJs": true,
+    "jsx": "react-jsx",
+    "paths": {
+      "shared/*": ["./shared/*"],
+      "components/*": ["./components/*"],
+      "widgets/*": ["./widgets/*"],
+      "entities/*": ["./entities/*"],
+      "routing/*": ["./routing/*"],
+      "layout/*": ["./layout/*"],
+      "paragraphs/*": ["./paragraphs/*"]
+    }
+  },
+  "include": ["src", "vite-env.d.ts"],
+  "exclude": ["node_modules"]
+}

@@ -1,0 +1,26 @@
+uuid: 946c2c42-f861-425c-81c4-ce70df9caa14
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.about_us_cards
+    - field.storage.paragraph.field_images
+    - paragraphs.paragraphs_type.about_us_cards
+id: paragraph.about_us_cards.field_images
+field_name: field_images
+entity_type: paragraph
+bundle: about_us_cards
+label: Cards
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: e8052f67-6433-4b84-9e46-addc74babc9b
+default_value_callback: ''
+settings:
+  handler: 'default:config_pages_type'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

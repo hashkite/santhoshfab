@@ -1,0 +1,184 @@
+<?php
+
+/**
+ * @file
+ * The mck_rest_apis.module file.
+ */
+
+use Drupal\Component\Render\PlainTextOutput;
+use Drupal\Component\Serialization\Json;
+use Drupal\Core\Link;
+use Drupal\Core\Url;
+use Drupal\taxonomy\Entity\Term;
+use Drupal\webform\WebformSubmissionInterface;
+use Drupal\webform\Entity\Webform;
+
+/**
+ * Implements hook_form_alter().
+ */
+function mck_rest_apis_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state): void {
+  $forms = [
+    'webform_submission_hire_add_form',
+    'webform_submission_hire_edit_form',
+    'webform_submission_hire_managed_add_form',
+    'webform_submission_sub_services_form_add_form',
+    'webform_submission_hire_services_add_form'
+  ];
+  if (!in_array($form['#form_id'], $forms)) {
+    return;
+  }
+
+  if (isset($form['elements']['first_page']['position']['#options'])) {
+    foreach ($form['elements']['first_page']['position']['#options'] as $key => $option) {
+      $term = Term::load($key);
+      $link = $term->get('field_link')->getValue();
+      if (isset($link[0]['uri'])) {
+        $url = Url::fromUri($link[0]['uri']);
+        $link = Link::fromTextAndUrl($option, $url);
+        $form['elements']['first_page']['position']['#options'][$key] = $link->toRenderable();
+      }
+    }
+  }
+
+  if ($form['#form_id'] == 'webform_submission_hire_managed_add_form') {
+    $ip = \Drupal::request()->getClientIp();
+    $webform = Webform::load('sub_services_form');
+    if ($webform->hasSubmissions()) {
+      $query = \Drupal::entityQuery('webform_submission')
+        ->accessCheck(TRUE)
+        ->condition('webform_id', 'sub_services_form')
+        ->condition('remote_addr', $ip);
+      $result = $query->execute();
+      if ($result) {
+        $submissions = \Drupal\webform\Entity\WebformSubmission::loadMultiple($result);
+        $submission = end($submissions);
+        $data = $submission->getData();
+        $form['elements']['first_page']['wrapper']['work_email']['#default_value'] = $data['not_sure_which_technology'];
+        $form['elements']['second_page']['prefered_technology']['#default_value'] = $data['sub_service'];
+      }
+    }
+  }
+
+  if ($form['#form_id'] == 'webform_submission_sub_services_form_add_form') {
+    $liks = [];
+    $nodes = \Drupal::entityTypeManager()->getStorage('node')
+      ->loadByProperties(['type' => 'sub_service', 'status' => 1]);
+    if ($nodes) {
+      foreach ($nodes as $nid => $node) {
+        $show_as_link = $node->get('field_show_as_link')->getValue();
+        if (isset($show_as_link[0]['value']) && $show_as_link[0]['value'] == 1) {
+          $liks[$nid] = trim($node->getTitle());
+        }
+      }
+    }
+    $form['elements']['sub_service']['#description']['#markup'] = (object) $liks;
+  }
+
+  //Hire Services
+  if ($form['#form_id'] == 'webform_submission_hire_services_add_form') {
+    $ip = \Drupal::request()->getClientIp();
+    $webform = Webform::load('sub_service');
+    if ($webform->hasSubmissions()) {
+      $query = \Drupal::entityQuery('webform_submission')
+        ->accessCheck(TRUE)
+        ->condition('webform_id', 'sub_service')
+        ->condition('remote_addr', $ip);
+      $result = $query->execute();
+      if ($result) {
+        $submissions = \Drupal\webform\Entity\WebformSubmission::loadMultiple($result);
+        $submission = end($submissions);
+        $data = $submission->getData();
+        $form['elements']['first_page']['flexbox']['work_email']['#default_value'] = $data['work_email'];
+      }
+    }
+  }
+
+  if (isset($form['elements']['first_page']['wrapper']['select_other_skills']['#options'])) {
+    $options = $form['elements']['first_page']['wrapper']['select_other_skills']['#options'];
+
+    $new_options = [];
+    foreach ($options as $id => $option) {
+      $term = Term::load($id);
+      if ($term->hasField('field_image') && !$term->get('field_image')->isEmpty()) {
+        $media = $term->get('field_image')->entity;
+        $fid = $media?->getSource()?->getSourceFieldValue($media);
+        if ($fid) {
+          $mck_rest_manager = \Drupal::service('mck_rest_apis.mck_rest_manager');
+          $image = $mck_rest_manager->getFileContent($fid, $media);
+          $new_options[$id] = $image['src'];
+        }
+      }
+    }
+    $form['elements']['first_page']['wrapper']['select_other_skills']['#attributes']['data-images'] = Json::encode($new_options);
+  }
+}
+
+/**
+ * Implements hook_entity_presave().
+ */
+function mck_rest_apis_paragraph_presave(Drupal\Core\Entity\EntityInterface $entity): void {
+  if ($entity->bundle() === 'vertical_tabs') {
+    $id = $entity->get('field_view')->target_id;
+    if ($id === 'current_sub_services') {
+      $values = $entity->get('field_view')->getValue();
+      if (
+        $entity->getParentEntity()?->hasField('field_service') &&
+        !$entity->getParentEntity()?->get('field_service')->isEmpty()
+      ) {
+        $tag = $entity->getParentEntity()?->get('field_service')->target_id;
+        $values[0]['arguments'] = $tag;
+        $entity->set('field_view', $values);
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_presave() for webform_submission.
+ */
+function mck_rest_apis_webform_submission_presave(WebformSubmissionInterface $webform_submission): void {
+  if ($webform_submission->getWebform()->id() != 'hire') {
+    return;
+  }
+
+  $data = $webform_submission->getData();
+  if (isset($data['skills'])) {
+    $data['skills'] = array_column($data['skills'], 'target_id');
+  }
+
+  $webform_submission->setData($data);
+}
+
+/**
+ * Implodes the tags from the taxonomy module.
+ *
+ * @param \Drupal\Core\Entity\EntityInterface[] $entities
+ *   List of entities.
+ * @param string $bundle
+ *   Bundle name.
+ *
+ * @return string
+ *   Imploded list of entity labels.
+ */
+ function mck_rest_apis_implode_entities(array $entities, $bundle = NULL) {
+  $typed_entities = [];
+  foreach ($entities as $entity) {
+    $label = $entity->label() . ' (' . $entity->id() . ')';
+
+    // Extract entities belonging to the bundle in question.
+    if (!isset($bundle) || $entity->bundle() == $bundle) {
+      // Make sure we have a completed loaded entity.
+      if ($label) {
+        // Commas and quotes in tag names are special cases, so encode 'em.
+        if (str_contains($label, ',') || str_contains($label, '"')) {
+          $label = '"' . str_replace('"', '""', $label) . '"';
+        }
+
+        $typed_entities[] = $label;
+      }
+    }
+  }
+
+  return implode(',', $typed_entities);
+}
+

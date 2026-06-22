@@ -1,0 +1,10 @@
+uuid: 3d321d10-66b8-4684-9a41-0eb565e4ffef
+langcode: en
+status: true
+dependencies: {  }
+id: business_teaser
+label: 'Business teaser'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

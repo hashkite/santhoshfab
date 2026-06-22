@@ -1,0 +1,37 @@
+uuid: 7ce2eb32-8b75-481d-a965-bdfb5ecc00a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.numbers.field_numbers_paragraphs
+    - field.field.paragraph.numbers.field_title
+    - paragraphs.paragraphs_type.numbers
+  module:
+    - mck_rest_apis
+id: paragraph.numbers.default
+targetEntityType: paragraph
+bundle: numbers
+mode: default
+content:
+  field_numbers_paragraphs:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: paragraph
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  extra_field_popup: true

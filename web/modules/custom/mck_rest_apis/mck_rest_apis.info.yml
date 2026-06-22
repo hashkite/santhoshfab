@@ -1,0 +1,8 @@
+name: Custom Rest Api
+description: Provide functionality for site wide Usage of custom made rest apis.
+package: CUSTOM
+type: module
+core_version_requirement: ^9 || ^10
+version: '1.0'
+dependencies:
+  - paragraphs

@@ -1,0 +1,24 @@
+uuid: 98687f3c-b4d8-44bc-a44a-eb39bc692f80
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - filter.format.basic_html
+    - paragraphs.paragraphs_type.table_wrapper
+  module:
+    - text
+id: paragraph.table_wrapper.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: table_wrapper
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text_long

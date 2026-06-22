@@ -1,0 +1,24 @@
+uuid: 4a8ed977-6bdf-41e9-8413-9196423583d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_multicolor_title
+    - filter.format.full_html
+    - paragraphs.paragraphs_type.slider
+  module:
+    - text
+id: paragraph.slider.field_multicolor_title
+field_name: field_multicolor_title
+entity_type: paragraph
+bundle: slider
+label: 'Multicolor title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

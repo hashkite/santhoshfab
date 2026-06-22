@@ -1,0 +1,36 @@
+uuid: 82290353-4cca-4516-8117-71c07ebbc31f
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.article_similar
+    - field.field.config_pages.article_similar.field_description
+    - field.field.config_pages.article_similar.field_multicolor_title
+  module:
+    - mck_rest_apis
+id: config_pages.article_similar.default
+targetEntityType: config_pages
+bundle: article_similar
+mode: default
+content:
+  field_description:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_multicolor_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

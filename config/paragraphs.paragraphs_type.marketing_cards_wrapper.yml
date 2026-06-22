@@ -1,0 +1,16 @@
+uuid: 784de294-257d-429e-9a3d-68698637ba4b
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_ee
+third_party_settings:
+  paragraphs_ee:
+    paragraphs_categories:
+      global: global
+id: marketing_cards_wrapper
+label: 'Marketing Cards Wrapper'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

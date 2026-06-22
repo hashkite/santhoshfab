@@ -1,0 +1,21 @@
+uuid: 82c5b34c-b371-4239-a11e-17ff7ce731ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_contractor_compatible
+    - taxonomy.vocabulary.country
+id: taxonomy_term.country.field_contractor_compatible
+field_name: field_contractor_compatible
+entity_type: taxonomy_term
+bundle: country
+label: 'Contractor compatible'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

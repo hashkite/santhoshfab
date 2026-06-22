@@ -1,0 +1,15 @@
+uuid: 302faaca-e49f-41e3-a69f-3d29e9a5a1cf
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_ee
+third_party_settings:
+  paragraphs_ee:
+    paragraphs_categories: {  }
+id: team_member_testimonial
+label: 'Team Member Testimonial'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

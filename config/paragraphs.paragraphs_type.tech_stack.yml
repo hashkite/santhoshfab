@@ -1,0 +1,16 @@
+uuid: e7c27507-4aff-4273-a429-07d9b8984811
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_ee
+third_party_settings:
+  paragraphs_ee:
+    paragraphs_categories:
+      global: global
+id: tech_stack
+label: 'Tech Stack'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

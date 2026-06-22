@@ -1,0 +1,21 @@
+uuid: 924c2e62-4ec2-4867-a226-b9f2e5909962
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_media_position
+    - paragraphs.paragraphs_type.hero_plus
+  module:
+    - options
+id: paragraph.hero_plus.field_media_position
+field_name: field_media_position
+entity_type: paragraph
+bundle: hero_plus
+label: 'Media Position'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

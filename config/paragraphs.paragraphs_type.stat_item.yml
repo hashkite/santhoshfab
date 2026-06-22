@@ -1,0 +1,15 @@
+uuid: 5b4d6199-ba0a-4f22-85c8-5bb23ce88751
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_ee
+third_party_settings:
+  paragraphs_ee:
+    paragraphs_categories: {  }
+id: stat_item
+label: 'Stat Item'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

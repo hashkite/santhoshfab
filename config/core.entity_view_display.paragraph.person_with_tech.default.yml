@@ -1,0 +1,39 @@
+uuid: a7b9dcd5-c5f6-430c-8f1c-5d8949fab667
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.person_with_tech.field_person
+    - field.field.paragraph.person_with_tech.field_taxonomy
+    - paragraphs.paragraphs_type.person_with_tech
+  module:
+    - mck_rest_apis
+id: paragraph.person_with_tech.default
+targetEntityType: paragraph
+bundle: person_with_tech
+mode: default
+content:
+  field_person:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: compact
+      storage: user
+      convert: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_taxonomy:
+    type: mck_react
+    label: hidden
+    settings:
+      format: taxonomy
+      view_mode: teaser
+      storage: taxonomy_term
+      convert: 0
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  extra_field_popup: true

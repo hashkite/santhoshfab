@@ -1,0 +1,51 @@
+uuid: 86d81322-0b75-4d82-9183-9b9b262c945c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.teaser.field_description
+    - field.field.paragraph.teaser.field_icon
+    - field.field.paragraph.teaser.field_title
+    - paragraphs.paragraphs_type.teaser
+  module:
+    - mck_rest_apis
+id: paragraph.teaser.default
+targetEntityType: paragraph
+bundle: teaser
+mode: default
+content:
+  field_description:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_icon:
+    type: mck_react
+    label: hidden
+    settings:
+      format: media
+      view_mode: default
+      convert: '1'
+      storage: media
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  extra_field_popup: true

@@ -1,0 +1,86 @@
+uuid: 7c3083df-2341-4d1f-8790-676429bbfa98
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.country.field_contractor_compatible
+    - field.field.taxonomy_term.country.field_eor_compatible
+    - field.field.taxonomy_term.country.field_icon
+    - field.field.taxonomy_term.country.field_offices
+    - field.field.taxonomy_term.country.field_position
+    - taxonomy.vocabulary.country
+  module:
+    - mck_rest_apis
+id: taxonomy_term.country.default
+targetEntityType: taxonomy_term
+bundle: country
+mode: default
+content:
+  description:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_contractor_compatible:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: default
+      storage: ''
+      convert: 0
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_eor_compatible:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: default
+      storage: ''
+      convert: 0
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_icon:
+    type: mck_react
+    label: hidden
+    settings:
+      format: media
+      view_mode: default
+      convert: '1'
+      storage: media
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_offices:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: paragraph
+      convert: 0
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_position:
+    type: mck_react
+    label: hidden
+    settings:
+      format: multiple
+      view_mode: default
+      storage: ''
+      convert: 0
+    third_party_settings: {  }
+    weight: 8
+    region: content
+hidden:
+  extra_field_related_nodes: true

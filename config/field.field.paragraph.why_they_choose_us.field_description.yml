@@ -1,0 +1,24 @@
+uuid: 3e2b1520-b663-47fd-af39-97487505f0dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - filter.format.basic_html
+    - paragraphs.paragraphs_type.why_they_choose_us
+  module:
+    - text
+id: paragraph.why_they_choose_us.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: why_they_choose_us
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text_long

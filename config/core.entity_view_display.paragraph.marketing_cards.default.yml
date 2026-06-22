@@ -1,0 +1,87 @@
+uuid: 50e86655-240f-48a4-aa8c-5c7bd2d23c43
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.marketing_cards.field_background_color
+    - field.field.paragraph.marketing_cards.field_card_type
+    - field.field.paragraph.marketing_cards.field_cta
+    - field.field.paragraph.marketing_cards.field_description
+    - field.field.paragraph.marketing_cards.field_image
+    - field.field.paragraph.marketing_cards.field_title
+    - paragraphs.paragraphs_type.marketing_cards
+  module:
+    - mck_rest_apis
+id: paragraph.marketing_cards.default
+targetEntityType: paragraph
+bundle: marketing_cards
+mode: default
+content:
+  field_background_color:
+    type: mck_react
+    label: hidden
+    settings:
+      format: color
+      view_mode: default
+      storage: ''
+      convert: 0
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_card_type:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_cta:
+    type: mck_react
+    label: hidden
+    settings:
+      format: link
+      view_mode: default
+      storage: ''
+      convert: 0
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_description:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_image:
+    type: mck_react
+    label: hidden
+    settings:
+      format: media
+      view_mode: default
+      convert: '1'
+      storage: media
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  extra_field_popup: true

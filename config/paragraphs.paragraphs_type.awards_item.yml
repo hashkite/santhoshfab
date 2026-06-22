@@ -1,0 +1,15 @@
+uuid: e7e7e827-e7c3-4b45-b7f0-3b9ef0d10d69
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_ee
+third_party_settings:
+  paragraphs_ee:
+    paragraphs_categories: {  }
+id: awards_item
+label: 'Awards Item'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,46 @@
+uuid: fcc2ab7d-bc0e-4888-ba10-3f3d825abae8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.product_engineering.field_engineering_main
+    - field.field.node.product_engineering.field_hero
+    - node.type.product_engineering
+  module:
+    - mck_rest_apis
+    - user
+id: node.product_engineering.default
+targetEntityType: node
+bundle: product_engineering
+mode: default
+content:
+  field_engineering_main:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: paragraph
+      convert: 0
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_hero:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  extra_field_favorite: true
+  extra_field_popup: true

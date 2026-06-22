@@ -1,0 +1,94 @@
+uuid: 2ad877f7-9780-495e-a838-4c1527be155f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hero
+    - node.type.article
+    - paragraphs.paragraphs_type.hero
+  module:
+    - entity_reference_revisions
+id: node.article.field_hero
+field_name: field_hero
+entity_type: node
+bundle: article
+label: Hero
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      hero: hero
+    negate: 0
+    target_bundles_drag_drop:
+      case_studies:
+        weight: 23
+        enabled: false
+      client_impact:
+        weight: 24
+        enabled: false
+      client_impacts:
+        weight: 25
+        enabled: false
+      country:
+        weight: 26
+        enabled: false
+      faq_s:
+        weight: 27
+        enabled: false
+      feedback:
+        weight: 28
+        enabled: false
+      hero:
+        weight: 4
+        enabled: true
+      hero_slide:
+        weight: 5
+        enabled: false
+      hero_slider:
+        weight: 6
+        enabled: false
+      office:
+        weight: 32
+        enabled: false
+      offices:
+        weight: 33
+        enabled: false
+      our_clients:
+        weight: 34
+        enabled: false
+      our_footprints:
+        weight: 35
+        enabled: false
+      our_partners:
+        weight: 36
+        enabled: false
+      process:
+        weight: 37
+        enabled: false
+      tab:
+        weight: 38
+        enabled: false
+      tabs:
+        weight: 39
+        enabled: false
+      talent_insights:
+        weight: 40
+        enabled: false
+      title_with_description:
+        weight: 41
+        enabled: false
+      view:
+        weight: 42
+        enabled: false
+      we_give_back:
+        weight: 44
+        enabled: false
+      webform:
+        weight: 43
+        enabled: false
+field_type: entity_reference_revisions

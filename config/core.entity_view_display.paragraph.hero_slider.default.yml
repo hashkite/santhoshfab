@@ -1,0 +1,63 @@
+uuid: 9ed03736-ab20-4131-a196-57bb2d5c8bcf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.hero_slider.field_delay
+    - field.field.paragraph.hero_slider.field_paragraph
+    - field.field.paragraph.hero_slider.field_paragraphs
+    - field.field.paragraph.hero_slider.field_slider_speed
+    - paragraphs.paragraphs_type.hero_slider
+  module:
+    - mck_rest_apis
+id: paragraph.hero_slider.default
+targetEntityType: paragraph
+bundle: hero_slider
+mode: default
+content:
+  field_delay:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_paragraph:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_paragraphs:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_slider_speed:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: default
+      storage: ''
+      convert: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  extra_field_popup: true

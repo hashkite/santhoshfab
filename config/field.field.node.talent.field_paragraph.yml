@@ -1,0 +1,187 @@
+uuid: 50f27ee3-17d5-4215-b0c8-78d8e9a203a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraph
+    - node.type.talent
+    - paragraphs.paragraphs_type.people
+  module:
+    - entity_reference_revisions
+id: node.talent.field_paragraph
+field_name: field_paragraph
+entity_type: node
+bundle: talent
+label: 'People in hero section'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      people: people
+    negate: 0
+    target_bundles_drag_drop:
+      business_needs:
+        weight: 54
+        enabled: false
+      business_teaser:
+        weight: 55
+        enabled: false
+      country:
+        weight: 56
+        enabled: false
+      creativity:
+        weight: 57
+        enabled: false
+      experience:
+        weight: 58
+        enabled: false
+      famaash_productions:
+        weight: 59
+        enabled: false
+      famaash_streamlines:
+        weight: 60
+        enabled: false
+      faq_s:
+        weight: 61
+        enabled: false
+      feedback:
+        weight: 62
+        enabled: false
+      grid:
+        weight: 63
+        enabled: false
+      hero:
+        weight: 64
+        enabled: false
+      hero_slide:
+        weight: 65
+        enabled: false
+      hero_slider:
+        weight: 66
+        enabled: false
+      horizontal_tab:
+        weight: 67
+        enabled: false
+      horizontal_tabs:
+        weight: 68
+        enabled: false
+      how_we_work:
+        weight: 69
+        enabled: false
+      image:
+        weight: 70
+        enabled: false
+      image_with_background:
+        weight: 72
+        enabled: false
+      image_with_titles:
+        weight: 73
+        enabled: false
+      images:
+        weight: 71
+        enabled: false
+      link_with_icon:
+        weight: 74
+        enabled: false
+      looking_for_a_team:
+        weight: 75
+        enabled: false
+      model_item:
+        weight: 76
+        enabled: false
+      number:
+        weight: 77
+        enabled: false
+      numbers:
+        weight: 78
+        enabled: false
+      our_capabilities:
+        weight: 79
+        enabled: false
+      our_clients:
+        weight: 80
+        enabled: false
+      our_expertise:
+        weight: 81
+        enabled: false
+      our_footprints:
+        weight: 82
+        enabled: false
+      our_model:
+        weight: 83
+        enabled: false
+      our_team:
+        weight: 84
+        enabled: false
+      people:
+        weight: 85
+        enabled: true
+      people_images:
+        weight: 86
+        enabled: false
+      person:
+        weight: 87
+        enabled: false
+      scrollable_item:
+        weight: 88
+        enabled: false
+      scrollable_items:
+        weight: 89
+        enabled: false
+      service_item:
+        weight: 91
+        enabled: false
+      services:
+        weight: 90
+        enabled: false
+      slider:
+        weight: 92
+        enabled: false
+      tab:
+        weight: 93
+        enabled: false
+      tabs:
+        weight: 94
+        enabled: false
+      teaser:
+        weight: 95
+        enabled: false
+      tile:
+        weight: 96
+        enabled: false
+      tiles:
+        weight: 97
+        enabled: false
+      tiles_item:
+        weight: 98
+        enabled: false
+      title_with_description:
+        weight: 100
+        enabled: false
+      titles:
+        weight: 99
+        enabled: false
+      vertical_tab:
+        weight: 101
+        enabled: false
+      vertical_tabs:
+        weight: 102
+        enabled: false
+      video:
+        weight: 103
+        enabled: false
+      videos:
+        weight: 104
+        enabled: false
+      view:
+        weight: 105
+        enabled: false
+      work_experience:
+        weight: 106
+        enabled: false
+field_type: entity_reference_revisions

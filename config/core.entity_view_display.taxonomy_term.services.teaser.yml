@@ -1,0 +1,37 @@
+uuid: c9ca7331-be95-41fd-97f1-397e097a9ff1
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.teaser
+    - field.field.taxonomy_term.services.field_image
+    - taxonomy.vocabulary.services
+  module:
+    - mck_rest_apis
+id: taxonomy_term.services.teaser
+targetEntityType: taxonomy_term
+bundle: services
+mode: teaser
+content:
+  description:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_image:
+    type: mck_react
+    label: hidden
+    settings:
+      format: media
+      view_mode: default
+      storage: media
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  extra_field_related_nodes: true

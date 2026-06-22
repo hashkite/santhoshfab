@@ -1,0 +1,33 @@
+uuid: d5b2a54a-e5c7-4e6f-aed7-4a20174bc94e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.team_member_testimonial.field_media
+    - field.field.paragraph.team_member_testimonial.field_title
+    - paragraphs.paragraphs_type.team_member_testimonial
+  module:
+    - media_library
+id: paragraph.team_member_testimonial.default
+targetEntityType: paragraph
+bundle: team_member_testimonial
+mode: default
+content:
+  field_media:
+    type: media_library_widget
+    weight: 2
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,161 @@
+@import '../../../app/styles/functions';
+@import '../../../app/styles/mixins';
+@import '../../../app/styles/variables';
+@import '../../../app/styles/colors';
+
+.stat-cards-wrapper {
+  // padding: 60px 0;
+
+  @include breakpoint-down($md) {
+    padding: 50px 0;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    margin-top: 40px;
+
+    @include breakpoint-down($md) {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    @include breakpoint-down($sm) {
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-top: 30px;
+    }
+  }
+
+  &__empty {
+    text-align: center;
+    padding: 40px;
+    color: $gray-600;
+    font-size: 16px;
+  }
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-4px);
+  }
+
+  &__image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  &__detail {
+    background: $white;
+    text-align: center;
+    padding: 24px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin: -24px -24px 20px -24px;
+    padding: 16px 24px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: $white;
+    background-color: $brand-blue;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  &__stats {
+    display: flex;
+    gap: 0;
+    margin-bottom: 20px;
+    padding: 2rem 0rem;
+    // background: $gray-100;
+    border-radius: 4px;
+    overflow: hidden;
+
+    @include breakpoint-down($sm) {
+      flex-wrap: wrap;
+      gap: 0;
+    }
+  }
+
+  &__stat {
+    display: flex;
+    flex-direction: column;
+    padding: 12px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    color: $gray-600;
+    text-align: center;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    flex: 1;
+    border-right: 1px solid $gray-300;
+
+    &:last-child {
+      border-right: none;
+    }
+
+    @include breakpoint-down($sm) {
+      border-right: none;
+      border-bottom: 1px solid $gray-300;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+    .stat {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 4px;
+      color: $brand-blue;
+    }
+
+    .stat-label {
+      font-size: 18px;
+      color: $gray-600;
+    }
+  }
+
+  &__from-client {
+    margin: 0 0 12px 0;
+    font-weight: 600;
+    font-size: 13px;
+    color: $gray-dark-100;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+  }
+
+  &__review {
+    margin: 0;
+    font-size: 14px;
+    font-style: italic;
+    color: $gray-600;
+    text-align: center;
+    line-height: 1.6;
+    flex: 1;
+  }
+}

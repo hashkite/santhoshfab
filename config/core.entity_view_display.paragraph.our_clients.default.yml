@@ -1,0 +1,39 @@
+uuid: 166faa0d-7159-4a83-9521-7c56977df092
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.our_clients.field_grid
+    - field.field.paragraph.our_clients.field_images
+    - paragraphs.paragraphs_type.our_clients
+  module:
+    - mck_rest_apis
+id: paragraph.our_clients.default
+targetEntityType: paragraph
+bundle: our_clients
+mode: default
+content:
+  field_grid:
+    type: mck_react
+    label: hidden
+    settings:
+      format: bool
+      view_mode: default
+      storage: ''
+      convert: 0
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_images:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: config_pages
+      convert: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  extra_field_popup: true

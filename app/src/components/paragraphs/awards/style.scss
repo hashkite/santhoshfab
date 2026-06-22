@@ -1,0 +1,347 @@
+@import '../../../app/styles/functions';
+@import '../../../app/styles/mixins';
+@import '../../../app/styles/variables';
+@import '../../../app/styles/colors';
+
+/* CTA Card at the bottom */
+.awards__cta-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(16, 24, 40, 0.06);
+  margin: 48px auto -8rem auto;
+  max-width: 900px;
+  padding: 40px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include breakpoint-down($md) {
+    padding: 28px 12px;
+  }
+
+  .awards__cta-card-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+
+    @include breakpoint-down($sm) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 18px;
+    }
+  }
+
+  .awards__cta-card-text {
+    color: #8a97a6;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.2;
+
+    @include breakpoint-down($sm) {
+      font-size: 1.2rem;
+    }
+  }
+
+  .awards__cta-card-title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0.2em;
+    color: #8a97a6;
+  }
+
+  .awards__cta-card-desc {
+    font-size: 1.4rem;
+    color: #8a97a6;
+    font-weight: 500;
+  }
+
+  .awards__cta-card-btn {
+    background: #ff6b3d;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 14px 32px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.18s;
+    box-shadow: 0 2px 6px rgba(16, 24, 40, 0.04);
+
+    &:hover {
+      background: #ff4a1a;
+    }
+  }
+}
+
+
+// Strictly match the provided image: white bg, left large white heading, gold CTA, black stats, gold icons, spacing
+.awards {
+  background: $purple-400;
+  padding: 80px 0;
+  margin: -10rem 0 -6rem;
+
+  @include breakpoint-down($md) {
+    padding: 48px 0;
+  }
+
+  .container {
+    max-width: 1200px;
+  }
+
+  .awards__grid {
+    display: grid;
+    grid-template-columns: 1.1fr 340px 1.3fr;
+    align-items: center;
+    gap: 40px;
+    padding: 10rem 40px 5rem;
+
+    @include breakpoint-down($lg) {
+      grid-template-columns: 1fr 260px 1fr;
+    }
+
+    @include breakpoint-down($md) {
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+  }
+
+  /* Left column */
+  .awards__left {
+    .awards__label {
+      display: inline-block;
+      text-transform: uppercase;
+      font-size: 14px;
+      letter-spacing: 1.2px;
+      color: $gray-200;
+      margin-bottom: 18px;
+      font-weight: 700;
+    }
+
+    .awards__title>* {
+      font-size: 48px;
+      line-height: 1.1;
+      color: $white;
+      margin-bottom: 18px;
+      font-weight: 700;
+      letter-spacing: -1px;
+
+      strong {
+        color: $brand-blue;
+      }
+    }
+
+    .awards__description>* {
+      font-size: 16px;
+      line-height: 26px;
+      color: $gray-300;
+      margin-bottom: 32px;
+      font-weight: 400;
+    }
+
+    .awards__cta {
+      margin-top: 18px;
+
+      .link-cta {
+        color: $brand-blue;
+        padding-bottom: 4px;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 16px;
+        font-weight: 500;
+        transition: color 0.18s;
+
+        &:hover {
+          color: $yellow-500;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  /* Middle rotor + stats */
+  .awards__middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    gap: 20px;
+
+    .awards__rotor-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 32px;
+    }
+
+    .awards__rotor {
+      width: 210px;
+      height: 210px;
+      color: $gray-400;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      margin-bottom: 0;
+
+      svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+
+      text {
+        font-size: 22px;
+        line-height: 1.5;
+        letter-spacing: 0.04em;
+      }
+
+      .awards__rotor-center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 2;
+        pointer-events: none;
+        text-align: center;
+      }
+
+      .awards__rotor-number {
+        font-size: 44px;
+        line-height: 1.1;
+        font-weight: 800;
+        color: $yellow-400;
+        margin-bottom: 0;
+        letter-spacing: -1px;
+      }
+
+      .awards__rotor-label {
+        font-size: 17px;
+        color: $gray-600;
+        margin-top: 2px;
+        font-weight: 500;
+        letter-spacing: 0.01em;
+      }
+    }
+
+    .awards__rotor-value {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 12px;
+      margin-bottom: 8px;
+
+      .awards__rotor-number {
+        font-size: 44px;
+        line-height: 1.1;
+        font-weight: 800;
+        color: $black;
+        margin-bottom: 0;
+        letter-spacing: -1px;
+      }
+
+      .awards__rotor-label {
+        font-size: 17px;
+        color: $gray-600;
+        margin-top: 2px;
+        font-weight: 500;
+        letter-spacing: 0.01em;
+      }
+    }
+
+    .awards__stats {
+      text-align: center;
+      margin-top: -54px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .awards__stat-number {
+        font-size: 44px;
+        line-height: 1.1;
+        font-weight: 800;
+        color: $black;
+        margin-bottom: 0;
+        letter-spacing: -1px;
+      }
+
+      .awards__stat-label {
+        font-size: 15px;
+        color: $gray-600;
+        margin-bottom: 18px;
+        font-weight: 500;
+      }
+
+      .awards__stat-industry {
+        margin-top: 18px;
+
+        .awards__industry-number {
+          font-size: 28px;
+          font-weight: 700;
+          color: $blue-dark-400;
+        }
+
+        .awards__industry-label {
+          font-size: 14px;
+          color: $gray-400;
+        }
+      }
+    }
+  }
+
+  /* Right awards list */
+  .awards__right {
+    .awards__list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+
+      .award-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 64px;
+
+        img {
+          width: 64px;
+          height: 64px;
+          object-fit: contain;
+          display: block;
+          filter: none;
+        }
+
+        .award-item__title {
+          font-size: 17px;
+          color: $gray-500;
+          font-weight: 500;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  @include breakpoint-down($md) {
+    .awards__left .awards__title>* {
+      font-size: 32px;
+      line-height: 40px;
+    }
+
+    .awards__middle {
+      order: 3;
+    }
+
+    .awards__right {
+      order: 2;
+    }
+
+    .awards__right .awards__list {
+      gap: 18px;
+    }
+  }
+}

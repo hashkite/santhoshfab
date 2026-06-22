@@ -1,0 +1,21 @@
+uuid: 457c70c0-9699-4be4-9fd5-91fc633fd275
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_large_height
+    - paragraphs.paragraphs_type.hero_plus
+id: paragraph.hero_plus.field_large_height
+field_name: field_large_height
+entity_type: paragraph
+bundle: hero_plus
+label: 'Large height'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - mck_rest_apis
+    - serialization
+    - user
+id: search_by_view
+plugin_id: search_by_view
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - json
+  authentication:
+    - cookie

@@ -1,0 +1,29 @@
+uuid: fec9c24d-cf24-4cb4-9905-6aadcf809fc7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_capabilities
+    - paragraphs.paragraphs_type.our_capabilities
+    - taxonomy.vocabulary.capabilities
+id: paragraph.our_capabilities.field_capabilities
+field_name: field_capabilities
+entity_type: paragraph
+bundle: our_capabilities
+label: Capabilities
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      capabilities: capabilities
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

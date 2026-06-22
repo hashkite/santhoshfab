@@ -1,0 +1,48 @@
+uuid: 3b70783e-21b0-48d6-9d7b-047e6caf2bce
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tabs.field_description
+    - field.field.paragraph.tabs.field_multicolor_title
+    - field.field.paragraph.tabs.field_paragraphs
+    - paragraphs.paragraphs_type.tabs
+  module:
+    - mck_rest_apis
+id: paragraph.tabs.default
+targetEntityType: paragraph
+bundle: tabs
+mode: default
+content:
+  field_description:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_multicolor_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_paragraphs:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: paragraph
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  extra_field_popup: true

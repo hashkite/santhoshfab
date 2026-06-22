@@ -1,0 +1,36 @@
+uuid: 65891a4b-a21d-4bc9-aafb-9ed6c2cb544b
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.faqs
+    - field.field.config_pages.faqs.field_paragraphs
+    - field.field.config_pages.faqs.field_title
+  module:
+    - mck_rest_apis
+id: config_pages.faqs.default
+targetEntityType: config_pages
+bundle: faqs
+mode: default
+content:
+  field_paragraphs:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: paragraph
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

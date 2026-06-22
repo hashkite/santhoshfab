@@ -1,0 +1,19 @@
+uuid: 98cdd69a-3bf4-4d3a-93a9-18e7ce63c7ab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_heading
+    - paragraphs.paragraphs_type.brands_images
+id: paragraph.brands_images.field_heading
+field_name: field_heading
+entity_type: paragraph
+bundle: brands_images
+label: Heading
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

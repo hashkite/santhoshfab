@@ -1,0 +1,154 @@
+@import '../../../app/styles/functions';
+@import '../../../app/styles/mixins';
+@import '../../../app/styles/variables';
+@import '../../../app/styles/colors';
+
+.offices {
+  &__block {
+    display: grid;
+    gap: 35px 0;
+    grid-template-columns: repeat(24, 1fr);
+    padding-top: 70px;
+    transition: gap 0.3s, padding 0.3s;
+
+    @include breakpoint-down($xl) {
+      gap: 50px 35px;
+      grid-template-columns: repeat(2, 1fr);
+      padding-top: 0;
+    }
+
+    @include breakpoint-down($sm) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__item {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 25px;
+    position: relative;
+
+    &::before {
+      background: $gray-200;
+      content: '';
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: -25px;
+      width: 1px;
+
+      @include breakpoint-down($xl) {
+        height: 1px;
+        top: -25px;
+        left: 0;
+        width: 100%;
+      }
+    }
+
+    &:nth-child(2) {
+      &::before {
+        @include breakpoint-down($xl) {
+          display: none;
+        }
+
+        @include breakpoint-down($sm) {
+          display: block;
+        }
+      }
+    }
+
+    &:nth-child(even) {
+      grid-column: 12 / 18;
+
+      @include breakpoint-down($xl) {
+        grid-column: 2 / -1;
+      }
+
+      @include breakpoint-down($sm) {
+        grid-column: 1 / -1;
+      }
+    }
+
+    &:nth-child(odd) {
+      grid-column: 19 / -1;
+
+      @include breakpoint-down($xl) {
+        grid-column: 1 / 2;
+      }
+
+      @include breakpoint-down($sm) {
+        grid-column: 1 / -1;
+      }
+    }
+
+    &:first-child {
+      grid-column: 1 / 11;
+      grid-row: 1 / 3;
+
+      @include breakpoint-down($xl) {
+        grid-column: 1 / 2;
+        grid-row: 1 / 1;
+      }
+
+      @include breakpoint-down($sm) {
+        grid-column: 1 / -1;
+      }
+
+      &::before {
+        display: none;
+      }
+    }
+
+    .office {
+      &__subtitle {
+        color: $purple-200;
+        position: absolute;
+        top: -50px;
+        left: 0;
+
+        @include breakpoint-down($xl) {
+          position: static;
+          margin-bottom: 10px;
+        }
+      }
+
+      &__header {
+        margin-bottom: 25px;
+
+        @include breakpoint-down($xs) {
+          margin-bottom: 15px;
+        }
+      }
+
+      &__title {
+        align-items: center;
+        display: flex;
+        gap: 15px;
+        margin-bottom: 10px;
+
+        .flag {
+          width: 28px;
+
+          img {
+            height: auto;
+            width: 100%;
+          }
+        }
+
+        .title {
+          color: $blue-dark-200;
+          font-size: 25px;
+          font-weight: 500;
+          letter-spacing: -1.25px;
+        }
+      }
+
+      &__contacts {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+uuid: e1a01cb1-0224-4d73-8bd3-e2bbdfc1c483
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_ee
+third_party_settings:
+  paragraphs_ee:
+    paragraphs_categories:
+      global: global
+id: brands_images
+label: 'Brands Images'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

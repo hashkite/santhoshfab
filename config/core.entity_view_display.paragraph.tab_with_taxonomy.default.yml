@@ -1,0 +1,39 @@
+uuid: 469af7a4-4746-41d3-aff1-2fd15eb11a3c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tab_with_taxonomy.field_tags
+    - field.field.paragraph.tab_with_taxonomy.field_title
+    - paragraphs.paragraphs_type.tab_with_taxonomy
+  module:
+    - mck_rest_apis
+id: paragraph.tab_with_taxonomy.default
+targetEntityType: paragraph
+bundle: tab_with_taxonomy
+mode: default
+content:
+  field_tags:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: taxonomy_term
+      convert: 0
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  extra_field_popup: true

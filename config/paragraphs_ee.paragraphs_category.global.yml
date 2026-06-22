@@ -1,0 +1,10 @@
+uuid: 940451a4-404a-4235-b1eb-3a08add331c2
+langcode: en
+status: true
+dependencies: {  }
+id: global
+label: Global
+description:
+  value: ''
+  format: basic_html
+weight: -10

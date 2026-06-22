@@ -1,0 +1,75 @@
+uuid: 97829be3-772a-4a85-98e9-74d42cca97df
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.sub_service.field_hero
+    - field.field.node.sub_service.field_icon
+    - field.field.node.sub_service.field_image
+    - field.field.node.sub_service.field_paragraphs
+    - field.field.node.sub_service.field_service
+    - field.field.node.sub_service.field_show_as_link
+    - field.field.node.sub_service.field_subtitle
+    - field.field.node.sub_service.field_teaser_text
+    - node.type.sub_service
+  module:
+    - mck_rest_apis
+    - user
+id: node.sub_service.teaser
+targetEntityType: node
+bundle: sub_service
+mode: teaser
+content:
+  field_icon:
+    type: mck_react
+    label: hidden
+    settings:
+      format: media
+      view_mode: default
+      storage: media
+      convert: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_image:
+    type: mck_react
+    label: hidden
+    settings:
+      format: media
+      view_mode: default
+      convert: '1'
+      storage: media
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_subtitle:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_teaser_text:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  extra_field_favorite: true
+  extra_field_popup: true
+  field_hero: true
+  field_paragraphs: true
+  field_service: true
+  field_show_as_link: true
+  links: true

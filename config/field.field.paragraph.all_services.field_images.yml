@@ -1,0 +1,26 @@
+uuid: f1cfa9ce-0178-4ec5-976a-1528f5628641
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.all_services
+    - field.storage.paragraph.field_images
+    - paragraphs.paragraphs_type.all_services
+id: paragraph.all_services.field_images
+field_name: field_images
+entity_type: paragraph
+bundle: all_services
+label: Cards
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: 6bfbed48-1afc-453f-a38b-3891986b7985
+default_value_callback: ''
+settings:
+  handler: 'default:config_pages_type'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

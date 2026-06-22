@@ -1,0 +1,19 @@
+uuid: 26e77422-2717-4d30-a82c-bbba2b16ad83
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tooltip
+    - paragraphs.paragraphs_type.comparison_row
+id: paragraph.comparison_row.field_tooltip
+field_name: field_tooltip
+entity_type: paragraph
+bundle: comparison_row
+label: Tooltip
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

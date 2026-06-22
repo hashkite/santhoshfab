@@ -1,0 +1,19 @@
+uuid: 0977ec40-b739-42d8-83fc-03b9beb91b5a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_subtitle
+    - paragraphs.paragraphs_type.work_experience
+id: paragraph.work_experience.field_subtitle
+field_name: field_subtitle
+entity_type: paragraph
+bundle: work_experience
+label: Subtitle
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

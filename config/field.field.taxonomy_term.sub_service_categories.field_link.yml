@@ -1,0 +1,23 @@
+uuid: 416b89ca-4f5c-456c-b878-76dd85e6bc38
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_link
+    - taxonomy.vocabulary.sub_service_categories
+  module:
+    - link
+id: taxonomy_term.sub_service_categories.field_link
+field_name: field_link
+entity_type: taxonomy_term
+bundle: sub_service_categories
+label: Link
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

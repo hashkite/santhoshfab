@@ -1,0 +1,19 @@
+uuid: 87b51d06-ec9e-48d4-96b1-a4ee39da0a72
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.ppc_setup_process
+id: paragraph.ppc_setup_process.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: ppc_setup_process
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

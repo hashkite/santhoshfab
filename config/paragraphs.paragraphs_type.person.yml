@@ -1,0 +1,10 @@
+uuid: 3b6ee987-bb01-4d4c-bc68-b9ed5e3d29ae
+langcode: en
+status: true
+dependencies: {  }
+id: person
+label: Person
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,9 @@
+{
+  "id": "X7b3Dk9vF2E5L1cA",
+  "type": "hero",
+  "multicolor_title": { "value": "<h1>Page not found</h1>" },
+  "description": {
+    "value": "<p>The page you are looking for might have been moved or renamed.<br />Visit our <a href='/'>home page</a> to find what you need.</p>"
+  },
+  "additional_classes": "--not-found"
+}

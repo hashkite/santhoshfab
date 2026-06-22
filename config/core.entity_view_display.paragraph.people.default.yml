@@ -1,0 +1,39 @@
+uuid: 48ee6fbd-254c-45b1-b06c-299d115bdee9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.people.field_image
+    - field.field.paragraph.people.field_two_items
+    - paragraphs.paragraphs_type.people
+  module:
+    - mck_rest_apis
+id: paragraph.people.default
+targetEntityType: paragraph
+bundle: people
+mode: default
+content:
+  field_image:
+    type: mck_react
+    label: hidden
+    settings:
+      format: media
+      view_mode: default
+      convert: '1'
+      storage: media
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_two_items:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  extra_field_popup: true

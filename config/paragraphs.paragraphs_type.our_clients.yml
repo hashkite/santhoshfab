@@ -1,0 +1,16 @@
+uuid: e853cd70-9291-46b2-b302-2684c949170c
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_ee
+third_party_settings:
+  paragraphs_ee:
+    paragraphs_categories:
+      global: global
+id: our_clients
+label: Sponsors
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

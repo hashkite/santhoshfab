@@ -1,0 +1,79 @@
+@import '../../../app/styles/functions';
+@import '../../../app/styles/mixins';
+@import '../../../app/styles/variables';
+@import '../../../app/styles/colors';
+
+.faq {
+  &__list {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    transition: 0.3s;
+
+    @include breakpoint-down($lg) {
+      gap: 25px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoint-down($xs) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__item {
+    background: $gray-300;
+    border-radius: 12px;
+    padding: 30px 30px 50px;
+    transition: 0.3s;
+
+    @include breakpoint-down($lg) {
+      padding: 25px;
+    }
+
+    &-number {
+      align-items: center;
+      background: $gray-50;
+      border-radius: 10px;
+      display: flex;
+      font-size: 25px;
+      font-weight: 600;
+      height: 80px;
+      justify-content: center;
+      letter-spacing: -0.5px;
+      line-height: 32px;
+      margin-bottom: 40px;
+      transition: 0.3s;
+      width: 80px;
+
+      @include breakpoint-down($lg) {
+        font-size: 20px;
+        height: 70px;
+        margin-bottom: 25px;
+        width: 70px;
+      }
+
+      @include breakpoint-down($sm) {
+        font-size: 18px;
+        height: 60px;
+        width: 60px;
+      }
+    }
+
+    &-content {
+      h3 {
+        color: $black;
+        font-size: 20px;
+        font-weight: 600;
+        letter-spacing: -0.4px;
+        line-height: 25px;
+        margin-bottom: 15px;
+      }
+    }
+
+    &-description {
+      font-size: 16px;
+      letter-spacing: -0.32px;
+      line-height: 22px;
+    }
+  }
+}

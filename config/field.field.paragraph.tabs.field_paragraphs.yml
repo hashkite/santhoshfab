@@ -1,0 +1,87 @@
+uuid: 2b5bd758-1eec-4a27-858e-d97fdcfea73c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraphs
+    - paragraphs.paragraphs_type.feedback
+    - paragraphs.paragraphs_type.tab
+    - paragraphs.paragraphs_type.tabs
+  module:
+    - entity_reference_revisions
+id: paragraph.tabs.field_paragraphs
+field_name: field_paragraphs
+entity_type: paragraph
+bundle: tabs
+label: Paragraphs
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      tab: tab
+      feedback: feedback
+    negate: 0
+    target_bundles_drag_drop:
+      case_studies:
+        weight: 20
+        enabled: false
+      client_impact:
+        weight: 21
+        enabled: false
+      client_impacts:
+        weight: 22
+        enabled: false
+      country:
+        weight: 23
+        enabled: false
+      faq_s:
+        weight: 24
+        enabled: false
+      feedback:
+        weight: 25
+        enabled: true
+      hero:
+        weight: 4
+        enabled: false
+      hero_slide:
+        weight: 5
+        enabled: false
+      hero_slider:
+        weight: 6
+        enabled: false
+      our_clients:
+        weight: 29
+        enabled: false
+      our_footprints:
+        weight: 30
+        enabled: false
+      our_partners:
+        weight: 31
+        enabled: false
+      process:
+        weight: 32
+        enabled: false
+      tab:
+        weight: 9
+        enabled: true
+      tabs:
+        weight: 10
+        enabled: false
+      title_with_description:
+        weight: 35
+        enabled: false
+      view:
+        weight: 36
+        enabled: false
+      we_give_back:
+        weight: 38
+        enabled: false
+      webform:
+        weight: 37
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,977 @@
+@import './../../../app/styles/functions';
+@import './../../../app/styles/colors';
+@import './../../../app/styles/variables';
+@import './../../../app/styles/mixins';
+
+.btn {
+  @include btn-default;
+
+  .icon {
+    &--turn {
+      &-left {
+        transform: rotate(-180deg);
+      }
+
+      &-up {
+        transform: rotate(-90deg);
+      }
+    }
+  }
+
+  &-m {
+    border-radius: 10px;
+    color: $white;
+    font-size: 18px;
+    gap: 20px;
+    line-height: 20px;
+    overflow: hidden;
+    padding: 24px 25px;
+    position: relative;
+
+    &::before,
+    &::after {
+      border-radius: 100%;
+      content: '';
+      height: 5px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: .3s .1s cubic-bezier(0.65, 0, 0.35, 1);
+      transform-origin: center;
+      transform: scale(0);
+      width: 5px;
+    }
+
+    &::after {
+      top: auto;
+      right: 0;
+      bottom: 0;
+      left: auto;
+    }
+
+    .icon,
+    .text,
+    svg {
+      position: relative;
+      z-index: 1;
+    }
+
+    &:hover {
+      text-decoration: none;
+
+      &::before,
+      &::after {
+        transform: scale(50);
+      }
+    }
+  }
+
+  &-s {
+    border-radius: 20px;
+    font-size: 17px;
+    font-weight: 400;
+    gap: 8px;
+    line-height: 17px;
+    padding: 9px 20px;
+  }
+
+  &-circle {
+    align-items: center;
+    border-radius: 100%;
+    display: inline-flex;
+    height: 50px;
+    justify-content: center;
+    min-width: 50px;
+    overflow: hidden;
+    position: relative;
+    width: 50px;
+
+    svg {
+      display: block;
+      height: 17px;
+      position: relative;
+      width: 10px;
+      z-index: 1;
+    }
+
+    &::before,
+    &::after {
+      border-radius: 100%;
+      content: '';
+      height: 5px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: .3s .1s cubic-bezier(0.65, 0, 0.35, 1);
+      transform-origin: center;
+      transform: scale(0);
+      width: 5px;
+    }
+
+    &::after {
+      top: auto;
+      right: 0;
+      bottom: 0;
+      left: auto;
+    }
+
+    &:hover {
+      text-decoration: none;
+
+      &::before,
+      &::after {
+        transform: scale(30);
+      }
+    }
+
+    &-s {
+      height: 40px;
+      min-width: 40px;
+      width: 40px;
+
+      svg {
+        &.icon-arrow--up {
+          height: 14px;
+          width: 14px;
+        }
+      }
+    }
+  }
+
+  &-square {
+    align-items: center;
+    border: 1px solid;
+    border-radius: 10px;
+    display: inline-flex;
+    height: 68px;
+    justify-content: center;
+    min-width: 68px;
+    overflow: hidden;
+    position: relative;
+    width: 68px;
+
+    svg {
+      display: block;
+      height: 17px;
+      position: relative;
+      width: 10px;
+      z-index: 1;
+    }
+
+    &::before,
+    &::after {
+      border-radius: 100%;
+      content: '';
+      height: 5px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: .3s .1s cubic-bezier(0.65, 0, 0.35, 1);
+      transform-origin: center;
+      transform: scale(0);
+      width: 5px;
+    }
+
+    &::after {
+      top: auto;
+      right: 0;
+      bottom: 0;
+      left: auto;
+    }
+
+    &:hover {
+      text-decoration: none;
+
+      &::before,
+      &::after {
+        transform: scale(30);
+      }
+    }
+  }
+
+  &-link {
+    color: $white;
+    font-size: 18px;
+    font-weight: 600;
+    gap: 20px;
+    line-height: 20px;
+    transition: .3s cubic-bezier(0.65, 0, 0.35, 1);
+
+    .text {
+      position: relative;
+
+      &::after {
+        background: $white;
+        border-radius: 2px;
+        content: '';
+        height: 2px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        transition: .3s cubic-bezier(0.65, 0, 0.35, 1);
+        width: 0;
+      }
+    }
+
+    &:hover {
+      text-decoration: none;
+
+      .text {
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+
+    &:active {
+      opacity: .7;
+    }
+
+    &.btn-black {
+      color: $blue-dark-200;
+      font-size: 17px;
+      font-weight: 400;
+      gap: 25px;
+      line-height: 20px;
+
+      .icon {
+        align-items: center;
+        border: 1px solid $gray-200;
+        border-radius: 100%;
+        display: flex;
+        height: 38px;
+        justify-content: center;
+        min-width: 38px;
+        transition: .3s;
+        width: 38px;
+
+        svg {
+          path {
+            transition: .3s;
+          }
+        }
+      }
+
+      .text {
+        &::after {
+          background: $blue-dark-200;
+          height: 1px;
+        }
+      }
+
+      &:hover {
+        .icon {
+          border-color: $purple-200;
+        }
+      }
+
+      &:active {
+        opacity: 1;
+
+        .icon {
+          background: $purple-200;
+          border-color: $purple-200;
+
+          svg {
+            path {
+              fill: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-gray-border {
+    background: transparent;
+    border: 1px solid $gray-200;
+    color: $black;
+    overflow: hidden;
+    position: relative;
+
+    &::before,
+    &::after {
+      background: $purple-200;
+      border-radius: 100%;
+      content: '';
+      height: 5px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: .3s .1s cubic-bezier(0.65, 0, 0.35, 1);
+      transform-origin: center;
+      transform: scale(0);
+      width: 5px;
+    }
+
+    &::after {
+      top: auto;
+      right: 0;
+      bottom: 0;
+      left: auto;
+    }
+
+    svg {
+      path {
+        fill: $black;
+        transition: .3s .1s;
+      }
+    }
+
+    .icon,
+    .text,
+    svg {
+      position: relative;
+      z-index: 1;
+    }
+
+    &:hover {
+      border-color: $purple-200;
+      color: $purple-200;
+      text-decoration: none;
+
+      svg {
+        path {
+          fill: $white;
+        }
+      }
+
+      &::before,
+      &::after {
+        transform: scale(50);
+      }
+    }
+
+    &:active {
+
+      &::before,
+      &::after {
+        background: darken($purple-200, 10);
+      }
+    }
+
+    &-2 {
+      background: transparent;
+      border: 1px solid $gray-200;
+      color: $blue-dark-300;
+      overflow: hidden;
+      padding-left: 35px;
+      padding-right: 35px;
+      position: relative;
+
+      @include breakpoint-down($md) {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      &::before,
+      &::after {
+        background: $purple-200;
+        border-radius: 100%;
+        content: '';
+        height: 5px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: .3s .1s cubic-bezier(0.65, 0, 0.35, 1);
+        transform-origin: center;
+        transform: scale(0);
+        width: 5px;
+      }
+
+      &::after {
+        top: auto;
+        right: 0;
+        bottom: 0;
+        left: auto;
+      }
+
+      svg {
+        path {
+          transition: .3s .1s;
+        }
+      }
+
+      .icon,
+      .text,
+      svg {
+        position: relative;
+        z-index: 1;
+      }
+
+      &:hover {
+        border-color: $purple-200;
+        color: $white;
+        text-decoration: none;
+
+        svg {
+          path {
+            fill: $white;
+          }
+        }
+
+        &::before,
+        &::after {
+          transform: scale(80);
+        }
+      }
+
+      &:active {
+
+        &::before,
+        &::after {
+          background: darken($purple-200, 10);
+        }
+      }
+    }
+
+    &-3 {
+      background: transparent;
+      border: 1px solid $gray-600;
+      color: $white;
+      overflow: hidden;
+      padding-left: 40px;
+      padding-right: 40px;
+      position: relative;
+
+      @include breakpoint-down($xs) {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      &::before,
+      &::after {
+        background: $purple-200;
+        border-radius: 100%;
+        content: '';
+        height: 5px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: .3s .1s cubic-bezier(0.65, 0, 0.35, 1);
+        transform-origin: center;
+        transform: scale(0);
+        width: 5px;
+      }
+
+      &::after {
+        top: auto;
+        right: 0;
+        bottom: 0;
+        left: auto;
+      }
+
+      svg {
+        path {
+          transition: .3s .1s;
+        }
+      }
+
+      .icon,
+      .text,
+      svg {
+        position: relative;
+        z-index: 1;
+      }
+
+      &:hover {
+        border-color: $purple-200;
+        color: $white;
+        text-decoration: none;
+
+        svg {
+          path {
+            fill: $white;
+          }
+        }
+
+        &::before,
+        &::after {
+          transform: scale(80);
+        }
+      }
+
+      &:active {
+
+        &::before,
+        &::after {
+          background: darken($purple-200, 10);
+        }
+      }
+    }
+  }
+
+  &-white-border {
+    background: transparent;
+    border: 1px solid $white;
+    color: $white;
+    overflow: hidden;
+    position: relative;
+
+    &::before,
+    &::after {
+      background: $white;
+      border-radius: 100%;
+      content: '';
+      height: 5px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: .3s .1s cubic-bezier(0.65, 0, 0.35, 1);
+      transform-origin: center;
+      transform: scale(0);
+      width: 5px;
+    }
+
+    &::after {
+      top: auto;
+      right: 0;
+      bottom: 0;
+      left: auto;
+    }
+
+    svg {
+      path {
+        transition: .3s;
+      }
+    }
+
+    .icon,
+    .text {
+      position: relative;
+      z-index: 1;
+    }
+
+    &:hover {
+      color: $purple-200;
+      text-decoration: none;
+
+      .icon {
+        svg {
+          path {
+            fill: $purple-200;
+          }
+        }
+      }
+
+      &::before,
+      &::after {
+        transform: scale(50);
+      }
+    }
+
+    &:active {
+
+      &::before,
+      &::after {
+        background: rgba($white, .5);
+      }
+    }
+  }
+
+  &-burger {
+    background: $brand-blue;
+    border-radius: 100%;
+    color: $blue-dark-200;
+    height: 55px;
+    overflow: hidden;
+    position: relative;
+    transition: .3s;
+    width: 55px;
+
+    &::before,
+    &::after {
+      background: $brand-blue;
+      border-radius: 100%;
+      content: '';
+      height: 5px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: .3s .1s cubic-bezier(0.65, 0, 0.35, 1);
+      transform-origin: center;
+      transform: scale(0);
+      width: 5px;
+    }
+
+    &::after {
+      top: auto;
+      right: 0;
+      bottom: 0;
+      left: auto;
+    }
+
+    .icon-burger {
+      background: transparent;
+      border-radius: 2px;
+      display: flex;
+      height: 2px;
+      position: relative;
+      width: 22px;
+      z-index: 1;
+
+      &::before,
+      &::after {
+        background: $white;
+        border-radius: 2px;
+        content: '';
+        height: 2px;
+        position: absolute;
+        top: -4px;
+        right: 0;
+        transition: .3s;
+        width: 100%;
+      }
+
+      &::before {
+        z-index: 1;
+      }
+
+      &::after {
+        top: auto;
+        right: 0;
+        bottom: -4px;
+        left: auto;
+        width: 12px;
+      }
+    }
+
+    &:hover {
+      text-decoration: none;
+
+      &::before,
+      &::after {
+        transform: scale(20);
+      }
+
+      .icon-burger {
+        &::before {
+          top: -5px;
+        }
+
+        &::after {
+          bottom: -5px;
+        }
+      }
+    }
+
+    &:active {
+
+      &::before,
+      &::after {
+        background: darken($brand-blue, 3);
+      }
+    }
+
+    &.active {
+      .icon-burger {
+        transition: .3s;
+
+        &::before {
+          top: 0;
+          transition: top .3s, transform .3s .3s;
+          transform: rotate(45deg);
+        }
+
+        &::after {
+          bottom: 0;
+          transition: background .3s, bottom .3s, width .3s, transform .3s .3s;
+          transform: rotate(-45deg);
+          width: 100%;
+        }
+      }
+
+      &:hover {
+        .icon-burger {
+          transform: scale(.8);
+        }
+      }
+    }
+  }
+
+  &-primary,
+  &-secondary {
+    background: $purple-200;
+    border-radius: 10px;
+    color: $white;
+    font-size: 17px;
+    gap: 20px;
+    line-height: 20px;
+    overflow: hidden;
+    padding: 17px 20px;
+    position: relative;
+
+    &::before,
+    &::after {
+      background: $brand-blue;
+      border-radius: 100%;
+      content: '';
+      height: 5px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: .3s .1s cubic-bezier(0.65, 0, 0.35, 1);
+      transform-origin: center;
+      transform: scale(0);
+      width: 5px;
+    }
+
+    &::after {
+      top: auto;
+      right: 0;
+      bottom: 0;
+      left: auto;
+    }
+
+    .icon,
+    .text,
+    svg {
+      position: relative;
+      z-index: 1;
+    }
+
+    &:hover {
+      text-decoration: none;
+
+      &::before,
+      &::after {
+        transform: scale(50);
+      }
+    }
+
+    &:active {
+
+      &::before,
+      &::after {
+        background: darken($brand-blue, 10);
+      }
+    }
+  }
+
+  &-secondary {
+    background: $brand-blue;
+    color: $white;
+    transition: .3s .1s;
+
+    &::before,
+    &::after {
+      background: darken($brand-blue, 5);
+    }
+
+    .icon {
+      svg path {
+        transition: .3s .1s;
+      }
+    }
+
+    &:hover {
+      color: $white;
+
+      .icon {
+        svg path {
+          fill: $white;
+        }
+      }
+    }
+
+    &:active {
+
+      &::before,
+      &::after {
+        background: darken($brand-blue, 10);
+      }
+    }
+
+    &.btn-white {
+      color: $blue-dark-400;
+
+      .icon {
+        svg path {
+          fill: $purple-200;
+        }
+      }
+
+      &:hover {
+        color: $white;
+
+        .icon {
+          svg path {
+            fill: $white;
+          }
+        }
+      }
+
+      &:active {
+
+        &::before,
+        &::after {
+          background: darken($brand-blue, 10);
+        }
+      }
+    }
+  }
+
+  &-purple {
+    background: $purple-200;
+
+    &::before,
+    &::after {
+      background: $brand-blue;
+    }
+
+    &:active {
+
+      &::before,
+      &::after {
+        background: darken($brand-blue, 10);
+      }
+    }
+
+    &-gradient {
+      background: linear-gradient(to right, $purple-200 0%, #AB74F6 100%);
+
+      &::before,
+      &::after {
+        background: $purple-200;
+        height: 10px;
+        width: 10px;
+      }
+
+      &:active {
+
+        &::before,
+        &::after {
+          background: darken($purple-200, 10);
+        }
+      }
+    }
+
+    &-border {
+      border: 1px solid $purple-500;
+      color: $white;
+
+      svg {
+        path {
+          fill: $brand-blue;
+          transition: fill .3s;
+        }
+      }
+
+      &::before,
+      &::after {
+        background: $purple-200;
+      }
+
+      &:hover {
+        border-color: $purple-200;
+
+        svg path {
+          fill: $white;
+        }
+      }
+
+      &:active {
+        border-color: $purple-500;
+
+        &::before,
+        &::after {
+          background: $purple-500;
+        }
+      }
+    }
+  }
+
+  &-yellow {
+    background: $brand-blue;
+
+    &::before,
+    &::after {
+      background: darken($brand-blue, 10);
+    }
+
+    &:active {
+
+      &::before,
+      &::after {
+        background: darken($brand-blue, 15);
+      }
+    }
+  }
+
+  &-white {
+    background: $gray-50;
+
+    &.btn-square {
+      border: none;
+    }
+
+    svg {
+      path {
+        fill: $blue-dark-400;
+        transition: fill .3s;
+      }
+    }
+
+    &::before,
+    &::after {
+      background: $brand-blue;
+    }
+
+    &:hover {
+      svg {
+        path {
+          fill: $white;
+          transition: fill .3s;
+        }
+      }
+    }
+
+    &:active {
+
+      &::before,
+      &::after {
+        background: darken($brand-blue, 10);
+      }
+    }
+
+    &-2 {
+      background: $white;
+      color: $blue-dark-400;
+
+      svg {
+        path {
+          transition: fill .3s;
+        }
+      }
+
+      &::before,
+      &::after {
+        background: $purple-200;
+      }
+
+      &:hover {
+        color: $white;
+
+        svg {
+          path {
+            fill: $white;
+            transition: fill .3s;
+          }
+        }
+      }
+
+      &:active {
+        color: $white;
+
+        &::before,
+        &::after {
+          background: darken($purple-200, 10);
+        }
+      }
+    }
+  }
+}
+
+button {
+  font-family: $body-font-family;
+}

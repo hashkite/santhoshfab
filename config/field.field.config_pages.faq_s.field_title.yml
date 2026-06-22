@@ -1,0 +1,19 @@
+uuid: 10a23a28-5c8a-49f9-a044-16ea3f22df30
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.faq_s
+    - field.storage.config_pages.field_title
+id: config_pages.faq_s.field_title
+field_name: field_title
+entity_type: config_pages
+bundle: faq_s
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

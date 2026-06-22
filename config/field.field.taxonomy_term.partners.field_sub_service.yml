@@ -1,0 +1,29 @@
+uuid: 9a3d5242-5b90-4ec1-a5b3-c950819a19ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_sub_service
+    - node.type.sub_service
+    - taxonomy.vocabulary.partners
+id: taxonomy_term.partners.field_sub_service
+field_name: field_sub_service
+entity_type: taxonomy_term
+bundle: partners
+label: 'Sub service'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      sub_service: sub_service
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,39 @@
+uuid: 51918aaa-a601-42d8-8df7-29a85fa7dec6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.offices.field_title
+    - field.field.paragraph.offices.field_top_title
+    - paragraphs.paragraphs_type.offices
+  module:
+    - mck_rest_apis
+id: paragraph.offices.default
+targetEntityType: paragraph
+bundle: offices
+mode: default
+content:
+  field_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_top_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  extra_field_popup: true

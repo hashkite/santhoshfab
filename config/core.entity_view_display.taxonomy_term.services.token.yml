@@ -1,0 +1,44 @@
+uuid: 540815ba-8b5e-4318-a6a8-5543f8ffcd09
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.token
+    - field.field.taxonomy_term.services.field_image
+    - taxonomy.vocabulary.services
+  module:
+    - mck_rest_apis
+id: taxonomy_term.services.token
+targetEntityType: taxonomy_term
+bundle: services
+mode: token
+content:
+  description:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  extra_field_related_nodes:
+    type: extra_field_related_nodes
+    settings:
+      label: ''
+      view_mode: token
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_image:
+    type: mck_react
+    label: hidden
+    settings:
+      format: media
+      view_mode: default
+      storage: media
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

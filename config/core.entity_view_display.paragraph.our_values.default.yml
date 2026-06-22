@@ -1,0 +1,63 @@
+uuid: f2e5ba2b-9037-43b1-ac1d-14a001811f34
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.our_values.field_description
+    - field.field.paragraph.our_values.field_new_ui
+    - field.field.paragraph.our_values.field_paragraphs
+    - field.field.paragraph.our_values.field_title
+    - paragraphs.paragraphs_type.our_values
+  module:
+    - mck_rest_apis
+id: paragraph.our_values.default
+targetEntityType: paragraph
+bundle: our_values
+mode: default
+content:
+  field_description:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_new_ui:
+    type: mck_react
+    label: hidden
+    settings:
+      format: bool
+      view_mode: default
+      storage: ''
+      convert: 0
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_paragraphs:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  extra_field_popup: true

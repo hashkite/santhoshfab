@@ -1,0 +1,426 @@
+uuid: dba5d40f-998a-4e58-9c87-3e3bb90fcc0a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.user.user.field_available_for_hire
+    - field.field.user.user.field_availablity
+    - field.field.user.user.field_country
+    - field.field.user.user.field_country_ref
+    - field.field.user.user.field_description
+    - field.field.user.user.field_experience
+    - field.field.user.user.field_expertise
+    - field.field.user.user.field_familiar_with
+    - field.field.user.user.field_flag
+    - field.field.user.user.field_image
+    - field.field.user.user.field_linked_in
+    - field.field.user.user.field_location
+    - field.field.user.user.field_portfolio
+    - field.field.user.user.field_position
+    - field.field.user.user.field_previously_at
+    - field.field.user.user.field_role
+    - field.field.user.user.field_show_on_tailored_teams
+    - field.field.user.user.field_time_zone
+    - field.field.user.user.field_toptal_member_since
+    - field.field.user.user.field_verified_expert_in_enginee
+    - field.field.user.user.field_work_experience
+  module:
+    - autocomplete_deluxe
+    - datetime
+    - field_group
+    - media_library
+    - paragraphs
+    - paragraphs_ee
+    - paragraphs_features
+    - path
+    - user
+third_party_settings:
+  field_group:
+    group_tabs:
+      children:
+        - group_settings
+        - group_header
+        - group_main
+        - group_portfolio
+        - group_experience
+        - group_work_experience
+      label: Tabs
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        direction: horizontal
+        width_breakpoint: null
+    group_header:
+      children:
+        - field_position
+        - field_previously_at
+        - field_expertise
+        - field_role
+        - field_location
+        - field_availablity
+        - field_time_zone
+        - field_available_for_hire
+        - field_verified_expert_in_enginee
+        - field_toptal_member_since
+        - field_linked_in
+        - field_country_ref
+      label: Header
+      region: content
+      parent_name: group_tabs
+      weight: 21
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_main:
+      children:
+        - field_description
+        - field_familiar_with
+      label: Main
+      region: content
+      parent_name: group_tabs
+      weight: 22
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_settings:
+      children:
+        - field_show_on_tailored_teams
+        - account
+        - field_image
+        - path
+      label: Settings
+      region: content
+      parent_name: group_tabs
+      weight: 20
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_portfolio:
+      children:
+        - field_portfolio
+      label: Portfolio
+      region: content
+      parent_name: group_tabs
+      weight: 23
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_experience:
+      children:
+        - field_experience
+      label: ' Experience'
+      region: content
+      parent_name: group_tabs
+      weight: 24
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_work_experience:
+      children:
+        - field_work_experience
+      label: 'Work experience'
+      region: content
+      parent_name: group_tabs
+      weight: 25
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+_core:
+  default_config_hash: FaQ9Ptcpxpg30AtiqRDtl_8zbJArHP1LPfug_s59TOA
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  account:
+    weight: 27
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_available_for_hire:
+    type: boolean_checkbox
+    weight: 34
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_availablity:
+    type: string_textfield
+    weight: 32
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_country_ref:
+    type: entity_reference_autocomplete
+    weight: 38
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_description:
+    type: string_textarea
+    weight: 21
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_experience:
+    type: paragraphs
+    weight: 24
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings:
+      paragraphs_features:
+        add_in_between: false
+        add_in_between_link_count: 3
+        delete_confirmation: false
+        show_drag_and_drop: true
+        show_collapse_all: true
+      paragraphs_ee:
+        paragraphs_ee:
+          dialog_off_canvas: false
+          dialog_style: tiles
+  field_expertise:
+    type: entity_reference_autocomplete
+    weight: 29
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_familiar_with:
+    type: autocomplete_deluxe
+    weight: 23
+    region: content
+    settings:
+      match_operator: CONTAINS
+      autocomplete_route_name: autocomplete_deluxe.autocomplete
+      size: 60
+      selection_handler: default
+      limit: 10
+      min_length: 0
+      delimiter: ''
+      not_found_message_allow: false
+      not_found_message: "The term '@term' will be added"
+      no_empty_message: 'No terms could be found. Please type in order to add a new term.'
+    third_party_settings: {  }
+  field_image:
+    type: media_library_widget
+    weight: 28
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_linked_in:
+    type: string_textfield
+    weight: 37
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_location:
+    type: string_textfield
+    weight: 31
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_portfolio:
+    type: paragraphs
+    weight: 23
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings:
+      paragraphs_features:
+        add_in_between: false
+        add_in_between_link_count: 3
+        delete_confirmation: false
+        show_drag_and_drop: true
+        show_collapse_all: true
+      paragraphs_ee:
+        paragraphs_ee:
+          dialog_off_canvas: false
+          dialog_style: tiles
+  field_position:
+    type: autocomplete_deluxe
+    weight: 27
+    region: content
+    settings:
+      match_operator: CONTAINS
+      autocomplete_route_name: autocomplete_deluxe.autocomplete
+      size: 60
+      selection_handler: default
+      limit: 10
+      min_length: 0
+      delimiter: ''
+      not_found_message_allow: false
+      not_found_message: "The term '@term' will be added"
+      no_empty_message: 'No terms could be found. Please type in order to add a new term.'
+    third_party_settings: {  }
+  field_previously_at:
+    type: entity_reference_autocomplete
+    weight: 28
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_role:
+    type: autocomplete_deluxe
+    weight: 30
+    region: content
+    settings:
+      match_operator: CONTAINS
+      autocomplete_route_name: autocomplete_deluxe.autocomplete
+      size: 60
+      selection_handler: default
+      limit: 10
+      min_length: 0
+      delimiter: ''
+      not_found_message_allow: false
+      not_found_message: "The term '@term' will be added"
+      no_empty_message: 'No terms could be found. Please type in order to add a new term.'
+    third_party_settings: {  }
+  field_show_on_tailored_teams:
+    type: boolean_checkbox
+    weight: 26
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_time_zone:
+    type: string_textfield
+    weight: 33
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_toptal_member_since:
+    type: datetime_default
+    weight: 36
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_verified_expert_in_enginee:
+    type: boolean_checkbox
+    weight: 35
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_work_experience:
+    type: paragraphs
+    weight: 25
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings:
+      paragraphs_features:
+        add_in_between: false
+        add_in_between_link_count: 3
+        delete_confirmation: false
+        show_drag_and_drop: true
+        show_collapse_all: true
+      paragraphs_ee:
+        paragraphs_ee:
+          dialog_off_canvas: false
+          dialog_style: tiles
+  path:
+    type: path
+    weight: 29
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  contact: true
+  field_country: true
+  field_flag: true
+  language: true
+  simplenews: true
+  timezone: true

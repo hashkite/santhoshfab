@@ -1,0 +1,99 @@
+uuid: e5b79b35-c7f8-4c1e-937c-99284819d969
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.engineering_card_wrapper.field_cta
+    - field.field.paragraph.engineering_card_wrapper.field_engineering_card_items
+    - field.field.paragraph.engineering_card_wrapper.field_engineering_card_type
+    - field.field.paragraph.engineering_card_wrapper.field_engineering_color
+    - field.field.paragraph.engineering_card_wrapper.field_layout
+    - field.field.paragraph.engineering_card_wrapper.field_subtitle
+    - field.field.paragraph.engineering_card_wrapper.field_title
+    - paragraphs.paragraphs_type.engineering_card_wrapper
+  module:
+    - mck_rest_apis
+id: paragraph.engineering_card_wrapper.default
+targetEntityType: paragraph
+bundle: engineering_card_wrapper
+mode: default
+content:
+  field_cta:
+    type: mck_react
+    label: hidden
+    settings:
+      format: link
+      view_mode: default
+      storage: ''
+      convert: 0
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_engineering_card_items:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: paragraph
+      convert: 0
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_engineering_card_type:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_engineering_color:
+    type: mck_react
+    label: hidden
+    settings:
+      format: color
+      view_mode: default
+      storage: ''
+      convert: 0
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_layout:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_subtitle:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  extra_field_popup: true

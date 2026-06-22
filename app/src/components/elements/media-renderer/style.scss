@@ -1,0 +1,21 @@
+@import '../../../app/styles/variables';
+@import '../../../app/styles/mixins';
+
+.media-renderer {
+  &__image,
+  &__video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
+  &__image {
+    max-width: 100%;
+  }
+
+  &__video {
+    background: #000;
+  }
+}

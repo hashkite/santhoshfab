@@ -1,0 +1,16 @@
+uuid: e24596b5-1883-4adf-8671-cad5db789ac7
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_ee
+third_party_settings:
+  paragraphs_ee:
+    paragraphs_categories:
+      global: global
+id: awards
+label: Awards
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

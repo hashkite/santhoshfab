@@ -1,0 +1,24 @@
+uuid: efa04d7d-0dea-4c7f-a9b4-2682d2f72e26
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - filter.format.basic_html
+    - paragraphs.paragraphs_type.business_teaser
+  module:
+    - text
+id: paragraph.business_teaser.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: business_teaser
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text_long

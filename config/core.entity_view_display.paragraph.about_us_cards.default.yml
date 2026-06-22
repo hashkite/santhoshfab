@@ -1,0 +1,27 @@
+uuid: 3108f76d-f5fc-4910-a06c-4a9d9d266f44
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.about_us_cards.field_images
+    - paragraphs.paragraphs_type.about_us_cards
+  module:
+    - mck_rest_apis
+id: paragraph.about_us_cards.default
+targetEntityType: paragraph
+bundle: about_us_cards
+mode: default
+content:
+  field_images:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: config_pages
+      convert: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  extra_field_popup: true

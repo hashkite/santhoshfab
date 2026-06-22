@@ -1,0 +1,23 @@
+uuid: dbda4edf-e824-4824-b3b5-56d130364437
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_rate
+    - paragraphs.paragraphs_type.feedback
+id: paragraph.feedback.field_rate
+field_name: field_rate
+entity_type: paragraph
+bundle: feedback
+label: Rate
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0.0
+  max: 5.0
+  prefix: ''
+  suffix: ''
+field_type: float

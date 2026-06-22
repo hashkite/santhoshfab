@@ -1,0 +1,56 @@
+uuid: 99a937a3-0efa-4a21-bfcf-041578344088
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.menu_link_content.footer-top.field_icon
+    - field.field.menu_link_content.footer-top.field_service
+    - system.menu.footer-top
+  module:
+    - autocomplete_deluxe
+    - link
+    - media_library
+    - menu_item_extras
+id: menu_link_content.footer-top.default
+targetEntityType: menu_link_content
+bundle: footer-top
+mode: default
+content:
+  field_icon:
+    type: media_library_widget
+    weight: 3
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_service:
+    type: autocomplete_deluxe
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      autocomplete_route_name: autocomplete_deluxe.autocomplete
+      size: 60
+      selection_handler: default
+      limit: 10
+      min_length: 0
+      delimiter: ''
+      not_found_message_allow: false
+      not_found_message: "The term '@term' will be added"
+      no_empty_message: 'No terms could be found. Please type in order to add a new term.'
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  view_mode:
+    type: menu_item_extras_view_mode_selector_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

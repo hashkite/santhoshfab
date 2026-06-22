@@ -1,0 +1,240 @@
+uuid: 14e3706f-ee07-459c-ada0-113956856b7d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.user.user.field_available_for_hire
+    - field.field.user.user.field_availablity
+    - field.field.user.user.field_country
+    - field.field.user.user.field_country_ref
+    - field.field.user.user.field_description
+    - field.field.user.user.field_experience
+    - field.field.user.user.field_expertise
+    - field.field.user.user.field_familiar_with
+    - field.field.user.user.field_flag
+    - field.field.user.user.field_image
+    - field.field.user.user.field_linked_in
+    - field.field.user.user.field_location
+    - field.field.user.user.field_portfolio
+    - field.field.user.user.field_position
+    - field.field.user.user.field_previously_at
+    - field.field.user.user.field_role
+    - field.field.user.user.field_show_on_tailored_teams
+    - field.field.user.user.field_time_zone
+    - field.field.user.user.field_toptal_member_since
+    - field.field.user.user.field_verified_expert_in_enginee
+    - field.field.user.user.field_work_experience
+  module:
+    - mck_rest_apis
+    - user
+_core:
+  default_config_hash: mZLyuWM9CQx2ZJVqFGSbzgFnHzudVbHBYmdU256A5Wk
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  field_available_for_hire:
+    type: mck_react
+    label: above
+    settings:
+      format: bool
+      view_mode: default
+      storage: ''
+      convert: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_availablity:
+    type: mck_react
+    label: above
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_country_ref:
+    type: mck_react
+    label: above
+    settings:
+      format: reference
+      view_mode: default
+      storage: taxonomy_term
+      convert: 0
+    third_party_settings: {  }
+    weight: 18
+    region: content
+  field_description:
+    type: mck_react
+    label: above
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_experience:
+    type: mck_react
+    label: above
+    settings:
+      format: reference
+      view_mode: default
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_expertise:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_familiar_with:
+    type: mck_react
+    label: above
+    settings:
+      format: reference
+      view_mode: token
+      storage: taxonomy_term
+      convert: false
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_image:
+    type: mck_react
+    label: hidden
+    settings:
+      format: media
+      view_mode: default
+      storage: media
+      convert: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_linked_in:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_location:
+    type: mck_react
+    label: above
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_portfolio:
+    type: mck_react
+    label: above
+    settings:
+      format: reference
+      view_mode: default
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_position:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_previously_at:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_role:
+    type: mck_react
+    label: hidden
+    settings:
+      format: taxonomy
+      view_mode: default
+      storage: taxonomy_term
+      convert: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_show_on_tailored_teams:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_time_zone:
+    type: mck_react
+    label: above
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_toptal_member_since:
+    type: mck_react
+    label: above
+    settings:
+      format: timestamp
+      view_mode: default
+      storage: ''
+      convert: false
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_verified_expert_in_enginee:
+    type: mck_react
+    label: above
+    settings:
+      format: bool
+      view_mode: default
+      storage: ''
+      convert: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_work_experience:
+    type: mck_react
+    label: above
+    settings:
+      format: reference
+      view_mode: default
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 11
+    region: content
+hidden:
+  field_country: true
+  field_flag: true
+  member_for: true
+  simplenews: true

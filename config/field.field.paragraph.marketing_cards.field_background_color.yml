@@ -1,0 +1,25 @@
+uuid: 3fb5e9c7-464e-4310-9da4-d8bed505038b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_background_color
+    - paragraphs.paragraphs_type.marketing_cards
+  module:
+    - color_field
+id: paragraph.marketing_cards.field_background_color
+field_name: field_background_color
+entity_type: paragraph
+bundle: marketing_cards
+label: 'Background Color'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    color: '#f6f6f6'
+    opacity: 0.78
+default_value_callback: ''
+settings:
+  opacity: 1
+field_type: color_field_type

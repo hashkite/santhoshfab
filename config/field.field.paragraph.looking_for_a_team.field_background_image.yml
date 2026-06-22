@@ -1,0 +1,29 @@
+uuid: 69416f0e-d0fe-4e20-bc36-dc77d6befc0e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_background_image
+    - media.type.image
+    - paragraphs.paragraphs_type.looking_for_a_team
+id: paragraph.looking_for_a_team.field_background_image
+field_name: field_background_image
+entity_type: paragraph
+bundle: looking_for_a_team
+label: 'Background image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

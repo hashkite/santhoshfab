@@ -1,0 +1,17 @@
+uuid: b509ea87-cb7c-46de-a312-5b0ab1eef67d
+langcode: en
+status: true
+dependencies: {  }
+id: footer_webform
+label: 'Footer Webform'
+token: false
+context:
+  show_warning: true
+  group:
+    language: false
+  fallback:
+    language: ''
+menu:
+  path: ''
+  weight: 0
+  description: ''

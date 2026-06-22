@@ -1,0 +1,22 @@
+uuid: 85b2dc68-1dab-4f8e-97dd-538e1a57e41b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_show_on_tailored_teams
+  module:
+    - user
+id: user.user.field_show_on_tailored_teams
+field_name: field_show_on_tailored_teams
+entity_type: user
+bundle: user
+label: 'Show on Tailored Teams'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

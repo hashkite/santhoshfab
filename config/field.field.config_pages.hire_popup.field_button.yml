@@ -1,0 +1,19 @@
+uuid: 568b9d66-c5bf-441b-a9c1-db8951f392d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.hire_popup
+    - field.storage.config_pages.field_button
+id: config_pages.hire_popup.field_button
+field_name: field_button
+entity_type: config_pages
+bundle: hire_popup
+label: Button
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,87 @@
+uuid: fca2c9f7-8a2d-4d5c-bfa2-a586d01463a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.looking_for_a_team.field_background_image
+    - field.field.paragraph.looking_for_a_team.field_description
+    - field.field.paragraph.looking_for_a_team.field_link
+    - field.field.paragraph.looking_for_a_team.field_multicolor_title
+    - field.field.paragraph.looking_for_a_team.field_top_title
+    - field.field.paragraph.looking_for_a_team.field_without_decor
+    - paragraphs.paragraphs_type.looking_for_a_team
+  module:
+    - mck_rest_apis
+id: paragraph.looking_for_a_team.default
+targetEntityType: paragraph
+bundle: looking_for_a_team
+mode: default
+content:
+  field_background_image:
+    type: mck_react
+    label: hidden
+    settings:
+      format: media
+      view_mode: default
+      convert: '1'
+      storage: media
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_description:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_link:
+    type: mck_react
+    label: hidden
+    settings:
+      format: link
+      view_mode: default
+      storage: ''
+      convert: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_multicolor_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_top_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_without_decor:
+    type: mck_react
+    label: hidden
+    settings:
+      format: bool
+      view_mode: default
+      storage: ''
+      convert: 0
+    third_party_settings: {  }
+    weight: 4
+    region: content
+hidden:
+  extra_field_popup: true

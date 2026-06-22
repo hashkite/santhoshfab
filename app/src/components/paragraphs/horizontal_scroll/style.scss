@@ -1,0 +1,197 @@
+@import '../../../app/styles/functions';
+@import '../../../app/styles/mixins';
+@import '../../../app/styles/variables';
+@import '../../../app/styles/colors';
+
+.horizontal-scroll {
+  &__section {
+    overflow: hidden;
+    position: relative;
+    // height: 100vh;
+    width: 100%;
+    background: linear-gradient(
+      180deg,
+      #e8eef8 0%,
+      rgba(232, 238, 248, 0) 100%
+    );
+    padding: 100px;
+    padding-top: 100px !important;
+
+    @include breakpoint-down($lg) {
+      padding: 10px;
+      padding-top: 50px !important;
+      padding-bottom: 50px;
+    }
+
+    .container {
+      background: $white-100;
+      box-shadow: 0px 18px 39px 0px #b5b5b51a, 0px 71px 71px 0px #b5b5b517,
+        0px 160px 96px 0px #b5b5b50d, 0px 284px 114px 0px #b5b5b503,
+        0px 444px 124px 0px #b5b5b500;
+      border-radius: 35px;
+      padding: 100px;
+      padding-bottom: 200px;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      @include breakpoint-down($lg) {
+        padding: 30px;
+        padding-bottom: 30px;
+        // height: 80vh !important;
+        // max-height: 80vh !important;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    overflow: hidden;
+    flex-wrap: nowrap;
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    flex: 0 0 100%;
+
+    @include breakpoint-down($lg) {
+      grid-template-columns: 1fr;
+    }
+    &-content {
+      &-title {
+        h2 {
+          font-size: 40px;
+          font-weight: 600;
+          line-height: 40px;
+          letter-spacing: -0.02em;
+          margin: 0 auto 30px;
+
+          @include breakpoint-down($xl) {
+            font-size: 24px;
+            line-height: 24px;
+          }
+        }
+        span {
+          font-weight: 600 !important;
+          font-size: 40px;
+          line-height: 25px !important;
+
+          @include breakpoint-down($xl) {
+            font-size: 24px;
+          }
+        }
+      }
+
+      &-description {
+        position: relative;
+        padding-bottom: 40px;
+        font-size: 16px;
+
+        @include breakpoint-down($lg) {
+          padding-bottom: 20px;
+          font-size: 14px;
+        }
+        &::after {
+          content: '';
+          width: 70px;
+          height: 5px;
+          background: linear-gradient(90deg, #5c00db 0%, #ab74f6 100%);
+          z-index: 1;
+          position: absolute;
+          bottom: 0;
+        }
+      }
+    }
+
+    &-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @include breakpoint-down($lg) {
+        display: none;
+      }
+
+      img {
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+.horizontal-scroll__nav-dots {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+}
+
+.horizontal-scroll__nav {
+  position: relative;
+  margin-bottom: 150px;
+
+  @include breakpoint-down($lg) {
+    margin-bottom: 50px;
+  }
+}
+
+.horizontal-scroll__progress-bar {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  height: 8px;
+  display: block;
+  background: $white-300;
+  width: 100%;
+
+  @include breakpoint-down($lg) {
+    height: 5px;
+  }
+}
+
+.horizontal-scroll__progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #5c00db 0%, #ab74f6 100%);
+
+  width: 0;
+}
+
+.horizontal-scroll__nav-item {
+  width: 22px;
+  height: 22px;
+  background: $white-300;
+  border-radius: 50%;
+  transition: background 0.3s, transform 0.3s;
+  position: relative;
+
+  @include breakpoint-down($lg) {
+    width: 15px;
+    height: 15px;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #5c00db;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.7);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  &.active {
+    background: #5c00db;
+
+    &::after {
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+uuid: fea7eb4e-21aa-4d38-af0b-792b8e392ad3
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_ee
+third_party_settings:
+  paragraphs_ee:
+    paragraphs_categories:
+      global: global
+id: case_study_card
+label: 'Case Study Card'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

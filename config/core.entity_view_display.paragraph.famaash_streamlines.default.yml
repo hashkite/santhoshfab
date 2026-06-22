@@ -1,0 +1,75 @@
+uuid: 4e2db23f-cf2f-4924-b7d1-dbc77a9cb994
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.famaash_streamlines.field_background_image
+    - field.field.paragraph.famaash_streamlines.field_description
+    - field.field.paragraph.famaash_streamlines.field_image
+    - field.field.paragraph.famaash_streamlines.field_multicolor_title
+    - field.field.paragraph.famaash_streamlines.field_top_title
+    - paragraphs.paragraphs_type.famaash_streamlines
+  module:
+    - mck_rest_apis
+id: paragraph.famaash_streamlines.default
+targetEntityType: paragraph
+bundle: famaash_streamlines
+mode: default
+content:
+  field_background_image:
+    type: mck_react
+    label: hidden
+    settings:
+      format: media
+      view_mode: default
+      convert: '1'
+      storage: media
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_description:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_image:
+    type: mck_react
+    label: hidden
+    settings:
+      format: media
+      view_mode: default
+      convert: '1'
+      storage: media
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_multicolor_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_top_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  extra_field_popup: true

@@ -1,0 +1,16 @@
+uuid: 05f609ac-14c2-4792-b944-9428e19f04e2
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_ee
+third_party_settings:
+  paragraphs_ee:
+    paragraphs_categories:
+      global: global
+id: table_wrapper
+label: 'Table Wrapper'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,144 @@
+@import '../../../app/styles/functions';
+@import '../../../app/styles/mixins';
+@import '../../../app/styles/variables';
+@import '../../../app/styles/colors';
+
+.webform {
+  &__section {
+    background: linear-gradient(
+        0deg,
+        $blue-dark-400 15%,
+        rgba(23, 26, 30, 0) 100%
+      ),
+      url(/media/bg-contact-form.jpg) no-repeat center top / cover;
+    color: $white;
+    overflow: hidden;
+    padding: 135px 0 125px;
+    position: relative;
+    transition: 0.3s;
+
+    @include breakpoint-down($xl) {
+      padding: 100px 0;
+    }
+
+    @include breakpoint-down($md) {
+      padding: 70px 0;
+    }
+
+    @include breakpoint-down($sm) {
+      padding: 50px 0;
+    }
+
+    .container {
+      align-items: flex-start;
+      display: flex;
+      gap: 130px;
+      position: relative;
+      transition: gap 0.3s;
+      z-index: 1;
+
+      @include breakpoint-down($xl) {
+        align-items: center;
+        gap: 70px;
+      }
+
+      @include breakpoint-down($md) {
+        gap: 50px;
+      }
+
+      @include breakpoint-down($sm) {
+        flex-direction: column;
+      }
+    }
+  }
+
+  &__content {
+    padding-top: 150px;
+    transition: padding 0.3s, width 0.3s;
+    width: 46%;
+
+    @include breakpoint-down($xl) {
+      padding-top: 0;
+    }
+
+    @include breakpoint-down($sm) {
+      text-align: center;
+      width: 100%;
+    }
+
+    h2 {
+      color: $white;
+      font-weight: 500;
+      letter-spacing: -2.75px;
+      margin-bottom: 35px;
+
+      @include breakpoint-up($xl) {
+        font-size: 55px;
+      }
+
+      @include breakpoint-down($xl) {
+        margin-bottom: 25px;
+      }
+
+      @include breakpoint-down($md) {
+        letter-spacing: -1.5px;
+        margin-bottom: 20px;
+      }
+
+      @include breakpoint-down($sm) {
+        letter-spacing: -1px;
+      }
+    }
+  }
+
+  &__description {
+    font-weight: 500;
+  }
+
+  &__form {
+    &-wrapper {
+      transition: max-width 0.3s, width 0.3s;
+      width: 54%;
+
+      @include breakpoint-down($sm) {
+        margin: auto;
+        max-width: 400px;
+        width: 100%;
+      }
+    }
+
+    &-block {
+      background: $blue-dark-400;
+      border-radius: 20px;
+      padding: 55px 90px 90px;
+      transition: padding 0.3s;
+
+      @include breakpoint-down($xxl) {
+        padding: 35px;
+      }
+
+      @include breakpoint-down($md) {
+        padding: 25px;
+      }
+
+      h3 {
+        color: $white;
+        font-size: 25px;
+        font-weight: 600;
+        letter-spacing: -0.5px;
+        margin-bottom: 45px;
+        text-align: center;
+        transition: 0.3s;
+
+        @include breakpoint-down($xl) {
+          margin-bottom: 30px;
+        }
+
+        @include breakpoint-down($md) {
+          font-size: 20px;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}

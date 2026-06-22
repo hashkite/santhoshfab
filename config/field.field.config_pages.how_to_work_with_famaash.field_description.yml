@@ -1,0 +1,24 @@
+uuid: dab5fd8c-6ee6-467a-a112-e8a67a465fca
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.how_to_work_with_famaash
+    - field.storage.config_pages.field_description
+    - filter.format.basic_html
+  module:
+    - text
+id: config_pages.how_to_work_with_famaash.field_description
+field_name: field_description
+entity_type: config_pages
+bundle: how_to_work_with_famaash
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text_long

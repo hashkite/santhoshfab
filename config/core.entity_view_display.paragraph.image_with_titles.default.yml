@@ -1,0 +1,39 @@
+uuid: 0b87f05a-4cd9-47cf-8a62-3e929319627a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.image_with_titles.field_image
+    - field.field.paragraph.image_with_titles.field_two_paragraphs
+    - paragraphs.paragraphs_type.image_with_titles
+  module:
+    - mck_rest_apis
+id: paragraph.image_with_titles.default
+targetEntityType: paragraph
+bundle: image_with_titles
+mode: default
+content:
+  field_image:
+    type: mck_react
+    label: hidden
+    settings:
+      format: media
+      view_mode: default
+      convert: '1'
+      storage: media
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_two_paragraphs:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  extra_field_popup: true

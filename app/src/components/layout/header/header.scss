@@ -1,0 +1,286 @@
+@import '../../../app/styles/functions';
+@import '../../../app/styles/mixins';
+@import '../../../app/styles/variables';
+@import '../../../app/styles/colors';
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: background 0.3s, backdrop-filter 0.3s, padding 0.3s, top 0.3s;
+  width: 100%;
+  z-index: 1001;
+
+  @include breakpoint-down($md) {
+    padding: 7px 0;
+  }
+
+  &.with-top-menu {
+    top: 50px;
+
+    .nav-block__nav-item {
+      padding: 40px 0;
+    }
+  }
+
+  &__container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__container {
+    .nav-block {
+      &__nav-wrapper {
+        @include breakpoint-down($md) {
+          pointer-events: none;
+        }
+      }
+    }
+  }
+
+  &.fixed {
+    position: fixed;
+    top: 0;
+    background: rgba($purple-700, 0.9);
+    backdrop-filter: blur(20px);
+
+    .header__container {
+      .nav-block {
+        &__nav-item {
+          padding: 40px 0;
+
+          @include breakpoint-down($xl) {
+            padding: 30px 0;
+          }
+        }
+      }
+    }
+  }
+
+  &.active {
+    @include breakpoint-down($md) {
+      background: $purple-200;
+    }
+
+    .header__container {
+      .nav-block {
+        &__nav {
+          opacity: 1;
+          transition: 0.3s 0.2s;
+
+          &-wrapper {
+            @include breakpoint-down($md) {
+              pointer-events: initial;
+            }
+
+            &::before,
+            &::after {
+              transform: scale(20);
+            }
+          }
+
+          &-item {
+            @include breakpoint-down($md) {
+              padding: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__logo {
+    img,
+    svg {
+      transition: 0.3s;
+
+      @include breakpoint-down($lg) {
+        max-width: 150px;
+      }
+      @include breakpoint-down($md) {
+        max-width: 120px;
+      }
+    }
+  }
+
+  &__left {
+    align-items: center;
+    display: flex;
+    gap: 100px;
+    transition: gap 0.3s;
+
+    @include breakpoint-down($xl) {
+      gap: 32px;
+    }
+  }
+
+  &__right {
+    align-items: center;
+    display: flex;
+    gap: 20px;
+
+    > .btn-secondary {
+      min-width: 180px;
+
+      @include breakpoint-down($xl) {
+        min-width: 0;
+      }
+
+      @include breakpoint-down($xs) {
+        display: none;
+      }
+    }
+
+    .btn-burger {
+      display: none;
+
+      @include breakpoint-down($md) {
+        display: flex;
+        width: 45px;
+        height: 45px;
+      }
+    }
+  }
+}
+
+.is_admin {
+  .header {
+    top: 54px;
+    z-index: 500;
+  }
+}
+
+#toolbar-administration ~ .dialog-off-canvas-main-canvas {
+  .header {
+    top: 54px;
+    z-index: 500;
+  }
+}
+
+.account-menu {
+  position: relative;
+
+  &:hover {
+    .account-menu__items {
+      max-height: 200px;
+      padding: 20px;
+    }
+  }
+
+  .account-menu__items {
+    transition: trs(padding, 0.3s, 0.1s), trs(max-height, 0.3s, 0.1s);
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    background: $white;
+    width: 200px;
+    border-radius: 12px;
+    right: 0;
+    text-align: right;
+    margin-top: 55px;
+    box-shadow: 0 0 6px rgba($black, 0.1);
+
+    a {
+      display: block;
+      color: $black;
+      font-weight: normal;
+      margin-bottom: 8px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &:hover {
+        text-decoration: none;
+        color: $color-primary;
+      }
+
+      &::after {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 20px;
+        background-image: url('#{$icons_path}/user-sm.svg');
+        background-repeat: no-repeat;
+        background-position: right center;
+        background-size: contain;
+        margin-left: 8px;
+      }
+
+      &[href*='edit']::after {
+        background-image: url('#{$icons_path}/pencil.svg');
+      }
+
+      &[href*='logout']::after {
+        background-image: url('#{$icons_path}/logout.svg');
+      }
+    }
+  }
+
+  &__icon {
+    a {
+      border: 1px solid $white;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+
+      @media (pointer: none), (pointer: coarse) {
+        pointer-events: none;
+      }
+    }
+
+    .image img {
+      width: 45px;
+      height: 45px;
+      object-fit: cover;
+    }
+
+    .icon {
+      width: 25px;
+      height: auto;
+    }
+  }
+}
+
+.navbar-top {
+  position: absolute;
+  width: 100%;
+  border-bottom: 1px rgba(255, 255, 255, 0.2) solid;
+  z-index: 1001;
+
+  .container {
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+  }
+
+  a,
+  span {
+    color: #7f799a;
+    font-size: 0.75rem;
+    font-weight: 400;
+    padding: 10px 20px;
+    display: block;
+    transition: 0.3s;
+
+    @include breakpoint-down($sm) {
+      font-size: 14px;
+      padding: 5px;
+    }
+
+    &:hover {
+      color: $yellow-100;
+      text-decoration: none;
+    }
+  }
+}

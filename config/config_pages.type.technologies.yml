@@ -1,0 +1,17 @@
+uuid: e3d55908-7c09-4f61-86f5-30075d64f349
+langcode: en
+status: true
+dependencies: {  }
+id: technologies
+label: Technologies
+token: false
+context:
+  show_warning: true
+  group:
+    language: false
+  fallback:
+    language: ''
+menu:
+  path: ''
+  weight: 0
+  description: ''

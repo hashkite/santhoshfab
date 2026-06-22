@@ -1,0 +1,35 @@
+uuid: 31eb389a-c53d-417c-9a02-45795e1a846c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.country.field_description
+    - field.field.paragraph.country.field_image
+    - field.field.paragraph.country.field_title
+    - paragraphs.paragraphs_type.country
+  module:
+    - media_library
+id: paragraph.country.default
+targetEntityType: paragraph
+bundle: country
+mode: default
+content:
+  field_image:
+    type: media_library_widget
+    weight: 0
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_description: true
+  status: true

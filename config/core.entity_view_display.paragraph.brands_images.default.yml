@@ -1,0 +1,39 @@
+uuid: e81bf5b7-744f-4b36-82bf-5826b9091f5f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.brands_images.field_brand_logos
+    - field.field.paragraph.brands_images.field_heading
+    - paragraphs.paragraphs_type.brands_images
+  module:
+    - mck_rest_apis
+id: paragraph.brands_images.default
+targetEntityType: paragraph
+bundle: brands_images
+mode: default
+content:
+  field_brand_logos:
+    type: mck_react
+    label: above
+    settings:
+      format: media
+      view_mode: default
+      storage: media
+      convert: 0
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_heading:
+    type: mck_react
+    label: above
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  extra_field_popup: true

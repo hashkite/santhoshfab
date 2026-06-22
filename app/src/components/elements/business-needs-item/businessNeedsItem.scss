@@ -1,0 +1,161 @@
+@import '../../../app/styles/functions';
+@import '../../../app/styles/mixins';
+@import '../../../app/styles/variables';
+@import '../../../app/styles/colors';
+
+.business-needs {
+  &__pic {
+    background: $gray-300;
+    border-radius: 25px;
+    height: 440px;
+    overflow: hidden;
+    transition: 0.3s;
+
+    @include breakpoint-down($xl) {
+      height: 300px;
+    }
+
+    @include breakpoint-down($lg) {
+      height: 250px;
+    }
+
+    @include breakpoint-down($md) {
+      height: 200px;
+    }
+
+    @include breakpoint-down($sm) {
+      height: 150px;
+    }
+
+    img {
+      display: block;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      width: 100%;
+    }
+  }
+
+  &__cnt {
+    margin-top: 45px;
+    transition: 0.3s;
+
+    @include breakpoint-down($xxl) {
+      margin-top: 25px;
+    }
+
+    @include breakpoint-down($sm) {
+      margin-top: 20px;
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    h3 {
+      font-size: 25px;
+      font-weight: 500;
+      letter-spacing: -0.5px;
+      line-height: 32px;
+      margin-bottom: 20px;
+      transition: 0.3s;
+
+      @include breakpoint-down($sm) {
+        font-size: 20px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__desc {
+    max-width: 82%;
+    transition: 0.3s;
+
+    @include breakpoint-down($xl) {
+      max-width: 100%;
+    }
+  }
+
+  &__button {
+    margin-top: 55px;
+    transition: margin 0.3s;
+
+    @include breakpoint-down($xxl) {
+      margin-top: 40px;
+    }
+
+    @include breakpoint-down($lg) {
+      margin-top: 30px;
+    }
+
+    @include breakpoint-down($sm) {
+      margin-top: 25px;
+    }
+
+    .btn-primary {
+      min-width: 160px;
+
+      @include breakpoint-down($md) {
+        min-width: 0;
+      }
+    }
+
+    .btn-secondary {
+      min-width: 200px;
+
+      @include breakpoint-down($md) {
+        min-width: 0;
+      }
+    }
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__people {
+    position: absolute;
+    top: 120px;
+    left: 20px;
+
+    @include breakpoint-down($xxl) {
+      top: 20px;
+      display: flex;
+    }
+
+    @include breakpoint-down($lg) {
+      display: block;
+    }
+
+    @include breakpoint-down($md) {
+      left: 10px;
+    }
+
+    @include breakpoint-down($sm) {
+      display: none;
+    }
+
+    img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 20px;
+
+      @include breakpoint-down($xxl) {
+        margin-bottom: 0;
+        margin-right: 20px;
+      }
+
+      @include breakpoint-down($xl) {
+        width: 40px;
+        height: 40px;
+      }
+
+      @include breakpoint-down($lg) {
+        margin-bottom: 15px;
+        margin-right: 0;
+      }
+    }
+  }
+}

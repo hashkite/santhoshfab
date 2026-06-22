@@ -1,0 +1,17 @@
+uuid: e8052f67-6433-4b84-9e46-addc74babc9b
+langcode: en
+status: true
+dependencies: {  }
+id: about_us_cards
+label: 'About Us Cards'
+token: false
+context:
+  show_warning: true
+  group:
+    language: false
+  fallback:
+    language: ''
+menu:
+  path: ''
+  weight: 0
+  description: ''

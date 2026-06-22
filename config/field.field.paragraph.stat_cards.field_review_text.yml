@@ -1,0 +1,24 @@
+uuid: c5fe1ad7-6d7f-4fb1-83f3-02a0ded41251
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_review_text
+    - filter.format.plain_text
+    - paragraphs.paragraphs_type.stat_cards
+  module:
+    - text
+id: paragraph.stat_cards.field_review_text
+field_name: field_review_text
+entity_type: paragraph
+bundle: stat_cards
+label: 'Review Text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - plain_text
+field_type: text_long

@@ -1,0 +1,23 @@
+@import '../../../app/styles/functions';
+@import '../../../app/styles/mixins';
+@import '../../../app/styles/variables';
+@import '../../../app/styles/colors';
+
+.nav-social__block {
+  nav {
+    align-items: center;
+    display: flex;
+    gap: 12px;
+    transition: .3s;
+  }
+
+  &.--type-footer {
+    nav {
+      gap: 30px;
+
+      @include breakpoint-down($xxl) {
+        gap: 20px;
+      }
+    }
+  }
+}

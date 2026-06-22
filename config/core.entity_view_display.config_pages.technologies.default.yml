@@ -1,0 +1,28 @@
+uuid: fe9ceaa5-5442-4c2c-9838-7f18bbc6efc2
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.technologies
+    - field.field.config_pages.technologies.field_multicolor_title
+    - field.field.config_pages.technologies.field_technologies_view
+  module:
+    - mck_rest_apis
+id: config_pages.technologies.default
+targetEntityType: config_pages
+bundle: technologies
+mode: default
+content:
+  field_multicolor_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_technologies_view: true

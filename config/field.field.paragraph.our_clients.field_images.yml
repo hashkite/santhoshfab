@@ -1,0 +1,23 @@
+uuid: bb849c7d-47d1-4ee1-9719-d18170a0b2ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_images
+    - paragraphs.paragraphs_type.our_clients
+id: paragraph.our_clients.field_images
+field_name: field_images
+entity_type: paragraph
+bundle: our_clients
+label: Images
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:config_pages_type'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

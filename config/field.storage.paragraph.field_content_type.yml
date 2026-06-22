@@ -1,0 +1,24 @@
+uuid: 505dc6fe-67ae-4f92-8956-e851f8fd4614
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_content_type
+field_name: field_content_type
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: background
+      label: Background
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

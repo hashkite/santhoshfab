@@ -1,0 +1,16 @@
+uuid: f0499ba8-7de8-439f-9cbe-42cbf8ffe496
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_ee
+third_party_settings:
+  paragraphs_ee:
+    paragraphs_categories:
+      global: global
+id: content_section
+label: 'Content Section'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,24 @@
+uuid: 5dc3379c-7243-4617-ba9f-bcd23f5868f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_multicolor_title
+    - filter.format.full_html
+    - paragraphs.paragraphs_type.why_they_choose_us
+  module:
+    - text
+id: paragraph.why_they_choose_us.field_multicolor_title
+field_name: field_multicolor_title
+entity_type: paragraph
+bundle: why_they_choose_us
+label: 'Multicolor title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

@@ -1,0 +1,75 @@
+@import '../../../app/styles/functions';
+@import '../../../app/styles/mixins';
+@import '../../../app/styles/variables';
+@import '../../../app/styles/colors';
+
+.faq {
+  &__section {
+    background: $gray-50;
+    overflow: hidden;
+    padding: 60px 0 80px;
+    position: relative;
+    transition: padding 0.3s;
+
+    @include breakpoint-down($xxl) {
+      padding-top: 90px;
+    }
+
+    @include breakpoint-down($lg) {
+      padding: 70px 0;
+    }
+
+    @include breakpoint-down($sm) {
+      padding: 50px 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 1024px;
+    }
+  }
+
+  &__header {
+    border-bottom: 1px solid $gray-400;
+    margin-bottom: 50px;
+    padding-bottom: 60px;
+    transition: 0.3s;
+
+    @include breakpoint-down($xxl) {
+      margin-bottom: 35px;
+      padding-bottom: 50px;
+    }
+
+    @include breakpoint-down($lg) {
+      margin-bottom: 25px;
+      padding-bottom: 35px;
+    }
+
+    @include breakpoint-down($sm) {
+      padding-bottom: 25px;
+    }
+
+    h2 {
+      color: $blue-dark-400;
+      letter-spacing: -0.9px;
+      line-height: 55px;
+
+      @include breakpoint-down($xl) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__item-number {
+    span {
+      @include purple;
+    }
+  }
+}
+
+.tiles__section {
+  + .faq__section {
+    padding-top: 0;
+  }
+}

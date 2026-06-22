@@ -1,0 +1,100 @@
+uuid: d9a2b5d5-3efa-457d-957a-4b3100dc25ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_business_teasers
+    - paragraphs.paragraphs_type.business_needs
+    - paragraphs.paragraphs_type.business_teaser
+  module:
+    - entity_reference_revisions
+id: paragraph.business_needs.field_business_teasers
+field_name: field_business_teasers
+entity_type: paragraph
+bundle: business_needs
+label: 'Business teasers'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      business_teaser: business_teaser
+    negate: 0
+    target_bundles_drag_drop:
+      business_needs:
+        weight: 24
+        enabled: false
+      business_teaser:
+        weight: 26
+        enabled: true
+      case_studies:
+        weight: 25
+        enabled: false
+      client_impact:
+        weight: 26
+        enabled: false
+      client_impacts:
+        weight: 27
+        enabled: false
+      country:
+        weight: 28
+        enabled: false
+      faq_s:
+        weight: 29
+        enabled: false
+      feedback:
+        weight: 30
+        enabled: false
+      hero:
+        weight: 31
+        enabled: false
+      hero_slide:
+        weight: 32
+        enabled: false
+      hero_slider:
+        weight: 33
+        enabled: false
+      office:
+        weight: 34
+        enabled: false
+      offices:
+        weight: 35
+        enabled: false
+      our_clients:
+        weight: 36
+        enabled: false
+      our_footprints:
+        weight: 37
+        enabled: false
+      our_partners:
+        weight: 38
+        enabled: false
+      process:
+        weight: 39
+        enabled: false
+      tab:
+        weight: 40
+        enabled: false
+      tabs:
+        weight: 41
+        enabled: false
+      talent_insights:
+        weight: 42
+        enabled: false
+      title_with_description:
+        weight: 43
+        enabled: false
+      view:
+        weight: 44
+        enabled: false
+      we_give_back:
+        weight: 46
+        enabled: false
+      webform:
+        weight: 45
+        enabled: false
+field_type: entity_reference_revisions

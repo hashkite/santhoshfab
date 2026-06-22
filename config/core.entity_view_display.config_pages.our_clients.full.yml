@@ -1,0 +1,28 @@
+uuid: 0f374a3f-9028-41c1-9754-b1da203dc363
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.our_clients
+    - core.entity_view_mode.config_pages.full
+    - field.field.config_pages.our_clients.field_images
+    - image.style.convert_to_webp
+  module:
+    - media
+id: config_pages.our_clients.full
+targetEntityType: config_pages
+bundle: our_clients
+mode: full
+content:
+  field_images:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: convert_to_webp
+      image_loading:
+        attribute: eager
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

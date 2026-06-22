@@ -1,0 +1,63 @@
+uuid: adcbcdb3-8d12-48c0-a9ab-c4924d866bb3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.creativity.field_description
+    - field.field.paragraph.creativity.field_grid
+    - field.field.paragraph.creativity.field_logos
+    - field.field.paragraph.creativity.field_multicolor_title
+    - paragraphs.paragraphs_type.creativity
+  module:
+    - mck_rest_apis
+id: paragraph.creativity.default
+targetEntityType: paragraph
+bundle: creativity
+mode: default
+content:
+  field_description:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_grid:
+    type: mck_react
+    label: hidden
+    settings:
+      format: bool
+      view_mode: default
+      storage: ''
+      convert: 0
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_logos:
+    type: mck_react
+    label: hidden
+    settings:
+      format: media
+      view_mode: default
+      convert: '1'
+      storage: media
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_multicolor_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  extra_field_popup: true

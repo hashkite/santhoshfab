@@ -1,0 +1,31 @@
+uuid: 14139b71-5fc0-4069-aa89-7c346d7778ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.person.field_flag
+    - field.field.paragraph.person.field_person
+    - field.field.paragraph.person.field_verified
+    - paragraphs.paragraphs_type.person
+  module:
+    - mck_rest_apis
+id: paragraph.person.default
+targetEntityType: paragraph
+bundle: person
+mode: default
+content:
+  field_person:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: compact
+      storage: user
+      convert: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  extra_field_popup: true
+  field_flag: true
+  field_verified: true

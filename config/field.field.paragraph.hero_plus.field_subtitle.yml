@@ -1,0 +1,19 @@
+uuid: 34241106-e676-437a-8279-c21aec7d7691
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_subtitle
+    - paragraphs.paragraphs_type.hero_plus
+id: paragraph.hero_plus.field_subtitle
+field_name: field_subtitle
+entity_type: paragraph
+bundle: hero_plus
+label: Subtitle
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,24 @@
+uuid: b26c24b9-1e54-48e9-ac2e-0ae8e01e2214
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - filter.format.basic_html
+    - paragraphs.paragraphs_type.tiles
+  module:
+    - text
+id: paragraph.tiles.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: tiles
+label: 'Section description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text_long

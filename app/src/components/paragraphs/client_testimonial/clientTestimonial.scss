@@ -1,0 +1,73 @@
+/* Client testimonial cards matching provided screenshot
+ * - pale blue background rows
+ * - client logo on far left inside the card
+ * - avatar + name + role near the top left of content
+ * - 5 yellow stars to the right
+ * - description paragraph
+ * - action links bottom-right
+ */
+.client-testimonials.container {
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 24px 20px;
+}
+
+.testimonial-card {
+  background: rgba(240,248,252,0.8);
+  border: 1px solid rgba(222,232,238,1);
+  padding: 18px 18px;
+  margin-bottom: 22px;
+}
+
+.testimonial-card__inner {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+.testimonial-card__logo {
+  width: 80px;
+  flex: 0 0 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.testimonial-card__logo img { max-width: 70px; max-height: 40px; object-fit: contain; }
+
+.testimonial-card__body {
+  flex: 1 1 auto;
+}
+
+.testimonial-card__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.testimonial-card__person {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.testimonial-card__avatar { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; }
+.testimonial-card__avatar--placeholder { width:44px; height:44px; background:#ddd; border-radius:50%; }
+
+.testimonial-card__person-meta { display:flex; flex-direction:column; }
+.testimonial-card__name { font-weight:700; font-size:16px; color:#222; }
+.testimonial-card__linkedin { display:inline-block; margin-left:6px; background:#0a66c2; color:#fff; font-size:11px; padding:2px 6px; border-radius:3px; vertical-align:middle; }
+.testimonial-card__role { font-size:13px; color:#6b7280; }
+
+.testimonial-card__rating { color: #f6c859; font-size:14px; }
+
+.testimonial-card__text { margin-top:12px; color:#333; line-height:1.6; }
+
+.testimonial-card__links { margin-top:14px; display:flex; justify-content:flex-end; gap:14px; }
+.testimonial-card__link { color:#0b6fb0; text-decoration:none; font-weight:600; }
+
+@media (max-width:800px) {
+  .testimonial-card__inner { flex-direction: column; }
+  .testimonial-card__logo { width: 100%; }
+  .testimonial-card__links { justify-content: flex-start; }
+}

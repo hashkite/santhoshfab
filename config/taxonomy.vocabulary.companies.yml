@@ -1,0 +1,9 @@
+uuid: 7e474675-c5a1-492c-84a0-1972d28cb0b4
+langcode: en
+status: true
+dependencies: {  }
+name: Companies
+vid: companies
+description: null
+weight: 0
+new_revision: false

@@ -1,0 +1,194 @@
+@import '../../../app/styles/functions';
+@import '../../../app/styles/mixins';
+@import '../../../app/styles/variables';
+@import '../../../app/styles/colors';
+
+.talent {
+  width: 300px;
+  background: #00000026;
+  border-radius: 25px;
+  padding: 5px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint-down($md) {
+    width: 250px;
+  }
+
+  &.type-purple {
+    background: $white;
+    color: $black;
+
+    .talent {
+      &__title {
+        color: $black;
+      }
+
+      &__details {
+        color: $black;
+      }
+
+      &__hire-button {
+        background: linear-gradient(90deg, #5c00db 0%, #ab74f6 100%);
+        color: $white;
+
+        svg path {
+          fill: $white;
+        }
+      }
+
+      &__expertise {
+        &-item {
+          color: $black;
+        }
+      }
+    }
+  }
+
+  &__image {
+    min-width: 290px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    aspect-ratio: 16/9;
+    border-radius: 25px;
+    object-fit: cover;
+  }
+
+  &__content {
+    padding: 20px;
+  }
+
+  &__position {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17.5px;
+    text-align: left;
+    margin-bottom: 5px;
+  }
+
+  &__header_title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 12px;
+
+    svg {
+      min-width: 20px;
+      min-height: 20px;
+    }
+  }
+
+  &__title {
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 25px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    color: $white;
+    margin-bottom: 0;
+  }
+
+  &__flag {
+    display: none;
+    width: 23px;
+    height: 16px;
+    min-width: 23px;
+    border-radius: 2px;
+    overflow: hidden;
+
+    img {
+      width: 23px;
+      min-width: 23px;
+      height: 16px;
+      border-radius: 2px;
+      overflow: hidden;
+    }
+  }
+
+  &__details {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 7px;
+    color: $white;
+    margin-bottom: 20px;
+  }
+
+  &__experience,
+  &__time_zone {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    &-label {
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 16.25px;
+    }
+
+    &-value {
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 16.25px;
+    }
+  }
+
+  &__expertise {
+    display: flex;
+    gap: 10px;
+    margin-top: auto;
+    &-item {
+      background: #ffffff0d;
+      color: $white;
+      padding: 7px 10px 7px 10px;
+      font-size: 10px;
+      font-weight: 500;
+      line-height: 12px;
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__hire-button {
+    background: linear-gradient(90deg, #dd9a34 -1.09%, #ffd392 98.69%);
+
+    color: $black;
+    border-radius: 50px;
+    padding: 0 10px;
+    font-weight: 600;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 10px;
+    min-height: 26px;
+    margin-left: auto;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      text-decoration: none;
+
+      filter: brightness(1.1);
+
+      svg {
+        transform: translate(1.5px, -1.5px);
+      }
+    }
+
+    span {
+      line-height: 10px;
+      font-size: 10px;
+      cursor: pointer;
+    }
+
+    svg {
+      cursor: pointer;
+      min-width: 10px;
+
+      transition: all 0.3s ease-in-out;
+    }
+  }
+}

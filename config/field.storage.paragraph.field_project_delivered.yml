@@ -1,0 +1,20 @@
+uuid: f7b06a93-64ce-46ea-9e98-1ee5788aecbe
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_project_delivered
+field_name: field_project_delivered
+entity_type: paragraph
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

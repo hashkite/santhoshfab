@@ -1,0 +1,105 @@
+@import '../../../app/styles/functions';
+@import '../../../app/styles/mixins';
+@import '../../../app/styles/variables';
+@import '../../../app/styles/colors';
+
+.talent-profile {
+  &__section {
+    background: $gray-50;
+    padding: 150px 0 85px;
+    transition: .3s;
+
+    @include breakpoint-down($xl) {
+      padding-top: 110px;
+    }
+
+    @include breakpoint-down($md) {
+      padding-top: 100px;
+    }
+
+    @include breakpoint-down($xs) {
+      padding-bottom: 50px;
+    }
+
+    >.container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .breadcrumbs__block {
+      margin-bottom: 75px;
+      position: relative;
+      top: 0;
+      left: 0;
+      transition: .3s;
+
+      @include breakpoint-down($xxl) {
+        margin-bottom: 50px;
+      }
+
+      @include breakpoint-down($md) {
+        margin-bottom: 35px;
+      }
+    }
+  }
+
+  &__block {
+    display: flex;
+    gap: 200px;
+    transition: .3s;
+
+    @include breakpoint-down($xxl) {
+      gap: 100px;
+    }
+
+    @include breakpoint-down($xl) {
+      gap: 70px;
+    }
+
+    @include breakpoint-down($lg) {
+      gap: 50px;
+    }
+
+    @include breakpoint-down($sm) {
+      gap: 35px;
+    }
+
+    @include breakpoint-down($xs) {
+      flex-direction: column;
+    }
+  }
+
+  &__decor {
+    background: url(/media/bg-talent-profile.jpg) no-repeat center / cover;
+    height: 580px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .3s;
+    width: 100%;
+
+    @include breakpoint-down($xxl) {
+      height: 500px;
+    }
+
+    @include breakpoint-down($xl) {
+      height: 430px;
+    }
+
+    @include breakpoint-down($md) {
+      height: 470px;
+    }
+
+    @include breakpoint-down($sm) {
+      height: 520px;
+    }
+
+    @include breakpoint-down($xs) {
+      height: 700px;
+    }
+
+    @include breakpoint-down($xs) {
+      height: 830px;
+    }
+  }
+}

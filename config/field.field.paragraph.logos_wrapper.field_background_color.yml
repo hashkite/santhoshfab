@@ -1,0 +1,25 @@
+uuid: 7f4d58d4-d6fb-473b-8100-7e852606c42f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_background_color
+    - paragraphs.paragraphs_type.logos_wrapper
+  module:
+    - color_field
+id: paragraph.logos_wrapper.field_background_color
+field_name: field_background_color
+entity_type: paragraph
+bundle: logos_wrapper
+label: 'Background Color'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    color: '#f6f6f6'
+    opacity: 0.78
+default_value_callback: ''
+settings:
+  opacity: 1
+field_type: color_field_type

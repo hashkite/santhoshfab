@@ -1,0 +1,61 @@
+uuid: 537c6974-3758-46cc-99a2-7c87ae8d074e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.technologies.field_image
+    - field.field.taxonomy_term.technologies.field_most_popular
+    - field.field.taxonomy_term.technologies.field_sub_service
+    - taxonomy.vocabulary.technologies
+  module:
+    - mck_rest_apis
+id: taxonomy_term.technologies.default
+targetEntityType: taxonomy_term
+bundle: technologies
+mode: default
+content:
+  description:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_image:
+    type: mck_react
+    label: hidden
+    settings:
+      format: media
+      view_mode: default
+      storage: media
+      convert: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_most_popular:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_sub_service:
+    type: mck_react
+    label: hidden
+    settings:
+      format: taxonomy
+      view_mode: teaser
+      storage: node
+      convert: 0
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  extra_field_related_nodes: true

@@ -1,0 +1,33 @@
+uuid: a6018a39-9920-4bad-9d42-9a61eb446916
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.awards_item.field_image
+    - field.field.paragraph.awards_item.field_title
+    - paragraphs.paragraphs_type.awards_item
+  module:
+    - media_library
+id: paragraph.awards_item.default
+targetEntityType: paragraph
+bundle: awards_item
+mode: default
+content:
+  field_image:
+    type: media_library_widget
+    weight: 1
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

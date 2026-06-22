@@ -1,0 +1,63 @@
+uuid: f1fc281e-76a9-4b27-b0d6-8970b5edf7ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.process.field_description
+    - field.field.paragraph.process.field_link
+    - field.field.paragraph.process.field_multicolor_title
+    - field.field.paragraph.process.field_paragraphs
+    - paragraphs.paragraphs_type.process
+  module:
+    - mck_rest_apis
+id: paragraph.process.default
+targetEntityType: paragraph
+bundle: process
+mode: default
+content:
+  field_description:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_link:
+    type: mck_react
+    label: hidden
+    settings:
+      format: link
+      view_mode: default
+      storage: ''
+      convert: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_multicolor_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_paragraphs:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  extra_field_popup: true

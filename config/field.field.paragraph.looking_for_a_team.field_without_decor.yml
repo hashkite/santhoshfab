@@ -1,0 +1,21 @@
+uuid: 5dc9d020-1072-4b4c-b9fb-dc28057b4073
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_without_decor
+    - paragraphs.paragraphs_type.looking_for_a_team
+id: paragraph.looking_for_a_team.field_without_decor
+field_name: field_without_decor
+entity_type: paragraph
+bundle: looking_for_a_team
+label: 'Without Decor'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

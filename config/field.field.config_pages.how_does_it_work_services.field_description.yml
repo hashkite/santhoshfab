@@ -1,0 +1,24 @@
+uuid: 17ae445a-214a-430e-a137-bdc64b8c10f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.how_does_it_work_services
+    - field.storage.config_pages.field_description
+    - filter.format.basic_html
+  module:
+    - text
+id: config_pages.how_does_it_work_services.field_description
+field_name: field_description
+entity_type: config_pages
+bundle: how_does_it_work_services
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text_long

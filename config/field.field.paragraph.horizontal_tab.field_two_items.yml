@@ -1,0 +1,157 @@
+uuid: afbb0f64-2143-46c5-b00d-78cf32a39783
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_two_items
+    - paragraphs.paragraphs_type.horizontal_tab
+    - paragraphs.paragraphs_type.person
+  module:
+    - entity_reference_revisions
+id: paragraph.horizontal_tab.field_two_items
+field_name: field_two_items
+entity_type: paragraph
+bundle: horizontal_tab
+label: People
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      person: person
+    negate: 0
+    target_bundles_drag_drop:
+      business_needs:
+        weight: 31
+        enabled: false
+      business_teaser:
+        weight: 32
+        enabled: false
+      case_studies:
+        weight: 33
+        enabled: false
+      client_impact:
+        weight: 34
+        enabled: false
+      client_impacts:
+        weight: 35
+        enabled: false
+      country:
+        weight: 36
+        enabled: false
+      creativity:
+        weight: 50
+        enabled: false
+      famaash_productions:
+        weight: 51
+        enabled: false
+      faq_s:
+        weight: 37
+        enabled: false
+      feedback:
+        weight: 38
+        enabled: false
+      hero:
+        weight: 39
+        enabled: false
+      hero_slide:
+        weight: 40
+        enabled: false
+      hero_slider:
+        weight: 41
+        enabled: false
+      horizontal_tab:
+        weight: 57
+        enabled: false
+      horizontal_tabs:
+        weight: 58
+        enabled: false
+      image:
+        weight: 59
+        enabled: false
+      image_with_background:
+        weight: 61
+        enabled: false
+      image_with_titles:
+        weight: 62
+        enabled: false
+      images:
+        weight: 42
+        enabled: false
+      number:
+        weight: 43
+        enabled: false
+      numbers:
+        weight: 44
+        enabled: false
+      office:
+        weight: 45
+        enabled: false
+      offices:
+        weight: 46
+        enabled: false
+      our_clients:
+        weight: 47
+        enabled: false
+      our_footprints:
+        weight: 48
+        enabled: false
+      our_partners:
+        weight: 49
+        enabled: false
+      our_team:
+        weight: 70
+        enabled: false
+      people:
+        weight: 50
+        enabled: false
+      people_images:
+        weight: 72
+        enabled: false
+      person:
+        weight: 51
+        enabled: true
+      process:
+        weight: 52
+        enabled: false
+      scrollable_item:
+        weight: 53
+        enabled: false
+      scrollable_items:
+        weight: 54
+        enabled: false
+      start_cooperation:
+        weight: 77
+        enabled: false
+      tab:
+        weight: 55
+        enabled: false
+      tabs:
+        weight: 56
+        enabled: false
+      talent_insights:
+        weight: 57
+        enabled: false
+      title_with_description:
+        weight: 58
+        enabled: false
+      titles:
+        weight: 81
+        enabled: false
+      video:
+        weight: 83
+        enabled: false
+      videos:
+        weight: 84
+        enabled: false
+      view:
+        weight: 59
+        enabled: false
+      webform:
+        weight: 60
+        enabled: false
+field_type: entity_reference_revisions

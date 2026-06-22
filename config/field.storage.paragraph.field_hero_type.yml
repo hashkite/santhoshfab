@@ -1,0 +1,39 @@
+uuid: 1c335abe-5ffe-43f8-b811-57e6ce0a933a
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_hero_type
+field_name: field_hero_type
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: image_right
+      label: 'Image right'
+    -
+      value: contact_us
+      label: 'Contact us'
+    -
+      value: article
+      label: Article
+    -
+      value: tailored_teams
+      label: 'Tailored Teams'
+    -
+      value: talent
+      label: Talent
+    -
+      value: small
+      label: Small
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

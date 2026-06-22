@@ -1,0 +1,24 @@
+uuid: 725fc214-8399-4168-b6c3-6659c8a40343
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_multicolor_title
+    - filter.format.full_html
+    - paragraphs.paragraphs_type.scrollable_item
+  module:
+    - text
+id: paragraph.scrollable_item.field_multicolor_title
+field_name: field_multicolor_title
+entity_type: paragraph
+bundle: scrollable_item
+label: 'Multicolor title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

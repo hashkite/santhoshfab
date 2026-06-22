@@ -1,0 +1,19 @@
+uuid: 89c9c3ec-dec7-4b17-8d09-2313b021bf32
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.engineering_card_item
+id: paragraph.engineering_card_item.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: engineering_card_item
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

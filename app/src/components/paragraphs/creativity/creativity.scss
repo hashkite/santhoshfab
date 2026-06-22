@@ -1,0 +1,397 @@
+@import '../../../app/styles/functions';
+@import '../../../app/styles/mixins';
+@import '../../../app/styles/variables';
+@import '../../../app/styles/colors';
+
+.creativity {
+  &__section {
+    padding-bottom: 110px;
+    position: relative;
+    transition: 0.3s;
+    background-color: $white;
+
+    @include breakpoint-down($md) {
+      padding-bottom: 70px;
+    }
+
+    &::after {
+      content: '';
+      height: 430px;
+      left: 0;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background: $white;
+    }
+
+    > .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    &.with-shadow {
+      background-color: transparent;
+
+      .creativity__header {
+        margin-bottom: 80px;
+
+        h1 {
+          font-size: 40px;
+
+          span {
+            font-weight: 600 !important;
+          }
+        }
+
+        p {
+          font-size: 16px;
+        }
+      }
+
+      .creativity__description {
+        max-width: 800px;
+      }
+
+      .creativity__item {
+        background: $white;
+        border: 1px solid $white-300;
+        border-radius: 25px;
+        box-shadow: 0px 25px 35px 0px #0000000d;
+
+        &:nth-last-child(4),
+        &:nth-last-child(3),
+        &:nth-last-child(2),
+        &:nth-child(4),
+        &:nth-child(3),
+        &:nth-child(2),
+        &:last-child,
+        &:first-child {
+          &::before,
+          &::after {
+            content: none;
+          }
+        }
+      }
+    }
+  }
+
+  &__header {
+    color: $blue-dark-400;
+    margin-bottom: 110px;
+    padding-top: 110px;
+    text-align: center;
+    transition: 0.3s;
+
+    @include breakpoint-down($xl) {
+      margin-bottom: 70px;
+      padding-top: 70px;
+    }
+
+    @include breakpoint-down($md) {
+      margin-bottom: 50px;
+    }
+
+    @include breakpoint-down($xs) {
+      padding-top: 50px;
+      margin-bottom: 35px;
+    }
+
+    h2 {
+      color: $blue-dark-400;
+      letter-spacing: -0.9px;
+      margin: auto;
+      max-width: 1060px;
+    }
+  }
+
+  &__description {
+    margin: 25px auto 0;
+    max-width: 1060px;
+    transition: 0.3s;
+
+    @include breakpoint-down($sm) {
+      margin-top: 20px;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+
+    @include breakpoint-down($md) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include breakpoint-down($sm) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoint-down($xs) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__item {
+    align-items: center;
+    border-bottom: 1px solid $gray-400;
+    border-top: 1px solid transparent;
+    display: flex;
+    height: 200px;
+    justify-content: center;
+    overflow: hidden;
+    transition: 0.3s;
+    position: relative;
+
+    &:nth-last-child(4),
+    &:nth-last-child(3),
+    &:nth-last-child(2),
+    &:nth-child(4),
+    &:nth-child(3),
+    &:nth-child(2),
+    &:last-child,
+    &:first-child {
+      &::before,
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      &::before {
+        width: 200px;
+        height: 1px;
+        background: linear-gradient(90deg, $purple-200 0%, #ab74f6 100%);
+
+        @include breakpoint-down($sm) {
+          width: 150px;
+        }
+      }
+
+      &::after {
+        height: 80px;
+        width: 1px;
+        background: linear-gradient(180deg, $purple-200 0%, #ab74f6 100%);
+
+        @include breakpoint-down($sm) {
+          height: 50px;
+        }
+      }
+    }
+
+    &:nth-child(2),
+    &:nth-child(3) {
+      border-top: 1px solid $gray-400;
+    }
+
+    &:nth-child(2) {
+      &::before,
+      &::after {
+        display: none;
+      }
+
+      @include breakpoint-down($sm) {
+        border-top: 0;
+
+        &::before {
+          display: block;
+          right: 0;
+          left: auto;
+        }
+
+        &::after {
+          display: block;
+          left: auto;
+          right: 0;
+        }
+      }
+    }
+
+    &:nth-child(3) {
+      &::before,
+      &::after {
+        display: none;
+      }
+
+      @include breakpoint-down($md) {
+        border-top: 0;
+
+        &::before {
+          display: block;
+          right: 0;
+          left: auto;
+        }
+
+        &::after {
+          display: block;
+          left: auto;
+          right: 0;
+        }
+      }
+
+      @include breakpoint-down($sm) {
+        &::before,
+        &::after {
+          display: none;
+        }
+      }
+    }
+
+    &:nth-child(4) {
+      &::after,
+      &::before {
+        display: none;
+      }
+
+      @include breakpoint-up($md) {
+        &::before {
+          display: block;
+          right: 0;
+          left: auto;
+        }
+
+        &::after {
+          display: block;
+          left: auto;
+          right: 0;
+        }
+      }
+    }
+
+    &:nth-last-child(2) {
+      &::before,
+      &::after {
+        display: none;
+      }
+
+      @include breakpoint-down($sm) {
+        border-bottom: 0;
+
+        &::before {
+          bottom: 0;
+          top: auto;
+          display: block;
+        }
+
+        &::after {
+          top: auto;
+          bottom: 0;
+          display: block;
+        }
+      }
+    }
+
+    &:nth-last-child(3) {
+      &::before,
+      &::after {
+        display: none;
+      }
+
+      @include breakpoint-down($md) {
+        border-bottom: 0;
+
+        &::before {
+          bottom: 0;
+          top: auto;
+          display: block;
+        }
+
+        &::after {
+          top: auto;
+          bottom: 0;
+          display: block;
+        }
+      }
+
+      @include breakpoint-down($sm) {
+        &::before,
+        &::after {
+          display: none;
+        }
+      }
+    }
+
+    &:nth-last-child(4) {
+      &::after,
+      &::before {
+        display: none;
+      }
+
+      @include breakpoint-up($md) {
+        border-bottom: 0;
+
+        &::before {
+          bottom: 0;
+          top: auto;
+          display: block;
+        }
+
+        &::after {
+          top: auto;
+          bottom: 0;
+          display: block;
+        }
+      }
+    }
+
+    &:last-child {
+      border-bottom: 0;
+
+      &::before {
+        right: 0;
+        left: auto;
+        top: auto;
+        bottom: 0;
+      }
+
+      &::after {
+        left: auto;
+        right: 0;
+        top: auto;
+        bottom: 0;
+      }
+    }
+
+    &:nth-child(odd),
+    &:nth-child(even) {
+      @include breakpoint-down($xs) {
+        border-bottom: 1px solid $gray-400;
+
+        &::before,
+        &::after {
+          display: none;
+        }
+      }
+    }
+
+    @include breakpoint-down($xl) {
+      height: 150px;
+    }
+
+    @include breakpoint-down($lg) {
+      height: 130px;
+    }
+
+    @include breakpoint-down($sm) {
+      height: 100px;
+    }
+
+    img {
+      max-height: 55px;
+      max-width: 220px;
+      transition: 0.3s;
+
+      @include breakpoint-down($xl) {
+        max-height: 45px;
+        max-width: 150px;
+      }
+
+      @include breakpoint-down($lg) {
+        max-height: 35px;
+        max-width: 120px;
+      }
+    }
+  }
+}

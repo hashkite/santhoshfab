@@ -1,0 +1,29 @@
+uuid: 1a8ba69f-67c0-4c9c-86cc-1833e1ab0623
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_taxonomy
+    - paragraphs.paragraphs_type.top_companies
+    - taxonomy.vocabulary.companies
+id: paragraph.top_companies.field_taxonomy
+field_name: field_taxonomy
+entity_type: paragraph
+bundle: top_companies
+label: Companies
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      companies: companies
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

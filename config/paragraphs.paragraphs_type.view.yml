@@ -1,0 +1,16 @@
+uuid: f5b1a07f-f5fd-405c-af38-f1be0df294ab
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_ee
+third_party_settings:
+  paragraphs_ee:
+    paragraphs_categories:
+      global: global
+id: view
+label: View
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

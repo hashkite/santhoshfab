@@ -1,0 +1,59 @@
+uuid: ebf42201-dd3b-4a5b-9d87-fe8f01917ce6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.view.field_description
+    - field.field.paragraph.view.field_multicolor_title
+    - field.field.paragraph.view.field_style
+    - field.field.paragraph.view.field_view
+    - paragraphs.paragraphs_type.view
+  module:
+    - mck_rest_apis
+id: paragraph.view.default
+targetEntityType: paragraph
+bundle: view
+mode: default
+content:
+  field_description:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_multicolor_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_style:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_view:
+    type: mck_react
+    label: hidden
+    settings:
+      format: view
+      view_mode: default
+      storage: view
+    third_party_settings: {  }
+    weight: 4
+    region: content
+hidden:
+  extra_field_popup: true

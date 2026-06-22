@@ -1,0 +1,183 @@
+uuid: 9d1a993f-d703-4225-b8e3-18580b91b759
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.hero_plus.field_align_text_left
+    - field.field.paragraph.hero_plus.field_description
+    - field.field.paragraph.hero_plus.field_large_height
+    - field.field.paragraph.hero_plus.field_link
+    - field.field.paragraph.hero_plus.field_media
+    - field.field.paragraph.hero_plus.field_media_position
+    - field.field.paragraph.hero_plus.field_multicolor_title
+    - field.field.paragraph.hero_plus.field_paragraph
+    - field.field.paragraph.hero_plus.field_paragraphs
+    - field.field.paragraph.hero_plus.field_subtitle
+    - field.field.paragraph.hero_plus.field_tags
+    - field.field.paragraph.hero_plus.field_title
+    - field.field.paragraph.hero_plus.field_two_paragraphs
+    - field.field.paragraph.hero_plus.field_webform
+    - paragraphs.paragraphs_type.hero_plus
+  module:
+    - mck_rest_apis
+id: paragraph.hero_plus.default
+targetEntityType: paragraph
+bundle: hero_plus
+mode: default
+content:
+  field_align_text_left:
+    type: mck_react
+    label: hidden
+    settings:
+      format: bool
+      view_mode: default
+      storage: ''
+      convert: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_description:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_large_height:
+    type: mck_react
+    label: hidden
+    settings:
+      format: bool
+      view_mode: default
+      storage: ''
+      convert: 0
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_link:
+    type: mck_react
+    label: hidden
+    settings:
+      format: link
+      view_mode: default
+      storage: ''
+      convert: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_media:
+    type: mck_react
+    label: hidden
+    settings:
+      format: media
+      view_mode: default
+      storage: media
+      convert: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_media_position:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_multicolor_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_paragraph:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_paragraphs:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_subtitle:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_tags:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: taxonomy_term
+      convert: 0
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_two_paragraphs:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_webform:
+    type: mck_react
+    label: hidden
+    settings:
+      format: webform
+      view_mode: default
+      storage: webform
+      convert: 0
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  extra_field_popup: true

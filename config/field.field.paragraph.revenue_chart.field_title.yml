@@ -1,0 +1,19 @@
+uuid: f615273e-7eac-4a9e-bdb1-c89ac989e960
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.revenue_chart
+id: paragraph.revenue_chart.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: revenue_chart
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

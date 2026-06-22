@@ -1,0 +1,25 @@
+uuid: 2bc1aa4c-b501-43b2-a5ac-c8a33f6562ed
+langcode: en
+status: true
+dependencies: {  }
+id: node__talent
+label: 'Content: Talent'
+tags:
+  canonical_url: '[node:url]'
+  description: '[node:field_hero:entity:field_description]'
+  image_src: /media/logo.jpg
+  og_description: '[node:field_hero:entity:field_description]'
+  og_image: /media/logo.jpg
+  og_image_alt: 'Site logo'
+  og_image_height: '630'
+  og_image_type: image/jpeg
+  og_image_url: /media/logo.jpg
+  og_image_width: '1200'
+  og_site_name: '[site:name]'
+  og_type: '[node:original:content-type]'
+  title: '[node:title] | [site:name]'
+  twitter_cards_description: '[node:field_hero:entity:field_description]'
+  twitter_cards_image: /media/logo.jpg
+  twitter_cards_image_alt: 'Site logo'
+  twitter_cards_title: '[node:title] | [site:name]'
+  twitter_cards_type: summary_large_image

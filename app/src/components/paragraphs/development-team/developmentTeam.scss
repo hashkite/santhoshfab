@@ -1,0 +1,334 @@
+@import '../../../app/styles/functions';
+@import '../../../app/styles/mixins';
+@import '../../../app/styles/variables';
+@import '../../../app/styles/colors';
+
+.development-team {
+  &__section {
+    padding: 110px 0;
+    transition: .3s;
+
+    @include breakpoint-down($xs) {
+      padding: 90px 0;
+    }
+
+    +.get-in-touch-with-us__section {
+      margin-top: -30px;
+      position: relative;
+      transition: .3s;
+      z-index: 1;
+
+      @include breakpoint-down($md) {
+        margin-top: -50px;
+      }
+
+      @include breakpoint-down($sm) {
+        margin-top: -70px;
+      }
+    }
+  }
+
+  &__top-section {
+    background: $gray-300;
+    margin-top: -110px;
+    min-height: 450px;
+    padding-top: 110px;
+    padding-bottom: 20px;
+    position: relative;
+    transition: .3s;
+
+    @include breakpoint-down($xl) {
+      min-height: 0;
+    }
+
+    >.container {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  &__bottom-section {
+    margin-top: -30px;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__line {
+    background: url(/media/bg-lines.svg) no-repeat center / cover;
+    height: 900px;
+    position: absolute;
+    top: 4%;
+    left: 0;
+    transition: .3s;
+    width: 100%;
+    z-index: 1;
+
+    @include breakpoint-down($xl) {
+      height: 700px;
+    }
+
+    @include breakpoint-down($md) {
+      display: none;
+    }
+  }
+
+  &__decor {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+
+    svg {
+      height: auto;
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__header {
+    max-width: 50%;
+    margin-bottom: 90px;
+    transition: .3s;
+
+    @include breakpoint-down($fluid) {
+      max-width: 750px;
+    }
+
+    @include breakpoint-down($xl) {
+      margin-bottom: 70px;
+    }
+
+    @include breakpoint-down($md) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__desc {
+    margin-top: 25px;
+    max-width: 650px;
+    transition: .3s;
+
+    @include breakpoint-down($md) {
+      margin-top: 20px;
+      max-width: 100%;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(2, 1fr);
+
+    @include breakpoint-down($sm) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    &-item {
+      background: $gray-50;
+      border: 1px solid $gray-300;
+      border-radius: 25px;
+      box-shadow: 0 25px 35px 0 rgba($black, .05);
+      min-height: 650px;
+      padding: 100px 45px 60px;
+      position: relative;
+      transition: .3s;
+
+      @include breakpoint-down($xxl) {
+        min-height: 0;
+        padding: 60px 40px 50px;
+      }
+
+      @include breakpoint-down($md) {
+        padding: 50px 30px 30px;
+      }
+
+      &:first-child,
+      &:nth-child(4n + 1) {
+        .development-team__pic {
+          &::before {
+            top: 14%;
+            left: 18%;
+
+            @include breakpoint-down($xs) {
+              top: 5%;
+              left: 5%;
+            }
+          }
+
+          &::after {
+            right: 14%;
+            bottom: 16%;
+
+            @include breakpoint-down($xs) {
+              right: 5%;
+              bottom: 5%;
+            }
+          }
+        }
+      }
+
+      &:nth-child(2),
+      &:nth-child(4n + 2) {
+        .development-team__pic {
+          &::before {
+            height: 95px;
+            top: 23%;
+            right: 37%;
+            width: 95px;
+
+            @include breakpoint-down($md) {
+              height: 50px;
+              width: 50px;
+            }
+
+            @include breakpoint-down($xs) {
+              top: 18%;
+            }
+          }
+
+          &::after {
+            display: none;
+          }
+        }
+      }
+
+      &:nth-child(3),
+      &:nth-child(4n + 3) {
+        .development-team__pic {
+          &::before {
+            bottom: 18%;
+            left: 13%;
+
+            @include breakpoint-down($xs) {
+              bottom: 5%;
+              left: 5%;
+            }
+          }
+
+          &::after {
+            top: 22%;
+            right: 11%;
+
+            @include breakpoint-down($xs) {
+              top: 5%;
+              right: 5%;
+            }
+          }
+        }
+      }
+
+      &:nth-child(4),
+      &:nth-child(4n + 4) {
+        .development-team__pic {
+          &::before {
+            height: 60px;
+            top: 0;
+            right: 11%;
+            width: 60px;
+
+            @include breakpoint-down($xs) {
+              height: 50px;
+              right: 5%;
+              width: 50px;
+            }
+          }
+
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  &__number {
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: -.5px;
+    line-height: 32px;
+    position: absolute;
+    top: 65px;
+    left: 60px;
+    transition: .3s;
+
+    @include breakpoint-down($md) {
+      font-size: 20px;
+      line-height: 20px;
+      top: 30px;
+      left: 30px;
+    }
+  }
+
+  &__pic {
+    align-items: center;
+    display: flex;
+    height: 280px;
+    justify-content: center;
+    margin-bottom: 75px;
+    position: relative;
+    transition: .3s;
+    width: 100%;
+
+    @include breakpoint-down($xxl) {
+      height: 200px;
+      margin-bottom: 50px;
+    }
+
+    @include breakpoint-down($md) {
+      height: 150px;
+      margin-bottom: 30px;
+    }
+
+    img {
+      height: 100%;
+      max-height: 200px;
+      max-width: 200px;
+      object-fit: contain;
+      object-position: center;
+      position: relative;
+      transition: .3s;
+      width: 100%;
+      z-index: 1;
+
+      @include breakpoint-down($xxl) {
+        max-height: 150px;
+      }
+
+      @include breakpoint-down($md) {
+        max-height: 100px;
+      }
+    }
+
+    &::before,
+    &::after {
+      background: url(/media/icons/icon-star.svg) no-repeat center / contain;
+      content: '';
+      height: 70px;
+      position: absolute;
+      transition: .3s;
+      width: 70px;
+
+      @include breakpoint-down($md) {
+        height: 50px;
+        width: 50px;
+      }
+    }
+  }
+
+  &__title {
+    h3 {
+      color: $blue-dark-400;
+      line-height: -.5px;
+    }
+  }
+
+  &__desc {
+    color: $blue-dark-600;
+    max-width: 90%;
+    transition: .3s;
+
+    @include breakpoint-down($md) {
+      max-width: 100%;
+    }
+  }
+}

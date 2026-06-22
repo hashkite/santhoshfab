@@ -1,0 +1,16 @@
+uuid: f0d1defa-44cc-4fea-b3dc-f7f8b2f232f7
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_ee
+third_party_settings:
+  paragraphs_ee:
+    paragraphs_categories:
+      global: global
+id: text_with_content
+label: 'Text with Content'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

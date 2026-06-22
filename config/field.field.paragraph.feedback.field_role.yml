@@ -1,0 +1,19 @@
+uuid: e4a45b4e-6b81-43da-b185-b50bbf6880bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_role
+    - paragraphs.paragraphs_type.feedback
+id: paragraph.feedback.field_role
+field_name: field_role
+entity_type: paragraph
+bundle: feedback
+label: Role
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

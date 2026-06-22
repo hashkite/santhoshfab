@@ -1,0 +1,48 @@
+uuid: 2b04115e-bfe3-45bd-a92e-92ee5a61367a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.how_we_work.field_description
+    - field.field.paragraph.how_we_work.field_multicolor_title
+    - field.field.paragraph.how_we_work.field_paragraphs
+    - paragraphs.paragraphs_type.how_we_work
+  module:
+    - mck_rest_apis
+id: paragraph.how_we_work.default
+targetEntityType: paragraph
+bundle: how_we_work
+mode: default
+content:
+  field_description:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_multicolor_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_paragraphs:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: paragraph
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  extra_field_popup: true

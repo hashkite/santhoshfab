@@ -1,0 +1,52 @@
+uuid: d5e1c1a1-8024-433a-9b03-fe34b8de18f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.some_cases_studies.field_case_studies
+    - field.field.paragraph.some_cases_studies.field_description
+    - field.field.paragraph.some_cases_studies.field_multicolor_title
+    - paragraphs.paragraphs_type.some_cases_studies
+  module:
+    - autocomplete_deluxe
+    - text
+id: paragraph.some_cases_studies.default
+targetEntityType: paragraph
+bundle: some_cases_studies
+mode: default
+content:
+  field_case_studies:
+    type: autocomplete_deluxe
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      autocomplete_route_name: autocomplete_deluxe.autocomplete
+      size: 60
+      selection_handler: default
+      limit: 10
+      min_length: 0
+      delimiter: ''
+      not_found_message_allow: false
+      not_found_message: "The term '@term' will be added"
+      no_empty_message: 'No terms could be found. Please type in order to add a new term.'
+    third_party_settings: {  }
+  field_description:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_multicolor_title:
+    type: text_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

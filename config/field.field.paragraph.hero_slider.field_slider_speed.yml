@@ -1,0 +1,23 @@
+uuid: b6f563e1-f88b-41f5-8f4f-30a1bec1500c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_slider_speed
+    - paragraphs.paragraphs_type.hero_slider
+id: paragraph.hero_slider.field_slider_speed
+field_name: field_slider_speed
+entity_type: paragraph
+bundle: hero_slider
+label: 'Slider speed'
+description: 'Slider speed in miliseconds'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 100
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

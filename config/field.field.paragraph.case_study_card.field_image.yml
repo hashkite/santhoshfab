@@ -1,0 +1,29 @@
+uuid: cf64b9ad-eac0-46ba-b7ce-ee61aa9e6f2b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image
+    - media.type.image
+    - paragraphs.paragraphs_type.case_study_card
+id: paragraph.case_study_card.field_image
+field_name: field_image
+entity_type: paragraph
+bundle: case_study_card
+label: Image
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

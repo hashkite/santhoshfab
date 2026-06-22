@@ -1,0 +1,252 @@
+uuid: aac87b42-7a73-41f6-89ff-c92c77d634f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraphs
+    - paragraphs.paragraphs_type.person_with_tech
+    - paragraphs.paragraphs_type.slider
+    - paragraphs.paragraphs_type.teaser
+  module:
+    - entity_reference_revisions
+id: paragraph.slider.field_paragraphs
+field_name: field_paragraphs
+entity_type: paragraph
+bundle: slider
+label: 'Info items'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      teaser: teaser
+      person_with_tech: person_with_tech
+    negate: 0
+    target_bundles_drag_drop:
+      about_us_cards:
+        weight: 73
+        enabled: false
+      all_services:
+        weight: 74
+        enabled: false
+      business_needs:
+        weight: 44
+        enabled: false
+      business_person:
+        weight: 76
+        enabled: false
+      business_teaser:
+        weight: 45
+        enabled: false
+      contact_ways:
+        weight: 78
+        enabled: false
+      country:
+        weight: 18
+        enabled: false
+      creativity:
+        weight: 50
+        enabled: false
+      development_team:
+        weight: 81
+        enabled: false
+      experience:
+        weight: 82
+        enabled: false
+      famaash_productions:
+        weight: 51
+        enabled: false
+      famaash_streamlines:
+        weight: 84
+        enabled: false
+      faq_s:
+        weight: 19
+        enabled: false
+      featured_case_studies:
+        weight: 86
+        enabled: false
+      feedback:
+        weight: 27
+        enabled: false
+      get_in_touch_with_us:
+        weight: 88
+        enabled: false
+      grid:
+        weight: 89
+        enabled: false
+      hero:
+        weight: 4
+        enabled: false
+      hero_plus:
+        weight: 91
+        enabled: false
+      hero_slide:
+        weight: 5
+        enabled: false
+      hero_slider:
+        weight: 6
+        enabled: false
+      horizontal_scroll:
+        weight: 94
+        enabled: false
+      horizontal_tab:
+        weight: 57
+        enabled: false
+      horizontal_tabs:
+        weight: 58
+        enabled: false
+      how_we_work:
+        weight: 62
+        enabled: false
+      image:
+        weight: 59
+        enabled: false
+      image_with_background:
+        weight: 61
+        enabled: false
+      image_with_titles:
+        weight: 62
+        enabled: false
+      images:
+        weight: 60
+        enabled: false
+      link_with_icon:
+        weight: 67
+        enabled: false
+      locations:
+        weight: 103
+        enabled: false
+      looking_for_a_team:
+        weight: 68
+        enabled: false
+      model_item:
+        weight: 69
+        enabled: false
+      number:
+        weight: 63
+        enabled: false
+      numbers:
+        weight: 64
+        enabled: false
+      our_capabilities:
+        weight: 74
+        enabled: false
+      our_clients:
+        weight: 23
+        enabled: false
+      our_expertise:
+        weight: 76
+        enabled: false
+      our_footprints:
+        weight: 24
+        enabled: false
+      our_model:
+        weight: 78
+        enabled: false
+      our_team:
+        weight: 70
+        enabled: false
+      our_values:
+        weight: 114
+        enabled: false
+      people:
+        weight: 71
+        enabled: false
+      people_images:
+        weight: 72
+        enabled: false
+      people_tabs:
+        weight: 117
+        enabled: false
+      person:
+        weight: 73
+        enabled: false
+      person_with_tech:
+        weight: 121
+        enabled: true
+      pricing:
+        weight: 119
+        enabled: false
+      puzzle:
+        weight: 120
+        enabled: false
+      puzzles:
+        weight: 121
+        enabled: false
+      re_arrange:
+        weight: 125
+        enabled: false
+      scrollable_item:
+        weight: 75
+        enabled: false
+      scrollable_items:
+        weight: 76
+        enabled: false
+      service_item:
+        weight: 86
+        enabled: false
+      services:
+        weight: 85
+        enabled: false
+      slider:
+        weight: 87
+        enabled: false
+      some_cases_studies:
+        weight: 127
+        enabled: false
+      tab:
+        weight: 27
+        enabled: false
+      tab_with_paragraphs:
+        weight: 130
+        enabled: false
+      tab_with_taxonomy:
+        weight: 131
+        enabled: false
+      tabs:
+        weight: 28
+        enabled: false
+      talent_list:
+        weight: 132
+        enabled: false
+      teaser:
+        weight: 90
+        enabled: true
+      tile:
+        weight: 91
+        enabled: false
+      tiles:
+        weight: 135
+        enabled: false
+      tiles_item:
+        weight: 136
+        enabled: false
+      title_with_description:
+        weight: 29
+        enabled: false
+      titles:
+        weight: 81
+        enabled: false
+      vertical_tabs:
+        weight: 95
+        enabled: false
+      vertical_tabs_new:
+        weight: 140
+        enabled: false
+      video:
+        weight: 83
+        enabled: false
+      videos:
+        weight: 84
+        enabled: false
+      view:
+        weight: 30
+        enabled: false
+      work_experience:
+        weight: 144
+        enabled: false
+field_type: entity_reference_revisions

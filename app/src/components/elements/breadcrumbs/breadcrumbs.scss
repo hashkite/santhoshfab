@@ -1,0 +1,59 @@
+@import '../../../app/styles/functions';
+@import '../../../app/styles/mixins';
+@import '../../../app/styles/variables';
+@import '../../../app/styles/colors';
+
+.breadcrumbs {
+  &__block {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    transition: top .3s;
+    width: 100%;
+    z-index: 1;
+
+    @include breakpoint-down($xs) {
+      top: 30px;
+    }
+  }
+
+  &__list {
+    align-items: center;
+    display: flex;
+    gap: 35px;
+    transition: gap .3s;
+
+    @include breakpoint-down($xs) {
+      gap: 15px;
+    }
+
+    div.breadcrumbs__item {
+      cursor: default;
+      font-weight: 600;
+    }
+  }
+
+  &__item {
+    color: $white;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 20px;
+    max-width: 40%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: .3s;
+    white-space: nowrap;
+
+    @include breakpoint-down($xs) {
+      font-size: 15px;
+    }
+  }
+
+  &__separator {
+    background: url(/media/icon-angle.svg) no-repeat center;
+    background-size: contain;
+    height: 12px;
+    width: 10px;
+  }
+}

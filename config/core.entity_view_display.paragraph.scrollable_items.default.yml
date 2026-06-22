@@ -1,0 +1,26 @@
+uuid: a5f8f8e2-5faf-487b-9d82-86794834fd42
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.scrollable_items.field_paragraphs
+    - paragraphs.paragraphs_type.scrollable_items
+  module:
+    - mck_rest_apis
+id: paragraph.scrollable_items.default
+targetEntityType: paragraph
+bundle: scrollable_items
+mode: default
+content:
+  field_paragraphs:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: paragraph
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  extra_field_popup: true

@@ -1,0 +1,51 @@
+uuid: d0418627-a72d-42cc-ab94-bb525c19bc04
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.locations.field_description
+    - field.field.paragraph.locations.field_multicolor_title
+    - field.field.paragraph.locations.field_paragraphs
+    - paragraphs.paragraphs_type.locations
+  module:
+    - mck_rest_apis
+id: paragraph.locations.default
+targetEntityType: paragraph
+bundle: locations
+mode: default
+content:
+  field_description:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_multicolor_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_paragraphs:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  extra_field_popup: true

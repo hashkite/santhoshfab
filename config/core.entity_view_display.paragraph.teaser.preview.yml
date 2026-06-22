@@ -1,0 +1,47 @@
+uuid: 932a0e9d-74f6-473e-92b2-cc251eb63ab5
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.teaser.field_description
+    - field.field.paragraph.teaser.field_icon
+    - field.field.paragraph.teaser.field_title
+    - image.style.convert_to_webp
+    - paragraphs.paragraphs_type.teaser
+  module:
+    - media
+    - text
+id: paragraph.teaser.preview
+targetEntityType: paragraph
+bundle: teaser
+mode: preview
+content:
+  field_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_icon:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: convert_to_webp
+      image_loading:
+        attribute: eager
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  extra_field_popup: true

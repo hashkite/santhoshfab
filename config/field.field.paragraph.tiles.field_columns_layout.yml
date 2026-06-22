@@ -1,0 +1,23 @@
+uuid: 77ea18b0-1368-49ae-a111-33a324d05b45
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_columns_layout
+    - paragraphs.paragraphs_type.tiles
+  module:
+    - options
+id: paragraph.tiles.field_columns_layout
+field_name: field_columns_layout
+entity_type: paragraph
+bundle: tiles
+label: 'Columns layout'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: '12'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

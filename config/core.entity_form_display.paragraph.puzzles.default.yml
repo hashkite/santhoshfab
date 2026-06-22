@@ -1,0 +1,54 @@
+uuid: 1642846b-8920-4510-948b-81ae80717548
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.puzzles.field_description
+    - field.field.paragraph.puzzles.field_multicolor_title
+    - field.field.paragraph.puzzles.field_paragraphs
+    - paragraphs.paragraphs_type.puzzles
+  module:
+    - paragraphs
+    - text
+id: paragraph.puzzles.default
+targetEntityType: paragraph
+bundle: puzzles
+mode: default
+content:
+  field_description:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_multicolor_title:
+    type: text_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_paragraphs:
+    type: paragraphs
+    weight: 3
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

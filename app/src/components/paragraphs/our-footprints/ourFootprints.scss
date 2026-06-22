@@ -1,0 +1,251 @@
+@import '../../../app/styles/functions';
+@import '../../../app/styles/mixins';
+@import '../../../app/styles/variables';
+@import '../../../app/styles/colors';
+
+.our-footprints {
+  &__section {
+    background: $purple-400;
+    color: $white;
+    overflow: hidden;
+    padding: 50px 0 240px;
+    position: relative;
+    transition: 0.3s;
+    z-index: 1;
+
+    @include breakpoint-down(2000px) {
+      padding-top: 150px;
+    }
+
+    @include breakpoint-down($xl) {
+      padding-bottom: 150px;
+    }
+
+    @include breakpoint-down($sm) {
+      padding-bottom: 100px;
+    }
+
+    @include breakpoint-down($xs) {
+      padding-bottom: 70px;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+
+      &::before,
+      &::after {
+        background: #2f077c;
+        border-radius: 100%;
+        content: '';
+        filter: blur(250px);
+        height: 800px;
+        position: absolute;
+        bottom: -40%;
+        left: -50%;
+        transition: 0.3s;
+        width: 700px;
+
+        @include breakpoint-down($xl) {
+          filter: blur(100px);
+          height: 300px;
+          width: 400px;
+        }
+
+        @include breakpoint-down($sm) {
+          height: 200px;
+          width: 200px;
+        }
+      }
+
+      &::after {
+        height: 700px;
+        top: auto;
+        right: -50%;
+        bottom: -10%;
+        left: auto;
+        width: 1000px;
+
+        @include breakpoint-down($xl) {
+          height: 300px;
+          width: 300px;
+        }
+
+        @include breakpoint-down($sm) {
+          height: 200px;
+          width: 200px;
+        }
+      }
+    }
+  }
+
+  &__main-bg {
+    mix-blend-mode: lighten;
+    height: 770px;
+    margin: auto;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: center;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    left: 0;
+    width: auto;
+    z-index: 1;
+    position: absolute;
+    top: 0px !important;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.45;
+
+    @include breakpoint-down(2000px) {
+      top: 150px;
+    }
+
+    @include breakpoint-down($xl) {
+      height: 500px;
+    }
+
+    @include breakpoint-down($md) {
+      height: 400px;
+    }
+
+    @include breakpoint-down($sm) {
+      height: 300px;
+    }
+  }
+
+  &__decor {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+
+    svg {
+      display: block;
+      height: auto;
+      transform-origin: center top;
+      width: 100%;
+    }
+
+    &-bottom {
+      top: auto;
+      bottom: -1px;
+
+      svg {
+        transform-origin: center bottom;
+      }
+    }
+  }
+
+  &__top-content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 40px;
+    min-height: 770px;
+    position: relative;
+    text-align: center;
+    transition: margin 0.3s, min-height 0.3s;
+    z-index: 2;
+
+    @include breakpoint-down($xl) {
+      min-height: 500px;
+    }
+
+    @include breakpoint-down($md) {
+      margin-bottom: 30px;
+      min-height: 400px;
+    }
+
+    @include breakpoint-down($sm) {
+      min-height: 300px;
+    }
+
+    h2 {
+      color: $white;
+      letter-spacing: -0.9px;
+      margin: 0 auto;
+      max-width: 1200px;
+      transition: 0.3s;
+
+      @include breakpoint-down($sm) {
+        letter-spacing: -0.5px;
+      }
+    }
+  }
+
+  &__subtitle {
+    color: $white;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: -0.36px;
+    line-height: 30px;
+    margin-bottom: 35px;
+    position: relative;
+    transition: 0.3s;
+    z-index: 1;
+
+    @include breakpoint-down($xl) {
+      margin-bottom: 20px;
+    }
+
+    @include breakpoint-down($sm) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__countries {
+    background: rgba($black, 0.4);
+    backdrop-filter: blur(12.5px);
+    border-radius: 12px;
+    padding: 70px 30px;
+    position: relative;
+    transition: padding 0.3s;
+    z-index: 1;
+
+    @include breakpoint-down($xl) {
+      padding: 35px 25px;
+    }
+
+    @include breakpoint-down($md) {
+      padding: 30px;
+    }
+
+    @include breakpoint-down($sm) {
+      padding: 25px;
+    }
+  }
+
+  &__bottom-content {
+    margin: 90px auto 0;
+    max-width: 900px;
+    position: relative;
+    text-align: center;
+    transition: margin 0.3s;
+    z-index: 1;
+
+    @include breakpoint-down($xl) {
+      margin-top: 50px;
+    }
+
+    @include breakpoint-down($md) {
+      margin-top: 35px;
+    }
+  }
+
+  &__description {
+    margin-bottom: 55px;
+    transition: 0.3s;
+
+    @include breakpoint-down($xl) {
+      margin-bottom: 35px;
+    }
+  }
+}

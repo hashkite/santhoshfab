@@ -1,0 +1,112 @@
+/* Styles for Technologies paragraph - matches pale-blue panel and horizontal logo rows */
+.technologies__container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 28px 18px;
+}
+
+.technologies {
+  background: linear-gradient(180deg, #e9f6ff 0%, #eaf8ff 100%);
+  padding: 28px 0 36px;
+}
+
+.technologies__header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.technologies__marker {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(180deg,#dff4fc 0%, #e6f7ff 100%);
+  border-left: 4px solid #7fc6f0;
+  display: inline-block;
+  box-shadow: 0 1px 0 rgba(16,24,40,0.03);
+}
+
+// .technologies__title {
+//   font-size: 26px;
+//   color: #0b496b; /* slightly darker blue to match other components */
+//   margin: 0;
+//   font-weight: 800;
+//   letter-spacing: -0.2px;
+// }
+
+.technologies__subtitle {
+  margin: 10px 0 20px 0;
+  color: #4b5563;
+}
+
+.technologies__panel {
+  background: rgba(255,255,255,0.04);
+  padding: 18px 18px 26px;
+}
+
+.tech-group {
+  margin-bottom: 22px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(15,76,120,0.04);
+}
+.tech-item-group-wrapper{
+    display: flex;
+    gap: 60px;
+}
+
+.tech-group__title {
+  font-size: 18px;
+  color: #0f66a3;
+  margin: 6px 0 12px;
+  font-weight: 700;
+}
+
+.tech-subtitle {
+  font-size: 13px;
+  color: #25658a;
+  margin: 6px 0 8px;
+  font-weight: 700;
+  text-transform: none;
+}
+
+.tech-item-group { margin-bottom: 10px; }
+
+.tech-group__items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 14px;
+  align-items: center;
+}
+
+.tech-item {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.tech-item__box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 1px 0 rgba(16,24,40,0.04);
+  min-width: 92px;
+  max-height: 64px;
+}
+
+.tech-item__box img { max-width: 100%; max-height: 42px; object-fit: contain; display:block; }
+
+.tech-item__placeholder { color:#6b7280; font-size:13px; padding:6px 8px; }
+
+@media (max-width: 900px) {
+  .technologies__title { font-size: 22px; }
+  .tech-item__box { min-width: 68px; }
+}
+
+@media (max-width: 500px) {
+  .technologies__container { padding: 18px 12px; }
+  .technologies__marker { width:36px; height:36px; }
+  .technologies__title { font-size: 20px; }
+  .tech-group__items { gap:8px; }
+}

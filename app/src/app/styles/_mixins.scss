@@ -1,0 +1,88 @@
+@mixin breakpoint-up($width) {
+  @media screen and (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin breakpoint-down($width) {
+  @media screen and (max-width: #{$width - 0.1px}) {
+    @content;
+  }
+}
+
+@mixin visually-hidden {
+  color: transparent;
+  opacity: 0;
+  font-size: 0;
+  float: left;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+}
+
+@mixin btn-default($type: 'primary', $outline: false, $transparent: false) {
+  align-items: center;
+  border-radius: 0;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: $body-font-family;
+  font-size: rem(17);
+  font-weight: 600;
+  justify-content: center;
+  max-width: 100%;
+  text-align: center;
+  text-decoration: none;
+  transition: color 0.3s, background 0.3s, border 0.3s;
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+  }
+
+  &::placeholder {
+    @content;
+  }
+}
+
+@mixin params {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin safariReset($color) {
+  @media not all and (min-resolution: 0.001dpcm) {
+    background-clip: initial;
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: initial;
+    background: transparent;
+    color: $color;
+  }
+}
+
+// Main
+@mixin purple {
+  background: linear-gradient(90deg, $purple-200 0%, $purple-600 100%);
+  @include params;
+  @include safariReset($purple-200);
+}
+
+@mixin red {
+  background: linear-gradient(90deg, $brand-red 0%, $brand-blue 100%);
+  @include params;
+  @include safariReset($brand-red);
+}
+
+// Main
+@mixin brand-blue {
+  background: linear-gradient(90deg, $brand-blue -1.09%, $brand-blue 98.69%);
+  @include params;
+  @include safariReset($brand-blue);
+}

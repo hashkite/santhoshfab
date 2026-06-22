@@ -1,0 +1,26 @@
+uuid: 075c5bbc-efe8-434c-b750-f94070bcbe61
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.our_clients
+    - field.field.config_pages.our_clients.field_images
+  module:
+    - mck_rest_apis
+id: config_pages.our_clients.default
+targetEntityType: config_pages
+bundle: our_clients
+mode: default
+content:
+  field_images:
+    type: mck_react
+    label: hidden
+    settings:
+      format: media
+      view_mode: default
+      convert: '1'
+      storage: media
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

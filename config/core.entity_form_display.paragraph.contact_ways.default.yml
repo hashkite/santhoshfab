@@ -1,0 +1,45 @@
+uuid: 468d90e4-b82c-47db-aed0-4d408c7502d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.contact_ways.field_multicolor_title
+    - field.field.paragraph.contact_ways.field_paragraphs
+    - paragraphs.paragraphs_type.contact_ways
+  module:
+    - paragraphs
+    - text
+id: paragraph.contact_ways.default
+targetEntityType: paragraph
+bundle: contact_ways
+mode: default
+content:
+  field_multicolor_title:
+    type: text_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_paragraphs:
+    type: paragraphs
+    weight: 3
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

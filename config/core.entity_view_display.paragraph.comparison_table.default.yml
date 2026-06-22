@@ -1,0 +1,99 @@
+uuid: bea5b491-10de-4bc1-b3b1-354e84d6af96
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.comparison_table.field_cells
+    - field.field.paragraph.comparison_table.field_columns
+    - field.field.paragraph.comparison_table.field_cta
+    - field.field.paragraph.comparison_table.field_description
+    - field.field.paragraph.comparison_table.field_rows
+    - field.field.paragraph.comparison_table.field_subtitle
+    - field.field.paragraph.comparison_table.field_title
+    - paragraphs.paragraphs_type.comparison_table
+  module:
+    - mck_rest_apis
+id: paragraph.comparison_table.default
+targetEntityType: paragraph
+bundle: comparison_table
+mode: default
+content:
+  field_cells:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: paragraph
+      convert: 0
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_columns:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: paragraph
+      convert: 0
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_cta:
+    type: mck_react
+    label: hidden
+    settings:
+      format: link
+      view_mode: default
+      storage: ''
+      convert: 0
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_description:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_rows:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: paragraph
+      convert: 0
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_subtitle:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  extra_field_popup: true

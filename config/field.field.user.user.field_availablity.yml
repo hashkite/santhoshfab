@@ -1,0 +1,20 @@
+uuid: ea704934-4b04-4d1c-9b33-3017ee5b1da4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_availablity
+  module:
+    - user
+id: user.user.field_availablity
+field_name: field_availablity
+entity_type: user
+bundle: user
+label: Availablity
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

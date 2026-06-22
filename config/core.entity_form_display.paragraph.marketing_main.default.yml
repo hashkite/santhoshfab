@@ -1,0 +1,107 @@
+uuid: ceb015d9-7901-44c5-8188-e59e9a40b813
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.marketing_main.field_cta
+    - field.field.paragraph.marketing_main.field_description
+    - field.field.paragraph.marketing_main.field_section_id
+    - field.field.paragraph.marketing_main.field_sub_description
+    - field.field.paragraph.marketing_main.field_sub_paragrapghs
+    - field.field.paragraph.marketing_main.field_sub_title
+    - field.field.paragraph.marketing_main.field_title
+    - field.field.paragraph.marketing_main.field_title_alignment
+    - field.field.paragraph.marketing_main.field_video
+    - paragraphs.paragraphs_type.marketing_main
+  module:
+    - link
+    - media_library
+    - paragraphs
+    - text
+id: paragraph.marketing_main.default
+targetEntityType: paragraph
+bundle: marketing_main
+mode: default
+content:
+  field_cta:
+    type: link_default
+    weight: 7
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_description:
+    type: text_textarea
+    weight: 4
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_section_id:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_sub_description:
+    type: text_textarea
+    weight: 6
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_sub_paragrapghs:
+    type: paragraphs
+    weight: 5
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      features:
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+  field_sub_title:
+    type: string_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_title_alignment:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_video:
+    type: media_library_widget
+    weight: 3
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

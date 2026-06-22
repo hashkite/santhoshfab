@@ -1,0 +1,48 @@
+uuid: 11fb7953-9c1e-4b84-a418-1ebc3332f8d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.get_in_touch_with_us.field_description
+    - field.field.paragraph.get_in_touch_with_us.field_link
+    - field.field.paragraph.get_in_touch_with_us.field_multicolor_title
+    - paragraphs.paragraphs_type.get_in_touch_with_us
+  module:
+    - mck_rest_apis
+id: paragraph.get_in_touch_with_us.default
+targetEntityType: paragraph
+bundle: get_in_touch_with_us
+mode: default
+content:
+  field_description:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_link:
+    type: mck_react
+    label: hidden
+    settings:
+      format: link
+      view_mode: default
+      storage: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_multicolor_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  extra_field_popup: true

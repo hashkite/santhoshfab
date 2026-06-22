@@ -1,0 +1,15 @@
+uuid: 0509ad5b-66d0-424f-a4f5-2cda687a3886
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_ee
+third_party_settings:
+  paragraphs_ee:
+    paragraphs_categories: {  }
+id: experience
+label: Experience
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

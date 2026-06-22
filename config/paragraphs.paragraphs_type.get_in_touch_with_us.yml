@@ -1,0 +1,16 @@
+uuid: 95c30cf9-cd9f-418d-a512-54ed6519b95e
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_ee
+third_party_settings:
+  paragraphs_ee:
+    paragraphs_categories:
+      global: global
+id: get_in_touch_with_us
+label: 'Get in touch with us'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

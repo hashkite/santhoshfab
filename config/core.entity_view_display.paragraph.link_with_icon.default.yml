@@ -1,0 +1,37 @@
+uuid: 39042d82-1605-42f3-a635-191937d9725c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.link_with_icon.field_icon
+    - field.field.paragraph.link_with_icon.field_link
+    - paragraphs.paragraphs_type.link_with_icon
+  module:
+    - mck_rest_apis
+id: paragraph.link_with_icon.default
+targetEntityType: paragraph
+bundle: link_with_icon
+mode: default
+content:
+  field_icon:
+    type: mck_react
+    label: hidden
+    settings:
+      format: media
+      view_mode: default
+      storage: media
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_link:
+    type: mck_react
+    label: hidden
+    settings:
+      format: link
+      view_mode: default
+      storage: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  extra_field_popup: true

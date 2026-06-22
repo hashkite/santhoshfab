@@ -1,0 +1,24 @@
+uuid: 17382c5a-4031-4a6d-a9a5-bb5cbbc28524
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - filter.format.basic_html
+    - paragraphs.paragraphs_type.top_companies
+  module:
+    - text
+id: paragraph.top_companies.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: top_companies
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text_long

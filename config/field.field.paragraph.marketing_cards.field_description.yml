@@ -1,0 +1,24 @@
+uuid: 83913094-425a-4320-87f7-6805b2980f52
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - filter.format.basic_html
+    - paragraphs.paragraphs_type.marketing_cards
+  module:
+    - text
+id: paragraph.marketing_cards.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: marketing_cards
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text_long

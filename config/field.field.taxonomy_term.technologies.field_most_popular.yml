@@ -1,0 +1,21 @@
+uuid: fcc9883f-3e18-4274-814d-6b2519504a6b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_most_popular
+    - taxonomy.vocabulary.technologies
+id: taxonomy_term.technologies.field_most_popular
+field_name: field_most_popular
+entity_type: taxonomy_term
+bundle: technologies
+label: 'Most Popular'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

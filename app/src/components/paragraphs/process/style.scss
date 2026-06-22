@@ -1,0 +1,197 @@
+@import '../../../app/styles/functions';
+@import '../../../app/styles/mixins';
+@import '../../../app/styles/variables';
+@import '../../../app/styles/colors';
+
+.process {
+  position: relative;
+  padding: 50px 0;
+  overflow: hidden;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    left: -50%;
+    height: 500px;
+    bottom: 250px;
+    background-color: #5c00db;
+    background-image: url(/media/bg-process.png);
+    background-size: 50%;
+    background-position: bottom;
+    border-radius: 50% 50% 0 0;
+
+    @include breakpoint-down($lg) {
+      background-size: cover;
+      background-position: center;
+    }
+  }
+
+  &__title {
+    > * {
+      font-size: 45px;
+      line-height: 55px;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 30px;
+
+      @include breakpoint-down($md) {
+        font-size: 25px;
+        margin-bottom: 20px;
+      }
+
+      span {
+        font-weight: 500 !important;
+      }
+    }
+  }
+
+  &__description {
+    font-size: 20px;
+    line-height: 35px;
+    color: $blue-dark-600;
+    max-width: 770px;
+    margin: 0 auto 100px auto;
+    text-align: center;
+
+    @include breakpoint-down($md) {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+    margin-top: 200px;
+    position: relative;
+
+    @include breakpoint-down($md) {
+      grid-template-columns: 1fr;
+      margin-top: 100px;
+    }
+  }
+
+  &__item {
+    background: $white;
+    border: 1px solid #0000001a;
+    border-radius: 35px;
+    padding: 40px;
+    position: relative;
+
+    box-shadow: 0px 17px 37px 0px #8080801a, 0px 67px 67px 0px #80808017,
+      0px 150px 90px 0px #8080800d, 0px 266px 106px 0px #80808003,
+      0px 416px 116px 0px #80808000;
+
+    &::before {
+      content: '';
+      width: 37px;
+      height: 3px;
+      display: block;
+      background: linear-gradient(90deg, #5c00db 0%, #ab74f6 100%);
+      border-radius: 50px;
+      position: absolute;
+      bottom: 60px;
+    }
+
+    &::after {
+      content: '';
+      width: 20px;
+      height: 20px;
+      display: block;
+      background: linear-gradient(90deg, #dd9a34 -1.09%, #ffd392 98.69%);
+      border-radius: 50%;
+      top: -10px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    img {
+      width: 90px;
+      height: 90px;
+      padding: 25px;
+      border-radius: 15px;
+      border: 1px solid #0000001a;
+      margin-bottom: 50px;
+
+      @include breakpoint-down($md) {
+        width: 70px;
+        height: 70px;
+        padding: 15px;
+        margin-bottom: 30px;
+      }
+    }
+
+    &-title {
+      margin-bottom: 20px;
+      > * {
+        font-size: 30px;
+        line-height: 40px;
+        color: $blue-dark-400;
+        margin-bottom: 30px;
+
+        @include breakpoint-down($md) {
+          font-size: 20px;
+          line-height: 30px;
+          margin-bottom: 10px;
+        }
+
+        span {
+          font-weight: 500 !important;
+        }
+      }
+    }
+
+    &-description {
+      font-size: 16px;
+      line-height: 20px;
+      margin-bottom: 50px;
+
+      @include breakpoint-down($md) {
+        font-size: 16px;
+        line-height: 25px;
+      }
+    }
+
+    &-index {
+      display: flex;
+      align-items: start;
+      justify-content: start;
+      width: 100%;
+      position: absolute;
+      left: -53%;
+      top: 0;
+      color: $white;
+      font-size: 16px;
+
+      @include breakpoint-down($md) {
+        display: none;
+      }
+
+      &::before {
+        content: '';
+        display: block;
+        height: 100px;
+        border-radius: 50%;
+        top: -50px;
+        position: absolute;
+        width: 100%;
+        border-top: 2px dashed $white;
+      }
+
+      span {
+        position: absolute;
+        top: -85px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  .btn {
+    width: 200px;
+    margin: 50px auto;
+    display: block;
+  }
+}

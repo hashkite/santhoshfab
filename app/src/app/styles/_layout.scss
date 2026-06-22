@@ -1,0 +1,153 @@
+@use 'sass:math';
+@use 'sass:map';
+
+[class^='col'] {
+  padding-left: math.div($grid-gutter-width, 2);
+  padding-right: math.div($grid-gutter-width, 2);
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+@each $breakpoint, $size in $grid-breakpoints {
+  @for $width from 1 through $grid-columns {
+    @if $size == 0 {
+      .col-#{$width} {
+        width: math.div($width, $grid-columns) * 100%;
+        flex: 0 0 math.div($width, $grid-columns) * 100%;
+      }
+      .offset-#{$width} {
+        margin-left: math.div($width, $grid-columns) * 100%;
+      }
+    } @else {
+      .col-#{$breakpoint}-#{$width} {
+        @include breakpoint-up($size) {
+          width: math.div($width, $grid-columns) * 100%;
+          flex: 0 0 math.div($width, $grid-columns) * 100%;
+        }
+      }
+
+      .offset-#{$breakpoint}-#{$width} {
+        @include breakpoint-up($size) {
+          margin-left: math.div($width, $grid-columns) * 100%;
+        }
+      }
+    }
+  }
+}
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: math.div($grid-gutter-width, 2);
+  padding-right: math.div($grid-gutter-width, 2);
+  transition: margin 0.3s, padding 0.3s, max-width 0.3s;
+
+  @each $breakpoint, $value in $container-max-widths {
+    @if $value != 0 {
+      @include breakpoint-up(map.get($grid-breakpoints, $breakpoint)) {
+        max-width: $value;
+      }
+    }
+  }
+
+  @include breakpoint-down($lg) {
+    padding: 0 30px;
+  }
+
+  @include breakpoint-down($xs) {
+    padding: 0 20px;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: math.div(-$grid-gutter-width, 2);
+  margin-right: math.div(-$grid-gutter-width, 2);
+}
+
+@each $key, $offset in $spacings {
+  .m-#{$key} {
+    margin: rem($offset);
+
+    @include breakpoint-down($md) {
+      margin: rem($offset * 0.8);
+    }
+  }
+  .p-#{$key} {
+    padding: rem($offset);
+
+    @include breakpoint-down($md) {
+      padding: rem($offset * 0.8);
+    }
+  }
+  @each $position in $positions {
+    $posKey: nth($position, 1);
+    $posValue: nth($position, 2);
+
+    .m#{$posKey}-#{$key} {
+      margin-#{$posValue}: rem($offset);
+
+      @include breakpoint-down($md) {
+        margin-#{$posValue}: rem($offset * 0.8);
+      }
+    }
+    .p#{$posKey}-#{$key} {
+      padding-#{$posValue}: rem($offset);
+
+      @include breakpoint-down($md) {
+        padding-#{$posValue}: rem($offset * 0.8);
+      }
+    }
+  }
+}
+
+.d {
+  &-none {
+    display: none;
+  }
+
+  &-block {
+    display: block;
+  }
+
+  &-flex {
+    display: flex;
+  }
+}
+
+.position-relative {
+  position: relative;
+}
+
+.text {
+  &-center {
+    text-align: center;
+  }
+
+  &-left {
+    text-align: left;
+  }
+
+  &-right {
+    text-align: right;
+  }
+}
+
+.w-100 {
+  width: 100%;
+
+  &vw {
+    width: 100vw;
+  }
+}
+
+.h-100 {
+  height: 100%;
+
+  &vh {
+    height: 100vh;
+  }
+}

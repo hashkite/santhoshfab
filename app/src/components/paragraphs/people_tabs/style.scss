@@ -1,0 +1,309 @@
+@import '../../../app/styles/functions';
+@import '../../../app/styles/mixins';
+@import '../../../app/styles/variables';
+@import '../../../app/styles/colors';
+
+.people-tabs {
+  background: $white-100;
+  padding: 50px 0 300px;
+  position: relative;
+  overflow: hidden;
+
+  @include breakpoint-down($md) {
+    padding-bottom: 10px;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  &__button-list {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    align-items: center;
+
+    @include breakpoint-down($sm) {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+
+  .gradient-button {
+    border: 2px solid $white-200;
+    border-radius: 555px;
+    padding: 13px 30px;
+    font-size: 16px;
+    background: $white-200;
+    font-weight: 400;
+    color: $blue-dark-600;
+    transition: border 0.3s ease-in-out, color 0.3s ease-in-out;
+    cursor: default;
+    pointer-events: none;
+
+    @include breakpoint-down($sm) {
+      font-size: 14px;
+      padding: 10px 20px;
+    }
+
+    // &:hover:not(.active) {
+    //   border: 2px solid $purple-200;
+    // }
+
+    // &.active {
+    //   cursor: default;
+    //   color: $white;
+    //   background: linear-gradient(90deg, #5c00db 0%, #ab74f6 100%);
+    // }
+  }
+
+  h1 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+
+    @include breakpoint-down($sm) {
+      font-size: 30px;
+    }
+
+    span {
+      font-weight: 600 !important;
+    }
+  }
+
+  &__description p {
+    font-size: 16px;
+    line-height: 25px;
+    max-width: 550px;
+    color: $blue-dark-600;
+  }
+
+  .people-item {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 30px;
+    margin-bottom: 30px;
+    min-height: 430px;
+
+    @include breakpoint-down($md) {
+      grid-template-columns: 1fr;
+    }
+
+    &__names {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      justify-content: center;
+      align-items: start;
+      position: relative;
+      z-index: 1;
+
+      @include breakpoint-down($md) {
+        margin-top: 40px;
+      }
+
+      h4 {
+        background: linear-gradient(90deg, #5c00db 0%, #ab74f6 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 30px;
+      }
+    }
+
+    &__name {
+      color: $blue-dark-600;
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      justify-content: start;
+      width: 400px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+
+      @include breakpoint-down($xl) {
+        width: 300px;
+      }
+
+      @include breakpoint-down($xs) {
+        width: 100%;
+      }
+
+      span {
+        font-size: 30px;
+        transition: font-weight 0.3s ease-in-out;
+
+        @include breakpoint-down($md) {
+          font-size: 20px;
+        }
+      }
+
+      svg {
+        transition: transform 0.3s ease-in-out;
+        transform: rotate(-45deg) scale(1);
+
+        path {
+          transition: fill 0.3s ease-in-out;
+        }
+      }
+
+      &:hover:not(.active) {
+        svg {
+          transform: rotate(0) scale(1.4);
+
+          path {
+            fill: $purple-200;
+          }
+        }
+      }
+
+      &.active {
+        span {
+          font-weight: 600;
+        }
+
+        svg {
+          transition: transform 0.3s ease-in-out;
+          transform: rotate(0) scale(1.4);
+
+          path {
+            fill: $purple-200;
+          }
+        }
+      }
+    }
+
+    &__content {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 50px;
+      position: relative;
+      z-index: 1;
+      margin-top: 100px;
+      padding: 20px;
+      border-radius: 45px;
+      background: $white-200;
+
+      @include breakpoint-down($lg) {
+        grid-template-columns: 1fr;
+        gap: 0;
+        padding-top: 30px;
+        margin-top: 20px;
+      }
+    }
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 400px;
+      align-self: center;
+
+      @include breakpoint-down($lg) {
+        margin-top: 20px;
+      }
+    }
+
+    &__subtitle {
+      font-size: 20px;
+      font-weight: 500;
+      background: linear-gradient(90deg, #5c00db 0%, #ab74f6 100%);
+
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    &__title {
+      font-size: 45px;
+      font-weight: 600;
+      line-height: 40px;
+      color: $blue-dark-400;
+
+      @include breakpoint-down($md) {
+        font-size: 30px;
+      }
+    }
+
+    &__description {
+      font-size: 16px;
+      line-height: 25px;
+      color: $blue-dark-600;
+    }
+
+    &__image {
+      border-radius: 35px;
+      width: 300px;
+      height: 100%;
+      align-self: flex-end;
+      justify-self: end;
+      object-fit: cover;
+
+      @include breakpoint-down($xl) {
+        width: 200px;
+        height: 100%;
+        justify-self: start;
+      }
+
+      @include breakpoint-down($sm) {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &__links {
+      margin-top: 20px;
+      display: flex;
+      gap: 10px;
+    }
+
+    &__read-more {
+      padding: 7px 40px;
+      color: $white;
+      background: linear-gradient(90deg, #5c00db 0%, #ab74f6 100%);
+      pointer-events: all;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    &__linked-in {
+      padding: 15px;
+      background: $white;
+      border-radius: 50%;
+      cursor: pointer;
+
+      path {
+        transition: fill 0.3s ease-in-out;
+      }
+
+      &:hover {
+        path {
+          fill: $purple-200;
+        }
+      }
+    }
+
+    .absolute_path {
+      position: absolute;
+      right: 0;
+    }
+
+    .path-2 {
+      position: absolute;
+      left: 0;
+      top: 100px;
+    }
+  }
+}

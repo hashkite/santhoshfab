@@ -1,0 +1,51 @@
+uuid: 37324eec-1a5c-41f3-a037-ece132e3aedb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.our_expertise.field_description
+    - field.field.paragraph.our_expertise.field_multicolor_title
+    - field.field.paragraph.our_expertise.field_sub_services
+    - paragraphs.paragraphs_type.our_expertise
+  module:
+    - mck_rest_apis
+id: paragraph.our_expertise.default
+targetEntityType: paragraph
+bundle: our_expertise
+mode: default
+content:
+  field_description:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_multicolor_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_sub_services:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: small_teaser
+      storage: node
+      convert: 0
+    third_party_settings: {  }
+    weight: 5
+    region: content
+hidden:
+  extra_field_popup: true

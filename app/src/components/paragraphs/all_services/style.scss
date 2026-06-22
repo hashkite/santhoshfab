@@ -1,0 +1,85 @@
+@import '../../../app/styles/functions';
+@import '../../../app/styles/mixins';
+@import '../../../app/styles/variables';
+@import '../../../app/styles/colors';
+
+.all_services {
+  padding: 100px 0;
+  overflow: hidden;
+
+  @include breakpoint-down($md) {
+    padding: 30px 0;
+  }
+
+  &--title {
+    text-align: center;
+    margin-bottom: 25px;
+    span {
+      font-size: 45px;
+      font-weight: 600 !important;
+      margin-bottom: 2rem;
+
+      @include breakpoint-down($md) {
+        font-size: 30px;
+      }
+    }
+  }
+
+  &--description {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 3rem;
+
+    @include breakpoint-down($md) {
+      font-size: 16px;
+    }
+  }
+
+  &--item-title {
+    font-size: 35px;
+    font-weight: 500 !important;
+    line-height: 50px;
+
+    @include breakpoint-down($md) {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+
+  .swiper-horizontal {
+    overflow: visible;
+  }
+
+  .swiper-wrapper {
+    transition-timing-function: linear;
+  }
+
+  .swiper-slide {
+    padding: 0 15px;
+    box-shadow: 0px 25px 35px 0px #0000000d;
+    border: 1px solid $white-400;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 110px;
+    width: 400px;
+    text-align: center;
+
+    @include breakpoint-down($md) {
+      width: 200px;
+      height: 70px;
+      padding: 0 10px;
+      border-radius: 15px;
+    }
+  }
+
+  .swiper + .swiper {
+    margin-top: 20px;
+
+    @include breakpoint-down($md) {
+      margin-top: 10px;
+    }
+  }
+}

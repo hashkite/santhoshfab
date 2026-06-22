@@ -1,0 +1,89 @@
+@import '../../../app/styles/functions';
+@import '../../../app/styles/mixins';
+@import '../../../app/styles/variables';
+@import '../../../app/styles/colors';
+
+.our-team {
+  &__section {
+    transition: 0.3s;
+    background-color: $white;
+
+    &-inner {
+      background: $gray-300;
+      padding-top: 200px;
+      padding-bottom: 110px;
+
+      @include breakpoint-down($xxl) {
+        padding-top: 120px;
+      }
+
+      @include breakpoint-down($lg) {
+        padding-top: 100px;
+      }
+
+      @include breakpoint-down($sm) {
+        padding-top: 50px;
+      }
+    }
+  }
+
+  &__decor {
+    svg {
+      height: auto;
+      width: 100%;
+    }
+  }
+
+  &__header {
+    color: $blue-dark-400;
+    margin: 0 auto 110px;
+    max-width: 1060px;
+    text-align: center;
+    transition: 0.3s;
+
+    @include breakpoint-down($xl) {
+      margin-bottom: 70px;
+    }
+
+    @include breakpoint-down($md) {
+      margin-bottom: 50px;
+    }
+
+    @include breakpoint-down($xs) {
+      margin-bottom: 35px;
+    }
+
+    h2 {
+      color: $blue-dark-400;
+      letter-spacing: -0.9px;
+      margin: 0;
+    }
+  }
+
+  &__description {
+    margin-top: 25px;
+    transition: 0.3s;
+
+    @include breakpoint-down($sm) {
+      margin-top: 20px;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(5, 1fr);
+
+    @include breakpoint-down($xxl) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include breakpoint-down($md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoint-down($xs) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

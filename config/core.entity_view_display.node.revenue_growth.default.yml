@@ -1,0 +1,46 @@
+uuid: 170c4730-54cb-496b-9036-fcd6d01c6e09
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.revenue_growth.field_hero
+    - field.field.node.revenue_growth.field_marketing_paragrapghs
+    - node.type.revenue_growth
+  module:
+    - mck_rest_apis
+    - user
+id: node.revenue_growth.default
+targetEntityType: node
+bundle: revenue_growth
+mode: default
+content:
+  field_hero:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_marketing_paragrapghs:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: paragraph
+      convert: 0
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  extra_field_favorite: true
+  extra_field_popup: true

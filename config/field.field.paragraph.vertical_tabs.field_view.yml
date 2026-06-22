@@ -1,0 +1,57 @@
+uuid: 2e9338c4-c426-4e06-8d53-1a2a335ffbf7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_view
+    - paragraphs.paragraphs_type.vertical_tabs
+  module:
+    - viewfield
+id: paragraph.vertical_tabs.field_view
+field_name: field_view
+entity_type: paragraph
+bundle: vertical_tabs
+label: View
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  force_default: false
+  allowed_views:
+    articles: articles
+    case_studies: case_studies
+    exceptional_talent: exceptional_talent
+    comment: '0'
+    content: '0'
+    block_content: '0'
+    current_sub_services: '0'
+    files: '0'
+    frontpage: '0'
+    media: '0'
+    media_library: '0'
+    most_popular: '0'
+    simplenews_newsletters: '0'
+    partners: '0'
+    user_admin_people: '0'
+    comments_recent: '0'
+    content_recent: '0'
+    redirect: '0'
+    simplenews_subscribers: '0'
+    taxonomy_term: '0'
+    technologies: '0'
+    watchdog: '0'
+    webform_submissions: '0'
+    who_s_new: '0'
+    who_s_online: '0'
+  allowed_display_types:
+    block: block
+    default: '0'
+    embed: '0'
+    entity_reference: '0'
+    feed: '0'
+    page: '0'
+  handler: 'default:view'
+  handler_settings: {  }
+field_type: viewfield

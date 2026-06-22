@@ -1,0 +1,16 @@
+uuid: 0d8f4343-ed71-4337-bb36-c32f2a7cd805
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: rT4EkZFHUBibtgPL5hk6474GqTMsitha2MpaheX00NM
+id: content
+label: Content
+type: 'canonical_entities:node'
+pattern: '/[node:title]'
+selection_criteria: {  }
+selection_logic: and
+weight: 0
+relationships: {  }

@@ -1,0 +1,99 @@
+uuid: a6f340a4-e670-43ac-9c75-073d2d6310ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.awards.field_awards_items
+    - field.field.paragraph.awards.field_cta
+    - field.field.paragraph.awards.field_description
+    - field.field.paragraph.awards.field_industry_sector
+    - field.field.paragraph.awards.field_multicolor_title
+    - field.field.paragraph.awards.field_project_delivered
+    - field.field.paragraph.awards.field_title
+    - paragraphs.paragraphs_type.awards
+  module:
+    - mck_rest_apis
+id: paragraph.awards.default
+targetEntityType: paragraph
+bundle: awards
+mode: default
+content:
+  field_awards_items:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: paragraph
+      convert: 0
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_cta:
+    type: mck_react
+    label: hidden
+    settings:
+      format: link
+      view_mode: default
+      storage: ''
+      convert: 0
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_description:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_industry_sector:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: default
+      storage: ''
+      convert: 0
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_multicolor_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_project_delivered:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  extra_field_popup: true

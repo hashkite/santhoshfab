@@ -1,0 +1,19 @@
+uuid: 8f36a0ae-45f1-4532-887c-cdd3406b2685
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_sub_title
+    - paragraphs.paragraphs_type.marketing_main
+id: paragraph.marketing_main.field_sub_title
+field_name: field_sub_title
+entity_type: paragraph
+bundle: marketing_main
+label: 'Sub Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

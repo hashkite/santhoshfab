@@ -1,0 +1,19 @@
+uuid: b7244cf7-09c2-4085-bdfd-99fb9fd38018
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.faqs
+    - field.storage.config_pages.field_title
+id: config_pages.faqs.field_title
+field_name: field_title
+entity_type: config_pages
+bundle: faqs
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

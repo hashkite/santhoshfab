@@ -1,0 +1,19 @@
+uuid: 74c32eb6-1694-4284-8834-25113a3791e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.tab_with_taxonomy
+id: paragraph.tab_with_taxonomy.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: tab_with_taxonomy
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

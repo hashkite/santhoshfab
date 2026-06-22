@@ -1,0 +1,52 @@
+uuid: eb733043-df7f-45a9-b18d-3d4ef5d78390
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.case_studies
+    - field.storage.config_pages.field_view
+  module:
+    - viewfield
+id: config_pages.case_studies.field_view
+field_name: field_view
+entity_type: config_pages
+bundle: case_studies
+label: View
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  force_default: false
+  allowed_views:
+    case_studies: case_studies
+    articles: '0'
+    comment: '0'
+    content: '0'
+    block_content: '0'
+    files: '0'
+    frontpage: '0'
+    media: '0'
+    media_library: '0'
+    simplenews_newsletters: '0'
+    user_admin_people: '0'
+    comments_recent: '0'
+    content_recent: '0'
+    redirect: '0'
+    simplenews_subscribers: '0'
+    taxonomy_term: '0'
+    watchdog: '0'
+    webform_submissions: '0'
+    who_s_new: '0'
+    who_s_online: '0'
+  allowed_display_types:
+    block: block
+    default: '0'
+    embed: '0'
+    entity_reference: '0'
+    feed: '0'
+    page: '0'
+  handler: 'default:view'
+  handler_settings: {  }
+field_type: viewfield

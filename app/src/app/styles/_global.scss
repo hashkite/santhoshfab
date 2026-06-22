@@ -1,0 +1,178 @@
+body {
+  background: $gray-50;
+}
+
+#react-root {
+  position: relative;
+}
+
+@keyframes fillUp {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+picture {
+  display: block;
+}
+
+// @keyframes fillUpWave {
+//   0% {
+//     bottom: 0;
+//   }
+//   100% {
+//     bottom: 100%;
+//   }
+// }
+
+// @keyframes wave {
+//   0% {
+//     margin-left: 0;
+//   }
+//   100% {
+//     margin-left: -150%;
+//   }
+// }
+
+.loading {
+  align-items: center;
+  background-color: $purple-400;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 1000;
+
+  &--icon {
+    background: transparent;
+    height: 210px;
+    margin: auto;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 210px;
+    border-radius: 50%;
+    border: 1px solid $brand-blue-light;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      height: auto;
+      width: 210px;
+    }
+
+    &::before {
+      animation: linear 1.5s 1 fillUp both;
+      background: transparent;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform-origin: center bottom;
+      transform: translateY(100%);
+      width: 100%;
+    }
+
+    &.without-animation {
+      &::before {
+        animation: none;
+        background: white;
+      }
+    }
+
+    // &::after {
+    //   animation: linear 1.5s infinite wave, linear 5s 1 fillUpWave both;
+    //   background: url(/media/wave.svg) repeat-x left bottom / contain;
+    //   content: '';
+    //   height: 39px;
+    //   position: absolute;
+    //   bottom: 0;
+    //   left: 0;
+    //   width: 600%;
+    // }
+
+    svg {
+      height: 100%;
+      display: block;
+      position: relative;
+      width: 100%;
+      z-index: 1;
+      transform: scale(1.01);
+    }
+  }
+}
+
+.node-edit {
+  text-decoration: none;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background: $color-primary;
+  color: $white;
+  opacity: 0.5;
+  transition: opacity 0.2s ease;
+  padding: 10px 15px;
+  border-radius: 0.5rem 0 0 0;
+  font-weight: 500;
+  z-index: 99;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.visually-hidden {
+  @include visually-hidden;
+}
+
+.toolbar-menu {
+  .menu-item {
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 1.2;
+  }
+}
+
+.purple {
+  @include purple;
+}
+
+.red {
+  @include red;
+}
+
+brand-blue {
+  @include brand-blue;
+}
+
+body {
+  overflow-x: hidden;
+  // contain: paint;
+}
+
+// #main-content {
+//   overflow-x: hidden;
+// }
+
+.toolbar-horizontal.toolbar-fixed {
+  .navbar-top {
+    top: -90px;
+  }
+}
+
+.grecaptcha-badge {
+  display: none !important;
+}

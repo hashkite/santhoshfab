@@ -1,0 +1,18 @@
+uuid: 8913a307-1dc1-4a98-90ff-fe59ce5d819f
+langcode: en
+status: true
+dependencies:
+  module:
+    - mck_rest_apis
+    - serialization
+    - user
+id: fetch_user_info
+plugin_id: fetch_user_info
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - json
+  authentication:
+    - cookie

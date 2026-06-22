@@ -1,0 +1,66 @@
+@import '../../../app/styles/functions';
+@import '../../../app/styles/mixins';
+@import '../../../app/styles/variables';
+@import '../../../app/styles/colors';
+
+.footprints {
+  &__list {
+    display: grid;
+    gap: 30px 45px;
+    grid-template-columns: repeat(2, 1fr);
+    transition: .3s;
+
+    @include breakpoint-down($xxl) {
+      gap: 15px 30px;
+    }
+
+    @include breakpoint-down($xs) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__item {
+    border-bottom: 1px solid $blue-dark-100;
+    padding-bottom: 15px;
+  }
+
+  &__country {
+    align-items: center;
+    display: flex;
+    gap: 16px;
+    transition: .3s;
+
+    @include breakpoint-down($xxl) {
+      gap: 10px;
+    }
+
+    .flag {
+      width: 25px;
+      
+      img {
+        height: auto;
+        display: block;
+        width: 100%;
+      }
+    }
+
+    .country {
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: -1px;
+      transition: .3s;
+
+      @include breakpoint-down($xxl) {
+        font-size: 18px;
+        letter-spacing: -.75px;
+      }
+    }
+  }
+
+  &__address {
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: -.85px;
+    margin-top: 5px;
+  }
+}

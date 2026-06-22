@@ -1,0 +1,25 @@
+uuid: c0ca78cc-276f-49eb-9909-14ce59c01b57
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_delay
+    - paragraphs.paragraphs_type.hero_slider
+id: paragraph.hero_slider.field_delay
+field_name: field_delay
+entity_type: paragraph
+bundle: hero_slider
+label: 'Slider delay'
+description: 'Please specify slider delay in ms. By default, 3500 will be used.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 3500
+default_value_callback: ''
+settings:
+  min: 1000
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

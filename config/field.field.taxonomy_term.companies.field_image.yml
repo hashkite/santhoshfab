@@ -1,0 +1,29 @@
+uuid: 42b5e4eb-f166-4172-9861-b5a6f5da758f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_image
+    - media.type.image
+    - taxonomy.vocabulary.companies
+id: taxonomy_term.companies.field_image
+field_name: field_image
+entity_type: taxonomy_term
+bundle: companies
+label: Image
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

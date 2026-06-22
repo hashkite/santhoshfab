@@ -1,0 +1,44 @@
+uuid: 738e1563-5c8e-4ca6-adc5-a673b5218119
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.link_with_icon.field_icon
+    - field.field.paragraph.link_with_icon.field_link
+    - paragraphs.paragraphs_type.link_with_icon
+  module:
+    - link_attributes
+    - media_library
+id: paragraph.link_with_icon.default
+targetEntityType: paragraph
+bundle: link_with_icon
+mode: default
+content:
+  field_icon:
+    type: media_library_widget
+    weight: 1
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_link:
+    type: link_attributes
+    weight: 5
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      enabled_attributes:
+        target: true
+        id: false
+        name: false
+        rel: false
+        class: false
+        accesskey: false
+        aria-label: false
+        title: false
+      widget_default_open: expandIfValuesSet
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

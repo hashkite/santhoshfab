@@ -1,0 +1,51 @@
+uuid: 68bfb5aa-87e9-40ea-b092-3923d38e0a13
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.page.field_hero
+    - field.field.node.page.field_metatags
+    - field.field.node.page.field_paragraphs
+    - node.type.page
+  module:
+    - mck_rest_apis
+    - metatag
+    - user
+_core:
+  default_config_hash: M_Y8L5tfmhx7DR143E05YyZSpvgil6VFvqcfBWykalg
+id: node.page.default
+targetEntityType: node
+bundle: page
+mode: default
+content:
+  field_hero:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: paragraph
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_metatags:
+    type: metatag_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_paragraphs:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: paragraph
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  extra_field_favorite: true
+  extra_field_popup: true
+  links: true

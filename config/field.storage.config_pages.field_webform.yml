@@ -1,0 +1,20 @@
+uuid: 2bc9dddf-15cc-4f5e-8469-412a8877be82
+langcode: en
+status: true
+dependencies:
+  module:
+    - config_pages
+    - webform
+id: config_pages.field_webform
+field_name: field_webform
+entity_type: config_pages
+type: webform
+settings:
+  target_type: webform
+module: webform
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,60 @@
+uuid: dab4781f-66a1-4643-9a49-da01188488f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tab.field_description
+    - field.field.paragraph.tab.field_image
+    - field.field.paragraph.tab.field_logo
+    - field.field.paragraph.tab.field_title
+    - field.field.paragraph.tab.field_top_title
+    - paragraphs.paragraphs_type.tab
+  module:
+    - media_library
+    - text
+id: paragraph.tab.default
+targetEntityType: paragraph
+bundle: tab
+mode: default
+content:
+  field_description:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_image:
+    type: media_library_widget
+    weight: 2
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_logo:
+    type: media_library_widget
+    weight: 4
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_top_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

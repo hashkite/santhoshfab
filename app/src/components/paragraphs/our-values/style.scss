@@ -1,0 +1,137 @@
+@import '../../../app/styles/functions';
+@import '../../../app/styles/mixins';
+@import '../../../app/styles/variables';
+@import '../../../app/styles/colors';
+
+.our_values {
+  text-align: center;
+  padding: 100px 0;
+  background: $white;
+  position: relative;
+  z-index: 1;
+
+  @include breakpoint-down($md) {
+    padding: 50px 0;
+  }
+
+  .container {
+    > h2 {
+      font-size: 40px;
+      line-height: 50px;
+      font-weight: 600;
+      margin-bottom: 20px;
+
+      @include breakpoint-down($md) {
+        font-size: 30px;
+        line-height: 40px;
+      }
+    }
+
+    > p {
+      margin-bottom: 60px;
+
+      @include breakpoint-down($md) {
+        margin-bottom: 30px;
+        font-size: 14px;
+      }
+    }
+  }
+
+  &--grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 100px;
+    margin-top: 20px;
+
+    @include breakpoint-down($lg) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 10px;
+    }
+
+    @include breakpoint-down($xs) {
+      grid-template-columns: 1fr;
+    }
+
+    .values-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 35px;
+      padding: 100px 15px 30px;
+
+      @include breakpoint-down($md) {
+        padding: 30px 15px;
+      }
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      &.card {
+        border: 2px $white-200 solid;
+        border-radius: 35px;
+        transition: border-color 0.3s;
+
+        svg {
+          transition: transform 0.3s;
+        }
+
+        &:hover {
+          border-color: $purple-200;
+
+          svg {
+            transform: translateX(10px);
+          }
+        }
+      }
+
+      &__content {
+        h3,
+        a {
+          margin-bottom: 5px;
+          font-size: 30px;
+          line-height: 40px;
+          font-weight: 600;
+
+          @include breakpoint-down($md) {
+            font-size: 20px;
+            line-height: 30px;
+          }
+        }
+
+        a {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          align-items: center;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+
+        p {
+          font-size: 18px;
+          line-height: 24px;
+
+          @include breakpoint-down($md) {
+            font-size: 14px;
+            line-height: 20px;
+          }
+        }
+      }
+    }
+
+    img {
+      width: 200px;
+      height: 200px;
+      object-fit: contain;
+
+      @include breakpoint-down($md) {
+        width: 150px;
+        height: 150px;
+      }
+    }
+  }
+}

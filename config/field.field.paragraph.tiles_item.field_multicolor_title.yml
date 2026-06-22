@@ -1,0 +1,24 @@
+uuid: f6f0f865-2a8c-4e4f-8304-d084d418f9fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_multicolor_title
+    - filter.format.full_html
+    - paragraphs.paragraphs_type.tiles_item
+  module:
+    - text
+id: paragraph.tiles_item.field_multicolor_title
+field_name: field_multicolor_title
+entity_type: paragraph
+bundle: tiles_item
+label: 'Multicolor title'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

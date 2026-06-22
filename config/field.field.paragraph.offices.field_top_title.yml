@@ -1,0 +1,19 @@
+uuid: 4f3df4b7-ee98-42fd-8afc-1597722c0acd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_top_title
+    - paragraphs.paragraphs_type.offices
+id: paragraph.offices.field_top_title
+field_name: field_top_title
+entity_type: paragraph
+bundle: offices
+label: State
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

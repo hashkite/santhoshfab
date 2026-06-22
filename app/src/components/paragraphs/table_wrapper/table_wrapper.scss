@@ -1,0 +1,90 @@
+@import '../../../app/styles/functions';
+@import '../../../app/styles/mixins';
+@import '../../../app/styles/variables';
+@import '../../../app/styles/colors';
+
+.table-wrapper {
+  padding: 50px 0;
+
+  .container{
+    max-width: 1280px ;
+  }
+  &__title {
+    font-size: 2.6rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 18px;
+    color: $gray-dark-100;
+  }
+
+  &__desc {
+    text-align: center;
+    color: $gray-600;
+    font-size: 1.15rem;
+    margin-bottom: 48px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    p {
+      margin: 0 0 10px 0;
+    }
+  }
+
+  &__table-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 12px;
+    font-size: 1.08rem;
+    background: none;
+  }
+
+  &__th {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: $gray-dark-100;
+    background: none;
+    padding: 12px 18px 12px 0;
+    text-align: left;
+    &--right {
+      padding-left: 0;
+      padding-right: 18px;
+    }
+  }
+
+  &__tr {
+    background: $gray-100;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  &__td {
+    padding: 16px 18px 16px 0;
+    &:first-child {
+      min-width: 320px;
+    }
+    &--right {
+      min-width: 100px;
+      border-left: none;
+    }
+  }
+
+  @include breakpoint-down($md) {
+    &__table {
+      font-size: 0.98rem;
+    }
+    &__td, &__th {
+      padding: 10px 8px;
+    }
+    &__desc {
+      font-size: 1rem;
+    }
+  }
+}

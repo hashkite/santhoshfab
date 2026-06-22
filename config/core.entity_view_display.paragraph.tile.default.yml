@@ -1,0 +1,51 @@
+uuid: 9af89dff-48f4-4a2c-917c-14137eb0b7ab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tile.field_icon
+    - field.field.paragraph.tile.field_link
+    - field.field.paragraph.tile.field_title
+    - paragraphs.paragraphs_type.tile
+  module:
+    - mck_rest_apis
+id: paragraph.tile.default
+targetEntityType: paragraph
+bundle: tile
+mode: default
+content:
+  field_icon:
+    type: mck_react
+    label: hidden
+    settings:
+      format: media
+      view_mode: default
+      convert: '1'
+      storage: media
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_link:
+    type: mck_react
+    label: hidden
+    settings:
+      format: link
+      view_mode: default
+      storage: ''
+      convert: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  extra_field_popup: true

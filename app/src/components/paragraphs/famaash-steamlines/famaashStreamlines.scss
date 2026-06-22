@@ -1,0 +1,183 @@
+@import '../../../app/styles/functions';
+@import '../../../app/styles/mixins';
+@import '../../../app/styles/variables';
+@import '../../../app/styles/colors';
+
+.famaash-streamlines {
+  &__section {
+    background: $gray-50;
+    overflow: hidden;
+    padding: 110px 0 190px;
+    position: relative;
+    text-align: center;
+    transition: 0.3s;
+
+    @include breakpoint-down($lg) {
+      padding: 70px 0 110px;
+    }
+
+    @include breakpoint-down($sm) {
+      padding-bottom: 70px;
+    }
+
+    > .container {
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  &__content {
+    margin: 0 auto 135px;
+    max-width: 1100px;
+    transition: 0.3s;
+
+    @include breakpoint-down($xxl) {
+      margin-bottom: 110px;
+    }
+
+    @include breakpoint-down($xl) {
+      margin-bottom: 90px;
+    }
+
+    @include breakpoint-down($lg) {
+      margin-bottom: 70px;
+    }
+
+    @include breakpoint-down($sm) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__suptitle {
+    color: $blue-dark-400;
+    margin-bottom: 30px;
+    transition: 0.3s;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 500;
+
+    @include breakpoint-down($lg) {
+      margin-bottom: 20px;
+    }
+
+    @include breakpoint-down($sm) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 45px;
+    transition: 0.3s;
+
+    @include breakpoint-down($lg) {
+      margin-bottom: 30px;
+    }
+
+    @include breakpoint-down($sm) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__description {
+    color: $blue-dark-600;
+    margin: auto;
+    max-width: 650px;
+    transition: 0.3s;
+
+    @include breakpoint-down($xl) {
+      max-width: 90%;
+    }
+
+    @include breakpoint-down($sm) {
+      max-width: 100%;
+    }
+  }
+
+  &__pic {
+    margin: auto;
+    max-width: 1220px;
+    position: relative;
+    transition: 0.3s;
+
+    @include breakpoint-down($lg) {
+      max-width: 90%;
+    }
+
+    img {
+      height: auto;
+      width: 100%;
+    }
+
+    .pic-small {
+      filter: drop-shadow(5px 5px 40px rgba($black, 0.25));
+      max-width: 260px;
+      position: absolute;
+      bottom: 200px;
+      left: -160px;
+      transition: 0.3s;
+
+      @include breakpoint-down($xxl) {
+        left: -70px;
+      }
+
+      @include breakpoint-down($lg) {
+        bottom: 100px;
+        left: -50px;
+      }
+
+      @include breakpoint-down($md) {
+        max-width: 200px;
+        bottom: 50px;
+      }
+
+      @include breakpoint-down($sm) {
+        max-width: 150px;
+        left: -30px;
+        bottom: 35px;
+      }
+    }
+  }
+
+  &__line {
+    background: url('/media/bg-lines.svg') no-repeat center / cover;
+    height: 600px;
+    position: absolute;
+    bottom: 24%;
+    left: -5%;
+    transform: rotate(9deg);
+    width: 110%;
+    z-index: 1;
+
+    @include breakpoint-down($lg) {
+      display: none;
+    }
+  }
+
+  &__decor {
+    background: $gray-300;
+    min-height: 450px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s;
+    width: 100%;
+
+    @include breakpoint-down($md) {
+      min-height: 300px;
+    }
+
+    @include breakpoint-down($sm) {
+      min-height: 150px;
+    }
+
+    svg {
+      display: block;
+      height: auto;
+      position: absolute;
+      bottom: 100%;
+      left: 0;
+      width: 100%;
+    }
+  }
+}

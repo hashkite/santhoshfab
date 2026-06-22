@@ -1,0 +1,15 @@
+uuid: 468402a1-d579-4f07-9c0b-cb072e39d020
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_ee
+third_party_settings:
+  paragraphs_ee:
+    paragraphs_categories: {  }
+id: comparison_column
+label: 'Comparison Column'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

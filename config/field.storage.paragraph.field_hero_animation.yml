@@ -1,0 +1,39 @@
+uuid: a57262e3-b398-42f7-a550-57b737c3c5b0
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_hero_animation
+field_name: field_hero_animation
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: advisory
+      label: Advisory
+    -
+      value: emerging_tech
+      label: 'Emerging Tech'
+    -
+      value: engineering
+      label: Engineering
+    -
+      value: creative
+      label: Creative
+    -
+      value: cloud_devops
+      label: 'Cloud & DevOps'
+    -
+      value: platforms
+      label: Platforms
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

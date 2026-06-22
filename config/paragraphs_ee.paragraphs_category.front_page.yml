@@ -1,0 +1,10 @@
+uuid: d3068b17-2305-4056-a83e-72d1df5deb21
+langcode: en
+status: true
+dependencies: {  }
+id: front_page
+label: 'Front page'
+description:
+  value: ''
+  format: basic_html
+weight: -7

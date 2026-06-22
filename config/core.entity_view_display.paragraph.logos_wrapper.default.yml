@@ -1,0 +1,51 @@
+uuid: 16491e3f-a7e5-47c7-a780-e0bd7eb4b80c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.logos_wrapper.field_background_color
+    - field.field.paragraph.logos_wrapper.field_is_carousal
+    - field.field.paragraph.logos_wrapper.field_logo_item
+    - paragraphs.paragraphs_type.logos_wrapper
+  module:
+    - mck_rest_apis
+id: paragraph.logos_wrapper.default
+targetEntityType: paragraph
+bundle: logos_wrapper
+mode: default
+content:
+  field_background_color:
+    type: mck_react
+    label: hidden
+    settings:
+      format: color
+      view_mode: default
+      storage: ''
+      convert: 0
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_is_carousal:
+    type: mck_react
+    label: hidden
+    settings:
+      format: bool
+      view_mode: default
+      storage: ''
+      convert: 0
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_logo_item:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: paragraph
+      convert: 0
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  extra_field_popup: true

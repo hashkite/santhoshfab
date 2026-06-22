@@ -1,0 +1,19 @@
+uuid: 63782197-7f50-4ba9-baea-6c31bc597b5c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.famaash_productions
+id: paragraph.famaash_productions.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: famaash_productions
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

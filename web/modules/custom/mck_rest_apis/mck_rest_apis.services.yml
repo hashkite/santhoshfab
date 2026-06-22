@@ -1,0 +1,9 @@
+services:
+  mck_rest_apis.mck_rest_manager:
+    class: Drupal\mck_rest_apis\MckRestManager
+    arguments: ['@entity_type.manager', '@form_builder', '@file_url_generator', '@menu.link_tree', '@menu.active_trail', '@entity.repository', '@path_alias.manager', '@current_user', '@renderer']
+  mck_rest_apis.route_subscriber:
+    class: Drupal\mck_rest_apis\EventSubscriber\RouteSubscriber
+    tags:
+      - { name: event_subscriber }
+    arguments: []

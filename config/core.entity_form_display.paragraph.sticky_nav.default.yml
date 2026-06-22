@@ -1,0 +1,25 @@
+uuid: aacf6643-e002-437e-a731-72ffaf0e5cbc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.sticky_nav.field_nav_item
+    - paragraphs.paragraphs_type.sticky_nav
+  module:
+    - link
+id: paragraph.sticky_nav.default
+targetEntityType: paragraph
+bundle: sticky_nav
+mode: default
+content:
+  field_nav_item:
+    type: link_default
+    weight: 0
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

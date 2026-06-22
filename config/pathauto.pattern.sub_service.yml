@@ -1,0 +1,23 @@
+uuid: 1e9b0e60-a5cc-41b4-bf6c-66ea6de71b1a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.sub_service
+  module:
+    - node
+id: sub_service
+label: 'Sub service'
+type: 'canonical_entities:node'
+pattern: '/services/[node:field_service:entity:name]/[node:title]'
+selection_criteria:
+  cb5d5261-f144-462a-8046-25f7dce738f7:
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      sub_service: sub_service
+selection_logic: and
+weight: -5
+relationships: {  }

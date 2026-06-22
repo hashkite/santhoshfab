@@ -1,0 +1,39 @@
+uuid: 21a4ed18-4e81-4fbe-b335-ce6c86ef53ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.people_images.field_background_image
+    - field.field.paragraph.people_images.field_logos
+    - paragraphs.paragraphs_type.people_images
+  module:
+    - mck_rest_apis
+id: paragraph.people_images.default
+targetEntityType: paragraph
+bundle: people_images
+mode: default
+content:
+  field_background_image:
+    type: mck_react
+    label: hidden
+    settings:
+      format: media
+      view_mode: default
+      convert: '1'
+      storage: media
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_logos:
+    type: mck_react
+    label: hidden
+    settings:
+      format: media
+      view_mode: default
+      storage: media
+      convert: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  extra_field_popup: true

@@ -1,0 +1,22 @@
+uuid: 6fc8f3d1-08bc-4e22-b6b5-229902028b3c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_verified_expert_in_enginee
+  module:
+    - user
+id: user.user.field_verified_expert_in_enginee
+field_name: field_verified_expert_in_enginee
+entity_type: user
+bundle: user
+label: 'Verified Expert in Engineering'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

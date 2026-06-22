@@ -1,0 +1,51 @@
+uuid: 05d76172-91e6-49ff-b575-0696518a4219
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.some_cases_studies.field_case_studies
+    - field.field.paragraph.some_cases_studies.field_description
+    - field.field.paragraph.some_cases_studies.field_multicolor_title
+    - paragraphs.paragraphs_type.some_cases_studies
+  module:
+    - mck_rest_apis
+id: paragraph.some_cases_studies.default
+targetEntityType: paragraph
+bundle: some_cases_studies
+mode: default
+content:
+  field_case_studies:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: teaser
+      storage: node
+      convert: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_description:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_multicolor_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  extra_field_popup: true

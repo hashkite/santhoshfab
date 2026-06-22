@@ -1,0 +1,29 @@
+uuid: 52b55d85-c9d9-4afc-9613-cb49682c557d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.autocomplete
+    - field.field.taxonomy_term.technologies.field_image
+    - field.field.taxonomy_term.technologies.field_most_popular
+    - field.field.taxonomy_term.technologies.field_sub_service
+    - taxonomy.vocabulary.technologies
+id: taxonomy_term.technologies.autocomplete
+targetEntityType: taxonomy_term
+bundle: technologies
+mode: autocomplete
+content:
+  field_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  description: true
+  extra_field_related_nodes: true
+  field_most_popular: true
+  field_sub_service: true

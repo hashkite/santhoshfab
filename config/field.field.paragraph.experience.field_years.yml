@@ -1,0 +1,23 @@
+uuid: 16b1e6c3-b9ed-4953-9dfd-4f56953de369
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_years
+    - paragraphs.paragraphs_type.experience
+id: paragraph.experience.field_years
+field_name: field_years
+entity_type: paragraph
+bundle: experience
+label: Years
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

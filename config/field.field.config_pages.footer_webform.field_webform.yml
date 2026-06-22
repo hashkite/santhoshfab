@@ -1,0 +1,25 @@
+uuid: a551d2e2-a5e3-4b02-9a75-f9c84c4e0cb5
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.footer_webform
+    - field.storage.config_pages.field_webform
+  module:
+    - webform
+id: config_pages.footer_webform.field_webform
+field_name: field_webform
+entity_type: config_pages
+bundle: footer_webform
+label: Webform
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:webform'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: webform

@@ -1,0 +1,37 @@
+uuid: 5be85a31-3252-42d3-8d31-c2e7f76057ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.featured_case_studies.field_case_studies
+    - field.field.paragraph.featured_case_studies.field_multicolor_title
+    - paragraphs.paragraphs_type.featured_case_studies
+  module:
+    - mck_rest_apis
+id: paragraph.featured_case_studies.default
+targetEntityType: paragraph
+bundle: featured_case_studies
+mode: default
+content:
+  field_case_studies:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: teaser
+      storage: node
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_multicolor_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  extra_field_popup: true

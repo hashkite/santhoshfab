@@ -1,0 +1,20 @@
+uuid: c240b318-deb6-47a5-9859-2eae3c57ccfb
+langcode: en
+status: true
+dependencies:
+  module:
+    - mck_rest_apis
+    - serialization
+    - user
+_core:
+  default_config_hash: PIIBVPTcIkNDbQABXnk06ZOFTkA6I7AJtHXUpTDcdW0
+id: search_by_view
+plugin_id: search_by_view
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - json
+  authentication:
+    - cookie

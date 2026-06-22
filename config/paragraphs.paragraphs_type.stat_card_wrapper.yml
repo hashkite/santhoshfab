@@ -1,0 +1,16 @@
+uuid: 2ecc18e7-64b1-4886-9d23-1879bdf336fd
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_ee
+third_party_settings:
+  paragraphs_ee:
+    paragraphs_categories:
+      global: global
+id: stat_card_wrapper
+label: 'Stat Card Wrapper'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

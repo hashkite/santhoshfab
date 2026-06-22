@@ -1,0 +1,21 @@
+uuid: 04784605-bcaf-4ba2-a7cf-0e1ab224b1f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_start_date
+    - paragraphs.paragraphs_type.work_experience
+  module:
+    - datetime
+id: paragraph.work_experience.field_start_date
+field_name: field_start_date
+entity_type: paragraph
+bundle: work_experience
+label: 'Start date'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

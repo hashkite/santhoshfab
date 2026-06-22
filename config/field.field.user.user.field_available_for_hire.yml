@@ -1,0 +1,22 @@
+uuid: b68d50f0-c5e1-42ed-bbf4-1756fd2d7d9c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_available_for_hire
+  module:
+    - user
+id: user.user.field_available_for_hire
+field_name: field_available_for_hire
+entity_type: user
+bundle: user
+label: 'Available for hire'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

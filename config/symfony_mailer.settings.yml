@@ -1,0 +1,10 @@
+_core:
+  default_config_hash: 4qVz27mvzjCZOQkd03vi4Ipqcf8m53p6xPVW-G0tXIA
+default_transport: 'null'
+override:
+  update: 3
+  contact_form: 3
+  contact: 3
+  simplenews: 3
+  user: 3
+  simplenews_newsletter: 3

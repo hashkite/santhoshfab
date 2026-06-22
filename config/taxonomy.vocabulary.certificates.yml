@@ -1,0 +1,9 @@
+uuid: 00903bd3-04ea-42d5-85ce-4d2acdba5222
+langcode: en
+status: true
+dependencies: {  }
+name: Certificates
+vid: certificates
+description: 'Footer block'
+weight: 0
+new_revision: false

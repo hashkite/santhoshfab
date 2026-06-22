@@ -1,0 +1,16 @@
+uuid: 2eb4bf36-e948-475f-afc1-5fdcf8a77d19
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_ee
+third_party_settings:
+  paragraphs_ee:
+    paragraphs_categories:
+      global: global
+id: ppc_setup_process
+label: 'PPC Setup Process'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

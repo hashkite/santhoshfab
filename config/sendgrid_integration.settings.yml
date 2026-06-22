@@ -1,0 +1,12 @@
+apikey: ''
+test_defaults:
+  to: testmail@gmail.com
+  subject: Subject
+  body:
+    value: '<p>Example body</p>'
+    format: basic_html
+  from_name: Danylo
+  to_name: ''
+  reply_to: ''
+trackopens: 0
+trackclicks: 0

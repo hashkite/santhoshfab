@@ -1,0 +1,21 @@
+uuid: 2e6c7a69-2a97-456e-896d-4f6b1d2eca09
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_align_text_left
+    - paragraphs.paragraphs_type.text_with_content
+id: paragraph.text_with_content.field_align_text_left
+field_name: field_align_text_left
+entity_type: paragraph
+bundle: text_with_content
+label: 'Align text left'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

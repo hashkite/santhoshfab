@@ -1,0 +1,26 @@
+uuid: 22e529b6-b15a-4be1-bce6-2e23ea2bc6a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.about_us_cards
+    - field.field.config_pages.about_us_cards.field_paragraphs
+  module:
+    - mck_rest_apis
+id: config_pages.about_us_cards.default
+targetEntityType: config_pages
+bundle: about_us_cards
+mode: default
+content:
+  field_paragraphs:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

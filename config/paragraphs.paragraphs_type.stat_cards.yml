@@ -1,0 +1,16 @@
+uuid: 522df354-45e4-42bb-8333-e37f39907c43
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_ee
+third_party_settings:
+  paragraphs_ee:
+    paragraphs_categories:
+      global: global
+id: stat_cards
+label: 'Stat Cards'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

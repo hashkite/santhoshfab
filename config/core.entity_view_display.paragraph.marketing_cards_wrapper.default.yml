@@ -1,0 +1,27 @@
+uuid: cab42e40-8367-4c63-832e-5e4be51b5acf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.marketing_cards_wrapper.field_marketing_cards_wrapper
+    - paragraphs.paragraphs_type.marketing_cards_wrapper
+  module:
+    - mck_rest_apis
+id: paragraph.marketing_cards_wrapper.default
+targetEntityType: paragraph
+bundle: marketing_cards_wrapper
+mode: default
+content:
+  field_marketing_cards_wrapper:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: paragraph
+      convert: 0
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  extra_field_popup: true

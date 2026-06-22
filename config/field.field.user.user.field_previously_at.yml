@@ -1,0 +1,30 @@
+uuid: 358ad160-95d2-4f99-ac33-b4507e89045f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_previously_at
+    - taxonomy.vocabulary.companies
+  module:
+    - user
+id: user.user.field_previously_at
+field_name: field_previously_at
+entity_type: user
+bundle: user
+label: 'Previously at'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      companies: companies
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

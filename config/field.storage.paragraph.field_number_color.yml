@@ -1,0 +1,27 @@
+uuid: 1cad5ae8-246d-4c6c-9875-6d5de27ff577
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_number_color
+field_name: field_number_color
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: green
+      label: Green
+    -
+      value: red
+      label: Red
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

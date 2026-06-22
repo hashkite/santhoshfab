@@ -1,0 +1,17 @@
+uuid: f4b13eca-fb77-4675-b088-723d8001c19f
+langcode: en
+status: true
+dependencies: {  }
+id: hire_popup
+label: 'Hire popup'
+token: false
+context:
+  show_warning: true
+  group:
+    language: false
+  fallback:
+    language: ''
+menu:
+  path: ''
+  weight: 0
+  description: ''

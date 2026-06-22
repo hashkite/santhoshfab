@@ -1,0 +1,77 @@
+uuid: f3c35fb6-0db0-44b3-ab32-a5b5a89e82e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.famaash_productions.field_background_image
+    - field.field.paragraph.famaash_productions.field_multicolor_title
+    - field.field.paragraph.famaash_productions.field_paragraphs
+    - field.field.paragraph.famaash_productions.field_subtitle
+    - field.field.paragraph.famaash_productions.field_title
+    - field.field.paragraph.famaash_productions.field_video
+    - paragraphs.paragraphs_type.famaash_productions
+  module:
+    - mck_rest_apis
+id: paragraph.famaash_productions.default
+targetEntityType: paragraph
+bundle: famaash_productions
+mode: default
+content:
+  field_multicolor_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_paragraphs:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_subtitle:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_video:
+    type: mck_react
+    label: hidden
+    settings:
+      format: media
+      view_mode: default
+      convert: '1'
+      storage: media
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  extra_field_popup: true
+  field_background_image: true

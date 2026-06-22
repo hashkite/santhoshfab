@@ -1,0 +1,25 @@
+uuid: a59c85fb-0023-4571-9289-5b3c9ab50334
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_columns_desktop
+    - paragraphs.paragraphs_type.grid
+id: paragraph.grid.field_columns_desktop
+field_name: field_columns_desktop
+entity_type: paragraph
+bundle: grid
+label: 'Columns Desktop'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 3
+default_value_callback: ''
+settings:
+  min: 3
+  max: 4
+  prefix: ''
+  suffix: ''
+field_type: integer

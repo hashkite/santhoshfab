@@ -1,0 +1,105 @@
+@import '../../../app/styles/functions';
+@import '../../../app/styles/mixins';
+@import '../../../app/styles/variables';
+@import '../../../app/styles/colors';
+
+.scrollable-item {
+  &__text-block {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: calc(100vh - 230px);
+    transition: 0.3s;
+
+    @media(max-height: 800px){
+      min-height: calc(100vh - 140px);
+    }
+
+    @include breakpoint-down($md) {
+      min-height: calc(100vh - 140px);
+    }
+
+    @include breakpoint-down($sm) {
+      min-height: calc(65vh - 105px);
+    }
+
+    + .scrollable-item__text-block {
+      @include breakpoint-down($sm) {
+        margin-top: 50px;
+      }
+    }
+  }
+
+  &__icon {
+    align-items: center;
+    background: $gray-100;
+    border: 1px solid $gray-200;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    margin-bottom: 65px;
+    transition: 0.3s;
+    width: 100px;
+
+    @include breakpoint-down($xl) {
+      height: 75px;
+      margin-bottom: 30px;
+      width: 75px;
+    }
+
+    @include breakpoint-down($md) {
+      height: 50px;
+      width: 50px;
+    }
+
+    img {
+      height: 56px;
+      object-fit: contain;
+      object-position: center;
+      transition: 0.3s;
+      width: 56px;
+
+      @include breakpoint-down($xl) {
+        height: 40px;
+        width: 40px;
+      }
+
+      @include breakpoint-down($md) {
+        height: 30px;
+        width: 30px;
+      }
+    }
+  }
+
+  &__content {
+    h2 {
+      margin-bottom: 25px;
+
+      @include breakpoint-down($md) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__description {
+    color: $blue-dark-300;
+    margin-bottom: 60px;
+    max-width: 540px;
+    transition: 0.3s;
+
+    @include breakpoint-down($xl) {
+      margin-bottom: 35px;
+      max-width: 100%;
+    }
+
+    @include breakpoint-down($md) {
+      margin-bottom: 30px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

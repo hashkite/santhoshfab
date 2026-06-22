@@ -1,0 +1,75 @@
+uuid: 8a6f4239-7f13-4afa-bd7c-9ea3a3b55f71
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.table_wrapper.field_description
+    - field.field.paragraph.table_wrapper.field_section_id
+    - field.field.paragraph.table_wrapper.field_table_headers
+    - field.field.paragraph.table_wrapper.field_table_rows
+    - field.field.paragraph.table_wrapper.field_title
+    - paragraphs.paragraphs_type.table_wrapper
+  module:
+    - mck_rest_apis
+id: paragraph.table_wrapper.default
+targetEntityType: paragraph
+bundle: table_wrapper
+mode: default
+content:
+  field_description:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_section_id:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_table_headers:
+    type: mck_react
+    label: hidden
+    settings:
+      format: multiple
+      view_mode: default
+      storage: ''
+      convert: 0
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_table_rows:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: paragraph
+      convert: 0
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  extra_field_popup: true

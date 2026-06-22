@@ -1,0 +1,123 @@
+@import '../../../app/styles/functions';
+@import '../../../app/styles/mixins';
+@import '../../../app/styles/variables';
+@import '../../../app/styles/colors';
+
+.about-us-cards {
+  padding: 100px 0;
+  background: $white-100;
+  scroll-margin-top: 100px;
+
+  @include breakpoint-down($md) {
+    padding: 30px 0;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+
+    @include breakpoint-down($md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoint-down($sm) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .posts-carousel__slide {
+    background-color: transparent;
+    padding-bottom: 30px;
+    height: 100%;
+  }
+
+  .posts-carousel__slide-tag {
+    @include breakpoint-down($sm) {
+      font-size: 14px;
+    }
+  }
+
+  .posts-carousel__slide-tags {
+    @include breakpoint-down($sm) {
+      margin-bottom: 10px;
+    }
+  }
+
+  .posts-carousel__slide-title .decorated {
+    font-size: 20px;
+
+    @include breakpoint-down($sm) {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .posts-carousel__slide-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+  }
+
+  .posts-carousel__slide-links {
+    gap: 15px;
+    display: flex;
+    margin-top: 10px;
+
+    @include breakpoint-down($sm) {
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .btn {
+      span {
+        position: relative;
+        z-index: 1;
+      }
+
+      &:not(.fa) {
+        padding: 22px 30px;
+
+        @include breakpoint-down($xl) {
+          padding: 15px 20px;
+          font-size: 16px;
+        }
+
+        @include breakpoint-down($sm) {
+          padding: 10px 15px;
+          font-size: 14px;
+        }
+      }
+    }
+
+    .fa {
+      background: $white-200;
+      border: none;
+
+      @include breakpoint-down($xl) {
+        padding: 15px;
+        height: 50px;
+        min-width: 50px;
+        width: 50px;
+      }
+
+      @include breakpoint-down($sm) {
+        padding: 10px;
+        height: 40px;
+        min-width: 40px;
+        width: 40px;
+      }
+
+      svg {
+        width: 20px;
+        height: 20px;
+
+        @include breakpoint-down($sm) {
+          width: 15px;
+          height: 15px;
+        }
+      }
+    }
+  }
+}

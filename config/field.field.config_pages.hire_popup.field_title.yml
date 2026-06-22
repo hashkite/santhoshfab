@@ -1,0 +1,19 @@
+uuid: b90d721a-b207-4b93-9834-f0308b5ca2f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.hire_popup
+    - field.storage.config_pages.field_title
+id: config_pages.hire_popup.field_title
+field_name: field_title
+entity_type: config_pages
+bundle: hire_popup
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

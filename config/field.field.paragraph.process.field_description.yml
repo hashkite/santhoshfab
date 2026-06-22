@@ -1,0 +1,24 @@
+uuid: e94db3f6-a6bc-449a-b110-90f1080a8cbd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - filter.format.basic_html
+    - paragraphs.paragraphs_type.process
+  module:
+    - text
+id: paragraph.process.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: process
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text_long

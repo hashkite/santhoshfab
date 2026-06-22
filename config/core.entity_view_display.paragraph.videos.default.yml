@@ -1,0 +1,26 @@
+uuid: 5e998cc1-0335-434d-ad03-2488baa4923e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.videos.field_paragraphs
+    - paragraphs.paragraphs_type.videos
+  module:
+    - mck_rest_apis
+id: paragraph.videos.default
+targetEntityType: paragraph
+bundle: videos
+mode: default
+content:
+  field_paragraphs:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: paragraph
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  extra_field_popup: true

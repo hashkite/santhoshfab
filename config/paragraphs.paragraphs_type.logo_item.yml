@@ -1,0 +1,15 @@
+uuid: 6c57d875-6ce6-4fad-b46d-c7ab7ecae271
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_ee
+third_party_settings:
+  paragraphs_ee:
+    paragraphs_categories: {  }
+id: logo_item
+label: 'Logo Item'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

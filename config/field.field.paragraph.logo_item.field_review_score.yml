@@ -1,0 +1,23 @@
+uuid: 63b47aef-06d0-4e50-a2ec-b5c63958ec41
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_review_score
+    - paragraphs.paragraphs_type.logo_item
+id: paragraph.logo_item.field_review_score
+field_name: field_review_score
+entity_type: paragraph
+bundle: logo_item
+label: 'Review Score'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: 100
+  prefix: ''
+  suffix: '%'
+field_type: integer

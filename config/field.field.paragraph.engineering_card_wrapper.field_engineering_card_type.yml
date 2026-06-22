@@ -1,0 +1,21 @@
+uuid: 7e7bd11c-2d01-4e47-a2a4-dac048147c45
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_engineering_card_type
+    - paragraphs.paragraphs_type.engineering_card_wrapper
+  module:
+    - options
+id: paragraph.engineering_card_wrapper.field_engineering_card_type
+field_name: field_engineering_card_type
+entity_type: paragraph
+bundle: engineering_card_wrapper
+label: 'Engineering Card Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,27 @@
+uuid: c7c7cf77-caab-44b9-ae0d-8be126e96804
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.horizontal_scroll.field_paragraphs
+    - paragraphs.paragraphs_type.horizontal_scroll
+  module:
+    - mck_rest_apis
+id: paragraph.horizontal_scroll.default
+targetEntityType: paragraph
+bundle: horizontal_scroll
+mode: default
+content:
+  field_paragraphs:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  extra_field_popup: true

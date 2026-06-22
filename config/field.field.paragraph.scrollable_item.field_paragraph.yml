@@ -1,0 +1,141 @@
+uuid: 78dfd159-8c93-419e-a297-c81928a9693f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraph
+    - paragraphs.paragraphs_type.image
+    - paragraphs.paragraphs_type.image_with_background
+    - paragraphs.paragraphs_type.image_with_titles
+    - paragraphs.paragraphs_type.people
+    - paragraphs.paragraphs_type.people_images
+    - paragraphs.paragraphs_type.scrollable_item
+  module:
+    - entity_reference_revisions
+id: paragraph.scrollable_item.field_paragraph
+field_name: field_paragraph
+entity_type: paragraph
+bundle: scrollable_item
+label: Paragraph
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      image_with_background: image_with_background
+      image: image
+      image_with_titles: image_with_titles
+      people: people
+      people_images: people_images
+    negate: 0
+    target_bundles_drag_drop:
+      business_needs:
+        weight: 31
+        enabled: false
+      business_teaser:
+        weight: 32
+        enabled: false
+      case_studies:
+        weight: 33
+        enabled: false
+      client_impact:
+        weight: 34
+        enabled: false
+      client_impacts:
+        weight: 35
+        enabled: false
+      country:
+        weight: 36
+        enabled: false
+      faq_s:
+        weight: 37
+        enabled: false
+      feedback:
+        weight: 38
+        enabled: false
+      hero:
+        weight: 39
+        enabled: false
+      hero_slide:
+        weight: 40
+        enabled: false
+      hero_slider:
+        weight: 41
+        enabled: false
+      image:
+        weight: 47
+        enabled: true
+      image_with_background:
+        weight: 44
+        enabled: true
+      image_with_titles:
+        weight: 47
+        enabled: true
+      images:
+        weight: 42
+        enabled: false
+      number:
+        weight: 43
+        enabled: false
+      numbers:
+        weight: 44
+        enabled: false
+      office:
+        weight: 45
+        enabled: false
+      offices:
+        weight: 46
+        enabled: false
+      our_clients:
+        weight: 47
+        enabled: false
+      our_footprints:
+        weight: 48
+        enabled: false
+      our_partners:
+        weight: 49
+        enabled: false
+      people:
+        weight: 50
+        enabled: true
+      people_images:
+        weight: 57
+        enabled: true
+      person:
+        weight: 51
+        enabled: false
+      process:
+        weight: 52
+        enabled: false
+      scrollable_item:
+        weight: 53
+        enabled: false
+      scrollable_items:
+        weight: 54
+        enabled: false
+      tab:
+        weight: 55
+        enabled: false
+      tabs:
+        weight: 56
+        enabled: false
+      talent_insights:
+        weight: 57
+        enabled: false
+      title_with_description:
+        weight: 58
+        enabled: false
+      titles:
+        weight: 63
+        enabled: false
+      view:
+        weight: 59
+        enabled: false
+      webform:
+        weight: 60
+        enabled: false
+field_type: entity_reference_revisions

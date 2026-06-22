@@ -1,0 +1,30 @@
+uuid: 732b04c5-8d2f-4461-8c29-f73fccd7cfcd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_expertise
+    - taxonomy.vocabulary.technologies
+  module:
+    - user
+id: user.user.field_expertise
+field_name: field_expertise
+entity_type: user
+bundle: user
+label: Expertise
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      technologies: technologies
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: services
+field_type: entity_reference

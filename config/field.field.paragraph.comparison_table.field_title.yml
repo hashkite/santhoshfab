@@ -1,0 +1,19 @@
+uuid: 21b1a6cf-e80e-4cf8-9bce-b62786825972
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.comparison_table
+id: paragraph.comparison_table.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: comparison_table
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

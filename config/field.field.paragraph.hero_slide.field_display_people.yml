@@ -1,0 +1,21 @@
+uuid: 3b2a6de8-1e20-4092-9b85-098e108c5d52
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_display_people
+    - paragraphs.paragraphs_type.hero_slide
+id: paragraph.hero_slide.field_display_people
+field_name: field_display_people
+entity_type: paragraph
+bundle: hero_slide
+label: 'Display People'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

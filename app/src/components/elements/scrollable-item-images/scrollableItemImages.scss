@@ -1,0 +1,580 @@
+@import '../../../app/styles/functions';
+@import '../../../app/styles/mixins';
+@import '../../../app/styles/variables';
+@import '../../../app/styles/colors';
+
+.scrollable-item__image {
+  align-items: center;
+  background: $gray-300;
+  display: flex;
+  justify-content: center;
+  height: calc(100vh - 230px);
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  transition: height 0.3s, top 0.3s;
+  transform-origin: center;
+  width: 100%;
+
+  @include breakpoint-down($md) {
+    height: calc(100vh - 140px);
+  }
+
+  @include breakpoint-down($sm) {
+    height: calc(100% - 60px);
+  }
+
+  &::before {
+    background: $gray-300;
+    content: '';
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: -10%;
+    width: 120%;
+
+    @include breakpoint-down($sm) {
+      height: calc(100% + 60px);
+      top: -30px;
+      right: -20px;
+      width: calc(100% + 40px);
+    }
+  }
+
+  &-inner {
+    position: relative;
+
+    @include breakpoint-down($sm) {
+      height: 100%;
+    }
+  }
+
+  &.--type {
+    &-people {
+      .image {
+        &__bg {
+          height: 600px;
+          transition: height 0.3s;
+
+          @include breakpoint-down($xl) {
+            height: 400px;
+          }
+
+          @include breakpoint-down($md) {
+            height: 350px;
+          }
+
+          @include breakpoint-down($sm) {
+            height: 100%;
+          }
+
+          picture {
+            height: 100%;
+          }
+
+          img {
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+            width: auto;
+          }
+        }
+
+        &__people {
+          .person {
+            border: 1px solid $gray-400;
+
+            &:first-child {
+              top: 5%;
+              left: 0;
+
+              @include breakpoint-down($md) {
+                top: 0;
+              }
+
+              @include breakpoint-down($sm) {
+                top: 40px;
+                left: -40%;
+              }
+
+              @include breakpoint-down($xs) {
+                top: -20px;
+                left: -10px;
+              }
+            }
+
+            &:last-child {
+              right: 0;
+              bottom: 3%;
+
+              @include breakpoint-down($md) {
+                bottom: -20px;
+              }
+
+              @include breakpoint-down($sm) {
+                right: -10px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &-image_with_background {
+      .image {
+        &__decor-code {
+          filter: drop-shadow(0 25px 35px rgba($black, 0.05));
+          position: absolute;
+          right: 7%;
+          bottom: 46%;
+          transition: 0.3s;
+          z-index: 1;
+
+          @include breakpoint-down($xl) {
+            right: 0;
+            bottom: 42%;
+          }
+        }
+
+        &__bg-image {
+          height: 550px;
+          transition: height 0.3s;
+
+          @include breakpoint-down($xl) {
+            height: 400px;
+          }
+
+          @include breakpoint-down($md) {
+            height: 350px;
+          }
+
+          @include breakpoint-down($sm) {
+            height: 100%;
+          }
+
+          picture {
+            height: 100%;
+          }
+
+          img {
+            height: 100%;
+            margin: auto;
+            object-fit: contain;
+            object-position: center;
+            width: auto;
+          }
+        }
+
+        &__bg {
+          border-radius: 13px;
+          height: 230px;
+          overflow: hidden;
+          position: absolute;
+          right: -7%;
+          bottom: 17%;
+          transition: 0.3s;
+
+          @include breakpoint-down($xl) {
+            height: 150px;
+          }
+
+          @include breakpoint-down($md) {
+            height: 120px;
+            right: -2%;
+            bottom: 10%;
+          }
+
+          picture {
+            height: 100%;
+          }
+
+          img {
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+            width: auto;
+          }
+        }
+      }
+    }
+
+    &-image_with_titles {
+      .image {
+        &__two-paragraphs {
+          .two-paragraphs__item {
+            background: $gray-300;
+            border-radius: 10px;
+            border: 1px solid $gray-500;
+            box-shadow: 0 25px 35px 0 rgba($black, 0.05);
+            color: $blue-dark-400;
+            display: inline-flex;
+            font-size: 20px;
+            font-weight: 500;
+            gap: 20px;
+            letter-spacing: -0.4px;
+            line-height: 20px;
+            padding: 15px 40px 15px 20px;
+            position: absolute;
+            transition: 0.3s;
+
+            @include breakpoint-down($xl) {
+              font-size: 18px;
+              gap: 10px;
+              padding: 10px 25px 10px 15px;
+            }
+
+            &:first-child {
+              top: 16%;
+              left: 3%;
+
+              @include breakpoint-down($sm) {
+                top: 10%;
+                left: -30%;
+              }
+
+              @include breakpoint-down($xs) {
+                top: -10px;
+                left: -10px;
+              }
+            }
+
+            &:last-child {
+              top: 45%;
+              right: -5%;
+
+              @include breakpoint-down($sm) {
+                right: -40%;
+              }
+
+              @include breakpoint-down($xs) {
+                right: -10px;
+              }
+            }
+
+            .icon {
+              align-items: center;
+              border-radius: 100%;
+              display: flex;
+              height: 22px;
+              justify-content: center;
+              width: 22px;
+
+              svg {
+                height: 6px;
+                width: 9px;
+              }
+            }
+
+            &.--color {
+              &-purple {
+                .icon {
+                  background: $purple-200;
+                }
+              }
+
+              &-yellow {
+                .icon {
+                  background: $brand-blue;
+                }
+              }
+            }
+          }
+        }
+
+        &__bg {
+          height: 605px;
+          transition: height 0.3s;
+
+          @include breakpoint-down($xl) {
+            height: 400px;
+          }
+
+          @include breakpoint-down($sm) {
+            height: 100%;
+          }
+
+          picture {
+            height: 100%;
+          }
+
+          img {
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+            width: auto;
+          }
+        }
+      }
+    }
+
+    &-people_images {
+      .image {
+        &__logos {
+          picture {
+            border-radius: 100%;
+            object-fit: cover;
+            object-position: center;
+            position: absolute;
+            transition: 0.3s;
+
+            img {
+              width: 100%;
+            }
+
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4) {
+              height: 80px;
+              width: 80px;
+
+              @include breakpoint-down($xl) {
+                height: 60px;
+                width: 60px;
+              }
+
+              @include breakpoint-down($md) {
+                height: 45px;
+                width: 45px;
+              }
+            }
+
+            &:nth-child(5),
+            &:nth-child(6) {
+              height: 52px;
+              width: 52px;
+
+              @include breakpoint-down($xl) {
+                height: 45px;
+                width: 45px;
+              }
+
+              @include breakpoint-down($md) {
+                height: 35px;
+                width: 35px;
+              }
+            }
+
+            &:nth-child(7),
+            &:nth-child(8) {
+              height: 48px;
+              width: 48px;
+
+              @include breakpoint-down($xl) {
+                height: 40px;
+                width: 40px;
+              }
+
+              @include breakpoint-down($md) {
+                height: 30px;
+                width: 30px;
+              }
+            }
+
+            &:nth-child(9),
+            &:nth-child(10),
+            &:nth-child(11),
+            &:nth-child(12) {
+              height: 30px;
+              width: 30px;
+
+              @include breakpoint-down($xl) {
+                height: 25px;
+                width: 25px;
+              }
+
+              @include breakpoint-down($md) {
+                height: 20px;
+                width: 20px;
+              }
+            }
+
+            &:nth-child(1) {
+              top: 20%;
+              left: -6%;
+
+              @include breakpoint-down($sm) {
+                top: 36%;
+              }
+            }
+
+            &:nth-child(2) {
+              top: 1%;
+              left: 33%;
+
+              @include breakpoint-down($sm) {
+                top: 16%;
+              }
+            }
+
+            &:nth-child(3) {
+              top: 24%;
+              right: -5%;
+
+              @include breakpoint-down($sm) {
+                top: 39%;
+              }
+            }
+
+            &:nth-child(4) {
+              bottom: -10%;
+              right: 25%;
+
+              @include breakpoint-down($sm) {
+                bottom: 6%;
+              }
+            }
+
+            &:nth-child(5) {
+              bottom: -10%;
+              left: -10%;
+
+              @include breakpoint-down($sm) {
+                bottom: 6%;
+              }
+
+              @include breakpoint-down($xs) {
+                left: -5%;
+              }
+            }
+
+            &:nth-child(6) {
+              bottom: -35%;
+              left: 23%;
+
+              @include breakpoint-down($sm) {
+                bottom: 0;
+              }
+            }
+
+            &:nth-child(7) {
+              top: -23%;
+              left: -23%;
+
+              @include breakpoint-down($sm) {
+                top: 8%;
+              }
+
+              @include breakpoint-down($xs) {
+                left: -7%;
+              }
+            }
+
+            &:nth-child(8) {
+              right: -17%;
+              bottom: 3%;
+
+              @include breakpoint-down($sm) {
+                bottom: 18%;
+              }
+
+              @include breakpoint-down($xs) {
+                right: -7%;
+              }
+            }
+
+            &:nth-child(9) {
+              right: -10%;
+              bottom: -45%;
+
+              @include breakpoint-down($sm) {
+                bottom: 0;
+              }
+
+              @include breakpoint-down($xs) {
+                right: 5%;
+              }
+            }
+
+            &:nth-child(10) {
+              top: -40%;
+              left: 15%;
+
+              @include breakpoint-down($sm) {
+                top: 1%;
+              }
+            }
+
+            &:nth-child(11) {
+              top: -20%;
+              right: 30%;
+
+              @include breakpoint-down($sm) {
+                top: 5%;
+              }
+            }
+
+            &:nth-child(12) {
+              top: -35%;
+              right: -20%;
+
+              @include breakpoint-down($sm) {
+                top: 0;
+              }
+
+              @include breakpoint-down($xs) {
+                right: 6%;
+              }
+            }
+          }
+        }
+
+        &__bg-image {
+          height: 250px;
+          transition: height 0.3s;
+
+          @include breakpoint-down($xl) {
+            height: 180px;
+          }
+
+          @include breakpoint-down($md) {
+            height: 140px;
+          }
+
+          @include breakpoint-down($sm) {
+            height: 70%;
+          }
+
+          picture {
+            height: 100%;
+          }
+
+          img {
+            height: 100%;
+            margin: auto;
+            object-fit: contain;
+            object-position: center;
+            width: auto;
+          }
+        }
+      }
+    }
+
+    &-image {
+      .image__bg {
+        height: 630px;
+        transition: height 0.3s;
+
+        @include breakpoint-down($xl) {
+          height: 400px;
+        }
+
+        @include breakpoint-down($sm) {
+          height: 100%;
+        }
+
+        picture {
+          height: 100%;
+        }
+
+        img {
+          height: 100%;
+          object-fit: contain;
+          object-position: center;
+          width: auto;
+        }
+      }
+    }
+  }
+}

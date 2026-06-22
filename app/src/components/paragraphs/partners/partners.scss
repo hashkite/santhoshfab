@@ -1,0 +1,57 @@
+@import '../../../app/styles/functions';
+@import '../../../app/styles/mixins';
+@import '../../../app/styles/variables';
+@import '../../../app/styles/colors';
+
+.partners {
+  &__block {
+    background: linear-gradient(to bottom, $gray-300, $gray-50);
+  }
+
+  &__items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    flex: 0 0 25%;
+    width: 25%;
+    padding: 40px 60px;
+    border-top: 1px solid rgba($gray-200, 0.5);
+    transition: 0.3s;
+
+    @include breakpoint-down($md) {
+      padding: 25px 40px;
+    }
+
+    @include breakpoint-down($sm) {
+      flex-basis: 33.33%;
+      width: 33.33%;
+    }
+
+    @include breakpoint-down($xs) {
+      flex-basis: 50%;
+      width: 50%;
+    }
+
+    picture {
+      height: 60px;
+      transition: 0.3s;
+
+      @include breakpoint-down($sm) {
+        height: 50px;
+      }
+
+      img {
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+        object-fit: contain;
+        object-position: center;
+        width: 100%;
+      }
+    }
+  }
+}

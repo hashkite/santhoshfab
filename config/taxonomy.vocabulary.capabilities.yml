@@ -1,0 +1,9 @@
+uuid: cd6455a8-1e39-44e8-930b-8d617edf9a84
+langcode: en
+status: true
+dependencies: {  }
+name: Capabilities
+vid: capabilities
+description: null
+weight: 0
+new_revision: false

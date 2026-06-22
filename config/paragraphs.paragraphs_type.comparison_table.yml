@@ -1,0 +1,16 @@
+uuid: b092cdc7-d6fe-4fd7-a52f-6633d401fd09
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_ee
+third_party_settings:
+  paragraphs_ee:
+    paragraphs_categories:
+      global: global
+id: comparison_table
+label: 'Comparison Table'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

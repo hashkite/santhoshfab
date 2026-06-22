@@ -1,0 +1,9 @@
+mck_rest_apis.set_prefix:
+  path: '/admin/mck_rest_apis/set-prefix'
+  defaults:
+    _form: 'Drupal\mck_rest_apis\Form\SetPrefixForm'
+    _title: 'Set prefix for react API'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE

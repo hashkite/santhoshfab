@@ -1,0 +1,32 @@
+uuid: 0ba5a984-bf67-491f-b829-4b8289ae1093
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.offices.field_title
+    - field.field.paragraph.offices.field_top_title
+    - paragraphs.paragraphs_type.offices
+id: paragraph.offices.default
+targetEntityType: paragraph
+bundle: offices
+mode: default
+content:
+  field_title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_top_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

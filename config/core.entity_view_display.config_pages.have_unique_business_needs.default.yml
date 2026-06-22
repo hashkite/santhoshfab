@@ -1,0 +1,50 @@
+uuid: 0a871ad4-e3e7-4314-9c68-7829d6e64925
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.have_unique_business_needs
+    - field.field.config_pages.have_unique_business_needs.field_description
+    - field.field.config_pages.have_unique_business_needs.field_link
+    - field.field.config_pages.have_unique_business_needs.field_multicolor_title
+  module:
+    - mck_rest_apis
+id: config_pages.have_unique_business_needs.default
+targetEntityType: config_pages
+bundle: have_unique_business_needs
+mode: default
+content:
+  field_description:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_link:
+    type: mck_react
+    label: hidden
+    settings:
+      format: link
+      view_mode: default
+      storage: ''
+      convert: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_multicolor_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

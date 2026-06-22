@@ -1,0 +1,79 @@
+@import '../../../app/styles/functions';
+@import '../../../app/styles/mixins';
+@import '../../../app/styles/variables';
+@import '../../../app/styles/colors';
+
+.tabs {
+  &__section {
+    background: $gray-50;
+    color: $blue-dark-600;
+    margin-top: -210px;
+    overflow: hidden;
+    padding: 330px 0 80px;
+    position: relative;
+    transition: 0.3s;
+
+    @include breakpoint-down($xl) {
+      padding: 280px 0 80px;
+    }
+
+    @include breakpoint-down($md) {
+      padding-bottom: 70px;
+    }
+
+    @include breakpoint-down($sm) {
+      margin-top: -150px;
+      padding-top: 200px;
+      padding-bottom: 50px;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  &__header {
+    margin-bottom: 100px;
+    max-width: 800px;
+    transition: margin 0.3s;
+
+    @include breakpoint-down($xxl) {
+      margin-bottom: 70px;
+    }
+
+    @include breakpoint-down($xl) {
+      margin-bottom: 50px;
+      max-width: 800px;
+    }
+
+    @include breakpoint-down($md) {
+      margin-bottom: 35px;
+    }
+
+    h2 {
+      color: $blue-dark-400;
+      margin-top: 30px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    &-description {
+      color: $blue-dark-600;
+      margin-top: 35px;
+      max-width: 650px;
+      transition: 0.3s;
+
+      @include breakpoint-down($xl) {
+        margin-top: 25px;
+        max-width: 100%;
+      }
+
+      @include breakpoint-down($md) {
+        margin-top: 20px;
+      }
+    }
+  }
+}

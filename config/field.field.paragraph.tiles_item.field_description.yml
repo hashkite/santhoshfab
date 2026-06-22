@@ -1,0 +1,24 @@
+uuid: 200ae3be-9570-452d-88f8-e67a8d524f02
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - filter.format.basic_html
+    - paragraphs.paragraphs_type.tiles_item
+  module:
+    - text
+id: paragraph.tiles_item.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: tiles_item
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text_long

@@ -1,0 +1,18 @@
+uuid: 55879df8-67e6-410d-beb6-fe96727a84a8
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.field_show_on_tailored_teams
+field_name: field_show_on_tailored_teams
+entity_type: user
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

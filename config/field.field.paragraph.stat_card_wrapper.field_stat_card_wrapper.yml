@@ -1,0 +1,289 @@
+uuid: 0c70cac4-a070-4218-b0ef-69287df3fec7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_stat_card_wrapper
+    - paragraphs.paragraphs_type.stat_card_wrapper
+    - paragraphs.paragraphs_type.stat_cards
+  module:
+    - entity_reference_revisions
+id: paragraph.stat_card_wrapper.field_stat_card_wrapper
+field_name: field_stat_card_wrapper
+entity_type: paragraph
+bundle: stat_card_wrapper
+label: 'Stat Card Wrapper'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      stat_cards: stat_cards
+    negate: 0
+    target_bundles_drag_drop:
+      about_us_cards:
+        weight: 88
+        enabled: false
+      all_services:
+        weight: 89
+        enabled: false
+      brands_images:
+        weight: 90
+        enabled: false
+      business_needs:
+        weight: 91
+        enabled: false
+      business_person:
+        weight: 92
+        enabled: false
+      business_teaser:
+        weight: 93
+        enabled: false
+      contact_ways:
+        weight: 94
+        enabled: false
+      country:
+        weight: 95
+        enabled: false
+      creativity:
+        weight: 96
+        enabled: false
+      development_team:
+        weight: 97
+        enabled: false
+      experience:
+        weight: 98
+        enabled: false
+      famaash_productions:
+        weight: 99
+        enabled: false
+      famaash_streamlines:
+        weight: 100
+        enabled: false
+      faq_s:
+        weight: 101
+        enabled: false
+      featured_case_studies:
+        weight: 102
+        enabled: false
+      feedback:
+        weight: 103
+        enabled: false
+      get_in_touch_with_us:
+        weight: 104
+        enabled: false
+      grid:
+        weight: 105
+        enabled: false
+      hero:
+        weight: 106
+        enabled: false
+      hero_plus:
+        weight: 107
+        enabled: false
+      hero_slide:
+        weight: 108
+        enabled: false
+      hero_slider:
+        weight: 109
+        enabled: false
+      horizontal_scroll:
+        weight: 110
+        enabled: false
+      horizontal_tab:
+        weight: 111
+        enabled: false
+      horizontal_tabs:
+        weight: 112
+        enabled: false
+      how_we_work:
+        weight: 113
+        enabled: false
+      image:
+        weight: 114
+        enabled: false
+      image_with_background:
+        weight: 116
+        enabled: false
+      image_with_titles:
+        weight: 117
+        enabled: false
+      images:
+        weight: 115
+        enabled: false
+      link_with_icon:
+        weight: 118
+        enabled: false
+      locations:
+        weight: 119
+        enabled: false
+      looking_for_a_team:
+        weight: 120
+        enabled: false
+      marketing_cards:
+        weight: 121
+        enabled: false
+      marketing_cards_wrapper:
+        weight: 122
+        enabled: false
+      marketing_main:
+        weight: 123
+        enabled: false
+      model_item:
+        weight: 124
+        enabled: false
+      number:
+        weight: 125
+        enabled: false
+      numbers:
+        weight: 126
+        enabled: false
+      offices:
+        weight: 127
+        enabled: false
+      our_capabilities:
+        weight: 128
+        enabled: false
+      our_clients:
+        weight: 129
+        enabled: false
+      our_expertise:
+        weight: 130
+        enabled: false
+      our_footprints:
+        weight: 131
+        enabled: false
+      our_model:
+        weight: 132
+        enabled: false
+      our_team:
+        weight: 133
+        enabled: false
+      our_values:
+        weight: 134
+        enabled: false
+      people:
+        weight: 135
+        enabled: false
+      people_images:
+        weight: 136
+        enabled: false
+      people_tabs:
+        weight: 137
+        enabled: false
+      person:
+        weight: 138
+        enabled: false
+      person_with_tech:
+        weight: 139
+        enabled: false
+      pricing:
+        weight: 140
+        enabled: false
+      process:
+        weight: 141
+        enabled: false
+      puzzle:
+        weight: 142
+        enabled: false
+      puzzles:
+        weight: 143
+        enabled: false
+      re_arrange:
+        weight: 144
+        enabled: false
+      scrollable_item:
+        weight: 145
+        enabled: false
+      scrollable_items:
+        weight: 146
+        enabled: false
+      service_item:
+        weight: 148
+        enabled: false
+      services:
+        weight: 147
+        enabled: false
+      slider:
+        weight: 149
+        enabled: false
+      some_cases_studies:
+        weight: 150
+        enabled: false
+      stat_card_wrapper:
+        weight: 152
+        enabled: false
+      stat_cards:
+        weight: 151
+        enabled: true
+      stat_item:
+        weight: 153
+        enabled: false
+      tab:
+        weight: 154
+        enabled: false
+      tab_with_paragraphs:
+        weight: 156
+        enabled: false
+      tab_with_taxonomy:
+        weight: 157
+        enabled: false
+      tabs:
+        weight: 155
+        enabled: false
+      talent_list:
+        weight: 158
+        enabled: false
+      teaser:
+        weight: 159
+        enabled: false
+      text_with_content:
+        weight: 160
+        enabled: false
+      tile:
+        weight: 161
+        enabled: false
+      tiles:
+        weight: 162
+        enabled: false
+      tiles_item:
+        weight: 163
+        enabled: false
+      title_with_description:
+        weight: 165
+        enabled: false
+      titles:
+        weight: 164
+        enabled: false
+      top_companies:
+        weight: 166
+        enabled: false
+      vertical_tabs:
+        weight: 167
+        enabled: false
+      vertical_tabs_new:
+        weight: 168
+        enabled: false
+      video:
+        weight: 169
+        enabled: false
+      videos:
+        weight: 170
+        enabled: false
+      view:
+        weight: 171
+        enabled: false
+      we_are_famaash:
+        weight: 172
+        enabled: false
+      why_they_choose_us:
+        weight: 173
+        enabled: false
+      work_experience:
+        weight: 174
+        enabled: false
+field_type: entity_reference_revisions

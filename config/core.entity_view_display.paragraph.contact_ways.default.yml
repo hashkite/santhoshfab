@@ -1,0 +1,39 @@
+uuid: 3533e0ea-db80-4622-bed1-c3ee7d2e89f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.contact_ways.field_multicolor_title
+    - field.field.paragraph.contact_ways.field_paragraphs
+    - paragraphs.paragraphs_type.contact_ways
+  module:
+    - mck_rest_apis
+id: paragraph.contact_ways.default
+targetEntityType: paragraph
+bundle: contact_ways
+mode: default
+content:
+  field_multicolor_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_paragraphs:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  extra_field_popup: true

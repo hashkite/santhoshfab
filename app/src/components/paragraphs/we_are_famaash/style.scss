@@ -1,0 +1,110 @@
+@import '../../../app/styles/functions';
+@import '../../../app/styles/mixins';
+@import '../../../app/styles/variables';
+@import '../../../app/styles/colors';
+
+.we_are_famaash {
+  padding: 50px 0;
+  overflow: hidden;
+
+  &--title {
+    margin-bottom: 20px;
+    text-align: center;
+    > * {
+      font-size: 150px;
+      line-height: 150px;
+      color: $blue-dark-400;
+      margin-bottom: 30px;
+
+      @include breakpoint-down($md) {
+        font-size: 80px;
+        line-height: 80px;
+        margin-bottom: 10px;
+      }
+
+      span {
+        font-weight: 600 !important;
+      }
+    }
+  }
+
+  &--content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    transform: translateY(-70px);
+    padding: 0 20px 0;
+
+    @include breakpoint-down($md) {
+      transform: translateY(-50px);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 200%;
+      z-index: 0;
+      height: 100%;
+      background: $purple-200;
+      border-radius: 50% 50% 0 0;
+    }
+
+    img {
+      position: relative;
+      z-index: 1;
+      border-radius: 50%;
+      margin-bottom: 40px;
+    }
+  }
+
+  &--subtitle {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+    font-size: 45px;
+    color: $white;
+    margin-bottom: 30px;
+
+    @include breakpoint-down($md) {
+      margin-bottom: 150px;
+    }
+
+    @include breakpoint-down($sm) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &--description {
+    position: relative;
+    z-index: 1;
+    font-size: 16px;
+    line-height: 30px;
+    color: $white;
+    max-width: 830px;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 60px;
+
+    @include breakpoint-down($md) {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &--empty {
+    height: 100px;
+    width: 100%;
+    max-width: 1200px;
+    border-radius: 25px;
+    background: #ffffff26;
+    backdrop-filter: blur(10px);
+    margin: 0 auto;
+    margin-bottom: 80px;
+  }
+}

@@ -1,0 +1,63 @@
+uuid: fbbd4937-2de4-45ff-9fb6-92721093b1c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.stat_cards.field_image
+    - field.field.paragraph.stat_cards.field_review_text
+    - field.field.paragraph.stat_cards.field_stat_items
+    - field.field.paragraph.stat_cards.field_title
+    - paragraphs.paragraphs_type.stat_cards
+  module:
+    - mck_rest_apis
+id: paragraph.stat_cards.default
+targetEntityType: paragraph
+bundle: stat_cards
+mode: default
+content:
+  field_image:
+    type: mck_react
+    label: hidden
+    settings:
+      format: media
+      view_mode: default
+      convert: '1'
+      storage: media
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_review_text:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_stat_items:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: paragraph
+      convert: 0
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  extra_field_popup: true

@@ -1,0 +1,19 @@
+uuid: 0c7430cd-775c-4aae-b784-1782bd787cbb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.team_member_testimonial
+id: paragraph.team_member_testimonial.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: team_member_testimonial
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

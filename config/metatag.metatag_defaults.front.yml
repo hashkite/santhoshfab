@@ -1,0 +1,29 @@
+uuid: 064b1a98-25fa-4922-9834-3e52e6623dff
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 1noCXlegCr5HFehQRF1ViXy1jhU1jZ_sNN99a8Sj5jo
+id: front
+label: 'Front page'
+tags:
+  canonical_url: '[site:url]'
+  description: 'Leading Mechanical Contractor Company For Complete Engineering Construction Projects Solution Under One Roof. From fabrication and erection to installation, testing, and commissioning, we deliver precision-engineered industrial infrastructure across India.'
+  image_src: /media/logo.jpg
+  og_description: 'Leading Mechanical Contractor Company For Complete Engineering Construction Projects Solution Under One Roof. From fabrication and erection to installation, testing, and commissioning, we deliver precision-engineered industrial infrastructure across India.'
+  og_image: /media/logo.jpg
+  og_image_alt: 'Site logo'
+  og_image_height: '630'
+  og_image_type: image/jpeg
+  og_image_url: /media/logo.jpg
+  og_image_width: '1200'
+  og_site_name: '[site:name]'
+  og_title: '[node:title] | [site:name]'
+  og_type: '[node:original:content-type]'
+  shortlink: '[site:url]'
+  title: '[node:title]'
+  twitter_cards_description: 'Leading Mechanical Contractor Company For Complete Engineering Construction Projects Solution Under One Roof. From fabrication and erection to installation, testing, and commissioning, we deliver precision-engineered industrial infrastructure across India.'
+  twitter_cards_image: /media/logo.jpg
+  twitter_cards_image_alt: 'Site logo'
+  twitter_cards_title: '[node:title] | [site:name]'
+  twitter_cards_type: summary_large_image

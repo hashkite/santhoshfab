@@ -1,0 +1,28 @@
+uuid: 01701856-b6f6-4d98-972d-c2f85b1abd56
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.page.field_hero
+    - field.field.node.page.field_metatags
+    - field.field.node.page.field_paragraphs
+    - node.type.page
+  module:
+    - user
+_core:
+  default_config_hash: 8BgdRtLbtQ0F__o0FHSH0Mx5fvXOra9tfT1GmNKbRYw
+id: node.page.teaser
+targetEntityType: node
+bundle: page
+mode: teaser
+content:
+  links:
+    weight: 101
+    region: content
+hidden:
+  extra_field_favorite: true
+  extra_field_popup: true
+  field_hero: true
+  field_metatags: true
+  field_paragraphs: true

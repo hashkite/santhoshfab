@@ -1,0 +1,49 @@
+uuid: 8856d071-002f-4517-ac45-27ea131d71ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.view.field_description
+    - field.field.paragraph.view.field_multicolor_title
+    - field.field.paragraph.view.field_style
+    - field.field.paragraph.view.field_view
+    - paragraphs.paragraphs_type.view
+  module:
+    - text
+    - viewfield
+id: paragraph.view.default
+targetEntityType: paragraph
+bundle: view
+mode: default
+content:
+  field_description:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_multicolor_title:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_style:
+    type: options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_view:
+    type: viewfield_select
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

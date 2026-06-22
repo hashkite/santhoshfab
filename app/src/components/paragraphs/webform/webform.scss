@@ -1,0 +1,146 @@
+@import '../../../app/styles/functions';
+@import '../../../app/styles/variables';
+@import '../../../app/styles/mixins';
+@import '../../../app/styles/colors';
+
+.webform {
+  &__form {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    transition: gap 0.3s;
+
+    @include breakpoint-down($xs) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    fieldset {
+      grid-column: 1 / -1;
+
+      &:nth-child(4) {
+        align-content: center;
+        display: flex;
+        grid-column: 1 / 2;
+        margin-top: 30px;
+        transition: 0.3s;
+
+        @include breakpoint-down($xl) {
+          grid-column: 1 / -1;
+          margin-top: 20px;
+        }
+      }
+
+      &:nth-child(5) {
+        display: flex;
+        grid-column: 2 / -1;
+        justify-content: flex-end;
+        margin-top: 30px;
+        transition: 0.3s;
+
+        @include breakpoint-down($xl) {
+          grid-column: 1 / -1;
+          margin-top: 20px;
+        }
+
+        @include breakpoint-down($sm) {
+          justify-content: flex-start;
+        }
+
+        .field {
+          @include breakpoint-down($sm) {
+            width: 100%;
+          }
+        }
+
+        .btn-secondary {
+          @include breakpoint-down($sm) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  &__loading {
+    align-items: center;
+    display: flex;
+    height: 80px;
+    justify-content: center;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: calc(100% - 220px) !important;
+
+    .loading {
+      border-radius: 15px;
+      height: 100%;
+      padding: 15px;
+      position: static;
+      width: 100%;
+
+      .loading--icon {
+        height: 100%;
+        position: relative;
+        width: auto;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+.custom-captcha {
+  background-image: url(/media/captcha.png);
+  color: white;
+  font-size: 12px;
+  line-height: 12px;
+
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 56px;
+  width: 250px;
+  position: absolute;
+  bottom: 60px;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+
+  @include breakpoint-down($md) {
+    bottom: 20px;
+  }
+
+  @include breakpoint-down($sm) {
+    display: none;
+  }
+
+  p {
+    margin: 0;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background: #1d73e8;
+    border-radius: 30px 0 0 30px;
+  }
+
+  .recaptcha-logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 16px;
+  }
+
+  .links {
+    display: flex;
+    gap: 5px;
+  }
+
+  a {
+    color: white;
+    font-size: 10px;
+    font-weight: 500;
+    text-decoration: none;
+  }
+}

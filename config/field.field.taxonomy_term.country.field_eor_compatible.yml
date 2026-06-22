@@ -1,0 +1,21 @@
+uuid: e6d2aa33-7c2a-49a2-be1f-72b0550b0744
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_eor_compatible
+    - taxonomy.vocabulary.country
+id: taxonomy_term.country.field_eor_compatible
+field_name: field_eor_compatible
+entity_type: taxonomy_term
+bundle: country
+label: 'EOR compatible'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

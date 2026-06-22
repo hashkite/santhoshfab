@@ -1,0 +1,33 @@
+uuid: 032c938e-e2cd-49dc-a0e8-1a81b97c66dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.about_us_cards.field_images
+    - paragraphs.paragraphs_type.about_us_cards
+  module:
+    - autocomplete_deluxe
+id: paragraph.about_us_cards.default
+targetEntityType: paragraph
+bundle: about_us_cards
+mode: default
+content:
+  field_images:
+    type: autocomplete_deluxe
+    weight: 3
+    region: content
+    settings:
+      match_operator: CONTAINS
+      autocomplete_route_name: autocomplete_deluxe.autocomplete
+      size: 60
+      selection_handler: default
+      limit: 10
+      min_length: 0
+      delimiter: ''
+      not_found_message_allow: false
+      not_found_message: "The term '@term' will be added"
+      no_empty_message: 'No terms could be found. Please type in order to add a new term.'
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

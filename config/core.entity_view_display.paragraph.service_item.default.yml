@@ -1,0 +1,51 @@
+uuid: e592535d-202a-46fb-a558-9ec4653575aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.service_item.field_description
+    - field.field.paragraph.service_item.field_image
+    - field.field.paragraph.service_item.field_service
+    - paragraphs.paragraphs_type.service_item
+  module:
+    - mck_rest_apis
+id: paragraph.service_item.default
+targetEntityType: paragraph
+bundle: service_item
+mode: default
+content:
+  field_description:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_image:
+    type: mck_react
+    label: hidden
+    settings:
+      format: media
+      view_mode: default
+      convert: '1'
+      storage: media
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_service:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: taxonomy_term
+      convert: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  extra_field_popup: true

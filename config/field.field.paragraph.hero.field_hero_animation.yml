@@ -1,0 +1,21 @@
+uuid: c7c55ee9-2057-4de9-8a21-244c23a0eecb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_hero_animation
+    - paragraphs.paragraphs_type.hero
+  module:
+    - options
+id: paragraph.hero.field_hero_animation
+field_name: field_hero_animation
+entity_type: paragraph
+bundle: hero
+label: 'Hero animation'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

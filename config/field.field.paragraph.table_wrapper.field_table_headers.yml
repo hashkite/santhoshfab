@@ -1,0 +1,19 @@
+uuid: 50fecd56-2fd3-46d5-8760-7e30a8b09c12
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_table_headers
+    - paragraphs.paragraphs_type.table_wrapper
+id: paragraph.table_wrapper.field_table_headers
+field_name: field_table_headers
+entity_type: paragraph
+bundle: table_wrapper
+label: 'Table Headers'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,38 @@
+uuid: ed151f27-a6a7-4bf7-a4a7-b62ff02cc963
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.vertical_tabs.field_multicolor_title
+    - field.field.paragraph.vertical_tabs.field_view
+    - paragraphs.paragraphs_type.vertical_tabs
+  module:
+    - mck_rest_apis
+id: paragraph.vertical_tabs.default
+targetEntityType: paragraph
+bundle: vertical_tabs
+mode: default
+content:
+  field_multicolor_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_view:
+    type: mck_react
+    label: hidden
+    settings:
+      format: view
+      view_mode: default
+      storage: view
+      convert: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+hidden:
+  extra_field_popup: true

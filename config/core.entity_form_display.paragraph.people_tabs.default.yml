@@ -1,0 +1,54 @@
+uuid: ae5a4cd7-bdfb-4d03-8b8b-abf70270e661
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.people_tabs.field_description
+    - field.field.paragraph.people_tabs.field_multicolor_title
+    - field.field.paragraph.people_tabs.field_paragraphs
+    - paragraphs.paragraphs_type.people_tabs
+  module:
+    - paragraphs
+    - text
+id: paragraph.people_tabs.default
+targetEntityType: paragraph
+bundle: people_tabs
+mode: default
+content:
+  field_description:
+    type: text_textarea
+    weight: 3
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_multicolor_title:
+    type: text_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_paragraphs:
+    type: paragraphs
+    weight: 3
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,24 @@
+uuid: dd9672a7-75ff-4e3b-8fc1-66cb98fb8894
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_multicolor_title
+    - filter.format.full_html
+    - paragraphs.paragraphs_type.we_are_famaash
+  module:
+    - text
+id: paragraph.we_are_famaash.field_multicolor_title
+field_name: field_multicolor_title
+entity_type: paragraph
+bundle: we_are_famaash
+label: 'Multicolor title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

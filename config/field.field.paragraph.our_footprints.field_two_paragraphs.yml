@@ -1,0 +1,136 @@
+uuid: f50849dc-cfd1-4245-9e75-4f8e9b5e27d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_two_paragraphs
+    - paragraphs.paragraphs_type.numbers
+    - paragraphs.paragraphs_type.our_footprints
+  module:
+    - entity_reference_revisions
+id: paragraph.our_footprints.field_two_paragraphs
+field_name: field_two_paragraphs
+entity_type: paragraph
+bundle: our_footprints
+label: Numbers
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      numbers: numbers
+    negate: 0
+    target_bundles_drag_drop:
+      business_needs:
+        weight: 34
+        enabled: false
+      business_teaser:
+        weight: 35
+        enabled: false
+      case_studies:
+        weight: 36
+        enabled: false
+      client_impact:
+        weight: 37
+        enabled: false
+      client_impacts:
+        weight: 38
+        enabled: false
+      country:
+        weight: 39
+        enabled: false
+      faq_s:
+        weight: 40
+        enabled: false
+      feedback:
+        weight: 41
+        enabled: false
+      hero:
+        weight: 42
+        enabled: false
+      hero_slide:
+        weight: 43
+        enabled: false
+      hero_slider:
+        weight: 44
+        enabled: false
+      image:
+        weight: 48
+        enabled: false
+      image_with_background:
+        weight: 46
+        enabled: false
+      image_with_titles:
+        weight: 47
+        enabled: false
+      images:
+        weight: 45
+        enabled: false
+      number:
+        weight: 48
+        enabled: false
+      numbers:
+        weight: 49
+        enabled: true
+      office:
+        weight: 50
+        enabled: false
+      offices:
+        weight: 51
+        enabled: false
+      our_clients:
+        weight: 52
+        enabled: false
+      our_footprints:
+        weight: 53
+        enabled: false
+      our_partners:
+        weight: 54
+        enabled: false
+      people:
+        weight: 55
+        enabled: false
+      people_images:
+        weight: 60
+        enabled: false
+      person:
+        weight: 56
+        enabled: false
+      process:
+        weight: 57
+        enabled: false
+      scrollable_item:
+        weight: 58
+        enabled: false
+      scrollable_items:
+        weight: 59
+        enabled: false
+      start_cooperation:
+        weight: 65
+        enabled: false
+      tab:
+        weight: 60
+        enabled: false
+      tabs:
+        weight: 61
+        enabled: false
+      talent_insights:
+        weight: 62
+        enabled: false
+      title_with_description:
+        weight: 64
+        enabled: false
+      titles:
+        weight: 63
+        enabled: false
+      view:
+        weight: 65
+        enabled: false
+      webform:
+        weight: 66
+        enabled: false
+field_type: entity_reference_revisions

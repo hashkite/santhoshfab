@@ -1,0 +1,24 @@
+uuid: 09aca18f-66d8-4c50-8207-173b0bad28c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.have_unique_business_needs
+    - field.storage.config_pages.field_description
+    - filter.format.basic_html
+  module:
+    - text
+id: config_pages.have_unique_business_needs.field_description
+field_name: field_description
+entity_type: config_pages
+bundle: have_unique_business_needs
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text_long

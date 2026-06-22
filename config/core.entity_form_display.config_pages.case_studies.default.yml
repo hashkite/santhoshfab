@@ -1,0 +1,41 @@
+uuid: 6894ba90-fd43-4379-919d-f030b600be3b
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.case_studies
+    - field.field.config_pages.case_studies.field_description
+    - field.field.config_pages.case_studies.field_multicolor_title
+    - field.field.config_pages.case_studies.field_view
+  module:
+    - text
+    - viewfield
+id: config_pages.case_studies.default
+targetEntityType: config_pages
+bundle: case_studies
+mode: default
+content:
+  field_description:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_multicolor_title:
+    type: text_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_view:
+    type: viewfield_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  label: true

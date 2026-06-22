@@ -1,0 +1,126 @@
+@import '../../../app/styles/functions';
+@import '../../../app/styles/mixins';
+@import '../../../app/styles/variables';
+@import '../../../app/styles/colors';
+
+.business-needs {
+  &__section {
+    padding: 140px 0 160px;
+    transition: padding 0.3s;
+
+    @include breakpoint-down($xl) {
+      padding: 100px 0;
+    }
+
+    @include breakpoint-down($md) {
+      padding: 70px 0;
+    }
+
+    @include breakpoint-down($sm) {
+      padding: 50px 0;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      margin-bottom: 35px;
+      max-width: 930px;
+      transition: font-size 0.3s, line-height 0.3s, margin 0.3s,
+        letter-spacing 0.3s, max-width 0.3s;
+      color: $blue-dark-300;
+      font-weight: 400;
+
+      @include breakpoint-down($md) {
+        margin-bottom: 20px;
+      }
+    }
+
+    h2 {
+      font-weight: 600;
+      max-width: 930px;
+      transition: font-size 0.3s, line-height 0.3s, margin 0.3s,
+        letter-spacing 0.3s, max-width 0.3s;
+
+      @include breakpoint-down($lg) {
+        max-width: 100%;
+      }
+    }
+
+    &.--title {
+      &-center {
+        padding: 110px 0;
+
+        @include breakpoint-down($xl) {
+          padding: 90px 0;
+        }
+
+        @include breakpoint-down($md) {
+          padding: 70px 0;
+        }
+
+        @include breakpoint-down($sm) {
+          padding: 50px 0;
+        }
+
+        .subtitle,
+        h2 {
+          margin: auto;
+          text-align: center;
+        }
+
+        .business-needs {
+          &__list {
+            border-top: 1px solid $gray-200;
+            margin-top: 60px;
+            padding-top: 20px;
+            transition: 0.3s;
+
+            @include breakpoint-down($sm) {
+              margin-top: 35px;
+            }
+          }
+        }
+      }
+    }
+
+    .featured-case-studies & {
+      padding-bottom: 100px;
+
+      @include breakpoint-down($xl) {
+        padding-bottom: 70px;
+      }
+  
+      @include breakpoint-down($sm) {
+        padding-bottom: 50px;
+      }
+
+      .btn {
+        min-width: 160px;
+      }
+    }
+  }
+
+  &__list {
+    display: grid;
+    gap: 70px 15px;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 120px;
+    transition: 0.3s;
+
+    @include breakpoint-down($xl) {
+      margin-top: 70px;
+    }
+
+    @include breakpoint-down($lg) {
+      margin-top: 50px;
+    }
+
+    @include breakpoint-down($md) {
+      margin-top: 30px;
+    }
+
+    @include breakpoint-down($xs) {
+      gap: 50px;
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

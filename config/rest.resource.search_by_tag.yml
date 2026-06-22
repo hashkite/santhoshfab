@@ -1,0 +1,18 @@
+uuid: b672bd72-87e4-4a51-8727-b05cc5791e12
+langcode: en
+status: true
+dependencies:
+  module:
+    - mck_rest_apis
+    - serialization
+    - user
+id: search_by_tag
+plugin_id: search_by_tag
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - json
+  authentication:
+    - cookie

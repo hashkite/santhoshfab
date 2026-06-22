@@ -1,0 +1,19 @@
+uuid: 28224a76-93ff-430a-9f58-7f2f6ae1a24a
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.how_does_it_work_services
+    - field.storage.config_pages.field_title
+id: config_pages.how_does_it_work_services.field_title
+field_name: field_title
+entity_type: config_pages
+bundle: how_does_it_work_services
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

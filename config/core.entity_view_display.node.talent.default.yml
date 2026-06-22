@@ -1,0 +1,55 @@
+uuid: 4a30243a-4a58-4643-a724-9585eddf6df5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.talent.field_hero
+    - field.field.node.talent.field_paragraph
+    - field.field.node.talent.field_paragraphs
+    - node.type.talent
+  module:
+    - mck_rest_apis
+    - user
+id: node.talent.default
+targetEntityType: node
+bundle: talent
+mode: default
+content:
+  field_hero:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: paragraph
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_paragraph:
+    type: mck_react
+    label: above
+    settings:
+      format: reference
+      view_mode: default
+      storage: paragraph
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_paragraphs:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: paragraph
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  extra_field_favorite: true
+  extra_field_popup: true

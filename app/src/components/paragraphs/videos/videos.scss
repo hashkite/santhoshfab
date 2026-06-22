@@ -1,0 +1,147 @@
+@import '../../../app/styles/functions';
+@import '../../../app/styles/mixins';
+@import '../../../app/styles/variables';
+@import '../../../app/styles/colors';
+
+.videos {
+  &__lines {
+    @include breakpoint-up($xs) {
+      background: url('#{$icons_path}/lines-purple.svg') no-repeat;
+      background-size: contain;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      aspect-ratio: 14/5;
+      z-index: 2;
+      pointer-events: none;
+    }
+  }
+
+  &__section {
+    padding-bottom: 100px;
+    position: relative;
+    transition: 0.3s;
+    background-color: $blue-dark-400;
+    padding-top: 400px;
+    overflow: hidden;
+
+    &.active {
+      z-index: 1001;
+
+      .videos__lines {
+        z-index: 0;
+      }
+    }
+
+    @include breakpoint-down($lg) {
+      padding-top: 350px;
+    }
+
+    @include breakpoint-down($md) {
+      padding-bottom: 70px;
+      padding-top: 280px;
+    }
+
+    @include breakpoint-down($sm) {
+      padding-bottom: 50px;
+      padding-top: 200px;
+    }
+
+    @include breakpoint-down($xs) {
+      padding-bottom: 0;
+      padding-top: 150px;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      width: 1.5px;
+      background-color: $blue-dark-500;
+      top: 0;
+      left: 50%;
+
+      @include breakpoint-down($xl) {
+        display: none;
+      }
+    }
+
+    &::before {
+      margin-left: -60px;
+
+      @include breakpoint-down($md) {
+        margin-left: -30px;
+      }
+    }
+
+    &::after {
+      margin-left: 60px;
+
+      @include breakpoint-down($md) {
+        margin-left: 30px;
+      }
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  &__list {
+    transition: padding 0.3s;
+  }
+
+  &__bg {
+    background: $blue-dark-400;
+    height: 80vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    @include breakpoint-down(2000px) {
+      height: 1000px;
+    }
+
+    @include breakpoint-down($xxl) {
+      height: 600px;
+    }
+
+    @include breakpoint-down($xl) {
+      height: 500px;
+    }
+
+    @include breakpoint-down($lg) {
+      height: 450px;
+    }
+
+    @include breakpoint-down($md) {
+      height: 350px;
+    }
+
+    @include breakpoint-down($sm) {
+      height: 250px;
+    }
+
+    @include breakpoint-down($xs) {
+      height: 200px;
+    }
+  }
+
+  &__decor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    svg {
+      display: block;
+      height: auto;
+      width: 100%;
+    }
+  }
+}

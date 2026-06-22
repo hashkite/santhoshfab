@@ -1,0 +1,121 @@
+/* Process Steps layout matching provided screenshot
+ * - container centered
+ * - vertical timeline with numbered badges on left
+ * - content on right with heading, meta (timelines), description and tip
+ */
+.process-steps.container {
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 36px 20px;
+}
+
+.process-steps__title {
+  font-size: 26px;
+  color: #0b4a7a; /* blue-ish title similar to screenshot */
+  margin-bottom: 20px;
+  position: relative;
+}
+
+/* main list area */
+.process-steps__list {
+  position: relative;
+  padding-left: 96px; /* space for markers */
+}
+
+/* vertical line */
+.process-steps__list:before {
+  content: '';
+  position: absolute;
+  left: 44px; /* centers under marker squares */
+  top: 12px;
+  bottom: 0;
+  width: 2px;
+  background: #e6e6e6;
+}
+
+.process-steps__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 20px 0;
+  position: relative;
+}
+
+.process-steps__marker {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 56px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  transform: translate(-140% ,70%);
+}
+
+.process-steps__number {
+  width: 28px;
+  height: 28px;
+  border: 1px solid #d8d8d8;
+  background: #fff;
+  color: #222;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  border-radius: 4px;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.02);
+  line-height: 1;
+}
+
+.process-steps__content {
+  flex: 1 1 auto;
+}
+
+.process-steps__heading {
+  font-size: 20px;
+  margin: 0 0 8px 0;
+  color: #111;
+}
+
+.process-steps__meta {
+  margin-bottom: 12px;
+}
+.process-steps__meta-title {
+  color: #0b6fb0;
+  font-weight: 700;
+  margin-right: 6px;
+}
+.process-steps__meta-value {
+  color: #0b6fb0;
+  font-weight: 600;
+}
+
+.process-steps__desc {
+  color: #333;
+  line-height: 1.55;
+}
+
+.process-steps__tip {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #666;
+  background: #fafafa;
+  padding: 10px 12px;
+  border-left: 3px solid #e1e7ee;
+}
+
+/* spacing between numbered marker and content: make sure the content lines up */
+.process-steps__item + .process-steps__item {
+  border-top: 1px solid rgba(0,0,0,0.03);
+  padding-top: 28px;
+}
+
+@media (max-width: 800px) {
+  .process-steps__list {
+    padding-left: 64px;
+  }
+  .process-steps__marker { width: 56px; }
+  .process-steps__number { width: 26px; height: 26px; }
+  .process-steps__title { font-size: 20px; }
+  .process-steps__heading { font-size: 18px; }
+}

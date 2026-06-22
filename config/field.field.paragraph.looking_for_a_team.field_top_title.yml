@@ -1,0 +1,19 @@
+uuid: b7080a1e-df6a-48c3-993c-16bba6d0da20
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_top_title
+    - paragraphs.paragraphs_type.looking_for_a_team
+id: paragraph.looking_for_a_team.field_top_title
+field_name: field_top_title
+entity_type: paragraph
+bundle: looking_for_a_team
+label: 'Top title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

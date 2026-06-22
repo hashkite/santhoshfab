@@ -1,0 +1,29 @@
+uuid: 101ef2b8-b0d0-4a00-98e6-64d836d68916
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.menu_link_content.field_icon
+    - media.type.image
+    - system.menu.footer-top
+id: menu_link_content.footer-top.field_icon
+field_name: field_icon
+entity_type: menu_link_content
+bundle: footer-top
+label: Icon
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

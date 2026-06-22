@@ -1,0 +1,258 @@
+@import '../../../app/styles/functions';
+@import '../../../app/styles/mixins';
+@import '../../../app/styles/variables';
+@import '../../../app/styles/colors';
+
+.talent_list {
+  padding: 50px 0;
+  position: relative;
+
+  @include breakpoint-down($md) {
+    padding-top: 0;
+    margin-bottom: 70px;
+  }
+
+  .prefixes {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 350px;
+      left: 0;
+      width: 100%;
+      height: 300px;
+      background: $white-200;
+      z-index: -2;
+
+      @include breakpoint-down($md) {
+        height: 400px;
+        bottom: 150px;
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 500px;
+      border-radius: 100%;
+      left: -25%;
+      width: 150%;
+      height: 200px;
+      background: $white-100;
+      z-index: -1;
+
+      @include breakpoint-down($md) {
+        height: 250px;
+        bottom: 330px;
+      }
+    }
+  }
+
+  .path1,
+  .path2 {
+    position: absolute;
+    top: 300px;
+    z-index: -1;
+  }
+
+  &--title {
+    text-align: center;
+    margin-bottom: 25px;
+
+    h1 {
+      font-size: 40px;
+      font-weight: 600 !important;
+      margin-bottom: 2rem;
+
+      @include breakpoint-down($md) {
+        font-size: 30px;
+      }
+    }
+    span {
+      font-size: 40px;
+      font-weight: 600 !important;
+      margin-bottom: 2rem;
+
+      @include breakpoint-down($md) {
+        font-size: 30px;
+      }
+    }
+  }
+
+  &--description {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    margin: auto;
+    margin-bottom: 3rem;
+    max-width: 700px;
+    color: $blue-dark-600;
+
+    @include breakpoint-down($md) {
+      font-size: 16px;
+    }
+  }
+
+  .swiper-container {
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 300px;
+      height: 200%;
+      background: #e8eef8;
+      z-index: -2;
+      left: 50%;
+      transform: translateX(calc(-50% + 5px));
+      top: 0;
+
+      @include breakpoint-down($md) {
+        width: 250px;
+        transform: translateX(calc(-50%));
+      }
+    }
+
+    @keyframes bounce {
+      0% {
+        transform: translate(50%, 0);
+      }
+      50% {
+        transform: translate(50%, -10px);
+      }
+      100% {
+        transform: translate(50%, 0);
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 40px;
+      height: 60px;
+      background-image: url(/media/icons/arrow-down.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      z-index: 0;
+      right: 50%;
+      transform: translateX(-50%);
+      bottom: -120px;
+      animation: bounce 1.5s infinite;
+    }
+  }
+
+  .swiper-horizontal {
+    overflow: hidden;
+  }
+
+  .swiper-slide {
+    width: 290px;
+    height: auto;
+
+    @include breakpoint-down($md) {
+      width: 250px;
+
+      .talent {
+        width: 250px;
+
+        img {
+          min-width: 240px;
+        }
+      }
+    }
+
+    // .talent {
+    //   box-shadow: 0px 28px 61px 0px #0000001a, 0px 111px 111px 0px #00000017,
+    //     0px 249px 149px 0px #0000000d, 0px 443px 177px 0px #00000003,
+    //     0px 692px 194px 0px #00000000;
+    // }
+  }
+
+  &--header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    img {
+      width: 36px;
+      height: 24px;
+      border-radius: 4px;
+      overflow: hidden;
+
+      @include breakpoint-down($md) {
+        width: 24px;
+        height: 16px;
+      }
+    }
+  }
+
+  &__titles {
+    display: flex;
+    align-self: center;
+    gap: 30px;
+    margin-bottom: 50px;
+
+    @include breakpoint-down($md) {
+      gap: 20px;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    hr {
+      color: $white-300;
+      border-style: inset;
+      background: $white-300;
+      border-color: transparent;
+      border-width: 0;
+      margin: auto;
+      width: 100%;
+      height: 1px;
+
+      &:first-child,
+      &:last-child {
+        display: flex;
+        width: 200%;
+
+        @include breakpoint-down($md) {
+          display: none;
+        }
+      }
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      span {
+        white-space: nowrap;
+        font-size: 18px;
+        color: $blue-dark-400;
+      }
+
+      svg {
+        min-width: 27px;
+        min-height: 27px;
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 70px;
+    margin-bottom: 100px;
+  }
+
+  &__button {
+    margin: auto;
+    background: linear-gradient(90deg, #5c00db 0%, #ab74f6 100%);
+    padding: 17px 40px;
+  }
+}

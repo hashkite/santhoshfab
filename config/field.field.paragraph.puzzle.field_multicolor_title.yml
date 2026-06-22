@@ -1,0 +1,24 @@
+uuid: 5fda2f78-893d-4693-9350-70008df965d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_multicolor_title
+    - filter.format.full_html
+    - paragraphs.paragraphs_type.puzzle
+  module:
+    - text
+id: paragraph.puzzle.field_multicolor_title
+field_name: field_multicolor_title
+entity_type: paragraph
+bundle: puzzle
+label: 'Multicolor title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

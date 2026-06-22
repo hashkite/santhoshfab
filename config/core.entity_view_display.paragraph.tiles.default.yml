@@ -1,0 +1,70 @@
+uuid: 2c3e27bb-69ab-465f-be33-ddf2aa7be375
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tiles.field_columns_layout
+    - field.field.paragraph.tiles.field_description
+    - field.field.paragraph.tiles.field_multicolor_title
+    - field.field.paragraph.tiles.field_paragraphs
+    - field.field.paragraph.tiles.field_text_style
+    - paragraphs.paragraphs_type.tiles
+  module:
+    - mck_rest_apis
+id: paragraph.tiles.default
+targetEntityType: paragraph
+bundle: tiles
+mode: default
+content:
+  field_columns_layout:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_description:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_multicolor_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_paragraphs:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: paragraph
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_text_style:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+    third_party_settings: {  }
+    weight: 5
+    region: content
+hidden:
+  extra_field_popup: true

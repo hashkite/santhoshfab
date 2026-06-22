@@ -1,0 +1,21 @@
+uuid: 6af5d6f5-245c-46bb-9fcc-dd82f189d958
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_verified
+    - paragraphs.paragraphs_type.person
+id: paragraph.person.field_verified
+field_name: field_verified
+entity_type: paragraph
+bundle: person
+label: Verified
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

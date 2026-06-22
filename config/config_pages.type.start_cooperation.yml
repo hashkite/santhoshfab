@@ -1,0 +1,17 @@
+uuid: 672999b3-64bd-4856-beaf-677fecc48d3d
+langcode: en
+status: true
+dependencies: {  }
+id: start_cooperation
+label: 'Start cooperation'
+token: false
+context:
+  show_warning: true
+  group:
+    language: false
+  fallback:
+    language: ''
+menu:
+  path: ''
+  weight: 0
+  description: ''

@@ -1,0 +1,151 @@
+@import '../../../app/styles/functions';
+@import '../../../app/styles/mixins';
+@import '../../../app/styles/variables';
+@import '../../../app/styles/colors';
+
+.team {
+  padding-top: 200px;
+  padding-bottom: 300px;
+  color: $white;
+
+  @include breakpoint-down($xl) {
+    padding-top: 100px;
+    padding-bottom: 170px;
+  }
+
+  @include breakpoint-down($md) {
+    padding-top: 70px;
+    padding-bottom: 150px;
+  }
+
+  @include breakpoint-down($sm) {
+    padding-top: 60px;
+    padding-bottom: 100px;
+  }
+
+  + * {
+    padding-top: 1px;
+    margin-top: 1px;
+  }
+
+  &__img img {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+  }
+
+  &__content {
+    z-index: 1;
+
+    .row {
+      @include breakpoint-down($xl) {
+        margin: 0;
+      }
+    }
+
+    .col-md-7 {
+      @include breakpoint-down($xl) {
+        flex-basis: 70%;
+        padding: 0;
+        width: 70%;
+      }
+
+      @include breakpoint-down($md) {
+        flex-basis: 80%;
+        width: 80%;
+      }
+
+      @include breakpoint-down($xs) {
+        flex-basis: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  &__title {
+    h2 {
+      color: inherit;
+    }
+
+    &-top {
+      margin-bottom: 35px;
+    }
+  }
+
+  &__description {
+    margin-top: 35px;
+  }
+
+  &__link {
+    margin-top: 70px;
+    padding-left: 40px;
+    padding-right: 40px;
+
+    @include breakpoint-down($xl) {
+      margin-top: 50px;
+    }
+
+    span {
+      background: url('#{$icons_path}/arrow-right.svg') no-repeat center;
+      display: inline-block;
+      width: 20px;
+      height: 10px;
+      position: relative;
+      z-index: 1;
+    }
+
+    &:hover {
+      &::after,
+      &::before {
+        transform: scale(60);
+      }
+    }
+  }
+
+  &__decor {
+    svg {
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      z-index: 1;
+    }
+  }
+
+  &.without_decor {
+    background: $white;
+    margin-top: -200px;
+    padding-top: 300px;
+    padding-bottom: 200px;
+    z-index: 0;
+
+    @include breakpoint-down($xl) {
+      margin-top: -100px;
+      padding-top: 170px;
+      padding-bottom: 100px;
+    }
+
+    .team__title {
+      span {
+        &:not(.purple),
+        &:not(.yellow) {
+          color: $white !important;
+        }
+      }
+    }
+
+    picture {
+      img {
+        top: 2px;
+        left: -1px;
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

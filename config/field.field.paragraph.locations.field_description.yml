@@ -1,0 +1,24 @@
+uuid: afe5c2b2-071b-4748-b4c4-5878819d0058
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - filter.format.basic_html
+    - paragraphs.paragraphs_type.locations
+  module:
+    - text
+id: paragraph.locations.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: locations
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text_long

@@ -1,0 +1,62 @@
+uuid: 265c26f9-46c2-4ee8-8350-f7a1c4349000
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.service_steps.field_background_color
+    - field.field.paragraph.service_steps.field_description
+    - field.field.paragraph.service_steps.field_title
+    - paragraphs.paragraphs_type.service_steps
+  module:
+    - color_field
+    - conditional_fields
+    - text
+id: paragraph.service_steps.default
+targetEntityType: paragraph
+bundle: service_steps
+mode: default
+content:
+  field_background_color:
+    type: color_field_widget_default
+    weight: 5
+    region: content
+    settings:
+      placeholder_color: ''
+      placeholder_opacity: ''
+    third_party_settings:
+      conditional_fields:
+        27d961e9-2bd8-488e-96f5-738dfee9499d:
+          entity_type: paragraph
+          bundle: marketing_cards
+          dependee: field_card_type
+          settings:
+            state: visible
+            reset: false
+            condition: value
+            grouping: OR
+            values_set: 3
+            value: ''
+            values: "colored\r\nsmall_colored"
+            value_form: {  }
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_description:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

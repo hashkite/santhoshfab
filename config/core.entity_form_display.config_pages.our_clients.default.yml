@@ -1,0 +1,23 @@
+uuid: 3eeccaf7-4205-4c93-b047-91fb16ee024d
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.our_clients
+    - field.field.config_pages.our_clients.field_images
+  module:
+    - media_library
+id: config_pages.our_clients.default
+targetEntityType: config_pages
+bundle: our_clients
+mode: default
+content:
+  field_images:
+    type: media_library_widget
+    weight: 0
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+hidden:
+  label: true

@@ -1,0 +1,24 @@
+uuid: 58f5e769-eb10-474a-9f24-4e1387ac3ba2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - filter.format.basic_html
+    - paragraphs.paragraphs_type.comparison_table
+  module:
+    - text
+id: paragraph.comparison_table.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: comparison_table
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text_long

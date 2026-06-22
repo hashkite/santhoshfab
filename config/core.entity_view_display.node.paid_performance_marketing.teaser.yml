@@ -1,0 +1,26 @@
+uuid: ae229b8d-9edc-4c10-8b48-047d1486578f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.paid_performance_marketing.field_hero
+    - field.field.node.paid_performance_marketing.field_marketing_paragrapghs
+    - node.type.paid_performance_marketing
+  module:
+    - user
+id: node.paid_performance_marketing.teaser
+targetEntityType: node
+bundle: paid_performance_marketing
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  extra_field_favorite: true
+  extra_field_popup: true
+  field_hero: true
+  field_marketing_paragrapghs: true

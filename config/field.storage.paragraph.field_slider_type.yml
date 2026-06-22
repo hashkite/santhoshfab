@@ -1,0 +1,36 @@
+uuid: 54c6789c-589c-4370-bc00-b6cab10a222c
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_slider_type
+field_name: field_slider_type
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: huge_title
+      label: 'Huge Title'
+    -
+      value: infinity_arrows
+      label: 'Infinity arrows'
+    -
+      value: services
+      label: Services
+    -
+      value: talent
+      label: Talent
+    -
+      value: circle
+      label: Circle
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

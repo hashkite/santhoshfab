@@ -1,0 +1,50 @@
+uuid: 194f0eff-c848-4762-a600-5d2195d14eeb
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.hire_popup
+    - field.field.config_pages.hire_popup.field_button
+    - field.field.config_pages.hire_popup.field_paragraphs
+    - field.field.config_pages.hire_popup.field_title
+  module:
+    - mck_rest_apis
+id: config_pages.hire_popup.default
+targetEntityType: config_pages
+bundle: hire_popup
+mode: default
+content:
+  field_button:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: default
+      storage: ''
+      convert: 0
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_paragraphs:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

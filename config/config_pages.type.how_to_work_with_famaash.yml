@@ -1,0 +1,17 @@
+uuid: 91c57358-e66e-4573-934c-809ea0909f7c
+langcode: en
+status: true
+dependencies: {  }
+id: how_to_work_with_famaash
+label: 'How to Work with Famaash'
+token: false
+context:
+  show_warning: true
+  group:
+    language: false
+  fallback:
+    language: ''
+menu:
+  path: ''
+  weight: 0
+  description: ''

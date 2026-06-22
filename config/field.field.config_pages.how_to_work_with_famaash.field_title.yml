@@ -1,0 +1,19 @@
+uuid: 003b6ed8-f9aa-48cf-aa30-b17907886b13
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.how_to_work_with_famaash
+    - field.storage.config_pages.field_title
+id: config_pages.how_to_work_with_famaash.field_title
+field_name: field_title
+entity_type: config_pages
+bundle: how_to_work_with_famaash
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

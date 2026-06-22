@@ -1,0 +1,39 @@
+uuid: cdc742b1-c2ac-4bf5-a55f-92d1c1c640ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.stat_item.field_stat
+    - field.field.paragraph.stat_item.field_title
+    - paragraphs.paragraphs_type.stat_item
+  module:
+    - mck_rest_apis
+id: paragraph.stat_item.default
+targetEntityType: paragraph
+bundle: stat_item
+mode: default
+content:
+  field_stat:
+    type: mck_react
+    label: above
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  extra_field_popup: true

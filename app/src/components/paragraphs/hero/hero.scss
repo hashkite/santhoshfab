@@ -1,0 +1,1226 @@
+@import '../../../app/styles/functions';
+@import '../../../app/styles/mixins';
+@import '../../../app/styles/variables';
+@import '../../../app/styles/colors';
+
+.hero {
+  &__section {
+    overflow: hidden;
+    padding: 14vh 0 8vh;
+    position: relative;
+    transition: 0.3s;
+
+    @include breakpoint-down($md) {
+      padding: 7vh 0 5vh;
+    }
+
+    &.--type {
+      &-hero_slider {
+        background: url(/media/bg-hero.jpg) no-repeat center / cover;
+      }
+
+      &-hero {
+        padding-top: 0;
+        background: url(/media/bg-article.jpg) no-repeat center / cover;
+        overflow: visible;
+        padding-bottom: 0;
+      }
+    }
+
+    &.--default {
+      background: $purple-700;
+    }
+
+    &.--hero-block-type {
+      &-tailored_teams {
+        background: url(/media/bg-managed-teams.jpg) no-repeat center / cover;
+        z-index: 1;
+
+        +.sponsors-carousel__block {
+          margin-top: -270px;
+          margin-bottom: 80px;
+          transition: 0.3s;
+
+          @include breakpoint-down($xxl) {
+            margin-top: -250px;
+            margin-bottom: 50px;
+          }
+
+          @include breakpoint-down($xl) {
+            margin-top: -200px;
+            margin-bottom: 30px;
+          }
+
+          @include breakpoint-down($lg) {
+            margin-top: -150px;
+          }
+
+          @include breakpoint-down($sm) {
+            margin-top: -110px;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+    &.with-top-menu {
+      .hero__block {
+        padding-top: 180px;
+      }
+    }
+  }
+
+  &__decor {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+
+    svg {
+      display: block;
+      height: auto;
+      transform-origin: center bottom;
+      width: 100%;
+    }
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    padding: 150px 0;
+    position: relative;
+    transition: padding 0.3s;
+
+    @include breakpoint-up($xxl) {
+      min-height: 750px;
+    }
+
+    @include breakpoint-down($xl) {
+      padding: 110px 0 110px;
+    }
+
+    @include breakpoint-down($lg) {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+
+    .container {
+      margin: auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .breadcrumbs__block {
+      margin-bottom: 50px;
+      position: static;
+    }
+
+    h1 {
+      color: $white;
+      font-size: 55px;
+      letter-spacing: -1.1px;
+      line-height: 1.16;
+      max-width: 1000px;
+
+      @include breakpoint-down($xxl) {
+        font-size: 45px;
+      }
+
+      @include breakpoint-down($xl) {
+        font-size: 35px;
+        max-width: 800px;
+      }
+
+      @include breakpoint-down($lg) {
+        font-size: 30px;
+      }
+    }
+
+    &-pic {
+      img {
+        height: 375px;
+        margin: auto;
+        position: absolute;
+        right: 0;
+        bottom: -212px;
+        left: 0;
+        transition: height 0.3s, bottom 0.3s;
+        width: auto;
+        z-index: 1;
+
+        @include breakpoint-down($xxl) {
+          height: 250px;
+          bottom: -143px;
+        }
+
+        @include breakpoint-down($xs) {
+          height: 200px;
+          bottom: -110px;
+        }
+      }
+    }
+
+    &-img {
+      img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+      }
+    }
+
+    &-description {
+      color: $gray-50;
+      margin-top: 45px;
+      max-width: 720px;
+      transition: 0.3s;
+
+      @include breakpoint-down($xl) {
+        margin-top: 35px;
+      }
+
+      @include breakpoint-down($lg) {
+        margin-top: 25px;
+      }
+    }
+
+    &-people {
+      display: flex;
+      position: absolute;
+      right: 0;
+      width: 40%;
+      top: 50%;
+
+      @include breakpoint-down($xxl) {
+        transform: scale(0.8);
+      }
+
+      @include breakpoint-down($xl) {
+        display: none;
+      }
+
+      .person-alt {
+        padding: 30px 20px;
+        position: absolute;
+        background: #f5f9ff26;
+        backdrop-filter: blur(5px);
+        border-radius: 12px;
+        margin-bottom: 20px;
+        width: 220px;
+
+        &:first-child {
+          left: 0;
+          top: 0;
+          transform: translateY(20%);
+
+          @include breakpoint-down($xxl) {
+            transform: translateY(5%);
+          }
+        }
+
+        &:last-child {
+          right: 0;
+          bottom: 0;
+          transform: translateY(25%);
+        }
+
+        &__pic {
+          margin-top: 0;
+          margin-bottom: 20px;
+
+          img {
+            width: 85px;
+            height: 85px;
+            border-radius: 50%;
+            object-fit: cover;
+            overflow: hidden;
+            margin-left: auto;
+            margin-right: auto;
+          }
+        }
+
+        &__cnt {
+          color: $gray-50;
+
+          h3 {
+            font-weight: 600;
+            color: inherit;
+            margin-bottom: 3px;
+          }
+        }
+
+        &__role {
+          font-size: 16px;
+          letter-spacing: -0.5px;
+        }
+      }
+    }
+
+    &.--default {
+      .hero__webform {
+        margin-top: 50px;
+        max-width: 650px;
+        position: relative;
+
+        @include breakpoint-down($xl) {
+          max-width: 630px;
+        }
+
+        .webform__form {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          position: relative;
+
+          &.--services {
+            margin-bottom: 40px;
+          }
+
+          #work_email {
+            padding-right: 250px;
+
+            @include breakpoint-down($xl) {
+              padding-top: 30px;
+              padding-bottom: 30px;
+            }
+
+            @include breakpoint-down($lg) {
+              padding-left: 65px;
+            }
+
+            @include breakpoint-down($sm) {
+              padding-top: 20px;
+              padding-bottom: 20px;
+              padding-left: 45px;
+              padding-right: 45px;
+            }
+          }
+
+          @include breakpoint-down($xs) {
+            flex-direction: column;
+          }
+
+          .field-webform_actions {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            height: 60px;
+
+            @include breakpoint-down($xl) {
+              height: 60px;
+            }
+
+            @include breakpoint-down($sm) {
+              position: static;
+              width: 100%;
+            }
+
+            .btn-secondary {
+              height: 100%;
+              padding-left: 50px;
+              padding-right: 50px;
+              min-width: 220px;
+
+              @include breakpoint-down($sm) {
+                padding-left: 20px;
+                padding-right: 30px;
+                min-width: 150px;
+                padding-top: 3px;
+                padding-bottom: 3px;
+                height: 60px;
+              }
+            }
+          }
+        }
+
+        .text-error,
+        .text-success {
+          display: none;
+        }
+      }
+
+      .title {
+        max-width: 850px;
+
+        @include breakpoint-down($xl) {
+          max-width: 720px;
+        }
+      }
+
+      .has-webform {
+        .hero__block-cnt {
+          max-width: 650px;
+
+          @include breakpoint-down($xl) {
+            max-width: 630px;
+          }
+        }
+
+        .title,
+        .hero__block-description {
+          max-width: 100%;
+        }
+      }
+    }
+
+    &.--type {
+      &-article {
+        background: transparent;
+        color: $white;
+        padding: 150px 0 115px;
+        transition: padding 0.3s;
+
+        @include breakpoint-down($xxl) {
+          padding: 130px 0 100px;
+        }
+
+        @include breakpoint-down($xl) {
+          padding-top: 100px;
+        }
+
+        @include breakpoint-down($lg) {
+          padding-bottom: 70px;
+        }
+
+        @include breakpoint-down($md) {
+          padding-bottom: 50px;
+        }
+
+        @include breakpoint-down($xs) {
+          padding-top: 80px;
+        }
+
+        .breadcrumbs__block {
+          margin: 15px 0 130px;
+          position: static;
+          transition: 0.3s;
+
+          @include breakpoint-down($xl) {
+            margin-bottom: 70px;
+          }
+
+          @include breakpoint-down($lg) {
+            margin-bottom: 50px;
+          }
+
+          @include breakpoint-down($md) {
+            margin-bottom: 35px;
+          }
+
+          @include breakpoint-down($xs) {
+            margin-bottom: 25px;
+          }
+        }
+
+        .container {
+          display: flex;
+          gap: 120px;
+          transition: 0.3s;
+
+          @include breakpoint-down($xl) {
+            gap: 80px;
+          }
+
+          @include breakpoint-down($lg) {
+            gap: 50px;
+          }
+
+          @include breakpoint-down($md) {
+            flex-direction: column;
+            gap: 35px;
+          }
+        }
+
+        h1 {
+          font-size: 55px;
+          line-height: 64px;
+          letter-spacing: -1.1px;
+          text-align: left;
+
+          @include breakpoint-down($xl) {
+            font-size: 45px;
+            line-height: 55px;
+          }
+
+          @include breakpoint-down($lg) {
+            font-size: 40px;
+            line-height: 50px;
+          }
+
+          @include breakpoint-down($md) {
+            font-size: 35px;
+            line-height: 45px;
+          }
+
+          @include breakpoint-down($xs) {
+            font-size: 30px;
+            line-height: 40px;
+          }
+        }
+
+        h1,
+        .title {
+          +.article-info__block {
+            margin-top: 90px;
+            transition: margin 0.3s;
+
+            @include breakpoint-down($xl) {
+              margin-top: 50px;
+            }
+
+            @include breakpoint-down($md) {
+              margin-top: 35px;
+            }
+
+            @include breakpoint-down($xs) {
+              margin-top: 30px;
+            }
+          }
+        }
+
+        .hero__block-description {
+          +.article-info__block {
+            margin-top: 20px;
+          }
+
+          +.hero__cta-buttons {
+            margin-top: 40px;
+          }
+        }
+
+        .hero__cta-buttons {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 20px;
+          margin-top: 40px;
+          margin-bottom: 40px;
+
+          @include breakpoint-down($md) {
+            gap: 15px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+          }
+
+          @include breakpoint-down($xs) {
+            flex-direction: column;
+
+            .btn {
+              width: 100%;
+            }
+          }
+
+          .btn {
+
+            &-secondary,
+            &-white-border {
+              font-size: 16px;
+              padding: 15px 30px;
+              transition: 0.3s;
+
+              @include breakpoint-down($sm) {
+                font-size: 15px;
+                padding: 12px 25px;
+              }
+            }
+          }
+        }
+
+        .hero__block {
+          &-pic {
+            margin-bottom: -300px;
+            position: relative;
+            transition: 0.3s;
+            width: 44%;
+            z-index: 1;
+
+            @include breakpoint-down($xxl) {
+              margin-bottom: -150px;
+            }
+
+            @include breakpoint-down($lg) {
+              margin-bottom: -100px;
+            }
+
+            @include breakpoint-down($md) {
+              margin-bottom: 0;
+              width: 100%;
+            }
+
+            img {
+              border-radius: 0 15px 15px 0;
+              height: 100%;
+              object-fit: cover;
+              object-position: center;
+              margin: 0;
+              max-width: none;
+              position: absolute;
+              top: 0;
+              right: 0;
+              bottom: auto;
+              left: auto;
+              transition: 0.3s;
+              width: calc(((100vw - 1530px) / 2) + 100%);
+              box-shadow: 0px 0px 0px 1px rgba($black, 0.05);
+
+              @include breakpoint-down($xxl) {
+                width: calc(((100vw - 1190px) / 2) + 100%);
+              }
+
+              @include breakpoint-down($xl) {
+                width: calc(((100vw - 994px) / 2) + 100%);
+              }
+
+              @include breakpoint-down($lg) {
+                width: calc(100% + 30px);
+              }
+
+              @include breakpoint-down($md) {
+                border-radius: 0;
+                position: static;
+                margin-left: -30px;
+                width: calc(100% + 60px);
+              }
+
+              @include breakpoint-down($xs) {
+                margin-left: -20px;
+                width: calc(100% + 40px);
+              }
+            }
+          }
+
+          &-cnt {
+            transition: 0.3s;
+            width: 56%;
+
+            @include breakpoint-down($md) {
+              width: 100%;
+            }
+          }
+        }
+      }
+
+      &-talent {
+        transition: 0.3s;
+
+        @include breakpoint-down($md) {
+          padding-bottom: 0;
+        }
+
+        >.container {
+          position: static;
+
+          @include breakpoint-down($md) {
+            display: flex;
+            flex-direction: column;
+          }
+        }
+
+        .hero__block {
+          &-cnt {
+            @include breakpoint-down($md) {
+              padding-bottom: 70px;
+            }
+
+            .title {
+              max-width: 750px;
+              transition: 0.3s;
+
+              @include breakpoint-down($xxl) {
+                max-width: 600px;
+              }
+
+              @include breakpoint-down($xl) {
+                max-width: 500px;
+              }
+
+              @include breakpoint-down($md) {
+                max-width: 90%;
+              }
+
+              @include breakpoint-down($sm) {
+                max-width: 100%;
+              }
+            }
+          }
+
+          &-description {
+            max-width: 600px;
+            transition: 0.3s;
+
+            @include breakpoint-down($xl) {
+              max-width: 500px;
+            }
+
+            @include breakpoint-down($md) {
+              max-width: 90%;
+            }
+
+            @include breakpoint-down($sm) {
+              max-width: 100%;
+            }
+          }
+
+          &-pic {
+            @include breakpoint-down($md) {
+              order: 1;
+              margin-top: 50px;
+            }
+
+            @include breakpoint-down($xs) {
+              margin-top: 35px;
+            }
+
+            @include breakpoint-down($md) {
+              margin: 0 0 30px;
+              order: -1;
+            }
+
+            img {
+              height: 100%;
+              bottom: 0;
+              right: calc((100vw - 1880px) / 2);
+              left: auto;
+
+              @include breakpoint-down($fluid) {
+                height: 600px;
+                bottom: 51px;
+                right: calc((100vw - 1530px) / 2);
+              }
+
+              @include breakpoint-down($xxl) {
+                right: calc((100vw - 1190px) / 2);
+                height: auto;
+                width: 35%;
+              }
+
+              @include breakpoint-down($xl) {
+                right: calc((100vw - 994px) / 2);
+              }
+
+              @include breakpoint-down($lg) {
+                right: 30px;
+              }
+
+              @include breakpoint-down($md) {
+                position: relative;
+                right: 0;
+                bottom: 0;
+                width: 60%;
+              }
+
+              @include breakpoint-down($sm) {
+                width: 80%;
+              }
+
+              @include breakpoint-down($xs) {
+                width: 90%;
+              }
+            }
+          }
+        }
+      }
+
+      &-tailored_teams {
+        padding-bottom: 430px;
+        transition: 0.3s;
+
+        @include breakpoint-down($xxl) {
+          padding-bottom: 330px;
+        }
+
+        @include breakpoint-down($xl) {
+          padding-bottom: 250px;
+        }
+
+        @include breakpoint-down($lg) {
+          padding-bottom: 200px;
+        }
+
+        @include breakpoint-down($sm) {
+          padding-bottom: 150px;
+        }
+
+        .hero__block {
+          &-cnt {
+            max-width: 60%;
+
+            @include breakpoint-down($fluid) {
+              max-width: 650px;
+            }
+
+            @include breakpoint-down($xl) {
+              max-width: 50%;
+            }
+
+            @include breakpoint-down($md) {
+              max-width: 100%;
+            }
+          }
+
+          &-description {
+            max-width: 80%;
+
+            @include breakpoint-down($fluid) {
+              max-width: 750px;
+            }
+          }
+        }
+
+        >.has-webform {
+          align-items: center;
+          display: flex;
+
+          @include breakpoint-down($fluid) {
+            align-items: flex-start;
+          }
+
+          @include breakpoint-down($sm) {
+            display: block;
+          }
+        }
+
+        .hero__webform {
+          flex: 1 0 0%;
+          max-width: 40%;
+          padding-left: 30px;
+          margin-left: auto;
+
+          @include breakpoint-down($fluid) {
+            max-width: 560px;
+          }
+
+          @include breakpoint-down($xl) {
+            flex: 0 0 50%;
+            width: 50%;
+            padding-left: 45px;
+          }
+
+          @include breakpoint-down($sm) {
+            flex: 0 0 100%;
+            width: 100%;
+          }
+
+          @include breakpoint-down($sm) {
+            max-width: 100%;
+            margin-left: 0;
+            padding-left: 0;
+            margin-top: 45px;
+            margin-bottom: 15px;
+          }
+
+          .loading {
+            position: static;
+            display: none;
+          }
+
+          form {
+            display: block;
+            width: 100%;
+          }
+
+          label {
+            font-size: 18px;
+            font-weight: 400;
+            color: $gray-400;
+            opacity: 1;
+            visibility: visible;
+            float: none;
+            display: block;
+            height: auto;
+            width: auto;
+            margin-bottom: 20px;
+            position: static;
+          }
+
+          select {
+            display: block;
+            width: 100%;
+
+            @include breakpoint-down($xl) {
+              height: 60px;
+            }
+          }
+
+          .field-select {
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid rgba($gray-50, 0.3);
+
+            @include breakpoint-down($xl) {
+              padding-bottom: 15px;
+              margin-bottom: 15px;
+            }
+          }
+
+          .field-email {
+            .icon {
+              height: 80px;
+              top: auto;
+
+              @include breakpoint-down($xl) {
+                height: 60px;
+              }
+            }
+
+            input {
+              @include breakpoint-down($xl) {
+                height: 60px;
+              }
+            }
+          }
+
+          .field-webform_actions {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+
+            .btn {
+              height: 60px;
+              top: -10px;
+              right: 25px;
+            }
+
+            @include breakpoint-down($xl) {
+              position: static;
+              margin-left: auto;
+              text-align: right;
+
+              .btn {
+                top: 0;
+                right: 0;
+                left: 0;
+                margin-top: 10px;
+              }
+            }
+          }
+
+          .description {
+            font-size: 12px;
+            color: $gray-50;
+            margin-top: 10px;
+
+            ul {
+              display: flex;
+              flex-wrap: wrap;
+              list-style: none;
+              padding-left: 0;
+              margin-bottom: 0;
+
+              li {
+                margin-right: 10px;
+                margin-bottom: 0;
+                line-height: 1.4;
+
+                &:first-child {
+                  color: $brand-blue;
+                }
+
+                &:last-child {
+                  margin-right: 0;
+                }
+              }
+            }
+          }
+
+          .text-error,
+          .text-success {
+            display: none;
+          }
+        }
+      }
+
+      &-image_right {
+        @include breakpoint-down($md) {
+          padding-bottom: 100px;
+        }
+
+        .container {
+          &.has-webform {
+            display: flex;
+            flex-flow: wrap;
+            gap: 30px;
+
+            @include breakpoint-down($md) {
+              flex-direction: column;
+            }
+
+            .hero {
+              &__block {
+                &-pic {
+                  order: 1;
+                  position: absolute;
+                  top: -15%;
+                  right: 0;
+                  transition: 0.3s;
+                  width: calc(50% - 25px);
+
+                  @include breakpoint-down($fluid) {
+                    top: -5%;
+                  }
+
+                  @include breakpoint-down($md) {
+                    margin: auto;
+                    order: 0;
+                    position: static;
+                    width: 75%;
+                  }
+
+                  @include breakpoint-down($xs) {
+                    width: 100%;
+                  }
+
+                  img {
+                    height: 600px;
+                    position: static;
+                    transition: 0.3s;
+
+                    @include breakpoint-down($fluid) {
+                      height: 550px;
+                    }
+
+                    @include breakpoint-down($xl) {
+                      height: 400px;
+                    }
+
+                    @include breakpoint-down($lg) {
+                      height: 350px;
+                    }
+
+                    @include breakpoint-down($sm) {
+                      height: 250px;
+                    }
+
+                    @include breakpoint-down($xs) {
+                      height: 200px;
+                    }
+                  }
+                }
+
+                &-cnt {
+                  padding-right: 40%;
+                  transition: 0.3s;
+                  width: 100%;
+
+                  @include breakpoint-down($fluid) {
+                    padding-right: 50%;
+                  }
+
+                  @include breakpoint-down($xl) {
+                    padding-right: 30%;
+                  }
+
+                  @include breakpoint-down($md) {
+                    padding-right: 0;
+                  }
+                }
+
+                &-description {
+                  max-width: 1000px;
+                  transition: 0.3s;
+
+                  @include breakpoint-down($fluid) {
+                    max-width: 720px;
+                  }
+
+                  @include breakpoint-down($md) {
+                    max-width: 100%;
+                  }
+                }
+              }
+
+              &__webform {
+                max-width: 1000px;
+                order: 2;
+                transition: 0.3s;
+                width: 100%;
+
+                @include breakpoint-down($fluid) {
+                  max-width: 850px;
+                }
+
+                @include breakpoint-down($xl) {
+                  max-width: 750px;
+                }
+
+                @include breakpoint-down($md) {
+                  max-width: 100%;
+                }
+
+                .webform__form {
+                  display: flex;
+                  flex-direction: column;
+                  width: 100%;
+                  position: relative;
+
+                  &.--services {
+                    margin-bottom: 40px;
+
+                    @include breakpoint-down($md) {
+                      margin-bottom: 0;
+                    }
+                  }
+
+                  #work_email {
+                    padding-right: 250px;
+
+                    @include breakpoint-down($xl) {
+                      padding-top: 30px;
+                      padding-bottom: 30px;
+                    }
+
+                    @include breakpoint-down($lg) {
+                      padding-left: 65px;
+                    }
+
+                    @include breakpoint-down($sm) {
+                      padding-left: 45px;
+                    }
+
+                    @include breakpoint-down($xs) {
+                      padding: 20px 20px 20px 45px;
+                    }
+                  }
+
+                  @include breakpoint-down($xs) {
+                    flex-direction: column;
+                  }
+
+                  fieldset {
+                    &:first-child {
+                      width: calc(100% - 220px);
+
+                      @include breakpoint-down($md) {
+                        width: calc(100% - 100px);
+                      }
+
+                      @include breakpoint-down($sm) {
+                        width: 100%;
+                      }
+                    }
+                  }
+
+                  .field-webform_actions {
+                    position: absolute;
+                    right: 230px;
+                    top: 10px;
+                    height: 60px;
+
+                    @include breakpoint-down($xl) {
+                      height: 60px;
+                    }
+
+                    @include breakpoint-down($md) {
+                      right: 110px;
+                    }
+
+                    @include breakpoint-down($sm) {
+                      right: 10px;
+                    }
+
+                    @include breakpoint-down($xs) {
+                      position: static;
+                    }
+
+                    .btn-secondary {
+                      height: 100%;
+                      padding-left: 50px;
+                      padding-right: 50px;
+                      min-width: 220px;
+
+                      @include breakpoint-down($sm) {
+                        padding-left: 20px;
+                        padding-right: 30px;
+                        min-width: 150px;
+                        padding-top: 3px;
+                        padding-bottom: 3px;
+                        height: 60px;
+                      }
+
+                      @include breakpoint-down($xs) {
+                        height: auto;
+                        padding: 20px 30px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &-small {
+        min-height: auto;
+        padding-bottom: 60px;
+        padding-top: 170px;
+
+        .breadcrumbs__block {
+          display: none;
+        }
+
+        h1 {
+          font-size: 45px;
+
+          @include breakpoint-down($xs) {
+            font-size: 40px;
+          }
+        }
+      }
+    }
+
+    &.case-study {
+      padding-top: 200px;
+
+      @include breakpoint-down($lg) {
+        padding-top: 150px;
+      }
+
+      @include breakpoint-down($xs) {
+        padding-top: 100px;
+      }
+
+      .breadcrumbs__block {
+        display: none;
+      }
+    }
+
+    .not-found & {
+      .hero__block {
+        &-description {
+          a {
+            color: $white;
+            text-decoration: underline;
+
+            &:hover {
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.hero__webform {
+  .proposal {
+    margin-top: 50px;
+    display: flex;
+    background-color: #ffff;
+    border-radius: 10px;
+    align-items: center;
+
+    .fieldset-textfield {
+      flex: 4.5;
+    }
+
+    .fieldset-webform_actions {
+      flex: 1;
+    }
+  }
+}

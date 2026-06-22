@@ -1,0 +1,16 @@
+uuid: e117c05c-08e6-4edf-8521-36c5c998cdeb
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_ee
+third_party_settings:
+  paragraphs_ee:
+    paragraphs_categories:
+      global: global
+id: logos_wrapper
+label: 'Logos Wrapper'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

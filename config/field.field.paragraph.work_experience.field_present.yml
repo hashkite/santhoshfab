@@ -1,0 +1,21 @@
+uuid: 87fc5ddc-f50f-4374-a8c7-71a30ff23bc4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_present
+    - paragraphs.paragraphs_type.work_experience
+id: paragraph.work_experience.field_present
+field_name: field_present
+entity_type: paragraph
+bundle: work_experience
+label: 'I am currently working in this role'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

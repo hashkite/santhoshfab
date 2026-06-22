@@ -1,0 +1,61 @@
+uuid: a1024b68-7e5c-4466-95a0-73af31dfc495
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.all_services.field_description
+    - field.field.paragraph.all_services.field_images
+    - field.field.paragraph.all_services.field_multicolor_title
+    - field.field.paragraph.all_services.field_number
+    - paragraphs.paragraphs_type.all_services
+  module:
+    - autocomplete_deluxe
+    - text
+id: paragraph.all_services.default
+targetEntityType: paragraph
+bundle: all_services
+mode: default
+content:
+  field_description:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_images:
+    type: autocomplete_deluxe
+    weight: 3
+    region: content
+    settings:
+      match_operator: CONTAINS
+      autocomplete_route_name: autocomplete_deluxe.autocomplete
+      size: 60
+      selection_handler: default
+      limit: 10
+      min_length: 0
+      delimiter: ''
+      not_found_message_allow: false
+      not_found_message: "The term '@term' will be added"
+      no_empty_message: 'No terms could be found. Please type in order to add a new term.'
+    third_party_settings: {  }
+  field_multicolor_title:
+    type: text_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_number:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

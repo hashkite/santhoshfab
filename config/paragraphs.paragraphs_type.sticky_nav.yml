@@ -1,0 +1,16 @@
+uuid: 132e6dd4-3f9d-4f6b-9d0f-0f84649eea05
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_ee
+third_party_settings:
+  paragraphs_ee:
+    paragraphs_categories:
+      global: global
+id: sticky_nav
+label: 'Sticky Nav'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

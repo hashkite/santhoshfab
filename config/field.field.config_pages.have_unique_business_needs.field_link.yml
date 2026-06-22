@@ -1,0 +1,23 @@
+uuid: 2b4adc05-2fd1-4c05-975d-c720588d70be
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.have_unique_business_needs
+    - field.storage.config_pages.field_link
+  module:
+    - link
+id: config_pages.have_unique_business_needs.field_link
+field_name: field_link
+entity_type: config_pages
+bundle: have_unique_business_needs
+label: Link
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

@@ -1,0 +1,29 @@
+uuid: 165defe9-c33a-4fce-8215-b2b89ff6c454
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_brand_logos
+    - media.type.image
+    - paragraphs.paragraphs_type.brands_images
+id: paragraph.brands_images.field_brand_logos
+field_name: field_brand_logos
+entity_type: paragraph
+bundle: brands_images
+label: 'Brand Logos'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

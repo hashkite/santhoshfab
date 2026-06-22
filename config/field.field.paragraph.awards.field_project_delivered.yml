@@ -1,0 +1,23 @@
+uuid: aa825c79-7569-4f4d-ba0b-f85570569628
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_project_delivered
+    - paragraphs.paragraphs_type.awards
+id: paragraph.awards.field_project_delivered
+field_name: field_project_delivered
+entity_type: paragraph
+bundle: awards
+label: 'Project Delivered'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

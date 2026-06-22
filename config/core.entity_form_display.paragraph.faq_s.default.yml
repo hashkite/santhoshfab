@@ -1,0 +1,44 @@
+uuid: b7a7b1c7-730a-46c0-8ebb-0ae63c817a2a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.faq_s.field_paragraphs
+    - field.field.paragraph.faq_s.field_title
+    - paragraphs.paragraphs_type.faq_s
+  module:
+    - paragraphs
+id: paragraph.faq_s.default
+targetEntityType: paragraph
+bundle: faq_s
+mode: default
+content:
+  field_paragraphs:
+    type: paragraphs
+    weight: 3
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

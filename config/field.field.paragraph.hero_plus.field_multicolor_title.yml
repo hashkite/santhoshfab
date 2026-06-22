@@ -1,0 +1,24 @@
+uuid: df917977-bfcc-4d3b-b905-d348a078d9bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_multicolor_title
+    - filter.format.full_html
+    - paragraphs.paragraphs_type.hero_plus
+  module:
+    - text
+id: paragraph.hero_plus.field_multicolor_title
+field_name: field_multicolor_title
+entity_type: paragraph
+bundle: hero_plus
+label: 'Multicolor title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

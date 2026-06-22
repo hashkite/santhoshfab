@@ -1,0 +1,23 @@
+uuid: 75eeb048-c712-4e38-b269-b1382d2c1002
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_review_numbers
+    - paragraphs.paragraphs_type.logo_item
+id: paragraph.logo_item.field_review_numbers
+field_name: field_review_numbers
+entity_type: paragraph
+bundle: logo_item
+label: 'Review Numbers'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

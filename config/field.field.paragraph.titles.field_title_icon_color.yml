@@ -1,0 +1,23 @@
+uuid: 7a1c4fac-6757-4822-bec9-be7a1322e27b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title_icon_color
+    - paragraphs.paragraphs_type.titles
+  module:
+    - options
+id: paragraph.titles.field_title_icon_color
+field_name: field_title_icon_color
+entity_type: paragraph
+bundle: titles
+label: 'Main color'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: purple
+default_value_callback: ''
+settings: {  }
+field_type: list_string

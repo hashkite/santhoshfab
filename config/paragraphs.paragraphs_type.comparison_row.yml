@@ -1,0 +1,15 @@
+uuid: 8340660c-81ea-4bff-9375-016d04fa0926
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_ee
+third_party_settings:
+  paragraphs_ee:
+    paragraphs_categories: {  }
+id: comparison_row
+label: 'Comparison Row'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

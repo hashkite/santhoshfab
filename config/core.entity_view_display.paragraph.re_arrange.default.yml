@@ -1,0 +1,51 @@
+uuid: 4258750e-604f-492d-9b55-b34ad4607fd5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.re_arrange.field_description
+    - field.field.paragraph.re_arrange.field_multicolor_title
+    - field.field.paragraph.re_arrange.field_paragraphs
+    - paragraphs.paragraphs_type.re_arrange
+  module:
+    - mck_rest_apis
+id: paragraph.re_arrange.default
+targetEntityType: paragraph
+bundle: re_arrange
+mode: default
+content:
+  field_description:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_multicolor_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_paragraphs:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  extra_field_popup: true

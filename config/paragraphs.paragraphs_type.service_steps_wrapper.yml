@@ -1,0 +1,16 @@
+uuid: 27a1b11b-d9a0-41dc-bbc8-5bc07685f321
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_ee
+third_party_settings:
+  paragraphs_ee:
+    paragraphs_categories:
+      global: global
+id: service_steps_wrapper
+label: 'Service Steps Wrapper'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

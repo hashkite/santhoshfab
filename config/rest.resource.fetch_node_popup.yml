@@ -1,0 +1,20 @@
+uuid: ba266af9-39ef-4c91-a621-18984eaee712
+langcode: en
+status: true
+dependencies:
+  module:
+    - mck_rest_apis
+    - serialization
+    - user
+_core:
+  default_config_hash: mxdJzDgoNo_NxlxkQOW1V1VSpMhSpY1smpAshy6__6I
+id: fetch_node_popup
+plugin_id: fetch_node_popup
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - json
+  authentication:
+    - cookie

@@ -1,0 +1,87 @@
+uuid: b644674e-46c9-4458-8772-f7bb1d7078c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.feedback.field_description
+    - field.field.paragraph.feedback.field_image
+    - field.field.paragraph.feedback.field_name
+    - field.field.paragraph.feedback.field_rate
+    - field.field.paragraph.feedback.field_role
+    - field.field.paragraph.feedback.field_title
+    - paragraphs.paragraphs_type.feedback
+  module:
+    - mck_rest_apis
+id: paragraph.feedback.default
+targetEntityType: paragraph
+bundle: feedback
+mode: default
+content:
+  field_description:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_image:
+    type: mck_react
+    label: hidden
+    settings:
+      format: media
+      view_mode: default
+      convert: '1'
+      storage: media
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_name:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_rate:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: default
+      storage: ''
+      convert: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_role:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  extra_field_popup: true

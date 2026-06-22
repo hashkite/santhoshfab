@@ -1,0 +1,55 @@
+uuid: 3b42373e-1e7c-44da-8a68-b0b5357bf24d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.menu_link_content.main.field_description
+    - field.field.menu_link_content.main.field_icon
+    - field.field.menu_link_content.main.field_service
+    - system.menu.main
+  module:
+    - mck_rest_apis
+id: menu_link_content.main.default
+targetEntityType: menu_link_content
+bundle: main
+mode: default
+content:
+  children:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_description:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_icon:
+    type: mck_react
+    label: hidden
+    settings:
+      format: media
+      view_mode: default
+      convert: '1'
+      storage: media
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_service:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: token
+      storage: taxonomy_term
+      convert: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

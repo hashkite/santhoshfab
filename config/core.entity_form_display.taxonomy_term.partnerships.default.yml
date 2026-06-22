@@ -1,0 +1,45 @@
+uuid: 73bd1b47-a395-45bb-901d-dfc123eca64e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.partnerships.field_icon
+    - taxonomy.vocabulary.partnerships
+  module:
+    - media_library
+    - path
+id: taxonomy_term.partnerships.default
+targetEntityType: taxonomy_term
+bundle: partnerships
+mode: default
+content:
+  field_icon:
+    type: media_library_widget
+    weight: 1
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 3
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  description: true

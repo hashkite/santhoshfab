@@ -1,0 +1,16 @@
+uuid: d0533307-2dc4-4c2f-87f0-03325cb349ba
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_ee
+third_party_settings:
+  paragraphs_ee:
+    paragraphs_categories:
+      global: global
+id: offices
+label: Office
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,51 @@
+uuid: 25f73350-efe0-42c4-8dca-7ed6bd7eafa0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.country.field_description
+    - field.field.paragraph.country.field_image
+    - field.field.paragraph.country.field_title
+    - paragraphs.paragraphs_type.country
+  module:
+    - mck_rest_apis
+id: paragraph.country.default
+targetEntityType: paragraph
+bundle: country
+mode: default
+content:
+  field_description:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_image:
+    type: mck_react
+    label: hidden
+    settings:
+      format: media
+      view_mode: default
+      convert: '1'
+      storage: media
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  extra_field_popup: true

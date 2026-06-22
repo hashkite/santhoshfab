@@ -1,0 +1,28 @@
+uuid: c444c274-9a4c-4282-9544-e622f6a3a2f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.talent.field_hero
+    - field.field.node.talent.field_paragraph
+    - field.field.node.talent.field_paragraphs
+    - node.type.talent
+  module:
+    - user
+id: node.talent.teaser
+targetEntityType: node
+bundle: talent
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  extra_field_favorite: true
+  extra_field_popup: true
+  field_hero: true
+  field_paragraph: true
+  field_paragraphs: true

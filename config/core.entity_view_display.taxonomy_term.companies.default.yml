@@ -1,0 +1,27 @@
+uuid: 985853c6-9c73-4a0c-970c-cdc8c8b52951
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.companies.field_image
+    - taxonomy.vocabulary.companies
+  module:
+    - mck_rest_apis
+id: taxonomy_term.companies.default
+targetEntityType: taxonomy_term
+bundle: companies
+mode: default
+content:
+  field_image:
+    type: mck_react
+    label: hidden
+    settings:
+      format: media
+      view_mode: default
+      storage: media
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  description: true
+  extra_field_related_nodes: true

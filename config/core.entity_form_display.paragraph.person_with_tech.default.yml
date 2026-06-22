@@ -1,0 +1,40 @@
+uuid: cf43e209-b7bc-4e58-89e8-59d792c6c8bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.person_with_tech.field_person
+    - field.field.paragraph.person_with_tech.field_taxonomy
+    - paragraphs.paragraphs_type.person_with_tech
+  module:
+    - autocomplete_deluxe
+id: paragraph.person_with_tech.default
+targetEntityType: paragraph
+bundle: person_with_tech
+mode: default
+content:
+  field_person:
+    type: autocomplete_deluxe
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      autocomplete_route_name: autocomplete_deluxe.autocomplete
+      size: 60
+      selection_handler: default
+      limit: 10
+      min_length: 0
+      delimiter: ''
+      not_found_message_allow: false
+      not_found_message: "The term '@term' will be added"
+      no_empty_message: 'No terms could be found. Please type in order to add a new term.'
+    third_party_settings: {  }
+  field_taxonomy:
+    type: options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

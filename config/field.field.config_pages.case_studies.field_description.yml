@@ -1,0 +1,24 @@
+uuid: 6bf7f4e1-92dc-46c3-b346-812848f3e11b
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.case_studies
+    - field.storage.config_pages.field_description
+    - filter.format.basic_html
+  module:
+    - text
+id: config_pages.case_studies.field_description
+field_name: field_description
+entity_type: config_pages
+bundle: case_studies
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text_long

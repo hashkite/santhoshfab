@@ -1,0 +1,39 @@
+uuid: 5601b796-5c30-4c2b-9201-c7effd552476
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.comparison_row.field_title
+    - field.field.paragraph.comparison_row.field_tooltip
+    - paragraphs.paragraphs_type.comparison_row
+  module:
+    - mck_rest_apis
+id: paragraph.comparison_row.default
+targetEntityType: paragraph
+bundle: comparison_row
+mode: default
+content:
+  field_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_tooltip:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  extra_field_popup: true

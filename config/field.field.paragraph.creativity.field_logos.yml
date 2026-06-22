@@ -1,0 +1,29 @@
+uuid: cb018a56-65f1-4c03-b976-42a9501d42cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_logos
+    - media.type.image
+    - paragraphs.paragraphs_type.creativity
+id: paragraph.creativity.field_logos
+field_name: field_logos
+entity_type: paragraph
+bundle: creativity
+label: Logos
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,23 @@
+uuid: 3f246075-0b3f-422c-9377-b0e697d69cdb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title_position
+    - paragraphs.paragraphs_type.business_needs
+  module:
+    - options
+id: paragraph.business_needs.field_title_position
+field_name: field_title_position
+entity_type: paragraph
+bundle: business_needs
+label: 'Title position'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: center
+default_value_callback: ''
+settings: {  }
+field_type: list_string

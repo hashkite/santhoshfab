@@ -1,0 +1,24 @@
+uuid: 9cfadad0-3c93-40ff-9225-dfb44d56a258
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - filter.format.basic_html
+    - paragraphs.paragraphs_type.get_in_touch_with_us
+  module:
+    - text
+id: paragraph.get_in_touch_with_us.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: get_in_touch_with_us
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text_long

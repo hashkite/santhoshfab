@@ -1,0 +1,164 @@
+<?php
+/**
+ * @file
+ * Theme file.
+ */
+
+use Drupal\paragraphs\Entity\Paragraph;
+use Drupal\media\Entity\Media;
+use Drupal\Core\Link;
+use Drupal\Core\Url;
+
+/**
+ * Implements hook_preprocess_HOOK() for page.html.twig.
+ */
+function blue_theme_preprocess_page(array &$variables) {
+  $variables['react_prefix'] = \Drupal::state()->get('mck_rest_apis_prefix_config');
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function blue_theme_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  $register_url = Url::fromRoute('user.register');
+  $login_url = Url::fromRoute('user.login');
+  $reset_pass_url = Url::fromRoute('user.pass');
+  $register_url_link = [
+    '#prefix' => '<div class="user-links">',
+    '#type' => 'link',
+    '#url' => $register_url,
+    '#title' => t('Create new account'),
+    '#weight' => 2,
+  ];
+
+  $login_url = [
+    '#type' => 'link',
+    '#url' => $login_url,
+    '#title' => t('Sign Up'),
+    "#suffix" => '</div>',
+    '#weight' => 3,
+  ];
+
+  $reset_pass_url_link = [
+    '#type' => 'link',
+    '#url' => $reset_pass_url,
+    '#title' => t('Forgot your password?'),
+    "#suffix" => '</div>',
+    '#weight' => 3,
+  ];
+
+  if ($form_id === 'user_login_form' ) {
+    $form['create_account'] = $register_url_link;
+    $form['request_password'] = $reset_pass_url_link;
+  }
+  if ($form_id === 'user_pass') {
+    $form['create_account'] = $register_url_link;
+    $form['login'] = $login_url;
+  }
+
+  if (isset($form['elements']['book_a_call'])) {
+    $title = 'What time works?<br>';
+    $title .= '<span>30 minutes meeting ';
+    $title .= 'America/New_York Time ';
+    $date = new DateTime();
+    $date->setTimezone(new DateTimeZone('America/Detroit'));
+    $title .= $date->format('H:i') . '</span>';
+    $form['elements']['book_a_call']['book_a_call_field']['#title'] = $title;
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function blue_theme_preprocess_page__webform(array &$variables) {
+  $current_path = \Drupal::service('path.current')->getPath();
+  $config_page = Drupal::entityTypeManager()->getStorage('config_pages')->load('our_clients');
+  $config_page_info_list = NULL;
+
+  if ($current_path == '/webform/hire_managed') {
+    $config_page_info_list = Drupal::entityTypeManager()->getStorage('config_pages')->load('how_does_it_work');
+  } elseif ($current_path == '/webform/hire_services') {
+    $config_page_info_list = Drupal::entityTypeManager()->getStorage('config_pages')->load('how_does_it_work_services');
+  }
+
+  if (is_array($config_page) || !$config_page) {
+    return;
+  }
+
+  $variables['config_page_logos'] = $config_page->get('field_images')->view('full');
+  $current_path = \Drupal::service('path.current')->getPath();
+
+  if ($config_page_info_list) {
+    $variables['config_page_info_list']['title'] = $config_page_info_list->get('field_title')->view('full');
+    $variables['config_page_info_list']['description'] = $config_page_info_list->get('field_description')->view('full');
+
+    foreach ($config_page_info_list->get('field_paragraphs') as $key => $item) {
+      $paragraph_id = $item->target_id;
+      $paragraph = Paragraph::load($paragraph_id);
+
+      if ($paragraph instanceof Paragraph) {
+        $title = $paragraph->get('field_title')->value ?? '';
+        $description = $paragraph->get('field_description')->value ?? '';
+        $mid = $paragraph->get('field_icon')->target_id ?? '';
+        $image = Media::load($mid)->get('field_media_image');
+        $uri = $image->entity->getFileUri();
+        $url = \Drupal::service('file_url_generator')->generateAbsoluteString($uri);
+        $alt = $image->alt;
+        $width = $image->width;
+        $height = $image->height;
+
+        $variables['config_page_info_list']['items'][$key]['icon']['width'] = $width;
+        $variables['config_page_info_list']['items'][$key]['icon']['height'] = $height;
+        $variables['config_page_info_list']['items'][$key]['icon']['alt'] = $alt;
+        $variables['config_page_info_list']['items'][$key]['icon']['src'] = $url;
+        $variables['config_page_info_list']['items'][$key]['title'] = $title;
+        $variables['config_page_info_list']['items'][$key]['description'] = $description;
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_css_alter().
+ */
+function blue_theme_css_alter(&$css) {
+  // Check if the current user is not an administrator.
+  $current_user = \Drupal::currentUser();
+  if (!$current_user->hasRole('administrator')) {
+    // List of CSS files to exclude for non-admin users.
+    $excluded_css = [
+      // Specify the paths of the CSS files you want to exclude.
+      'core/modules/system/css/components/ajax-progress.module.css',
+      'core/modules/system/css/components/autocomplete.module.css',
+      'core/modules/system/css/components/ajax-progress.module.css',
+      'core/modules/system/css/components/align.module.css',
+      'core/modules/system/css/components/autocomplete-loading.module.css',
+      'core/modules/system/css/components/fieldgroup.module.css',
+      'core/modules/system/css/components/container-inline.module.css',
+      'core/modules/system/css/components/clearfix.module.css',
+      'core/modules/system/css/components/details.module.css',
+      'core/modules/system/css/components/hidden.module.css',
+      'core/modules/system/css/components/item-list.module.css',
+      'core/modules/system/css/components/js.module.css',
+      'core/modules/system/css/components/nowrap.module.css',
+      'core/modules/system/css/components/position-container.module.css',
+      'core/modules/system/css/components/progress.module.css',
+      'core/modules/system/css/components/reset-appearance.module.css',
+      'core/modules/system/css/components/resize.module.css',
+      'core/modules/system/css/components/sticky-header.module.css',
+      'core/modules/system/css/components/system-status-counter.css',
+      'core/modules/system/css/components/system-status-report-counters.css',
+      'core/modules/system/css/components/system-status-report-general-info.css',
+      'core/modules/system/css/components/tabledrag.module.css',
+      'core/modules/system/css/components/tablesort.module.css',
+      'core/modules/system/css/components/tree-child.module.css',
+    ];
+
+    // Remove the specified CSS files from the array.
+    foreach ($excluded_css as $path) {
+      if (isset($css[$path])) {
+        unset($css[$path]);
+      }
+    }
+  }
+}

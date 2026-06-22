@@ -1,0 +1,27 @@
+@import '../../../app/styles/mixins';
+@import '../../../app/styles/variables';
+
+.title-description {
+  padding: 60px 0;
+
+  @include breakpoint-down($md) {
+    padding: 50px 0;
+  }
+
+  .container {
+    max-width: 1024px;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+    margin-top: 40px;
+
+    @include breakpoint-down($xs) {
+      margin-top: 35px;
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}

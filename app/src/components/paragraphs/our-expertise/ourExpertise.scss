@@ -1,0 +1,96 @@
+@import '../../../app/styles/functions';
+@import '../../../app/styles/mixins';
+@import '../../../app/styles/variables';
+@import '../../../app/styles/colors';
+
+.our-expertise {
+  &__section {
+    background: url('/media/bg-expertise.jpg') no-repeat center / cover;
+    color: $gray-50;
+    padding: 1px 0 165px;
+    position: relative;
+
+    @include breakpoint-down($lg) {
+      padding: 1px 0 70px;
+    }
+
+    > .container {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  &__decor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    svg {
+      display: block;
+      height: auto;
+      width: 100%;
+    }
+  }
+
+  &__donut {
+    background: url('/media/pic-donut.png') no-repeat center / contain;
+    height: 210px;
+    margin: -30px auto 90px;
+    transition: 0.3s;
+    width: 210px;
+
+    @include breakpoint-down($xxl) {
+      margin-bottom: 70px;
+    }
+
+    @include breakpoint-down($lg) {
+      margin-bottom: 50px;
+    }
+
+    @include breakpoint-down($xs) {
+      height: 150px;
+      width: 150px;
+    }
+  }
+
+  &__header {
+    margin: 0 auto 110px;
+    max-width: 750px;
+    text-align: center;
+    transition: 0.3s;
+
+    @include breakpoint-down($xxl) {
+      margin-bottom: 70px;
+    }
+
+    @include breakpoint-down($lg) {
+      margin-bottom: 50px;
+    }
+
+    h2 {
+      color: $gray-50;
+      letter-spacing: -0.9px;
+      margin-bottom: 35px;
+
+      @include breakpoint-down($xl) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__list {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(4, 1fr);
+
+    @include breakpoint-down($xl) {
+      gap: 15px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoint-down($xs) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

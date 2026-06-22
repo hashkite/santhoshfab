@@ -1,0 +1,62 @@
+uuid: a5a18e4f-1019-4812-864b-a8850745a0cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tech_stack.field_cta
+    - field.field.paragraph.tech_stack.field_description
+    - field.field.paragraph.tech_stack.field_media_gallery
+    - field.field.paragraph.tech_stack.field_subtitle
+    - field.field.paragraph.tech_stack.field_title
+    - paragraphs.paragraphs_type.tech_stack
+  module:
+    - link
+    - media_library
+    - text
+id: paragraph.tech_stack.default
+targetEntityType: paragraph
+bundle: tech_stack
+mode: default
+content:
+  field_cta:
+    type: link_default
+    weight: 4
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_description:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_media_gallery:
+    type: media_library_widget
+    weight: 3
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_subtitle:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

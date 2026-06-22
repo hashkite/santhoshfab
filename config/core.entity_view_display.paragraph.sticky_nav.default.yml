@@ -1,0 +1,27 @@
+uuid: d4687872-0653-4d27-aff5-90e4605bc381
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.sticky_nav.field_nav_item
+    - paragraphs.paragraphs_type.sticky_nav
+  module:
+    - mck_rest_apis
+id: paragraph.sticky_nav.default
+targetEntityType: paragraph
+bundle: sticky_nav
+mode: default
+content:
+  field_nav_item:
+    type: mck_react
+    label: hidden
+    settings:
+      format: link
+      view_mode: default
+      storage: ''
+      convert: 0
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  extra_field_popup: true

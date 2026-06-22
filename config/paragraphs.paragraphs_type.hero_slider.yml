@@ -1,0 +1,10 @@
+uuid: a5456052-ee3d-4bc2-9f0b-cef983828e88
+langcode: en
+status: true
+dependencies: {  }
+id: hero_slider
+label: 'Hero slider'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

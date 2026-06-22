@@ -1,0 +1,51 @@
+uuid: f8803c50-41d0-4452-ab7b-2d3b6dde8935
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.top_companies.field_description
+    - field.field.paragraph.top_companies.field_multicolor_title
+    - field.field.paragraph.top_companies.field_taxonomy
+    - paragraphs.paragraphs_type.top_companies
+  module:
+    - mck_rest_apis
+id: paragraph.top_companies.default
+targetEntityType: paragraph
+bundle: top_companies
+mode: default
+content:
+  field_description:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_multicolor_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: default
+      storage: ''
+      convert: 0
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_taxonomy:
+    type: mck_react
+    label: hidden
+    settings:
+      format: reference
+      view_mode: default
+      storage: taxonomy_term
+      convert: 0
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  extra_field_popup: true

@@ -1,0 +1,21 @@
+uuid: 62877fb8-8eb1-4351-950c-41d43260790e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_display_countries
+    - paragraphs.paragraphs_type.hero_slide
+id: paragraph.hero_slide.field_display_countries
+field_name: field_display_countries
+entity_type: paragraph
+bundle: hero_slide
+label: 'Display Countries'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

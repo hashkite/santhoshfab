@@ -1,0 +1,47 @@
+uuid: 3de72dd1-d674-4ac1-ba9d-9af95930ef7a
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.case_studies
+    - field.field.config_pages.case_studies.field_description
+    - field.field.config_pages.case_studies.field_multicolor_title
+    - field.field.config_pages.case_studies.field_view
+  module:
+    - mck_rest_apis
+id: config_pages.case_studies.default
+targetEntityType: config_pages
+bundle: case_studies
+mode: default
+content:
+  field_description:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_multicolor_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_view:
+    type: mck_react
+    label: hidden
+    settings:
+      format: view
+      view_mode: default
+      storage: view
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden: {  }

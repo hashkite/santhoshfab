@@ -1,0 +1,62 @@
+uuid: fa52764d-4535-4554-b5f3-dbb4eb38d52c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.case_study_card.field_cta
+    - field.field.paragraph.case_study_card.field_description
+    - field.field.paragraph.case_study_card.field_image
+    - field.field.paragraph.case_study_card.field_related
+    - field.field.paragraph.case_study_card.field_title
+    - paragraphs.paragraphs_type.case_study_card
+  module:
+    - link
+    - media_library
+    - text
+id: paragraph.case_study_card.default
+targetEntityType: paragraph
+bundle: case_study_card
+mode: default
+content:
+  field_cta:
+    type: link_default
+    weight: 4
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_description:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_image:
+    type: media_library_widget
+    weight: 1
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_related:
+    type: link_default
+    weight: 5
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

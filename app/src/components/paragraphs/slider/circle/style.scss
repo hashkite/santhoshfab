@@ -1,0 +1,313 @@
+@import '../../../../app/styles/functions';
+@import '../../../../app/styles/mixins';
+@import '../../../../app/styles/variables';
+@import '../../../../app/styles/colors';
+
+.slider-circle {
+  display: grid;
+  grid-template-columns: 6fr 5fr;
+  padding: 300px 0;
+  position: relative;
+
+  @include breakpoint-down($xxl) {
+    padding: 100px 0;
+  }
+
+  @include breakpoint-down($lg) {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 50px 0 100px 0;
+    gap: 50px;
+  }
+
+  &__top-path {
+    position: absolute;
+    top: -430px;
+    left: 0;
+    width: 100%;
+    height: 600px;
+    background: $white-200;
+    z-index: -2;
+    overflow: hidden;
+
+    @include breakpoint-down($lg) {
+      height: 500px;
+      bottom: 150px;
+      display: none;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: -100px;
+      border-radius: 100%;
+      left: -25%;
+      width: 150%;
+      height: 200px;
+      background: $white-100;
+      z-index: -1;
+
+      @include breakpoint-down($lg) {
+        height: 250px;
+        bottom: 330px;
+        display: none;
+      }
+    }
+
+    &::after {
+      top: 530px;
+
+      @include breakpoint-down($lg) {
+        top: 400px;
+      }
+    }
+  }
+
+  &__text {
+    position: relative;
+    z-index: 1;
+    padding: 0 50px;
+
+    @include breakpoint-down($md) {
+      padding: 0 20px;
+    }
+  }
+
+  &__circle {
+    display: block;
+    position: absolute;
+    top: -30px;
+    left: 0;
+    width: 950px;
+    height: 950px;
+    border-radius: 50%;
+    transform: translateX(-100px);
+    background: $white;
+    z-index: -1;
+    border: 1px solid $white-200;
+
+    @include breakpoint-down($xxl) {
+      width: 700px;
+      height: 700px;
+      top: 80px;
+    }
+
+    @include breakpoint-down($md) {
+      width: 500px;
+      height: 500px;
+      top: 190px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      width: 780px;
+      height: 780px;
+      background: $white;
+      border-radius: 50%;
+      border: 1px solid $white-300;
+
+      @include breakpoint-down($xxl) {
+        width: 550px;
+        height: 550px;
+      }
+
+      @include breakpoint-down($md) {
+        width: 400px;
+        height: 400px;
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      width: 500px;
+      height: 500px;
+      background: $white;
+      border-radius: 50%;
+      border: 1px solid $white-300;
+
+      @include breakpoint-down($xxl) {
+        width: 350px;
+        height: 350px;
+      }
+
+      @include breakpoint-down($md) {
+        width: 250px;
+        height: 250px;
+      }
+    }
+  }
+
+  &__subtitle {
+    font-size: 20px;
+    margin-bottom: 30px;
+    font-weight: 500;
+  }
+
+  &__title {
+    > * {
+      margin-bottom: 20px;
+      font-size: 35px;
+
+      @include breakpoint-down($md) {
+        font-size: 25px;
+        margin-bottom: 10px;
+      }
+
+      span {
+        font-weight: 600 !important;
+      }
+    }
+  }
+
+  &__description {
+    font-size: 20px;
+    line-height: 30px;
+    color: $blue-dark-600;
+    margin-bottom: 40px;
+    max-width: 830px;
+
+    @include breakpoint-down($md) {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .btn {
+    width: 200px;
+  }
+
+  .path {
+    position: absolute;
+    top: -180px;
+    right: -250px;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    display: none;
+  }
+
+  .arrows {
+    display: flex;
+    position: absolute;
+    gap: 10px;
+    left: 450px;
+    top: 200px;
+    z-index: 2;
+
+    @include breakpoint-down($xxl) {
+      left: 300px;
+      top: 250px;
+    }
+
+    @include breakpoint-down($md) {
+      left: 50px;
+      top: 250px;
+    }
+
+    .btn {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background: linear-gradient(90deg, #5c00db 0%, #ab74f6 100%);
+
+      &.prev {
+        transform: translate(-10px, 0);
+      }
+
+      &.next {
+        transform: translate(-10px, -32px);
+      }
+    }
+  }
+
+  &__swiper {
+    position: absolute;
+    width: 900px;
+    transform: translateX(-20px);
+
+    @include breakpoint-down($xxl) {
+      width: 600px;
+      transform: translateX(0);
+      top: 310px;
+    }
+
+    @include breakpoint-down($lg) {
+      position: relative;
+      width: 100%;
+      transform: none;
+    }
+
+    &-block {
+      @include breakpoint-down($xxl) {
+        transform: translateY(-200px);
+        position: relative;
+      }
+    }
+
+    .swiper-slide {
+      display: flex;
+      height: auto;
+
+      @include breakpoint-down($lg) {
+        width: 250px;
+      }
+    }
+
+    .talent {
+      background: transparent;
+
+      &__image {
+        width: 245px;
+        height: 245px;
+        border-radius: 50%;
+        min-height: 245px;
+        min-width: 245px;
+      }
+
+      &__flag {
+        display: block;
+      }
+
+      &__details {
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+      }
+
+      &__content {
+        border-radius: 25px;
+        border: 1px solid #0000001a;
+        background: #ffffff59;
+        backdrop-filter: blur(10px);
+        padding: 30px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        min-width: 290px;
+        transform: translate(-25px, -25px);
+      }
+
+      &__hire-button {
+        display: none;
+      }
+
+      &__title {
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      &__expertise-item {
+        background: #0000000d;
+        font-size: 10px;
+      }
+    }
+  }
+}

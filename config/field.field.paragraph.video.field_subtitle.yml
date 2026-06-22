@@ -1,0 +1,19 @@
+uuid: 00378b61-dae1-48c8-80e3-796c33e54817
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_subtitle
+    - paragraphs.paragraphs_type.video
+id: paragraph.video.field_subtitle
+field_name: field_subtitle
+entity_type: paragraph
+bundle: video
+label: Subtitle
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

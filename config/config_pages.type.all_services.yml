@@ -1,0 +1,17 @@
+uuid: 6bfbed48-1afc-453f-a38b-3891986b7985
+langcode: en
+status: true
+dependencies: {  }
+id: all_services
+label: 'All Services'
+token: true
+context:
+  show_warning: true
+  group:
+    language: false
+  fallback:
+    language: ''
+menu:
+  path: ''
+  weight: 0
+  description: ''

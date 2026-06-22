@@ -1,0 +1,24 @@
+uuid: 322ef4b2-9a85-407f-ad41-1d7f5cece73d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_multicolor_title
+    - filter.format.full_html
+    - paragraphs.paragraphs_type.vertical_tabs
+  module:
+    - text
+id: paragraph.vertical_tabs.field_multicolor_title
+field_name: field_multicolor_title
+entity_type: paragraph
+bundle: vertical_tabs
+label: 'Multicolor title'
+description: "This field is optional. By default 'Related Technologies' will be displayed as a title"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

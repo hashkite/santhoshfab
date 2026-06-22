@@ -1,0 +1,16 @@
+uuid: fb228df9-733f-452b-82ac-1974fda7ffb1
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_ee
+third_party_settings:
+  paragraphs_ee:
+    paragraphs_categories:
+      global: global
+id: marketing_main
+label: 'Marketing Main'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,24 @@
+uuid: ca6a009d-541f-4bec-be90-a8a9348f8de3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - filter.format.basic_html
+    - paragraphs.paragraphs_type.country
+  module:
+    - text
+id: paragraph.country.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: country
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text_long

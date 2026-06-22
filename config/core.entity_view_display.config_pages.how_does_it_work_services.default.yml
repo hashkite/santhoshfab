@@ -1,0 +1,42 @@
+uuid: 32a8b745-3825-4e36-b5f0-6d25911440fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.how_does_it_work_services
+    - field.field.config_pages.how_does_it_work_services.field_description
+    - field.field.config_pages.how_does_it_work_services.field_paragraphs
+    - field.field.config_pages.how_does_it_work_services.field_title
+  module:
+    - entity_reference_revisions
+    - text
+id: config_pages.how_does_it_work_services.default
+targetEntityType: config_pages
+bundle: how_does_it_work_services
+mode: default
+content:
+  field_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_paragraphs:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: preview
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

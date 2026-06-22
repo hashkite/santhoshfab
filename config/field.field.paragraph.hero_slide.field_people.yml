@@ -1,0 +1,109 @@
+uuid: 8c073ce0-e991-4d8c-8bf6-a86d533aa9e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_people
+    - paragraphs.paragraphs_type.hero_slide
+    - paragraphs.paragraphs_type.images
+  module:
+    - entity_reference_revisions
+id: paragraph.hero_slide.field_people
+field_name: field_people
+entity_type: paragraph
+bundle: hero_slide
+label: People
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      images: images
+    negate: 0
+    target_bundles_drag_drop:
+      business_needs:
+        weight: 28
+        enabled: false
+      business_teaser:
+        weight: 29
+        enabled: false
+      case_studies:
+        weight: 30
+        enabled: false
+      client_impact:
+        weight: 31
+        enabled: false
+      client_impacts:
+        weight: 32
+        enabled: false
+      country:
+        weight: 33
+        enabled: false
+      faq_s:
+        weight: 34
+        enabled: false
+      feedback:
+        weight: 35
+        enabled: false
+      hero:
+        weight: 36
+        enabled: false
+      hero_slide:
+        weight: 37
+        enabled: false
+      hero_slider:
+        weight: 38
+        enabled: false
+      images:
+        weight: 39
+        enabled: true
+      number:
+        weight: 40
+        enabled: false
+      numbers:
+        weight: 41
+        enabled: false
+      office:
+        weight: 42
+        enabled: false
+      offices:
+        weight: 43
+        enabled: false
+      our_clients:
+        weight: 44
+        enabled: false
+      our_footprints:
+        weight: 45
+        enabled: false
+      our_partners:
+        weight: 46
+        enabled: false
+      process:
+        weight: 47
+        enabled: false
+      tab:
+        weight: 48
+        enabled: false
+      tabs:
+        weight: 49
+        enabled: false
+      talent_insights:
+        weight: 50
+        enabled: false
+      title_with_description:
+        weight: 51
+        enabled: false
+      view:
+        weight: 52
+        enabled: false
+      we_give_back:
+        weight: 54
+        enabled: false
+      webform:
+        weight: 53
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,42 @@
+uuid: 10e72fb8-b262-4567-b14d-71d2babe1e34
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tab_with_taxonomy.field_tags
+    - field.field.paragraph.tab_with_taxonomy.field_title
+    - paragraphs.paragraphs_type.tab_with_taxonomy
+  module:
+    - autocomplete_deluxe
+id: paragraph.tab_with_taxonomy.default
+targetEntityType: paragraph
+bundle: tab_with_taxonomy
+mode: default
+content:
+  field_tags:
+    type: autocomplete_deluxe
+    weight: 3
+    region: content
+    settings:
+      match_operator: CONTAINS
+      autocomplete_route_name: autocomplete_deluxe.autocomplete
+      size: 60
+      selection_handler: default
+      limit: 10
+      min_length: 0
+      delimiter: ''
+      not_found_message_allow: false
+      not_found_message: "The term '@term' will be added"
+      no_empty_message: 'No terms could be found. Please type in order to add a new term.'
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

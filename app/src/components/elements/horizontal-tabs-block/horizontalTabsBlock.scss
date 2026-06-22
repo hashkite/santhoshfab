@@ -1,0 +1,463 @@
+@import '../../../app/styles/functions';
+@import '../../../app/styles/mixins';
+@import '../../../app/styles/variables';
+@import '../../../app/styles/colors';
+
+.horizontal-tabs {
+  &__block {
+    background: linear-gradient(90deg, #dce4ef 34.16%, $gray-400 63.7%);
+    position: relative;
+  }
+
+  &__tab {
+    overflow: hidden;
+    padding: 180px 0 350px;
+    position: relative;
+    transition: padding 0.3s;
+
+    @include breakpoint-down(2000px) {
+      padding: 70px 0 350px;
+    }
+
+    @include breakpoint-down($xxl) {
+      padding: 50px 0 300px;
+    }
+
+    @include breakpoint-down($md) {
+      padding-bottom: 250px;
+    }
+
+    @include breakpoint-down($sm) {
+      padding-bottom: 120px;
+    }
+
+    > .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    &:last-child {
+      .horizontal-tabs__item-panel {
+        &.--panel {
+          &-people {
+            &:first-child {
+              bottom: 42%;
+              left: 0%;
+            }
+
+            &:last-child {
+              right: 35%;
+              bottom: 58%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__content {
+    max-width: 730px;
+    min-height: 700px;
+    transition: min-height 0.3s, max-width 0.3s;
+
+    @include breakpoint-down(2000px) {
+      min-height: 550px;
+      max-width: 780px;
+    }
+
+    @include breakpoint-down($xxl) {
+      max-width: 780px;
+      min-height: 550px;
+    }
+
+    @include breakpoint-down($xl) {
+      max-width: 100%;
+      min-height: 0;
+    }
+
+    h2 {
+      color: $blue-dark-400;
+      letter-spacing: -0.9px;
+
+      @include breakpoint-down($md) {
+        letter-spacing: -0.5px;
+      }
+    }
+  }
+
+  &__subtitle {
+    color: rgba($black, 0.5);
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: -0.36px;
+    line-height: 30px;
+    margin-bottom: 35px;
+    transition: 0.3s;
+
+    @include breakpoint-down(2000px) {
+      margin-bottom: 20px;
+    }
+
+    @include breakpoint-down($xxl) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__description {
+    color: $blue-dark-600;
+    margin-top: 35px;
+    max-width: 650px;
+    transition: 0.3s;
+
+    @include breakpoint-down(2000px) {
+      margin-top: 25px;
+      max-width: 700px;
+    }
+
+    @include breakpoint-down($xxl) {
+      max-width: 550px;
+    }
+
+    @include breakpoint-down($xl) {
+      max-width: 100%;
+    }
+
+    @include breakpoint-down($sm) {
+      margin-top: 20px;
+    }
+  }
+
+  &__links {
+    display: inline-grid;
+    gap: 20px 80px;
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 100px;
+    transition: 0.3s;
+
+    @include breakpoint-down(2000px) {
+      margin-top: 50px;
+    }
+
+    @include breakpoint-down($xxl) {
+      margin-top: 35px;
+    }
+
+    @include breakpoint-down($xl) {
+      gap: 20px 40px;
+    }
+
+    &.--cols-2 {
+      grid-template-columns: repeat(2, 1fr);
+
+      @include breakpoint-down($xs) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+
+    &.--cols-3 {
+      gap: 20px 60px;
+      grid-template-columns: repeat(3, 1fr);
+
+      @include breakpoint-down($sm) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @include breakpoint-down($xs) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+
+    &-subtitle {
+      color: $blue-dark-400;
+      margin-top: 60px;
+      transition: 0.3s;
+
+      @include breakpoint-down(2000px) {
+        margin-top: 35px;
+      }
+
+      @include breakpoint-down($xxl) {
+        margin-top: 30px;
+      }
+
+      + .horizontal-tabs__links {
+        margin-top: 35px;
+        transition: 0.3s;
+
+        @include breakpoint-down($xl) {
+          margin-top: 25px;
+        }
+
+        @include breakpoint-down($lg) {
+          margin-top: 20px;
+        }
+
+        @include breakpoint-down($sm) {
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+
+  &__link {
+    align-items: center;
+    color: $blue-dark-400;
+    display: flex;
+    gap: 15px;
+    transition: 0.3s;
+    text-decoration: none;
+
+    .text {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: -0.36px;
+      line-height: 22px;
+    }
+
+    &:hover {
+      color: $purple-200;
+      text-decoration: none;
+    }
+  }
+
+  &__decor {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+
+    svg {
+      display: block;
+      height: auto;
+      transform-origin: center bottom;
+      width: 100%;
+    }
+  }
+
+  &__bg {
+    align-items: flex-end;
+    display: flex;
+    height: 100vh;
+    position: absolute;
+    bottom: -400px;
+    right: 0;
+    transition: height 0.3s, width 0.3s, right 0.3s;
+    width: 1200px;
+
+    @include breakpoint-up($fluid) {
+      height: 960px;
+      right: -10%;
+      width: 1050px;
+    }
+
+    @include breakpoint-down($fluid) {
+      height: 960px;
+      right: -10%;
+      width: 1050px;
+    }
+
+    @include breakpoint-down($xxl) {
+      height: 80vh;
+      margin: auto;
+      right: -5%;
+      bottom: -300px;
+      width: 800px;
+    }
+
+    @include breakpoint-down($xl) {
+      display: none;
+    }
+
+    > picture {
+      height: 100%;
+      width: 100%;
+    }
+
+    > img {
+      height: 100%;
+      object-fit: contain;
+      object-position: right bottom;
+      width: 100%;
+    }
+
+    .person {
+      position: absolute;
+      transition: padding 0.3s, top 0.3s, right 0.3s, left 0.3s, bottom 0.3s,
+        width 0.3s;
+      width: 254px;
+
+      @include breakpoint-down($xl) {
+        padding: 25px;
+        width: 220px;
+      }
+
+      @include breakpoint-down($lg) {
+        padding: 15px;
+        width: 200px;
+      }
+
+      @include breakpoint-down($md) {
+        width: auto;
+      }
+
+      @include breakpoint-down($xs) {
+        display: none;
+      }
+
+      &:first-child {
+        bottom: 35%;
+        left: 18%;
+
+        @include breakpoint-down($md) {
+          top: 0;
+        }
+
+        @include breakpoint-down($sm) {
+          top: 40px;
+          left: -40%;
+        }
+      }
+
+      &:last-child {
+        right: 10%;
+        bottom: 50%;
+
+        @include breakpoint-down($md) {
+          bottom: 0;
+        }
+
+        @include breakpoint-down($sm) {
+          right: -35%;
+        }
+      }
+    }
+  }
+
+  &__nav {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    left: 0;
+    transition: 0.3s;
+    z-index: 3;
+    bottom: -50px;
+
+    @include breakpoint-down($lg) {
+      padding: 0 15px;
+    }
+
+    @include breakpoint-down($md) {
+      bottom: -100px;
+      width: 100%;
+      overflow-x: auto;
+      padding-top: 40px;
+    }
+
+    @include breakpoint-down($sm) {
+      bottom: -40px;
+    }
+
+    @include breakpoint-down($xs) {
+      gap: 10px;
+    }
+
+    &-item {
+      background: #f8fbff;
+      border-radius: 15px;
+      cursor: pointer;
+      padding: 20px 20px 30px;
+      transition: 0.3s;
+      width: 240px;
+      box-shadow: rgba($black, 0.16) 0px 1px 4px;
+
+      @include breakpoint-down($xl) {
+        padding: 15px 15px 25px;
+      }
+
+      @include breakpoint-down($sm) {
+        padding: 15px;
+      }
+
+      &.selected {
+        transform: translateY(-60px);
+
+        @include breakpoint-down($sm) {
+          transform: translateY(-30px);
+        }
+
+        .horizontal-tabs__nav {
+          &-pic {
+            border-color: $purple-200;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+              rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+          }
+
+          &-title {
+            font-weight: 600;
+          }
+        }
+      }
+    }
+
+    &-pic {
+      align-items: center;
+      border: 1px solid $gray-300;
+      border-radius: 15px;
+      display: flex;
+      height: 130px;
+      justify-content: center;
+      margin-bottom: 20px;
+      transition: 0.3s;
+      width: 100%;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+        rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+
+      @include breakpoint-down($xl) {
+        height: 100px;
+        margin-bottom: 15px;
+      }
+
+      @include breakpoint-down($sm) {
+        border: none;
+        height: 50px;
+        width: 75px;
+        margin-bottom: 0;
+        padding: 5px;
+      }
+
+      picture {
+        width: 100%;
+        @include breakpoint-down($sm) {
+          height: 100%;
+        }
+      }
+
+      img {
+        @include breakpoint-down($md) {
+          height: 100%;
+          object-fit: contain;
+          object-position: center;
+          width: 75%;
+          margin: auto;
+        }
+      }
+    }
+
+    &-title {
+      color: $blue-dark-500;
+      font-size: 16px;
+      font-weight: 400;
+      letter-spacing: -0.32px;
+      line-height: 22px;
+      text-align: center;
+
+      @include breakpoint-down($sm) {
+        display: none;
+      }
+    }
+  }
+}

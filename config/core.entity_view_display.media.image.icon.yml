@@ -1,0 +1,38 @@
+uuid: 9803264c-d167-4df7-b9b6-a569a1060314
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.icon
+    - field.field.media.image.field_media_image
+    - image.style.convert_to_webp
+    - media.type.image
+  module:
+    - svg_image
+_core:
+  default_config_hash: 73xaTNkI5J6sfFcBmNYeuk070X3mQS_iwwWaPYyfG2M
+id: media.image.icon
+targetEntityType: media
+bundle: image
+mode: icon
+content:
+  field_media_image:
+    type: image
+    label: visually_hidden
+    settings:
+      image_link: ''
+      image_style: convert_to_webp
+      image_loading:
+        attribute: eager
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

@@ -1,0 +1,40 @@
+uuid: efcd1ba8-826d-4385-a095-aa619d462a83
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.partners
+    - field.field.config_pages.partners.field_description
+    - field.field.config_pages.partners.field_multicolor_title
+    - field.field.config_pages.partners.field_partners_view
+  module:
+    - mck_rest_apis
+id: config_pages.partners.default
+targetEntityType: config_pages
+bundle: partners
+mode: default
+content:
+  field_description:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_multicolor_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_partners_view: true

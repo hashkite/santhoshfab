@@ -1,0 +1,87 @@
+uuid: 4b7f3ce2-3884-4294-b688-b92ea9ebec5f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.engineering_card_item.field_background_image
+    - field.field.paragraph.engineering_card_item.field_cta
+    - field.field.paragraph.engineering_card_item.field_description
+    - field.field.paragraph.engineering_card_item.field_engineering_color
+    - field.field.paragraph.engineering_card_item.field_media
+    - field.field.paragraph.engineering_card_item.field_title
+    - paragraphs.paragraphs_type.engineering_card_item
+  module:
+    - mck_rest_apis
+id: paragraph.engineering_card_item.default
+targetEntityType: paragraph
+bundle: engineering_card_item
+mode: default
+content:
+  field_background_image:
+    type: mck_react
+    label: hidden
+    settings:
+      format: media
+      view_mode: default
+      storage: media
+      convert: 0
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_cta:
+    type: mck_react
+    label: hidden
+    settings:
+      format: link
+      view_mode: default
+      storage: ''
+      convert: 0
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_description:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_engineering_color:
+    type: mck_react
+    label: hidden
+    settings:
+      format: hex
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_media:
+    type: mck_react
+    label: hidden
+    settings:
+      format: media
+      view_mode: default
+      storage: media
+      convert: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_title:
+    type: mck_react
+    label: hidden
+    settings:
+      format: default
+      view_mode: teaser
+      storage: paragraph
+      convert: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  extra_field_popup: true

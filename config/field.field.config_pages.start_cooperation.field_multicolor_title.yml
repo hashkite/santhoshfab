@@ -1,0 +1,24 @@
+uuid: 52a9b58b-9f42-4dea-b68e-95c83aba2068
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.start_cooperation
+    - field.storage.config_pages.field_multicolor_title
+    - filter.format.full_html
+  module:
+    - text
+id: config_pages.start_cooperation.field_multicolor_title
+field_name: field_multicolor_title
+entity_type: config_pages
+bundle: start_cooperation
+label: 'Multicolor title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long
