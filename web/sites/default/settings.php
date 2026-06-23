@@ -38,3 +38,17 @@ $ddev_settings = __DIR__ . '/settings.ddev.php';
 if (getenv('IS_DDEV_PROJECT') == 'true' && is_readable($ddev_settings)) {
   require $ddev_settings;
 }
+
+$databases['default']['default'] = array (
+  'database' => 'u808770276_santhoshfab',
+  'username' => 'u808770276_santhoshfab',
+  'password' => 'Santhoshfab@2k26',
+  'prefix' => '',
+  'host' => '127.0.0.1',
+  'port' => '3306',
+  'isolation_level' => '',
+  'driver' => 'mysql',
+  'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql',
+  'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
+);
+$settings['hash_salt'] = '8P4xKObOqi8CLeIs9BQUMncwmGO9FEQAAY-2BEBHBWNTA9wDXkGPaKGcAJWUM457CbUd7CNebg';
