@@ -33,13 +33,17 @@ if (file_exists($local_settings)) {
   include $local_settings;
 }
 
+if (isset($GLOBALS['request']) and '/web/index.php' === $GLOBALS['request']->server->get('SCRIPT_NAME')) {
+  $GLOBALS['request']->server->set('SCRIPT_NAME', '/index.php');
+}
+
 // Automatically generated include for settings managed by ddev.
 $ddev_settings = __DIR__ . '/settings.ddev.php';
 if (getenv('IS_DDEV_PROJECT') == 'true' && is_readable($ddev_settings)) {
   require $ddev_settings;
 }
 
-$databases['default']['default'] = array (
+$databases['default']['default'] = array(
   'database' => 'u808770276_santhoshfab',
   'username' => 'u808770276_santhoshfab',
   'password' => 'Santhoshfab@2k26',
