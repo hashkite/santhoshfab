@@ -70,10 +70,6 @@ const Webform = ({ data, dependentFields, submissionMessage }) => {
 
   const handleSubmit = async (event, data) => {
     if (event) event.preventDefault();
-    if (!googleReCaptcha) {
-      alert('Please verify you are not a robot');
-      return;
-    }
     setIsSubmitting(true); // Set isSubmitting to true during form submission
     const token = tokenData?.data;
     const formDataNew = data ? { ...initialFormData, ...data } : formData;
