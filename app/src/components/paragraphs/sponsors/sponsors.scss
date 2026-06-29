@@ -56,6 +56,7 @@
       max-height: 55px;
       max-width: 165px;
       transition: 0.3s;
+      object-fit: contain;
 
       @include breakpoint-down($md) {
         max-height: 35px;
@@ -88,6 +89,7 @@
       //aspect-ratio: 16/9;
       display: block;
       margin: auto;
+      object-fit: contain;
       max-height: 70px;
       max-width: 165px;
       transition: 0.3s;
@@ -111,6 +113,14 @@
     padding: 50px;
     border-top: 1px $white-200 solid;
     border-bottom: 1px $white-200 solid;
+
+    @include breakpoint-down($lg) {
+      padding: 25px;
+    }
+    
+    @include breakpoint-down($md) {
+      padding: 25px;
+    }
 
     // after 4 first item remove border top
     &:nth-child(n + 5) {
