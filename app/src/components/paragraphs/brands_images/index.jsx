@@ -16,7 +16,10 @@ const BrandImages = ({ data }) => {
         <div className="brand-images__logos">
           {brand_logos?.items?.map((logo, idx) => (
             <div className="brand-images__logo" key={idx}>
-              <img src={logo.src} alt={logo.alt || ''} />
+              <img
+                src={logo.webp ? logo.webp : logo.src}
+                alt={logo.alt || ''}
+              />
             </div>
           ))}
         </div>
