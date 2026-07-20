@@ -1,3 +1,5 @@
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 export const Media = ({ src, name, type, svg }) => {
   if (!src) return null;
 
@@ -18,5 +20,12 @@ export const Media = ({ src, name, type, svg }) => {
     return <div className="svg" dangerouslySetInnerHTML={{ __html: svg }} />;
   }
 
-  return <img src={src} alt={name} className="hero-plus__media image" />;
+  return (
+    <LazyLoadImage
+      src={src}
+      alt={name}
+      wrapperClassName="hero-plus__media image"
+      effect="blur"
+    />
+  );
 };

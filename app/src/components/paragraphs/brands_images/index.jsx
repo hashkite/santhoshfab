@@ -1,4 +1,5 @@
 import React from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import './style.scss';
 
@@ -16,9 +17,10 @@ const BrandImages = ({ data }) => {
         <div className="brand-images__logos">
           {brand_logos?.items?.map((logo, idx) => (
             <div className="brand-images__logo" key={idx}>
-              <img
+              <LazyLoadImage
                 src={logo.webp ? logo.webp : logo.src}
                 alt={logo.alt || ''}
+                effect="blur"
               />
             </div>
           ))}
