@@ -26,27 +26,22 @@
  */
 #}
 <!DOCTYPE html>
-<html{{ html_attributes }}>
-  <head>
-    <head-placeholder token="{{ placeholder_token }}">
-    <title>{{ head_title|safe_join(' | ') }}</title>
-    <js-placeholder token="{{ placeholder_token }}">
-  </head>
-  <body{{ attributes }}>
-    {#
-      Keyboard navigation/accessibility link to main content section in
-      page.html.twig.
-    #}
-    <a href="#main-content" class="visually-hidden focusable">
-      {{ 'Skip to main content'|t }}
-    </a>
-    {{ page_top }}
-    {{ page }}
-    {{ page_bottom }}
-    <js-bottom-placeholder token="{{ placeholder_token }}">
-      <css-placeholder token="{{ placeholder_token }}">
-      <!-- Start of HubSpot Embed Code -->
-      <script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/46743891.js"></script>
-      <!-- End of HubSpot Embed Code -->
-  </body>
-</html>
+<html{{html_attributes}}>
+	<head>
+		<head-placeholder token="{{ placeholder_token }}">
+			<title>{{ head_title|safe_join(' | ') }}</title>
+			<js-placeholder token="{{ placeholder_token }}"></head>
+			<body{{attributes}}>
+				{#
+				      Keyboard navigation/accessibility link to main content section in
+				      page.html.twig.
+				    #}
+				<a href="#main-content" class="visually-hidden focusable">
+					{{ 'Skip to main content'|t }}
+				</a>
+				{{ page_top }}
+				{{ page }}
+				{{ page_bottom }}
+				<js-bottom-placeholder token="{{ placeholder_token }}">
+					<css-placeholder token="{{ placeholder_token }}"></body>
+				</html>
