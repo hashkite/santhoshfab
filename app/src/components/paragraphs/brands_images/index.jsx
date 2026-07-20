@@ -18,9 +18,15 @@ const BrandImages = ({ data }) => {
           {brand_logos?.items?.map((logo, idx) => (
             <div className="brand-images__logo" key={idx}>
               <LazyLoadImage
-                src={logo.webp ? logo.webp : logo.src}
+                src={logo.src}
+                srcSet={logo.webp}
                 alt={logo.alt || ''}
                 effect="blur"
+                onError={(e) => {
+                  if (e.target.srcset) {
+                    e.target.srcset = '';
+                  }
+                }}
               />
             </div>
           ))}
