@@ -62,7 +62,7 @@
           line-height: 34px;
         }
 
-        > .text {
+        >.text {
           position: relative;
           transition: trs(color);
 
@@ -93,7 +93,7 @@
           text-decoration: none;
         }
 
-        > a .text {
+        >a .text {
           color: rgba($gray-50, 0.8);
 
           &::after {
@@ -156,7 +156,7 @@
 
       &::before,
       &::after {
-        background: $purple-200;
+        background: $color-primary;
         border-radius: 100%;
         content: '';
         height: 110px;
