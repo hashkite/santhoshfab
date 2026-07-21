@@ -35,15 +35,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 40px;
+    gap: 25px;
     flex-wrap: wrap;
 
     @include breakpoint-down($md) {
-      gap: 30px;
+      gap: 25px;
     }
 
     @include breakpoint-down($sm) {
-      gap: 20px;
+      gap: 25px;
     }
   }
 
@@ -52,17 +52,18 @@
     align-items: center;
     justify-content: center;
     height: 80px;
-    width: 120px;
+    width: auto;
+    max-width: 100%;
     flex-shrink: 0;
 
     @include breakpoint-down($md) {
       height: 70px;
-      width: 110px;
+      width: auto;
     }
 
     @include breakpoint-down($sm) {
       height: 60px;
-      width: 100px;
+      width: auto;
     }
 
     .lazy-load-image-wrapper {
