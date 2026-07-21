@@ -21,11 +21,10 @@ export const Media = ({ src, name, type, svg }) => {
   }
 
   return (
-    <LazyLoadImage
+    <img
       src={src}
       alt={name}
       wrapperClassName="hero-plus__media image"
-      effect="blur"
     />
   );
 };

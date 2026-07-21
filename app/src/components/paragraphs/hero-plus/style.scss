@@ -7,8 +7,10 @@
   &__section {
     position: relative;
     padding: 150px 0 100px;
-
     text-align: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
 
     background: url(/media/bg-hero-plus.png) no-repeat center / cover;
 
@@ -23,7 +25,10 @@
       left: 0px;
       bottom: 0px;
       right: 0px;
-      opacity: 0.4;
+      opacity: 0.67;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
     }
 
     &.with-top-menu {
@@ -104,6 +109,7 @@
         grid-template-columns: 2fr 3fr;
         gap: 50px;
         transform: translateY(250px);
+        position: relative;
 
         @include breakpoint-down($xxl) {
           grid-template-columns: 1fr 3fr;
@@ -115,6 +121,16 @@
           gap: 100px;
         }
 
+        &::after {
+          content: " ";
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: #0f50b0;
+        }
       }
 
       .hero-plus__text {
@@ -656,6 +672,42 @@
   &__content {
     position: relative;
     z-index: 1;
+    padding: 30px;
+    min-width: 750px;
+    width: min-content;
+    max-width: 100%;
+
+    @include breakpoint-down($xxl) {
+      min-width: 700px;
+    }
+
+    @include breakpoint-down($xl) {
+      min-width: 600px;
+    }
+
+    @include breakpoint-down($lg) {
+      min-width: 500px;
+    }
+
+    @include breakpoint-down($sm) {
+      padding: 10px;
+      min-width: 300px;
+    }
+
+    &::after {
+      content: " ";
+      position: absolute;
+      background-color: #0f50b0;
+      display: block;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      opacity: .4;
+      z-index: -1;
+      padding: 1rem;
+      border-radius: 14px;
+    }
   }
 
   &__media {
