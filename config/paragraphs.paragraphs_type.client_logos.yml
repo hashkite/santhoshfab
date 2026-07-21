@@ -1,0 +1,17 @@
+uuid: f2c81a4e-9b17-4e8a-a6d5-3c7e1f8b2d94
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_ee
+third_party_settings:
+  paragraphs_ee:
+    paragraphs_categories:
+      global: global
+      front_page: front_page
+id: client_logos
+label: 'Client Logos'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

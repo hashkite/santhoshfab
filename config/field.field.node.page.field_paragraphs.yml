@@ -81,12 +81,54 @@ settings:
       work_experience: work_experience
     negate: 1
     target_bundles_drag_drop:
+      about_us_cards:
+        weight: 110
+        enabled: false
+      all_services:
+        weight: 111
+        enabled: false
+      awards:
+        weight: 112
+        enabled: false
+      awards_item:
+        weight: 113
+        enabled: false
+      brands_images:
+        weight: 114
+        enabled: false
       business_needs:
         weight: 25
+        enabled: false
+      business_person:
+        weight: 116
         enabled: false
       business_teaser:
         weight: 26
         enabled: true
+      case_study_card:
+        weight: 118
+        enabled: false
+      client_logos:
+        weight: 119
+        enabled: false
+      comparison_cell:
+        weight: 120
+        enabled: false
+      comparison_column:
+        weight: 121
+        enabled: false
+      comparison_row:
+        weight: 122
+        enabled: false
+      comparison_table:
+        weight: 123
+        enabled: false
+      contact_ways:
+        weight: 124
+        enabled: false
+      content_section:
+        weight: 125
+        enabled: false
       country:
         weight: 11
         enabled: true
@@ -95,6 +137,12 @@ settings:
         enabled: false
       development_team:
         weight: 64
+        enabled: false
+      engineering_card_item:
+        weight: 129
+        enabled: false
+      engineering_card_wrapper:
+        weight: 130
         enabled: false
       experience:
         weight: 57
@@ -132,6 +180,9 @@ settings:
       hero_slider:
         weight: 6
         enabled: true
+      horizontal_scroll:
+        weight: 143
+        enabled: false
       horizontal_tab:
         weight: 50
         enabled: true
@@ -156,8 +207,26 @@ settings:
       link_with_icon:
         weight: 67
         enabled: true
+      locations:
+        weight: 152
+        enabled: false
+      logo_item:
+        weight: 153
+        enabled: false
+      logos_wrapper:
+        weight: 154
+        enabled: false
       looking_for_a_team:
         weight: 68
+        enabled: false
+      marketing_cards:
+        weight: 156
+        enabled: false
+      marketing_cards_wrapper:
+        weight: 157
+        enabled: false
+      marketing_main:
+        weight: 158
         enabled: false
       model_item:
         weight: 71
@@ -168,6 +237,9 @@ settings:
       numbers:
         weight: 41
         enabled: true
+      offices:
+        weight: 162
+        enabled: false
       our_capabilities:
         weight: 76
         enabled: false
@@ -195,9 +267,36 @@ settings:
       people_images:
         weight: 57
         enabled: true
+      people_tabs:
+        weight: 172
+        enabled: false
       person:
         weight: 51
         enabled: true
+      person_with_tech:
+        weight: 174
+        enabled: false
+      ppc_setup_process:
+        weight: 175
+        enabled: false
+      pricing:
+        weight: 176
+        enabled: false
+      process:
+        weight: 177
+        enabled: false
+      puzzle:
+        weight: 178
+        enabled: false
+      puzzles:
+        weight: 179
+        enabled: false
+      re_arrange:
+        weight: 180
+        enabled: false
+      revenue_chart:
+        weight: 181
+        enabled: false
       scrollable_item:
         weight: 53
         enabled: true
@@ -207,21 +306,66 @@ settings:
       service_item:
         weight: 82
         enabled: true
+      service_steps:
+        weight: 185
+        enabled: false
+      service_steps_wrapper:
+        weight: 186
+        enabled: false
       services:
         weight: 81
         enabled: false
       slider:
         weight: 85
         enabled: false
+      some_cases_studies:
+        weight: 189
+        enabled: false
+      stat_card_wrapper:
+        weight: 190
+        enabled: false
+      stat_cards:
+        weight: 191
+        enabled: false
+      stat_item:
+        weight: 192
+        enabled: false
+      sticky_nav:
+        weight: 193
+        enabled: false
       tab:
         weight: 9
         enabled: true
+      tab_with_paragraphs:
+        weight: 195
+        enabled: false
+      tab_with_taxonomy:
+        weight: 196
+        enabled: false
+      table_row:
+        weight: 197
+        enabled: false
+      table_wrapper:
+        weight: 198
+        enabled: false
       tabs:
         weight: 10
+        enabled: false
+      talent_list:
+        weight: 200
+        enabled: false
+      team_member_testimonial:
+        weight: 201
         enabled: false
       teaser:
         weight: 95
         enabled: true
+      tech_stack:
+        weight: 203
+        enabled: false
+      text_with_content:
+        weight: 204
+        enabled: false
       tile:
         weight: 86
         enabled: true
@@ -237,6 +381,9 @@ settings:
       titles:
         weight: 63
         enabled: true
+      top_companies:
+        weight: 210
+        enabled: false
       vertical_tabs:
         weight: 86
         enabled: false
@@ -251,6 +398,12 @@ settings:
         enabled: false
       view:
         weight: 36
+        enabled: false
+      we_are_famaash:
+        weight: 216
+        enabled: false
+      why_they_choose_us:
+        weight: 217
         enabled: false
       work_experience:
         weight: 106
