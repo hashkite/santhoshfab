@@ -1,0 +1,19 @@
+uuid: a7d3e5f1-4c29-4b8e-9f1a-6d8c2e7b3a15
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_heading
+    - paragraphs.paragraphs_type.client_logos
+id: paragraph.client_logos.field_heading
+field_name: field_heading
+entity_type: paragraph
+bundle: client_logos
+label: Heading
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

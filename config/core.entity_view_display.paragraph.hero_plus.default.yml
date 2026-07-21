@@ -75,8 +75,8 @@ content:
     settings:
       format: media
       view_mode: default
+      convert: '1'
       storage: media
-      convert: false
     third_party_settings: {  }
     weight: 3
     region: content

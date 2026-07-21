@@ -1,0 +1,33 @@
+uuid: c9f5a7b3-6e4b-4daf-b13c-8fae4a9d5c37
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.client_logos.field_brand_logos
+    - field.field.paragraph.client_logos.field_heading
+    - paragraphs.paragraphs_type.client_logos
+  module:
+    - media_library
+id: paragraph.client_logos.default
+targetEntityType: paragraph
+bundle: client_logos
+mode: default
+content:
+  field_brand_logos:
+    type: media_library_widget
+    weight: 1
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_heading:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

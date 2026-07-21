@@ -1,16 +1,16 @@
-uuid: e81bf5b7-744f-4b36-82bf-5826b9091f5f
+uuid: d0a6b8c4-7f5c-4eaf-c24d-9abf5bae6d48
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.brands_images.field_brand_logos
-    - field.field.paragraph.brands_images.field_heading
-    - paragraphs.paragraphs_type.brands_images
+    - field.field.paragraph.client_logos.field_brand_logos
+    - field.field.paragraph.client_logos.field_heading
+    - paragraphs.paragraphs_type.client_logos
   module:
     - mck_rest_apis
-id: paragraph.brands_images.default
+id: paragraph.client_logos.default
 targetEntityType: paragraph
-bundle: brands_images
+bundle: client_logos
 mode: default
 content:
   field_brand_logos:

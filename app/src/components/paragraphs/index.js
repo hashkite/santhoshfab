@@ -56,6 +56,7 @@ export { default as StatCardsWrapper } from './stat_card_wrapper';
 export { default as TextWithContent } from './text_with_content';
 export { default as MarketingCardsWrapper } from './marketing_cards_wrapper';
 export { default as BrandImages } from './brands_images';
+export { default as ClientLogos } from './client_logos';
 export { default as ServiceStepsWrapper } from './service_steps_wrapper';
 export { default as LogosWrapper } from './logos_wrapper';
 export { default as StickyNav } from './sticky_nav';
